@@ -8,7 +8,9 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   {
     files: ["**/*.js", "**/*.vue"],
+    ignores: ["**/jedi.js"],
     rules: {
+      "vue/no-v-html": 0,
       "semi": ["error", "never"],
       "no-unused-vars": 2,
       "no-undef": 2,

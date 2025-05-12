@@ -29,11 +29,27 @@
     "vue": "^3.4.27"
   },
   "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/lang-javascript": "^6.2.3",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.36.7",
+    "@uiw/codemirror-theme-dracula": "^4.23.12",
+    "@uiw/codemirror-theme-github": "^4.23.12",
+    "ace-builds": "^1.41.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "codemirror": "^6.0.1",
+    "highlight.js": "^11.11.1",
+    "highlightjs-copy": "^1.0.6",
+    "marked": "^15.0.11",
     "pinia": "^2.1.7",
+    "splitpanes": "^4.0.3",
     "vue-i18n": "^9.13.1",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue-splitpane": "^1.0.6"
   },
   "resolutions": {
     "ws": "^8.17.1",

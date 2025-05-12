@@ -1,19 +1,19 @@
-import Home from '@/pages/AppHome.vue'
-import About from '@/pages/AppAbout.vue'
+import GettingStarted from "@/pages/GettingStarted.vue"
+import MinimalExample from "@/pages/MinimalExample.vue"
 
 export const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home,
+    name: 'Getting Started',
+    component: GettingStarted,
     meta: {
       navbar: true
     }
   },
   {
-    path: '/about',
-    name: 'about',
-    component: About,
+    path: '/example',
+    name: 'Minimal Example',
+    component: MinimalExample,
     meta: {
       navbar: true
     }

@@ -1,0 +1,1353 @@
+{
+  "\u0000/Users/germanbisurgi/Sites/germanbisurgi/jedi-docs/node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-module": [
+    "/assets/bootstrap.bundle-DTIdaKsh.js"
+  ],
+  "\u0000/Users/germanbisurgi/Sites/germanbisurgi/jedi-docs/node_modules/highlightjs-copy/index.js?commonjs-module": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "\u0000commonjsHelpers.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "\u0000plugin-vue:export-helper": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "\u0000vite/modulepreload-polyfill.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "\u0000vite/preload-helper.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "index.html": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/extends.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/autocomplete/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/lang-css/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/lang-html/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/lang-javascript/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/language/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/lint/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/state/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/theme-one-dark/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@codemirror/view/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@intlify/core-base/dist/core-base.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@intlify/message-compiler/dist/message-compiler.esm-browser.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@intlify/shared/dist/shared.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@joeattardi/emoji-button/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/common/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/css/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/highlight/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/html/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/javascript/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@lezer/lr/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@marijn/find-cluster-break/src/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@uiw/codemirror-theme-dracula/esm/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@uiw/codemirror-theme-github/esm/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@uiw/codemirror-themes/esm/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@unhead/vue/dist/client.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@unhead/vue/dist/shared/vue.BYLJNEcq.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@unhead/vue/dist/shared/vue.N9zWjxoK.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.js": [
+    "/assets/bootstrap.bundle-DTIdaKsh.js"
+  ],
+  "node_modules/choices.js/public/assets/scripts/choices.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/codemirror/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/codemirror/node_modules/@codemirror/commands/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/codemirror/node_modules/@codemirror/search/dist/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/crelt/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/core.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/1c.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/abnf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/accesslog.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/actionscript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ada.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/angelscript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/apache.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/applescript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/arcade.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/arduino.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/armasm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/asciidoc.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/aspectj.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/autohotkey.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/autoit.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/avrasm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/awk.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/axapta.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/bash.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/basic.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/bnf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/brainfuck.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/c.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/cal.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/capnproto.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ceylon.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/clean.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/clojure-repl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/clojure.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/cmake.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/coffeescript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/coq.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/cos.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/cpp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/crmsh.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/crystal.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/csharp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/csp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/css.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/d.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dart.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/delphi.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/diff.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/django.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dns.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dockerfile.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dos.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dsconfig.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dts.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/dust.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ebnf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/elixir.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/elm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/erb.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/erlang-repl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/erlang.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/excel.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/fix.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/flix.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/fortran.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/fsharp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gams.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gauss.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gcode.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gherkin.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/glsl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/go.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/golo.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/gradle.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/graphql.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/groovy.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/haml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/handlebars.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/haskell.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/haxe.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/hsp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/http.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/hy.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/inform7.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ini.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/irpf90.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/isbl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/java.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/javascript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/jboss-cli.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/json.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/julia-repl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/julia.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/kotlin.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/lasso.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/latex.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ldif.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/leaf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/less.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/lisp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/livecodeserver.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/livescript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/llvm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/lsl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/lua.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/makefile.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/markdown.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mathematica.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/matlab.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/maxima.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mel.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mercury.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mipsasm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mizar.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/mojolicious.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/monkey.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/moonscript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/n1ql.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/nestedtext.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/nginx.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/nim.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/nix.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/node-repl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/nsis.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/objectivec.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ocaml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/openscad.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/oxygene.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/parser3.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/perl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/pf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/pgsql.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/php-template.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/php.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/plaintext.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/pony.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/powershell.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/processing.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/profile.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/prolog.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/properties.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/protobuf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/puppet.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/purebasic.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/python-repl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/python.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/q.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/qml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/r.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/reasonml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/rib.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/roboconf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/routeros.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/rsl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ruby.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/ruleslanguage.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/rust.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/sas.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/scala.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/scheme.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/scilab.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/scss.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/shell.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/smali.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/smalltalk.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/sml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/sqf.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/sql.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/stan.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/stata.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/step21.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/stylus.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/subunit.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/swift.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/taggerscript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/tap.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/tcl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/thrift.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/tp.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/twig.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/typescript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vala.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vbnet.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vbscript-html.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vbscript.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/verilog.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vhdl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/vim.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/wasm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/wren.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/x86asm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/xl.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/xml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/xquery.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/yaml.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/lib/languages/zephir.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlightjs-copy/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/hookable/dist/index.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/pinia/dist/pinia.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/sortablejs/modular/sortable.esm.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/style-mod/src/style-mod.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/unhead/dist/client.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/unhead/dist/shared/unhead.Cp0iF6eN.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/unhead/dist/shared/unhead.DGkFBTYv.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/unhead/dist/shared/unhead.DZbvapt-.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/unhead/dist/shared/unhead.yem5I2v_.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/vite-ssg/dist/index.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/vue-i18n/dist/vue-i18n.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/vue-router/dist/vue-router.mjs": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/w3c-keyname/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/App.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/App.vue?vue&type=style&index=0&lang.scss": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/assets/html/basic.html?raw": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppCodemirror.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppCodemirror.vue?vue&type=style&index=0&lang.css": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppEditor.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppNavbar.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppOffcanvas.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppOffcanvasToggle.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/components/AppPagesNav.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/i18n/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/main.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/modules/jedi.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/pages/EnforceAdditionalProperties.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/pages/GettingStarted.vue": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/router/routes.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/store/index.js": [
+    "/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/assets/vue-logo-B5-umZ-1.png"
+  ]
+}

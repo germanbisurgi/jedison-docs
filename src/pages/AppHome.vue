@@ -1,15 +1,20 @@
 <template>
   <div class="container">
     <h1>{{ $t('home') }}</h1>
-    <img class="img-fluid" src="@/assets/vue-logo.png" alt="A green V">
+
+    <app-editor :schema />
   </div>
 </template>
 
 <script>
 import {useHead} from "@unhead/vue"
+import AppEditor from "@/components/AppEditor.vue"
 
 export default {
   name: 'AppHome',
+  components: {
+    AppEditor
+  },
   setup() {
     useHead({
       title: 'Home',
@@ -20,6 +25,14 @@ export default {
         },
       ],
     })
+  },
+  data () {
+    return {
+      schema: {
+        "type": "object",
+        "title": "Hello world"
+      }
+    }
   }
 }
 </script>
