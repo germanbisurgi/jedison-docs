@@ -1,5 +1,8 @@
 <template>
   <aside class="aside">
+    <h5 id="offcanvasLabel" class="pt-3">
+      Jedison
+    </h5>
     <app-pages-nav />
   </aside>
 </template>

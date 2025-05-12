@@ -1,8 +1,8 @@
 <template>
-  <nav class="pages-nav">
+  <nav class="pages-nav pe-2">
     <ul class="nav flex-column">
       <li v-for="route in routes" :key="route.name" class="nav-item">
-        <router-link :to="route.path" class="nav-link" active-class="text-primary">
+        <router-link :to="route.path" class="nav-link" active-class="text-white bg-primary">
           {{ route.name }}
         </router-link>
       </li>

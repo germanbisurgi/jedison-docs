@@ -1,7 +1,7 @@
 <template>
-  <div class="navbar">
+  <div class="navbar app-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Jedison</a>
+      <div />
       <app-off-canvas-toggle class="d-xl-none" />
     </div>
   </div>

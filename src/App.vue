@@ -1,12 +1,11 @@
 <template>
   <div class="container-fluid">
-    <app-navbar />
     <app-off-canvas />
     <div class="d-flex">
-      <app-aside class="d-none d-xl-block" />
-      <div class="container-xl">
+      <app-aside class="d-none d-xl-block vh-100 overflow-y-auto" />
+      <div class="container-xl vh-100 overflow-y-auto">
+        <app-navbar />
         <router-view />
-
         <app-next-previous />
       </div>
     </div>

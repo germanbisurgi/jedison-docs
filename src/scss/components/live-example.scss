@@ -1,4 +1,5 @@
 .live-example {
+  @extend .border;
   font-size: $font-size-sm;
   font-family: $font-family-code;
 
@@ -22,5 +23,9 @@
     align-items: center;
     font-size: 22px;
     color: $primary;
+  }
+
+  .ͼ1l {
+    background-color: $gray-900;
   }
 }

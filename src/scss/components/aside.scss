@@ -1,0 +1,4 @@
+.aside {
+  @extend .border-end;
+  min-width: $offcanvas-horizontal-width;
+}
