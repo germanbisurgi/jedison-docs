@@ -6,8 +6,11 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src')
+      '@': resolve(__dirname, './src')
     }
+  },
+  build: {
+    outDir: resolve(__dirname, 'docs')
   },
   server: {
     port: 8080

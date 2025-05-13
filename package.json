@@ -7,13 +7,13 @@
   "author": "g.bisurgi <gbisurgi@protonmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --config ./config/vite.config.js",
-    "build": "vite-ssg build --config ./config/vite.config.js",
-    "serve": "vite preview --config ./config/vite.config.js",
+    "dev": "vite --config ./vite.config.js",
+    "build": "vite-ssg build --config ./vite.config.js",
+    "serve": "vite preview --config ./vite.config.js",
     "e2e": "codeceptjs run-workers 1 -c tests/e2e/codecept.conf.cjs",
     "unit": "jest --config=./tests/unit/jest.config.cjs",
-    "lint": "yarn eslint --config ./config/eslint.config.js ./src",
-    "lint:fix": "yarn eslint --fix  --config ./config/eslint.config.js ./src"
+    "lint": "yarn eslint --config ./eslint.config.js ./src",
+    "lint:fix": "yarn eslint --fix  --config ./eslint.config.js ./src"
   },
   "devDependencies": {
     "@unhead/vue": "^2.0.8",
@@ -24,7 +24,7 @@
     "jest": "^29.7.0",
     "puppeteer": "^22.8.0",
     "sass": "1.77.6",
-    "vite": "^5.2.11",
+    "vite": "^6.3.5",
     "vite-ssg": "^26.1.1",
     "vue": "^3.4.27"
   },
