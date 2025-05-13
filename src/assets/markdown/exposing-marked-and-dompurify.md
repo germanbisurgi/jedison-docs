@@ -3,6 +3,6 @@ import marked from 'marked'
 import DOMPurify from 'dompurify'
 
 // Explicitly expose them to the window object
-window.marked = marked;
-window.DOMPurify = DOMPurify;
+window.marked = marked
+window.DOMPurify = DOMPurify
 

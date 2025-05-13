@@ -1,3 +1,4 @@
 pre code.hljs {
-  background-color: $gray-900 !important;
+  @extend .border;
+  background-color: #111 !important;
 }

@@ -40,16 +40,19 @@ export default {
     }
   },
   mounted() {
-    this.srcDoc = this.example
+    this.srcDoc = this.replaceTemplates(this.example)
   },
   methods: {
     updateSrcDoc() {
-      this.srcDoc = this.$refs.cm.getValue()
+      this.srcDoc = this.replaceTemplates(this.$refs.cm.getValue())
       this.refreshCanUpdate()
     },
     refreshCanUpdate() {
       this.canUpdate = this.srcDoc !== this.$refs.cm.getValue()
-    }
+    },
+    replaceTemplates(string) {
+      return string.replace("{{theme}}", "dark")
+    },
   }
 }
 </script>

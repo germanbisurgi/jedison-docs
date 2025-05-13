@@ -7,5 +7,5 @@ BeforeSuite(({I}) => {
 });
 
 Scenario('@app should open app', ({ I }) => {
-  I.waitForText('Home')
+  I.waitForText('Jedison')
 })

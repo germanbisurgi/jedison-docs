@@ -32,6 +32,8 @@
           <li>FontAwesome 6</li>
         </ul>
       </li>
+      <li>Markdown Support with marked.js (if installed)</li>
+      <li>Secure HTML Sanitization with DomPurify (if installed)</li>
       <li>
         Plugin Editors:
         <ul>

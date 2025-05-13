@@ -34,7 +34,7 @@ export default {
       ].includes(value)
     }
   },
-  emits: ['change'],  // Changed from update:modelValue to change
+  emits: ['change'],
   data() {
     return {
       editorView: null,

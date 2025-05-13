@@ -7,7 +7,7 @@ import store from './store'
 export const createApp = ViteSSG(
   App,
   { routes },
-  ({ app, router, routes, isClient, initialState }) => {
+  async ({ app, router, routes, isClient, initialState }) => {
     app.use(router)
     app.use(i18n)
     app.use(store)
