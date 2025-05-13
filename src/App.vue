@@ -16,7 +16,7 @@
 import AppNavbar from '@/components/AppNavbar.vue'
 import AppOffCanvas from '@/components/AppOffCanvas.vue'
 import AppAside from '@/components/AppAside.vue'
-import AppNextPrevious from "@/components/AppNextPrevious.vue"
+import AppNextPrevious from '@/components/AppNextPrevious.vue'
 
 export default {
   components: {
