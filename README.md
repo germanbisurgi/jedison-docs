@@ -1,8 +1,6 @@
 [![Tests](https://github.com/germanbisurgi/vue-app-template/actions/workflows/main.yml/badge.svg)](https://github.com/germanbisurgi/vue-app-template/actions/workflows/main.yml)
 
-# vue-app
-
-Vue App Template is a project scaffold for Vue.js applications. It comes pre-configured with vite, allowing you to start building your Vue applications quickly and efficiently.
+# Jedison Documentation
 
 ## Usage
 
