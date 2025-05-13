@@ -4,7 +4,6 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
-  // assetsInclude: ['**/*.ttf'],
   resolve: {
     alias: {
       '@': resolve(__dirname, '../src')
