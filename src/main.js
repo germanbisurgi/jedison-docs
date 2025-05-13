@@ -6,7 +6,10 @@ import store from './store'
 
 export const createApp = ViteSSG(
   App,
-  { routes },
+  {
+    routes,
+    base: '/jedison-docs/',
+  },
   async ({ app, router, routes, isClient, initialState }) => {
     app.use(router)
     app.use(i18n)
