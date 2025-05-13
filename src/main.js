@@ -1,3 +1,5 @@
+/* global process */
+
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import routes from './router/routes'
@@ -8,7 +10,7 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
-    base: '/jedison-docs/',
+    base: process.env.NODE_ENV === 'production' ? '/jedison-docs/' : '/'
   },
   async ({ app, router, routes, isClient, initialState }) => {
     app.use(router)
