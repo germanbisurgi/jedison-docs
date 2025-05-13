@@ -3,6 +3,13 @@
 </template>
 
 <script>
+// Import highlight.js core and languages at build time
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import bash from 'highlight.js/lib/languages/bash'
+import xml from 'highlight.js/lib/languages/xml'
+import CopyButtonPlugin from 'highlightjs-copy'
+
 export default {
   name: 'AppHighlight',
   props: {
@@ -21,33 +28,24 @@ export default {
       return `language-${this.language}`
     }
   },
-  async mounted() {
-    if (typeof window === 'undefined') return // SSR guard
-
-    // Dynamically import highlight.js and languages
-    const hljs = await import('highlight.js/lib/core')
-    const languages = await Promise.all([
-      import('highlight.js/lib/languages/javascript'),
-      import('highlight.js/lib/languages/bash'),
-      import('highlight.js/lib/languages/xml')
-    ])
-
+  mounted() {
     // Register languages
-    hljs.default.registerLanguage('javascript', languages[0].default)
-    hljs.default.registerLanguage('bash', languages[1].default)
-    hljs.default.registerLanguage('html', languages[2].default)
+    hljs.registerLanguage('javascript', javascript)
+    hljs.registerLanguage('bash', bash)
+    hljs.registerLanguage('html', xml)
 
-    // Conditionally load copy plugin
-    if (this.$el) {
-      const CopyButtonPlugin = await import('highlightjs-copy')
-      hljs.default.addPlugin(new CopyButtonPlugin.default({
-        autohide: false,
-        callback: (text) => console.log('Copied:', text)
-      }))
+    // Add copy plugin
+    hljs.addPlugin(new CopyButtonPlugin({
+      autohide: false,
+      callback: (text) => console.log('Copied:', text)
+    }))
 
-      // Apply highlighting
-      hljs.default.highlightElement(this.$refs.codeBlock)
-    }
+    // Apply highlighting
+    this.$nextTick(() => {
+      if (this.$refs.codeBlock) {
+        hljs.highlightElement(this.$refs.codeBlock)
+      }
+    })
   }
 }
 </script>
