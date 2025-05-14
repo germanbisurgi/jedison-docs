@@ -17,7 +17,7 @@
 <script>
 import {useHead} from '@unhead/vue'
 import AppLiveExample from "@/components/AppLiveExample.vue"
-import htmlContent from '@/assets/html/minimal-example.html?raw'
+import htmlContent from '@/assets/html/playground.html?raw'
 
 export default {
   name: 'Playground',

@@ -6,6 +6,7 @@
 
     const jedison = new Jedison.Create({
         container: document.querySelector('#jedison-container'),
+        theme: new Jedison.Theme(),
         schema: {}
     })
 </script>

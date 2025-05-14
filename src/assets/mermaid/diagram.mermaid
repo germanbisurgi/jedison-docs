@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant Client as Frontend
+    participant Server as Backend
+
+    Server-->>Client: Send JSON Schema
+    Client->>Client: Render Form from Schema
+    Client->>Client: Perform Client-side Validation
+    Client-->>Server: Submit JSON Data
+    Server->>Server: Validate JSON with Same Schema
+    alt Valid JSON
+        Server-->>Client: Success Response
+    else Validation Errors
+        Server-->>Client: Return Validation Errors
+    end
