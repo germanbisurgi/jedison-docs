@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h1>Getting Started</h1>
+    <h1>What is Jedison?</h1>
 
-    <h2>What is Jedison?</h2>
+    <p>
+      This library helps you validate JSON data on the backend and generate interactive forms from JSON Schemas on the frontend.
+      <br>
+      Perfect for building admin panels, config UIs, or schema-driven apps.
+    </p>
 
-    <p>Jedison is both a JSON schema validator and a JSON editor.</p>
+    <img class="img-fluid mermaid-diagram" src="@/assets/svg/mermaid-flow-transparent.svg" alt="Jedison use diagram">
 
     <h2>Features</h2>
 
@@ -47,54 +51,28 @@
         </ul>
       </li>
     </ul>
-
-    <h2>Installing</h2>
-
-    <p>Using npm:</p>
-    <app-highlight language="bash" :code="mdInstallNpm" />
-
-    <p>Using yarn:</p>
-    <app-highlight language="bash" :code="mdInstallYarn" />
-
-    <p>Using jsDelivr CDN:</p>
-    <app-highlight language="html" :code="mdInstallJsdelivr" />
-
-    <p>Using unpkg CDN:</p>
-    <app-highlight language="html" :code="mdInstallUnpkg" />
   </div>
 </template>
 
 <script>
 import {useHead} from '@unhead/vue'
-import mdInstallNpm from '@/assets/markdown/install-npm.md?raw'
-import mdInstallYarn from '@/assets/markdown/install-yarn.md?raw'
-import mdInstallJsdelivr from '@/assets/markdown/install-jsdelivr.md?raw'
-import mdInstallUnpkg from '@/assets/markdown/install-unpkg.md?raw'
-import AppHighlight from "@/components/AppHighlight.vue"
 
 export default {
   name: 'GettingStarted',
-  components: {
-    AppHighlight
-  },
+  components: {},
   setup() {
     useHead({
       title: 'Getting started',
       meta: [
         {
           name: 'description',
-          content: 'Jedison getting started',
+          content: 'What is Jedison?',
         }
       ]
     })
   },
   data() {
-    return {
-      mdInstallNpm: mdInstallNpm,
-      mdInstallYarn: mdInstallYarn,
-      mdInstallJsdelivr: mdInstallJsdelivr,
-      mdInstallUnpkg: mdInstallUnpkg
-    }
+    return {}
   }
 }
 </script>

@@ -1,5 +1,5 @@
 .live-example {
-  @extend .border;
+  @extend .border, .mb-3;
   font-size: $font-size-sm;
   font-family: $font-family-code;
 

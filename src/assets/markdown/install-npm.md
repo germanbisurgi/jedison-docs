@@ -1,1 +1,3 @@
+```bash
 npm install jedison
+```

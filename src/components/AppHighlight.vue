@@ -1,5 +1,5 @@
 <template>
-  <pre><code ref="codeBlock" :class="languageClass">{{ code }}</code></pre>
+  <pre><code ref="codeBlock" :class="languageClass">{{ strippedCode }}</code></pre>
 </template>
 
 <script>
@@ -26,6 +26,11 @@ export default {
   computed: {
     languageClass() {
       return `language-${this.language}`
+    },
+    strippedCode() {
+      return this.code
+      .replace(/^```[a-z]*\n/, '')
+      .replace(/```[\s\n]*$/, '')
     }
   },
   mounted() {

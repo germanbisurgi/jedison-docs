@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
+    <title>Jedison in the Backend side</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-C3fcI7NW.js"></script>
+  <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-D3PvzGlC.css">
+<meta name="description" content="Using Jedison as a Validator in Backend"></head>
+<body>
+<div id="app" data-server-rendered="true"><div class="container-fluid"><div id="offcanvasNavbar" class="offcanvas offcanvas-start d-xl-none" tabindex="-1" aria-labelledby="navigation"><div class="offcanvas-header"><h5 id="offcanvasLabel" class="offcanvas-title"> Jedison </h5></div><div class="offcanvas-body"><nav class="pages-nav pe-2"><!--[--><div class="nav-group"><h6 class="nav-group-title px-3 pt-3 pb-1 text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">What is Jedison?</a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor</a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/as-validator" class="text-dark bg-primary router-link-exact-active nav-link">As Validator</a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground</a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title px-3 pt-3 pb-1 text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations</a></li><!--]--></ul><hr></div><!--]--></nav></div></div><div class="d-flex"><aside class="aside d-none d-xl-block vh-100 overflow-y-auto"><h5 id="offcanvasLabel" class="pt-3"> Jedison </h5><nav class="pages-nav pe-2"><!--[--><div class="nav-group"><h6 class="nav-group-title px-3 pt-3 pb-1 text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">What is Jedison?</a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor</a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/as-validator" class="text-dark bg-primary router-link-exact-active nav-link">As Validator</a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground</a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title px-3 pt-3 pb-1 text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations</a></li><!--]--></ul><hr></div><!--]--></nav></aside><div class="container-xl vh-100 overflow-y-auto"><div class="navbar app-navbar"><div class="container-fluid"><div></div><button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div></div><div><h1>Use as a Validator</h1><h2>Using ES Module </h2><p>npm:</p><pre><code class="language-bash">npm install jedison
+</code></pre><p>yarn:</p><pre><code class="language-bash">yarn add jedison
+</code></pre><h2>Node.js</h2><pre><code class="language-javascript">const Jedison = require('jedison')
+
+const jedison = new Jedison.Create({
+  schema: {
+    title: 'Person',
+    type: 'object',
+    properties: {
+      name: {
+        type: 'string',
+      },
+      age: {
+        type: 'integer',
+        minimum: 0,
+      },
+      email: {
+        type: 'string',
+        format: 'email',
+      },
+    },
+    required: [
+      'name',
+      'age'
+    ],
+  },
+})
+
+jedison.setValue({
+  name: 'Alice',
+  age: 30,
+  email: 'alice@example.com',
+})
+
+console.log(jedison.getErrors())
+
+jedison.setValue({
+  id: 123,
+  price: 'free',
+})
+
+console.log(jedison.getErrors())
+</code></pre></div><div class="d-flex justify-content-between mt-4 mb-4"><button class="btn btn-outline-primary"><span>« As Editor</span></button><button class="btn btn-outline-primary"><span>Playground »</span></button></div></div></div></div></div>
+
+
+</body></html>

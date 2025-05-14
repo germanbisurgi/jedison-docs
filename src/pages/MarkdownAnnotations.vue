@@ -14,13 +14,13 @@
       the Jedison configuration.
     </p>
 
+    <app-live-example :example="example" />
+
     <p>
-      For this implementation to work, both <code>DOMPurify</code> and <code>marked</code> must be available as global variables in the <code>window</code> object.
+      When using ES modules it may be necessary to expose, <code>DOMPurify</code> and <code>marked</code> as global variables in the <code>window</code> object.
     </p>
 
     <app-highlight :code="exposing" />
-
-    <app-live-example :example="example" />
   </div>
 </template>
 

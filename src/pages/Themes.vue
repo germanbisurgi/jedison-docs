@@ -20,17 +20,17 @@ import AppLiveExample from "@/components/AppLiveExample.vue"
 import htmlContent from '@/assets/html/minimal-example.html?raw'
 
 export default {
-  name: 'GettingStarted',
+  name: 'Themes',
   components: {
     AppLiveExample,
   },
   setup() {
     useHead({
-      title: 'Minimal Example',
+      title: 'Themes',
       meta: [
         {
           name: 'description',
-          content: 'Jedison minimal example',
+          content: 'Jedison themes',
         },
       ],
     })

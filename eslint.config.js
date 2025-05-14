@@ -15,7 +15,8 @@ export default [
       "no-unused-vars": 2,
       "no-undef": 2,
       "vue/max-attributes-per-line": 0,
-      "vue/html-closing-bracket-newline": 0
+      "vue/html-closing-bracket-newline": 0,
+      "vue/multi-word-component-names": 0
     },
     languageOptions: {
       ecmaVersion: 2022,

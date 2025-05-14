@@ -1,1 +1,3 @@
+```bash
 yarn add jedison
+```
