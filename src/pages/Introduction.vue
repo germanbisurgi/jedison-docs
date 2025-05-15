@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Introduction?</h1>
+    <h1>Introduction</h1>
 
     <section>
       <h2>What is Jedison?</h2>

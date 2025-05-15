@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Use as a Validator</h1>
+    <h1>Asa Validator</h1>
 
     <h2>Using ES Module </h2>
 

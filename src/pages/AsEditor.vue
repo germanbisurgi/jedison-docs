@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Use as an Editor</h1>
+    <h1>As Editor</h1>
 
     <h2>Using ES Module </h2>
 
