@@ -1,0 +1,51 @@
+```javascript
+  const jedison = new Jedison.Create({
+  language: 'de',
+  translations: {
+    de: {
+      errorAdditionalProperties: 'Hat die zusätzliche Eigenschaft "{{ property }}", aber keine zusätzlichen Eigenschaften sind erlaubt.',
+      errorAnyOf: 'Muss mindestens einem der bereitgestellten Schemata entsprechen.',
+      errorConst: 'Muss den Wert {{ const }} haben.',
+      errorContains: 'Muss mindestens ein Element enthalten, das dem bereitgestellten Schema entspricht.',
+      errorDependentRequired: 'Muss die erforderlichen Eigenschaften haben: {{ dependentRequired }}.',
+      errorEnum: 'Muss einer der aufgeführten Werte sein: {{ enum }}.',
+      errorExclusiveMaximum: 'Muss kleiner als {{ exclusiveMaximum }} sein.',
+      errorExclusiveMinimum: 'Muss größer als {{ exclusiveMinimum }} sein.',
+      errorFormat: 'Muss ein gültiges {{ format }} sein.',
+      errorItems: 'Muss Elemente enthalten, die dem bereitgestellten Schema entsprechen.',
+      errorMaximum: 'Muss höchstens {{ maximum }} sein.',
+      errorMaxItems: 'Darf höchstens {{ maxItems }} Elemente enthalten.',
+      errorMaxLength: 'Darf höchstens {{ maxLength }} Zeichen lang sein.',
+      errorMaxProperties: 'Darf höchstens {{ maxProperties }} Eigenschaften haben.',
+      errorMaxContains: 'Darf höchstens {{ maxContains }} Elemente enthalten, die dem bereitgestellten Schema entsprechen. Aktuell enthält es {{ counter }}.',
+      errorMinContains: 'Muss mindestens {{ minContains }} Elemente enthalten, die dem bereitgestellten Schema entsprechen. Aktuell enthält es {{ counter }}.',
+      errorMinimum: 'Muss mindestens {{ minimum }} sein.',
+      errorMinItems: 'Muss mindestens {{ minItems }} Elemente enthalten.',
+      errorMinLength: 'Muss mindestens {{ minLength }} Zeichen lang sein.',
+      errorMinProperties: 'Muss mindestens {{ minProperties }} Eigenschaften haben.',
+      errorMultipleOf: 'Muss ein Vielfaches von {{ multipleOf }} sein.',
+      errorNot: 'Darf nicht dem bereitgestellten Schema entsprechen.',
+      errorOneOf: 'Muss genau einem der bereitgestellten Schemata entsprechen. Derzeit entspricht es {{ counter }} der Schemata.',
+      errorPattern: 'Muss dem Muster "{{ pattern }}" entsprechen.',
+      errorPrefixItems: 'Element {{ index }} entspricht nicht der Validierung.',
+      errorPropertyNames: 'Der Eigenschaftsname "{{ propertyName }}" entspricht nicht der Validierung.',
+      errorProperties: 'Die folgenden Eigenschaften entsprechen nicht ihren Schemata: {{ properties }}',
+      errorRequired: 'Muss die erforderlichen Eigenschaften haben: {{ required }}.',
+      errorType: 'Muss vom Typ {{ type }} sein.',
+      errorUnevaluatedProperties: 'Hat eine ungültige nicht bewertete Eigenschaft "{{ property }}"',
+      errorUniqueItems: 'Muss eindeutige Elemente haben.',
+      arrayDelete: 'Element löschen',
+      arrayMoveUp: 'Nach oben verschieben',
+      arrayMoveDown: 'Nach unten verschieben',
+      arrayDrag: 'Ziehen',
+      arrayAdd: 'Element hinzufügen',
+      arrayConfirmDelete: 'Möchten Sie dieses Element wirklich löschen?',
+      objectAddProperty: 'Eigenschaft hinzufügen',
+      objectPropertyAdded: 'Feld wurde dem Formular hinzugefügt',
+      objectPropertyRemoved: 'Feld wurde aus dem Formular entfernt',
+      propertiesToggle: 'Eigenschaften',
+      collapseToggle: 'Einklappen'
+    }
+  }
+})
+```

@@ -88,7 +88,7 @@ export default {
     initEditor() {
       // Create minimal setup without line numbers
       const minimalSetup = [
-        EditorView.lineWrapping,
+        // EditorView.lineWrapping,
         // Add other essential extensions you need
         // but exclude lineNumbers
       ]

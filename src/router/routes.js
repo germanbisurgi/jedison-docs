@@ -6,6 +6,7 @@ import Methods from "@/pages/Methods.vue"
 import Events from "@/pages/Events.vue"
 import Themes from "@/pages/Themes.vue"
 import Icons from "@/pages/Icons.vue"
+import LanguageAndTranslations from "@/pages/LanguageAndTranslations.vue"
 import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 
@@ -77,6 +78,15 @@ export const routes = [
     path: '/icons',
     name: 'Icons',
     component: Icons,
+    meta: {
+      navbar: true,
+      group: 'Features'
+    }
+  },
+  {
+    path: '/language-and-translations',
+    name: 'Language and Translations',
+    component: LanguageAndTranslations,
     meta: {
       navbar: true,
       group: 'Features'
