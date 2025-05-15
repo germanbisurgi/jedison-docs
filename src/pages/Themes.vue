@@ -2,26 +2,33 @@
   <div>
     <h1>Themes</h1>
 
-    <p>Jedison supports multiple CSS frameworks through its theme system, allowing you to maintain consistent styling with your application's design system.</p>
-
     <section>
       <h2>Supported Themes</h2>
+      <p>Jedison supports multiple CSS frameworks through its theme system, allowing you to maintain consistent styling with your application's design system.</p>
 
-      <h3>Bootstrap 5</h3>
-      <p>Full support for Bootstrap 5 form styling: <code>new Jedison.ThemeBootstrap5()</code></p>
-      <app-live-example :example="htmlThemesBootstrap5" />
+      <article>
+        <h3>Bootstrap 5</h3>
+        <p>Full support for Bootstrap 5 form styling: <code>new Jedison.ThemeBootstrap5()</code></p>
+        <app-live-example :example="htmlThemesBootstrap5" />
+      </article>
 
-      <h3>Bootstrap 4</h3>
-      <p>Full support for Bootstrap 4 form styling: <code>new Jedison.ThemeBootstrap4()</code></p>
-      <app-live-example :example="htmlThemesBootstrap4" />
+      <article>
+        <h3>Bootstrap 4</h3>
+        <p>Full support for Bootstrap 4 form styling: <code>new Jedison.ThemeBootstrap4()</code></p>
+        <app-live-example :example="htmlThemesBootstrap4" />
+      </article>
 
-      <h3>Bootstrap 3</h3>
-      <p>Full support for Bootstrap 3 form styling: <code>new Jedison.ThemeBootstrap3()</code></p>
-      <app-live-example :example="htmlThemesBootstrap3" />
+      <article>
+        <h3>Bootstrap 3</h3>
+        <p>Full support for Bootstrap 3 form styling: <code>new Jedison.ThemeBootstrap3()</code></p>
+        <app-live-example :example="htmlThemesBootstrap3" />
+      </article>
 
-      <h3>Default Theme</h3>
-      <p>Basic unstyled theme that provides minimal structure: <code>new Jedison.Theme()</code></p>
-      <app-live-example :example="htmlThemesTheme" />
+      <article>
+        <h3>Default Theme</h3>
+        <p>Basic unstyled theme that provides minimal structure: <code>new Jedison.Theme()</code></p>
+        <app-live-example :example="htmlThemesTheme" />
+      </article>
     </section>
   </div>
 </template>
@@ -41,7 +48,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Themes',
+      title: 'Jedison - Themes',
       meta: [
         {
           name: 'description',

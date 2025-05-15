@@ -78,11 +78,11 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison - events',
+      title: 'Jedison - Events',
       meta: [
         {
           name: 'description',
-          content: 'Detailed documentation for Jedison event listeners',
+          content: 'Jedison event listeners documentation',
         }
       ]
     })

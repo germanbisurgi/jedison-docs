@@ -9,23 +9,35 @@
 
       <p>Jedison supports multiple icon libraries which can be specified using the <code>iconLib</code> option:</p>
 
-      <h3><code>'bootstrap-icons'</code></h3>
-      <app-live-example :example="htmlIconsBootstrapIcons" />
+      <article>
+        <h3><code>'bootstrap-icons'</code></h3>
+        <app-live-example :example="htmlIconsBootstrapIcons" />
+      </article>
 
-      <h3><code>'fontawesome6'</code></h3>
-      <app-live-example :example="htmlIconsFontawesome6" />
+      <article>
+        <h3><code>'fontawesome6'</code></h3>
+        <app-live-example :example="htmlIconsFontawesome6" />
+      </article>
 
-      <h3><code>'fontawesome5'</code></h3>
-      <app-live-example :example="htmlIconsFontawesome5" />
+      <article>
+        <h3><code>'fontawesome5'</code></h3>
+        <app-live-example :example="htmlIconsFontawesome5" />
+      </article>
 
-      <h3><code>'fontawesome4'</code></h3>
-      <app-live-example :example="htmlIconsFontawesome4" />
+      <article>
+        <h3><code>'fontawesome4'</code></h3>
+        <app-live-example :example="htmlIconsFontawesome4" />
+      </article>
 
-      <h3><code>'fontawesome3'</code></h3>
-      <app-live-example :example="htmlIconsFontawesome3" />
+      <article>
+        <h3><code>'fontawesome3'</code></h3>
+        <app-live-example :example="htmlIconsFontawesome3" />
+      </article>
 
-      <h3><code>'glyphicons'</code><small> - Bootstrap 3's Glyphicons</small></h3>
-      <app-live-example :example="htmlIconsGlyphicons" />
+      <article>
+        <h3><code>'glyphicons'</code><small> - Bootstrap 3's Glyphicons</small></h3>
+        <app-live-example :example="htmlIconsGlyphicons" />
+      </article>
     </section>
   </div>
 </template>
@@ -47,7 +59,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Icons',
+      title: 'Jedison - Icons',
       meta: [
         {
           name: 'description',

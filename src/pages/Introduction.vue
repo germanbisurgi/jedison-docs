@@ -44,7 +44,7 @@ export default {
   components: {},
   setup() {
     useHead({
-      title: 'Getting started',
+      title: 'Jedison - Introduction',
       meta: [
         {
           name: 'description',

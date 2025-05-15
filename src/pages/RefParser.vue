@@ -2,7 +2,19 @@
   <div>
     <h1>RefParser</h1>
 
-    <p>A <code>RefParser</code> resolves <code>$ref</code> references in JSON Schemas by dereferencing them.</p>
+    <article>
+      <p>
+        Jedison includes a <code>RefParser</code> class, which processes a JSON Schema and builds an internal list of dereferenced <code>$ref</code> pointers.
+        <br>
+        You can pass the <code>RefParser</code> instance to a Jedison instance, which will then use it to handle schema dereferencing internally.
+        <br>
+        The original schema remains unchanged—schemas are dereferenced at runtime only when needed.
+        <br>
+        This approach makes it easier to support and manage recursive schemas.
+      </p>
+
+      <app-highlight language="javascript" :code="mdRefParserUsage" />
+    </article>
 
     <article>
       <h2>Before Dereferencing</h2>
@@ -18,21 +30,7 @@
       <app-live-example :example="htmlRefParserBefore" />
     </article>
 
-    <article>
-      <h2>RefParser</h2>
 
-      <p>
-        Jedison includes a <code>RefParser</code> class, which processes a JSON Schema and builds an internal list of dereferenced <code>$ref</code> pointers.
-        <br>
-        You can pass the <code>RefParser</code> instance to a Jedison instance, which will then use it to handle schema dereferencing internally.
-        <br>
-        The original schema remains unchanged—schemas are dereferenced at runtime only when needed.
-        <br>
-        This approach makes it easier to support and manage recursive schemas.
-      </p>
-
-      <app-highlight language="javascript" :code="mdRefParserUsage" />
-    </article>
 
     <article>
       <h2>After Dereferencing</h2>
@@ -93,7 +91,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison RefParser - Resolving JSON Schema References',
+      title: 'Jedison - RefParser',
       meta: [
         {
           name: 'description',

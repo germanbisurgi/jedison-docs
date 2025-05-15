@@ -72,7 +72,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Language and Translations in Jedison',
+      title: 'Jedison Language and Translations',
       meta: [
         {
           name: 'description',
