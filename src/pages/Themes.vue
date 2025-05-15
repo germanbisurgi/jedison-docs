@@ -4,59 +4,49 @@
 
     <p>Jedison supports multiple CSS frameworks through its theme system, allowing you to maintain consistent styling with your application's design system.</p>
 
-    <h2>Supported Themes</h2>
+    <section>
+      <h2>Supported Themes</h2>
 
-    <div class="theme-grid">
-      <div class="theme-card">
-        <h3>Default Theme</h3>
-        <p>Basic unstyled theme that provides minimal structure</p>
-        <code>new Jedison.Theme()</code>
-      </div>
+      <h3>Bootstrap 5</h3>
+      <p>Full support for Bootstrap 5 form styling: <code>new Jedison.ThemeBootstrap5()</code></p>
+      <app-live-example :example="htmlThemesBootstrap5" />
 
-      <app-live-example :example="htmlThemesTheme" />
-
-      <div class="theme-card">
-        <h3>Bootstrap 3</h3>
-        <p>Full support for Bootstrap 3 form styling</p>
-        <code>new Jedison.ThemeBootstrap3()</code>
-      </div>
-
-      <app-live-example :example="htmlThemesBootstrap3" />
-
-
-      <div class="theme-card">
-        <h3>Bootstrap 4</h3>
-        <p>Full support for Bootstrap 4 form styling</p>
-        <code>new Jedison.ThemeBootstrap4()</code>
-      </div>
-
+      <h3>Bootstrap 4</h3>
+      <p>Full support for Bootstrap 4 form styling: <code>new Jedison.ThemeBootstrap4()</code></p>
       <app-live-example :example="htmlThemesBootstrap4" />
 
-      <div class="theme-card">
-        <h3>Bootstrap 5</h3>
-        <p>Full support for Bootstrap 5 form styling</p>
-        <code>new Jedison.ThemeBootstrap5()</code>
-      </div>
+      <h3>Bootstrap 3</h3>
+      <p>Full support for Bootstrap 3 form styling: <code>new Jedison.ThemeBootstrap3()</code></p>
+      <app-live-example :example="htmlThemesBootstrap3" />
 
-      <app-live-example :example="htmlThemesBootstrap5" />
-    </div>
+      <h3>Default Theme</h3>
+      <p>Basic unstyled theme that provides minimal structure: <code>new Jedison.Theme()</code></p>
+      <app-live-example :example="htmlThemesTheme" />
+    </section>
 
-    <h2>Icon Library Integration</h2>
+    <section>
+      <h2>Icon Library Integration</h2>
 
-    <p>Jedison supports multiple icon libraries which can be specified using the <code>iconLib</code> option:</p>
+      <p>Jedison supports multiple icon libraries which can be specified using the <code>iconLib</code> option:</p>
 
-    <ul>
-      <li><code>'glyphicons'</code> - Bootstrap 3's Glyphicons</li>
-      <li><code>'bootstrap-icons'</code> - Bootstrap Icons</li>
-      <li><code>'fontawesome3'</code> - Font Awesome 3</li>
-      <li><code>'fontawesome4'</code> - Font Awesome 4</li>
-      <li><code>'fontawesome5'</code> - Font Awesome 5</li>
-      <li><code>'fontawesome6'</code> - Font Awesome 6</li>
-    </ul>
+      <h3><code>'bootstrap-icons'</code></h3>
+      <app-live-example :example="htmlIconsBootstrapIcons" />
 
-    <h2>Basic Usage Example</h2>
+      <h3><code>'fontawesome6'</code></h3>
+      <app-live-example :example="htmlIconsFontawesome6" />
 
-    <p>This example shows how to initialize Jedison with the Bootstrap 5 theme:</p>
+      <h3><code>'fontawesome5'</code></h3>
+      <app-live-example :example="htmlIconsFontawesome5" />
+
+      <h3><code>'fontawesome4'</code></h3>
+      <app-live-example :example="htmlIconsFontawesome4" />
+
+      <h3><code>'fontawesome3'</code></h3>
+      <app-live-example :example="htmlIconsFontawesome3" />
+
+      <h3><code>'glyphicons'</code><small> - Bootstrap 3's Glyphicons</small></h3>
+      <app-live-example :example="htmlIconsGlyphicons" />
+    </section>
   </div>
 </template>
 
@@ -67,6 +57,12 @@ import htmlThemesTheme from '@/assets/html/themes-theme.html?raw'
 import htmlThemesBootstrap3 from '@/assets/html/themes-bootstrap3.html?raw'
 import htmlThemesBootstrap4 from '@/assets/html/themes-bootstrap4.html?raw'
 import htmlThemesBootstrap5 from '@/assets/html/themes-bootstrap5.html?raw'
+import htmlIconsBootstrapIcons from '@/assets/html/icons-bootstrap-icons.html?raw'
+import htmlIconsFontawesome3 from '@/assets/html/icons-fontawesome3.html?raw'
+import htmlIconsFontawesome4 from '@/assets/html/icons-fontawesome4.html?raw'
+import htmlIconsFontawesome5 from '@/assets/html/icons-fontawesome5.html?raw'
+import htmlIconsFontawesome6 from '@/assets/html/icons-fontawesome6.html?raw'
+import htmlIconsGlyphicons from '@/assets/html/icons-glyphicons.html?raw'
 
 export default {
   name: 'Themes',
@@ -89,7 +85,13 @@ export default {
       htmlThemesTheme,
       htmlThemesBootstrap3,
       htmlThemesBootstrap4,
-      htmlThemesBootstrap5
+      htmlThemesBootstrap5,
+      htmlIconsBootstrapIcons,
+      htmlIconsFontawesome3,
+      htmlIconsFontawesome4,
+      htmlIconsFontawesome5,
+      htmlIconsFontawesome6,
+      htmlIconsGlyphicons
     }
   }
 }

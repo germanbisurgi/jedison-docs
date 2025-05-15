@@ -13,6 +13,15 @@
     <h2>Node.js</h2>
 
     <app-highlight language="javascript" :code="mdUsingNode" />
+
+    <p>To use Jedison as a JSON validator, this options are required:</p>
+
+    <ul>
+      <li>
+        <strong><code>schema</code></strong> defines the validation rules. This is the only mandatory option when using Jedison for validation. The validator will check JSON data
+        against this schema without needing a UI container or theme.
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -34,7 +43,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison in the Backend side',
+      title: 'Jedison - Using as a Validator',
       meta: [
         {
           name: 'description',

@@ -12,11 +12,7 @@ const jedison = new Jedison.Create({
       age: {
         type: 'integer',
         minimum: 0,
-      },
-      email: {
-        type: 'string',
-        format: 'email',
-      },
+      }
     },
     required: [
       'name',
@@ -27,8 +23,7 @@ const jedison = new Jedison.Create({
 
 jedison.setValue({
   name: 'Alice',
-  age: 30,
-  email: 'alice@example.com',
+  age: 30
 })
 
 console.log(jedison.getErrors())

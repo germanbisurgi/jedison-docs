@@ -1,5 +1,5 @@
 <template>
-  <div id="offcanvasNavbar" class="offcanvas offcanvas-start d-xl-none" tabindex="-1" aria-labelledby="navigation">
+  <div id="offcanvasNavbar" ref="offcanvas" class="offcanvas offcanvas-start d-xl-none" tabindex="-1" aria-labelledby="navigation">
     <div class="offcanvas-header">
       <h5 id="offcanvasLabel" class="offcanvas-title">
         Jedison
@@ -13,11 +13,21 @@
 
 <script>
 import AppPagesNav from "@/components/AppPagesNav.vue"
+// import { Offcanvas } from 'bootstrap'
 
 export default {
   name: 'AppOffCanvas',
   components: {
     AppPagesNav
   },
+  mounted() {
+    // const offcanvas = Offcanvas.getInstance(this.$refs.offcanvas)
+    //
+    // document.querySelectorAll('.offcanvas a').forEach(link => {
+    //   link.addEventListener('click', () => {
+    //     offcanvas.hide()
+    //   })
+    // })
+  }
 }
 </script>
