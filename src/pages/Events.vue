@@ -2,11 +2,16 @@
   <div>
     <h1>Events</h1>
 
-    <p>Jedison provides several events:</p>
+    <article>
+      <p>Jedison provides several events that let you track changes and user interactions in your forms. These events are useful because they allow you to:</p>
+
+      <ul>
+        <li>React immediately when data changes (like saving to a database)</li>
+        <li>Synchronize form state with other parts of your application</li>
+      </ul>
+    </article>
 
     <section>
-      <h2>Event Listeners</h2>
-
       <article>
         <h3><code>change</code></h3>
         <p>Triggered when the entire instance changes (whole JSON value/instance/editor).</p>

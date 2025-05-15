@@ -1,7 +1,11 @@
 <template>
-  <nav class="pages-nav pe-2">
+  <nav class="pages-nav">
+    <h5 class="mb-3">
+      Jedison
+    </h5>
+
     <div v-for="(groupRoutes, groupName) in groupedRoutes" :key="groupName" class="nav-group">
-      <h6 class="nav-group-title px-3 pt-3 pb-1 text-muted text-uppercase small">
+      <h6 class="nav-group-title text-muted text-uppercase small">
         {{ groupName }}
       </h6>
       <ul class="nav flex-column">

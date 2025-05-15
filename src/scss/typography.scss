@@ -3,12 +3,10 @@ h1 {
 }
 
 h2 {
-  @extend .pt-5;
   @extend .mb-3;
 }
 
 h3 {
-  @extend .pt-5;
   @extend .mb-3;
   font-size: 1.2rem;
 }

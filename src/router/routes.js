@@ -1,6 +1,6 @@
 import AsEditor from "@/pages/AsEditor.vue"
 import AsValidator from "@/pages/AsValidator.vue"
-import WhatIsJedison from "@/pages/WhatIsJedison.vue"
+import Introduction from "@/pages/Introduction.vue"
 import Playground from "@/pages/Playground.vue"
 import Methods from "@/pages/Methods.vue"
 import Events from "@/pages/Events.vue"
@@ -13,8 +13,8 @@ import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 export const routes = [
   {
     path: '/',
-    name: 'What is Jedison?',
-    component: WhatIsJedison,
+    name: 'introduction',
+    component: Introduction,
     meta: {
       navbar: true,
       group: 'Getting Started'

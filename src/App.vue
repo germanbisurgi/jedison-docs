@@ -1,12 +1,16 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <app-off-canvas />
-    <div class="d-flex">
-      <app-aside class="d-none d-xl-block vh-100 overflow-y-auto" />
-      <div class="container-xl vh-100 overflow-y-auto">
-        <app-navbar />
-        <router-view />
-        <app-next-previous />
+
+    <div class="vh-100 overflow-y-auto">
+      <div class="d-flex">
+        <app-aside class="vh-100 overflow-y-auto d-none d-xl-block" />
+
+        <div class="wrapper">
+          <app-navbar />
+          <router-view class="app-content" />
+          <app-next-previous class="app-prev-next" />
+        </div>
       </div>
     </div>
   </div>
@@ -30,4 +34,21 @@ export default {
 
 <style lang="scss">
 @import "scss/main";
+
+.wrapper {
+  @extend .px-3;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-prev-next {
+}
 </style>
