@@ -51,7 +51,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison - Using as an Editor in Frontend',
+      title: 'Jedison - As Editor',
       meta: [
         {
           name: 'description',

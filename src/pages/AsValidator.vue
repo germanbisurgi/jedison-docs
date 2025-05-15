@@ -43,7 +43,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison - Using as a Validator',
+      title: 'Jedison - As Validator',
       meta: [
         {
           name: 'description',

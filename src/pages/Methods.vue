@@ -97,7 +97,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Jedison - methods',
+      title: 'Jedison - Methods',
       meta: [
         {
           name: 'description',
