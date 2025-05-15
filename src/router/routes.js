@@ -13,7 +13,7 @@ import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 export const routes = [
   {
     path: '/',
-    name: 'introduction',
+    name: 'Introduction',
     component: Introduction,
     meta: {
       navbar: true,
