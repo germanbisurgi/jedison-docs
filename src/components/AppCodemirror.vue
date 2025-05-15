@@ -6,7 +6,6 @@
 import {EditorView} from '@codemirror/view'
 import {EditorState} from '@codemirror/state'
 import {html} from '@codemirror/lang-html'
-import {basicSetup} from 'codemirror'
 import {oneDark} from '@codemirror/theme-one-dark'
 import {githubLight, githubDark} from '@uiw/codemirror-theme-github'
 import {dracula} from '@uiw/codemirror-theme-dracula'
@@ -54,7 +53,7 @@ export default {
     }
   },
   watch: {
-    value(newValue) {  // Changed from modelValue to value
+    value(newValue) {
       if (this.editorView && newValue !== this.editorView.state.doc.toString()) {
         this.editorView.dispatch({
           changes: {
@@ -87,8 +86,15 @@ export default {
       return this.editorValue
     },
     initEditor() {
+      // Create minimal setup without line numbers
+      const minimalSetup = [
+        EditorView.lineWrapping,
+        // Add other essential extensions you need
+        // but exclude lineNumbers
+      ]
+
       const extensions = [
-        basicSetup,
+        ...minimalSetup,
         html(),
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
@@ -133,11 +139,5 @@ export default {
 
 .code-mirror-container .cm-editor {
   height: 100%;
-}
-
-.cm-content {
-  font-family: monospace;
-  line-height: 1.5;
-  font-size: 12px;
 }
 </style>

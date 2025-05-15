@@ -5,6 +5,7 @@ import Playground from "@/pages/Playground.vue"
 import Methods from "@/pages/Methods.vue"
 import Events from "@/pages/Events.vue"
 import Themes from "@/pages/Themes.vue"
+import Icons from "@/pages/Icons.vue"
 import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 
@@ -67,6 +68,15 @@ export const routes = [
     path: '/themes',
     name: 'Themes',
     component: Themes,
+    meta: {
+      navbar: true,
+      group: 'Features'
+    }
+  },
+  {
+    path: '/icons',
+    name: 'Icons',
+    component: Icons,
     meta: {
       navbar: true,
       group: 'Features'
