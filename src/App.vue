@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <app-off-canvas />
+  <div class="app-container">
+    <app-off-canvas/>
 
     <div class="vh-100 overflow-y-auto">
       <div class="d-flex">
-        <app-aside class="vh-100 overflow-y-auto d-none d-xl-block" />
+        <app-aside class="vh-100 overflow-y-auto d-none d-xl-block"/>
 
-        <div class="wrapper">
-          <app-navbar />
-          <router-view class="app-content" />
-          <app-next-previous class="app-prev-next" />
+        <div class="wrapper border-start border-end">
+          <app-navbar/>
+          <router-view class="app-content"/>
+          <app-next-previous class="app-prev-next"/>
         </div>
       </div>
     </div>
@@ -34,21 +34,4 @@ export default {
 
 <style lang="scss">
 @import "scss/main";
-
-.wrapper {
-  @extend .px-3;
-  height: 100vh;
-  width: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-content {
-  flex: 1;
-  overflow-y: auto;
-}
-
-.app-prev-next {
-}
 </style>

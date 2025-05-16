@@ -2,34 +2,51 @@
   <div>
     <h1>As Editor</h1>
 
-    <h2>Using ES Module </h2>
+    <section>
+      <h2>Using ES Module </h2>
 
-    <p>npm:</p>
-    <app-highlight language="bash" :code="mdInstallNpm" />
+      <article>
+        <p>npm:</p>
+        <app-highlight language="bash" :code="mdInstallNpm"/>
+      </article>
 
-    <p>yarn:</p>
-    <app-highlight language="bash" :code="mdInstallYarn" />
+      <article>
+        <p>yarn:</p>
+        <app-highlight language="bash" :code="mdInstallYarn"/>
+      </article>
 
-    <app-highlight language="html" :code="mdUsingEsm" />
+      <article>
+        <app-highlight language="html" :code="mdUsingEsm"/>
+      </article>
+    </section>
 
-    <h2>Using from CDN </h2>
+    <section>
+      <h2>Using from CDN </h2>
 
-    <app-highlight language="html" :code="mdUsingCdn" />
+      <article>
+        <app-highlight language="html" :code="mdUsingCdn"/>
+      </article>
 
-    <p>To use Jedison as a JSON editor, this options are required:</p>
+      <article>
+        <p>To use Jedison as a JSON editor, this options are required:</p>
 
-    <ul>
-      <li>
-        <strong><code>container</code></strong> specifies where the editor renders in your HTML. Without it, Jedison has no place to display the form. In the example, we attach it to <code>&lt;div id="jedison-container"&gt;</code> using <code>document.querySelector</code>.
-      </li>
-      <li>
-        <strong><code>theme</code></strong> defines the editor's visual style. While Jedison provides a default theme (<code>new Jedison.Theme()</code>), you must include this option—omitting it may break styling or functionality.
-      </li>
-      <li>
-        <strong><code>schema</code></strong> defines the validation rules. The editor will check JSON data
-        against this schema.
-      </li>
-    </ul>
+        <ul>
+          <li>
+            <strong><code>container</code></strong> specifies where the editor renders in your HTML. Without it, Jedison has no place to display the form. In the example, we attach
+            it
+            to <code>&lt;div id="jedison-container"&gt;</code> using <code>document.querySelector</code>.
+          </li>
+          <li>
+            <strong><code>theme</code></strong> defines the editor's visual style. While Jedison provides a default theme (<code>new Jedison.Theme()</code>), you must include this
+            option—omitting it may break styling or functionality.
+          </li>
+          <li>
+            <strong><code>schema</code></strong> defines the validation rules. The editor will check JSON data
+            against this schema.
+          </li>
+        </ul>
+      </article>
+    </section>
   </div>
 </template>
 

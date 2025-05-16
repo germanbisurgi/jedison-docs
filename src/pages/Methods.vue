@@ -47,12 +47,12 @@
           <li><code>filters</code>: Include only errors with <code>type</code> that are included in the filter array</li>
         </ul>
 
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
+        <div class="d-flex flex-column flex-md-row gap-3">
+          <div class="flex-fill">
             <app-highlight language="javascript" :code="mdMethodGetErrorsAndWarnings" />
             <app-highlight language="javascript" :code="mdValidationErrors" />
           </div>
-          <div class="col-xs-12 col-md-6">
+          <div class="flex-fill">
             <app-highlight language="javascript" :code="mdMethodGetErrors" />
             <app-highlight language="javascript" :code="mdValidationErrorsFiltered" />
           </div>
