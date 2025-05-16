@@ -1,7 +1,32 @@
 <template>
   <div>
-    <h1>As Editor</h1>
+    <h1>Install</h1>
+
     <section>
+      <h2>Using ES Module </h2>
+
+      <article>
+        <p>npm:</p>
+        <app-highlight language="bash" :code="mdInstallNpm"/>
+      </article>
+
+      <article>
+        <p>yarn:</p>
+        <app-highlight language="bash" :code="mdInstallYarn"/>
+      </article>
+
+      <article>
+        <app-highlight language="html" :code="mdUsingEsm"/>
+      </article>
+    </section>
+
+    <section>
+      <h2>Using from CDN </h2>
+
+      <article>
+        <app-highlight language="html" :code="mdUsingCdn"/>
+      </article>
+
       <article>
         <p>To use Jedison as a JSON editor, this options are required:</p>
 
@@ -20,8 +45,6 @@
             against this schema.
           </li>
         </ul>
-
-        <app-live-example :example="htmlContent" />
       </article>
     </section>
   </div>
@@ -29,13 +52,19 @@
 
 <script>
 import {useHead} from '@unhead/vue'
-import AppLiveExample from "@/components/AppLiveExample.vue"
-import htmlContent from '@/assets/html/playground.html?raw'
+import AppHighlight from "@/components/AppHighlight.vue"
+import mdInstallNpm from '@/assets/markdown/install-npm.md?raw'
+import mdInstallYarn from '@/assets/markdown/install-yarn.md?raw'
+import mdInstallJsdelivr from '@/assets/markdown/install-jsdelivr.md?raw'
+import mdInstallUnpkg from '@/assets/markdown/install-unpkg.md?raw'
+import mdUsingEsm from '@/assets/markdown/using-esm.md?raw'
+import mdUsingCdn from '@/assets/markdown/using-cdn.md?raw'
+import mdUsingNode from '@/assets/markdown/using-node.md?raw'
 
 export default {
   name: 'AsEditor',
   components: {
-    AppLiveExample
+    AppHighlight
   },
   setup() {
     useHead({
@@ -50,7 +79,13 @@ export default {
   },
   data() {
     return {
-      htmlContent
+      mdInstallNpm,
+      mdInstallYarn,
+      mdInstallJsdelivr,
+      mdInstallUnpkg,
+      mdUsingEsm,
+      mdUsingCdn,
+      mdUsingNode
     }
   }
 }

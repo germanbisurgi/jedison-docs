@@ -1,6 +1,7 @@
+import Introduction from "@/pages/Introduction.vue"
+import Install from "@/pages/Install.vue"
 import AsEditor from "@/pages/AsEditor.vue"
 import AsValidator from "@/pages/AsValidator.vue"
-import Introduction from "@/pages/Introduction.vue"
 import Playground from "@/pages/Playground.vue"
 import Methods from "@/pages/Methods.vue"
 import Events from "@/pages/Events.vue"
@@ -15,6 +16,15 @@ export const routes = [
     path: '/',
     name: 'Introduction',
     component: Introduction,
+    meta: {
+      navbar: true,
+      group: 'Getting Started'
+    }
+  },
+  {
+    path: '/install',
+    name: 'Install',
+    component: Install,
     meta: {
       navbar: true,
       group: 'Getting Started'
@@ -39,15 +49,6 @@ export const routes = [
     }
   },
   {
-    path: '/playground',
-    name: 'Playground',
-    component: Playground,
-    meta: {
-      navbar: true,
-      group: 'Getting Started'
-    }
-  },
-  {
     path: '/methods',
     name: 'Methods',
     component: Methods,
@@ -60,6 +61,15 @@ export const routes = [
     path: '/events',
     name: 'Events',
     component: Events,
+    meta: {
+      navbar: true,
+      group: 'Getting Started'
+    }
+  },
+  {
+    path: '/playground',
+    name: 'Playground',
+    component: Playground,
     meta: {
       navbar: true,
       group: 'Getting Started'

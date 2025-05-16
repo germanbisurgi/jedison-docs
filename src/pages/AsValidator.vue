@@ -2,26 +2,23 @@
   <div>
     <h1>As Validator</h1>
 
-    <h2>Using ES Module </h2>
+    <section>
+      <h2>Node.js</h2>
 
-    <p>npm:</p>
-    <app-highlight language="bash" :code="mdInstallNpm" />
+      <article>
+        <p>To use Jedison as a JSON validator, this options are required:</p>
 
-    <p>yarn:</p>
-    <app-highlight language="bash" :code="mdInstallYarn" />
+        <ul>
+          <li>
+            <strong><code>schema</code></strong> defines the validation rules. This is the only mandatory option when using Jedison for validation. The validator will check JSON
+            data
+            against this schema without needing a UI container or theme.
+          </li>
+        </ul>
 
-    <h2>Node.js</h2>
-
-    <app-highlight language="javascript" :code="mdUsingNode" />
-
-    <p>To use Jedison as a JSON validator, this options are required:</p>
-
-    <ul>
-      <li>
-        <strong><code>schema</code></strong> defines the validation rules. This is the only mandatory option when using Jedison for validation. The validator will check JSON data
-        against this schema without needing a UI container or theme.
-      </li>
-    </ul>
+        <app-highlight language="javascript" :code="mdUsingNode"/>
+      </article>
+    </section>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
-```javascript
-const Jedison = require('jedison')
+// const Jedison = require('jedison')
+import Jedison from 'jedison'
 
 const jedison = new Jedison.Create({
   schema: {
@@ -28,23 +28,9 @@ jedison.setValue({
 
 console.log(jedison.getErrors())
 
-// Valid: outputs is an empty array
-// []
-
 jedison.setValue({
   id: 123,
   price: 'free',
 })
 
 console.log(jedison.getErrors())
-
-// Invalid: outputs is an array of errors
-// [
-//   {
-//     type: 'error',
-//     path: '#',
-//     constraint: 'required',
-//     messages: ['Must have the required properties: name, age.']
-//   }
-// ]
-```
