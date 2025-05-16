@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container safe-area-top safe-area-bottom">
     <app-off-canvas />
 
     <div class="vh-100 overflow-y-auto">
