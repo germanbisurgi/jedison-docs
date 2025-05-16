@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Playground</h1>
+    <header>
+      <h1>Playground</h1>
+    </header>
 
     <section>
       <article>

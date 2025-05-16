@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>As Editor</h1>
+    <header>
+      <h1>As Editor</h1>
+    </header>
+
     <section>
       <article>
         <p>To use Jedison as a JSON editor, this options are required:</p>

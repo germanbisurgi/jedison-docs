@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Themes</h1>
+    <header>
+      <h1>Themes</h1>
+    </header>
 
     <section>
       <h2>Supported Themes</h2>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Events</h1>
+    <header>
+      <h1>Events</h1>
+    </header>
 
     <article>
       <p>Jedison provides several events that let you track changes and user interactions in your forms. These events are useful because they allow you to:</p>

@@ -1,15 +1,15 @@
 <template>
   <div class="app-container">
-    <app-off-canvas/>
+    <app-off-canvas />
 
     <div class="vh-100 overflow-y-auto">
       <div class="d-flex">
-        <app-aside class="vh-100 overflow-y-auto d-none d-xl-block"/>
+        <app-aside class="vh-100 overflow-y-auto d-none d-xl-block" />
 
         <div class="wrapper border-start border-end">
-          <app-navbar/>
-          <router-view class="app-content"/>
-          <app-next-previous class="app-prev-next"/>
+          <app-navbar />
+          <router-view class="app-content" />
+          <app-next-previous class="app-prev-next" />
         </div>
       </div>
     </div>

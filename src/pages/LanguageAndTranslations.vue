@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Language and Translations</h1>
+    <header>
+      <h1>Language and Translations</h1>
+    </header>
 
     <section>
       <h2>Default Language</h2>

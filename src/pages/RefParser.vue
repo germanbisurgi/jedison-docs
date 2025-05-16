@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>RefParser</h1>
+    <header>
+      <h1>RefParser</h1>
+    </header>
 
     <article>
       <p>
@@ -29,7 +31,6 @@
 
       <app-live-example :example="htmlRefParserBefore" />
     </article>
-
 
 
     <article>

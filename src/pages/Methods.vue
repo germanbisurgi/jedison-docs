@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Methods</h1>
+    <header>
+      <h1>Methods</h1>
+    </header>
 
     <section>
       <h2>Methods</h2>

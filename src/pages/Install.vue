@@ -1,22 +1,24 @@
 <template>
   <div>
-    <h1>Install</h1>
+    <header>
+      <h1>Install</h1>
+    </header>
 
     <section>
       <h2>Using ES Module </h2>
 
       <article>
         <p>npm:</p>
-        <app-highlight language="bash" :code="mdInstallNpm"/>
+        <app-highlight language="bash" :code="mdInstallNpm" />
       </article>
 
       <article>
         <p>yarn:</p>
-        <app-highlight language="bash" :code="mdInstallYarn"/>
+        <app-highlight language="bash" :code="mdInstallYarn" />
       </article>
 
       <article>
-        <app-highlight language="html" :code="mdUsingEsm"/>
+        <app-highlight language="html" :code="mdUsingEsm" />
       </article>
     </section>
 
@@ -24,7 +26,7 @@
       <h2>Using from CDN </h2>
 
       <article>
-        <app-highlight language="html" :code="mdUsingCdn"/>
+        <app-highlight language="html" :code="mdUsingCdn" />
       </article>
     </section>
   </div>

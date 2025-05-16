@@ -1,36 +1,51 @@
-// const Jedison = require('jedison')
-import Jedison from 'jedison'
+class SchemaGenerator {
+  static inferType(value) {
+    if (Array.isArray(value)) return 'array'
+    if (value === null) return 'null'
+    return typeof value
+  }
 
-const jedison = new Jedison.Create({
-  schema: {
-    title: 'Person',
-    type: 'object',
-    properties: {
-      name: {
-        type: 'string',
-      },
-      age: {
-        type: 'integer',
-        minimum: 0,
+  static generate(obj) {
+    if (typeof obj !== 'object' || obj === null) {
+      return { type: this.inferType(obj) }
+    }
+
+    if (Array.isArray(obj)) {
+      const itemSchemas = obj.map(item => this.generate(item))
+      return {
+        type: 'array',
+        items: itemSchemas.length ? itemSchemas[0] : {}
       }
+    }
+
+    const properties = {}
+    for (const key in obj) {
+      properties[key] = this.generate(obj[key])
+    }
+
+    return {
+      type: 'object',
+      properties: properties
+    }
+  }
+}
+
+const jsonData =   {
+  $schema: 'http://json-schema.org/draft-04/schema#',
+  title: 'json schema',
+  type: 'object',
+  properties: {
+    taskId: {
+      type: 'string',
+      title: 'taskId',
     },
-    required: [
-      'name',
-      'age'
-    ],
+    description: {
+      type: 'string',
+      title: 'description',
+    }
   },
-})
+  required: ['taskId'],
+}
 
-jedison.setValue({
-  name: 'Alice',
-  age: 30
-})
 
-console.log(jedison.getErrors())
-
-jedison.setValue({
-  id: 123,
-  price: 'free',
-})
-
-console.log(jedison.getErrors())
+console.log(JSON.stringify(SchemaGenerator.generate(jsonData), null, 2))

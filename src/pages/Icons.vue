@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Icons</h1>
+    <header>
+      <h1>Icons</h1>
+    </header>
 
     <p>Jedison supports multiple icons libraries</p>
 

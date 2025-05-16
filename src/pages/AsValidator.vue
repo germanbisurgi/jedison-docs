@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>As Validator</h1>
+    <header>
+      <h1>As Validator</h1>
+    </header>
 
     <section>
       <h2>Node.js</h2>
@@ -16,7 +18,7 @@
           </li>
         </ul>
 
-        <app-highlight language="javascript" :code="mdUsingNode"/>
+        <app-highlight language="javascript" :code="mdUsingNode" />
       </article>
     </section>
   </div>

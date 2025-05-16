@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Markdown Annotations</h1>
+    <header>
+      <h1>Markdown Annotations</h1>
+    </header>
 
     <section>
       <article>
