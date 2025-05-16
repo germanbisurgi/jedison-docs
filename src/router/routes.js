@@ -10,6 +10,7 @@ import Icons from "@/pages/Icons.vue"
 import LanguageAndTranslations from "@/pages/LanguageAndTranslations.vue"
 import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
+import Options from "@/pages/Options.vue"
 
 export const routes = [
   {
@@ -115,6 +116,15 @@ export const routes = [
     path: '/markdown-annotations',
     name: 'Markdown Annotations',
     component: MarkdownAnnotations,
+    meta: {
+      navbar: true,
+      group: 'Features'
+    }
+  },
+  {
+    path: '/options',
+    name: 'Options',
+    component: Options,
     meta: {
       navbar: true,
       group: 'Features'
