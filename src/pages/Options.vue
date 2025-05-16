@@ -15,7 +15,6 @@
         <p><strong>Type:</strong> <code>HTMLElement</code></p>
         <p><strong>Default:</strong> <code>null</code></p>
         <p>The HTML element that will contain the generated form.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -31,7 +30,6 @@
           <li><code>'fontawesome5'</code></li>
           <li><code>'fontawesome6'</code></li>
         </ul>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -45,7 +43,6 @@
           <li><code>new Jedison.ThemeBootstrap4()</code></li>
           <li><code>new Jedison.ThemeBootstrap5()</code></li>
         </ul>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -56,7 +53,6 @@
         <ul>
           <li><code>new Jedison.RefParser</code></li>
         </ul>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -69,7 +65,6 @@
     errorEnum: '🚨 YIKES! That value is about as valid as a pineapple pizza! 🍍🍕.'
   }
 }</pre>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -77,7 +72,6 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Transform <code>markdown</code> to <code>html</code> in annotations like <code>title</code> and <code>description</code> if marked.js is available as <code>window.marked</code>.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -85,7 +79,6 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>Sanitizes <code>html</code> tags from annotations like if DOMPurify.js is available as <code>window.DOMPurify</code>.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -93,7 +86,6 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>DOMPurify options.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -101,7 +93,6 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>A JSON schema for the form.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -109,7 +100,6 @@
         <p><strong>Type:</strong> <code>string</code></p>
         <p><strong>Default:</strong> <code>''</code></p>
         <p>Used to prefix <code>id</code> and <code>for</code> attributes. Useful if you want to have multiple Jedison forms on the page</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -117,7 +107,6 @@
         <p><strong>Type:</strong> <code>string</code></p>
         <p><strong>Default:</strong> <code>'en'</code></p>
         <p>Set default language for error messages and UI texts.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -125,7 +114,6 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>undefined</code></p>
         <p>Initial JSON data to populate the form.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -133,7 +121,6 @@
         <p><strong>Type:</strong> <code>array</code></p>
         <p><strong>Default:</strong> <code>[]</code></p>
         <p>An array of custom editor classes.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -141,7 +128,6 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>Attributes for the hidden input that contains the whole JSON value of the form.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -149,7 +135,6 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>An object to store user data and functions. Useful for when there is the need to provide options to configure a plugin but the options can not be used in schemas because of JSON data limitations. Can be used in annotations when using templates.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -157,7 +142,6 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>If buttons texts should be displayed.</p>
-        <p><strong>x-option:</strong> no</p>
       </article>
 
       <article>
@@ -165,31 +149,38 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>If buttons icons should be displayed.</p>
-        <p><strong>x-option:</strong> no</p>
+      </article>
+
+      <article>
+        <h3><code>enforceConst</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Enforces the <code>const</code> keyword value in editors. <span class="text-warning">Works only in editor mode</span></p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
         <h3><code>enforceEnum</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
-        <p>When <code>true</code> uses the first item in the enum as the default value. Works only in editor mode</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p>When <code>true</code> uses the first item in the enum as the default value. <span class="text-warning">Works only in editor mode</span></p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
         <h3><code>enforceRequired</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
-        <p>When <code>true</code> required properties are always displayed and added when missing. Works only in editor mode</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p>When <code>true</code> required properties are always displayed and added when missing. <span class="text-warning">Works only in editor mode</span></p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
         <h3><code>enforceAdditionalProperties</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
-        <p>When <code>true</code> the editor removes all properties that are not listed in properties. Works only in editor mode</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p>When <code>true</code> the editor removes all properties that are not listed in properties. <span class="text-warning">Works only in editor mode</span></p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -202,7 +193,7 @@
           <li><code>radios</code></li>
           <li><code>radios-inline</code></li>
         </ul>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <!--      <article>-->
@@ -210,7 +201,7 @@
       <!--        <p><strong>Type:</strong> <code>boolean</code></p>-->
       <!--        <p><strong>Default:</strong> <code>false</code></p>-->
       <!--        <p>Merge <code>allOf</code> subschemas into it's owner schema. <strong>WARNING</strong>, merging schemas can lead to unwanted overrides. Use at your own risk.</p>-->
-      <!--        <p><strong>x-option:</strong> yes</p>-->
+      <!--        <p><strong>x-option:</strong> ✅</p>-->
       <!--      </article>-->
 
       <article>
@@ -218,7 +209,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Enables a toggle to show/hide the properties dialog in the UI.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -226,7 +217,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Allows sections to be collapsible in the UI.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -234,7 +225,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Deactivates non-required properties. Useful when working with circular schemas to avoid infinite recursion.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -247,7 +238,7 @@
           <li><code>'change'</code></li>
           <li><code>'always'</code></li>
         </ul>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -255,15 +246,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Treats <code>'format'</code> as a validator rather than just an annotation.</p>
-        <p><strong>x-option:</strong> yes</p>
-      </article>
-
-      <article>
-        <h3><code>enforceConst</code></h3>
-        <p><strong>Type:</strong> <code>boolean</code></p>
-        <p><strong>Default:</strong> <code>false</code></p>
-        <p>Enforces the <code>const</code> keyword value in editors. Works only in editor mode</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -271,7 +254,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>If array delete buttons should be displayed.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -279,7 +262,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>If array move up and move down buttons should be displayed.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
 
       <article>
@@ -287,7 +270,7 @@
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
         <p>If array add buttons should be displayed.</p>
-        <p><strong>x-option:</strong> yes</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
     </section>
   </div>

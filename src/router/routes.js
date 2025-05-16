@@ -11,6 +11,7 @@ import LanguageAndTranslations from "@/pages/LanguageAndTranslations.vue"
 import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 import Options from "@/pages/Options.vue"
+import SchemaOptions from "@/pages/SchemaOptions.vue"
 
 export const routes = [
   {
@@ -125,6 +126,15 @@ export const routes = [
     path: '/options',
     name: 'Options',
     component: Options,
+    meta: {
+      navbar: true,
+      group: 'Features'
+    }
+  },
+  {
+    path: '/schema-options',
+    name: 'Schema Options',
+    component: SchemaOptions,
     meta: {
       navbar: true,
       group: 'Features'
