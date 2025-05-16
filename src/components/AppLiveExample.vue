@@ -1,10 +1,10 @@
 <template>
   <div class="live-example">
     <splitpanes style="height: 700px">
-      <pane size="61">
+      <pane size="40">
         <app-codemirror ref="cm" :value="example" @change="refreshCanUpdate" />
       </pane>
-      <pane size="39">
+      <pane size="60">
         <iframe :srcDoc="srcDoc" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
       </pane>
     </splitpanes>

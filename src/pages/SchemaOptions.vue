@@ -5,7 +5,7 @@
     </header>
 
     <article>
-      <p>Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>)to not collide with future JSON schema spec keywords.</p>
+      <p>Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>) to not collide with future JSON schema spec keywords.</p>
     </article>
 
     <section>

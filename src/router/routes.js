@@ -12,6 +12,7 @@ import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 import Options from "@/pages/Options.vue"
 import SchemaOptions from "@/pages/SchemaOptions.vue"
+import ArrayEditors from "@/pages/ArrayEditors.vue"
 
 export const routes = [
   {
@@ -138,6 +139,15 @@ export const routes = [
     meta: {
       navbar: true,
       group: 'Features'
+    }
+  },
+  {
+    path: '/array-editors',
+    name: 'Array Editors',
+    component: ArrayEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
     }
   }
 ]
