@@ -13,6 +13,7 @@ import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 import Options from "@/pages/Options.vue"
 import SchemaOptions from "@/pages/SchemaOptions.vue"
 import ArrayEditors from "@/pages/ArrayEditors.vue"
+import BooleanEditors from "@/pages/BooleanEditors.vue"
 
 export const routes = [
   {
@@ -145,6 +146,15 @@ export const routes = [
     path: '/array-editors',
     name: 'Array Editors',
     component: ArrayEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editors',
+    name: 'Boolean Editors',
+    component: BooleanEditors,
     meta: {
       navbar: true,
       group: 'Editors'
