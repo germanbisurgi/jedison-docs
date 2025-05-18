@@ -15,6 +15,9 @@ import SchemaOptions from "@/pages/SchemaOptions.vue"
 import ArrayEditors from "@/pages/ArrayEditors.vue"
 import BooleanEditors from "@/pages/BooleanEditors.vue"
 import NumberEditors from "@/pages/NumberEditors.vue"
+import ObjectEditors from "@/pages/ObjectEditors.vue"
+import StringEditors from "@/pages/StringEditors.vue"
+import NullEditors from "@/pages/NullEditors.vue"
 
 export const routes = [
   {
@@ -165,6 +168,33 @@ export const routes = [
     path: '/numbers-editors',
     name: 'Numbers Editors',
     component: NumberEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editors',
+    name: 'Object Editors',
+    component: ObjectEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editors',
+    name: 'String Editors',
+    component: StringEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/null-editors',
+    name: 'Null Editors',
+    component: NullEditors,
     meta: {
       navbar: true,
       group: 'Editors'
