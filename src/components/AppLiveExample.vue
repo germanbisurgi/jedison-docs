@@ -1,13 +1,26 @@
 <template>
   <div class="live-example">
-    <splitpanes style="height: 700px">
-      <pane size="40">
+    <div class="d-lg-none mb-3">
+      <!-- Mobile view - stacked -->
+      <div class="mb-3">
         <app-codemirror ref="cm" :value="example" @change="refreshCanUpdate" />
-      </pane>
-      <pane size="60">
+      </div>
+      <div class="mb-3" style="height: 400px">
         <iframe :srcDoc="srcDoc" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
-      </pane>
-    </splitpanes>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <!-- Desktop view - split panes -->
+      <splitpanes style="height: 700px">
+        <pane size="40">
+          <app-codemirror ref="cm" :value="example" @change="refreshCanUpdate" />
+        </pane>
+        <pane size="60">
+          <iframe :srcDoc="srcDoc" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
+        </pane>
+      </splitpanes>
+    </div>
 
     <button v-if="canUpdate" class="btn btn-primary w-100 mt-3" @click="updateSrcDoc">
       Update
