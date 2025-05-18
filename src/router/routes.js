@@ -14,6 +14,7 @@ import Options from "@/pages/Options.vue"
 import SchemaOptions from "@/pages/SchemaOptions.vue"
 import ArrayEditors from "@/pages/ArrayEditors.vue"
 import BooleanEditors from "@/pages/BooleanEditors.vue"
+import NumberEditors from "@/pages/NumberEditors.vue"
 
 export const routes = [
   {
@@ -155,6 +156,15 @@ export const routes = [
     path: '/boolean-editors',
     name: 'Boolean Editors',
     component: BooleanEditors,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/numbers-editors',
+    name: 'Numbers Editors',
+    component: NumberEditors,
     meta: {
       navbar: true,
       group: 'Editors'
