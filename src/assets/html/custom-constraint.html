@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  const jedison = new Jedison.Create({
+    container: document.querySelector('#jedison-container'),
+    theme: new Jedison.ThemeBootstrap5(),
+    schema: {
+      "title": "Warning messages",
+      "type": "string",
+      "minLength": 4,
+      "x-my-constraint": "test"
+    },
+    constraints: {
+      'x-my-constraint': (context) => {
+        const errors = []
+        const schemaMyConstraint = context.schema['x-my-constraint']
+
+        if (schemaMyConstraint) {
+          const invalid = context.value !== schemaMyConstraint
+
+          if (invalid) {
+            errors.push({
+              type: 'warning',
+              path: context.path,
+              constraint: 'x-my-constraint',
+              messages: [
+                `Value should be equal to "${schemaMyConstraint}".`
+              ]
+            })
+          }
+        }
+
+        return errors
+      }
+    }
+  })
+
+  jedison.on('change', () => {
+    console.log('only errors', JSON.stringify(jedison.getErrors(), null, 2))
+
+    console.log('errors && warnings', JSON.stringify(jedison.getErrors(['error', 'warning']), null, 2))
+  })
+</script>
+</body>
+</html>

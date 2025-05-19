@@ -4945,9 +4945,9 @@ jackspeak@^4.0.1:
     "@isaacs/cliui" "^8.0.2"
 
 jedison@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/jedison/-/jedison-0.2.1.tgz#77db31c59184537ef36ac6c96af48c47caaad05a"
-  integrity sha512-7seaaJNP9g5ba/aMgTMcwvMAUZH0DTE6h0EcChPz/yIJoPyr6+fdpfhaKhm88qwWJDPv82OsDXE3SasdVAI5mw==
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/jedison/-/jedison-0.2.3.tgz#788511e6ca7865e34cbed4017010c1f7a3252b1d"
+  integrity sha512-0a7ODpUqfPn94Kc56vftm+TRyEppo2uGPhLGNYD63bxS9XjRXfNBzc51JhfyuC+5NTKehMJ9xXN6iStjJWXdqA==
 
 jest-changed-files@^29.7.0:
   version "29.7.0"
