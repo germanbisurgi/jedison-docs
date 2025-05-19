@@ -6,7 +6,7 @@
 
     <article>
       <p>Jedison provides various configuration options to customize the behavior and appearance of your form instances. These options can be passed when creating a new Jedison instance.</p>
-      <p>Some of this options can be set at JSON schema level. Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>) to not collide with future JSON schema spec keywords.</p>
+      <p>Some of these options can be set at JSON schema level. Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>) to not collide with future JSON schema spec keywords.</p>
     </article>
 
     <section>

@@ -6,7 +6,7 @@
 
     <section>
       <article>
-        <p>To use Jedison as a JSON editor, this options are required:</p>
+        <p>To use Jedison as a JSON editor, these options are required:</p>
 
         <ul>
           <li>

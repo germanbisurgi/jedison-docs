@@ -8,7 +8,7 @@
       <h2>Node.js</h2>
 
       <article>
-        <p>To use Jedison as a JSON validator, this options are required:</p>
+        <p>To use Jedison as a JSON validator, these options are required:</p>
 
         <ul>
           <li>
