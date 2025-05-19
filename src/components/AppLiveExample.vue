@@ -1,34 +1,35 @@
 <template>
-  <div class="live-example">
-    <div class="d-lg-none mb-3">
-      <!-- Mobile view - stacked -->
-      <div class="mb-3">
-        <app-codemirror ref="cm" :value="example" @change="refreshCanUpdate" />
+  <div class="live-example mb-3">
+    <div class="d-lg-none">
+      <button v-if="canUpdateMobile" class="btn btn-primary w-100" @click="updateSrcDoc('mobile')">
+        Update
+      </button>
+      <div>
+        <app-codemirror ref="cmMobile" :value="example" @change="() => refreshCanUpdate('mobile')" />
       </div>
-      <div class="mb-3" style="height: 400px">
-        <iframe ref="iframe" :srcdoc="srcDoc" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
+      <div style="height: 400px">
+        <iframe ref="iframeMobile" :srcdoc="srcDocMobile" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
       </div>
     </div>
 
     <div class="d-none d-lg-block">
-      <!-- Desktop view - split panes -->
+      <!-- Desktop view -->
+      <button v-if="canUpdateDesktop" class="btn btn-primary w-100" @click="updateSrcDoc('desktop')">
+        Update
+      </button>
       <splitpanes style="height: 700px">
         <pane size="30">
-          <app-codemirror ref="cm" :value="example" @change="refreshCanUpdate" />
+          <app-codemirror ref="cmDesktop" :value="example" @change="() => refreshCanUpdate('desktop')" />
         </pane>
         <pane size="70">
-          <iframe ref="iframe" :srcdoc="srcDoc" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
+          <iframe ref="iframeDesktop" :srcdoc="srcDocDesktop" sandbox="allow-scripts" frameBorder="0" width="100%" height="100%" />
         </pane>
       </splitpanes>
     </div>
 
     <div v-if="logs.length" class="log-output p-2 border" style="height: 300px; overflow-y: auto; font-family: monospace;">
-      <pre v-for="(log, index) in logs" :key="index" :style="{ color: log.color }" class="mb-3">{{ log.text }}</pre>
+      <pre v-for="(log, index) in logs" :key="index" :style="{ color: log.color }">{{ log.text }}</pre>
     </div>
-
-    <button v-if="canUpdate" class="btn btn-primary w-100 mt-3" @click="updateSrcDoc">
-      Update
-    </button>
   </div>
 </template>
 
@@ -52,13 +53,17 @@ export default {
   },
   data() {
     return {
-      srcDoc: '',
-      canUpdate: false,
+      srcDocMobile: '',
+      srcDocDesktop: '',
+      canUpdateMobile: false,
+      canUpdateDesktop: false,
       logs: []
     }
   },
   mounted() {
-    this.srcDoc = this.injectConsoleLogger(this.replaceTemplates(this.example))
+    // Initialize both with example code
+    this.srcDocMobile = this.injectConsoleLogger(this.replaceTemplates(this.example))
+    this.srcDocDesktop = this.injectConsoleLogger(this.replaceTemplates(this.example))
 
     window.addEventListener("message", this.handleIframeLogs)
   },
@@ -66,14 +71,31 @@ export default {
     window.removeEventListener("message", this.handleIframeLogs)
   },
   methods: {
-    updateSrcDoc() {
-      const code = this.$refs.cm.getValue()
-      this.srcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
-      this.refreshCanUpdate()
-      this.logs = [] // clear logs on reload
+    updateSrcDoc(version) {
+      const code = this.getEditorValue(version)
+      const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
+      if (version === 'mobile') {
+        this.srcDocMobile = newSrcDoc
+        this.canUpdateMobile = false
+      } else if (version === 'desktop') {
+        this.srcDocDesktop = newSrcDoc
+        this.canUpdateDesktop = false
+      }
+      this.logs = []
     },
-    refreshCanUpdate() {
-      this.canUpdate = this.srcDoc !== this.injectConsoleLogger(this.replaceTemplates(this.$refs.cm.getValue()))
+    refreshCanUpdate(version) {
+      const code = this.getEditorValue(version)
+      const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
+
+      if (version === 'mobile') {
+        this.canUpdateMobile = this.srcDocMobile !== newSrcDoc
+      } else if (version === 'desktop') {
+        this.canUpdateDesktop = this.srcDocDesktop !== newSrcDoc
+      }
+    },
+    getEditorValue(version) {
+      const editor = version === 'mobile' ? this.$refs.cmMobile : this.$refs.cmDesktop
+      return editor && editor.getValue ? editor.getValue() : ''
     },
     replaceTemplates(string) {
       return string.replace("{{theme}}", "dark")
@@ -105,7 +127,6 @@ export default {
           })();
         <\/script>
       `
-      // Inject at end of body or whole doc
       return html.includes('</body>')
           ? html.replace('</body>', loggerScript + '</body>')
           : html + loggerScript

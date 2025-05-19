@@ -88,8 +88,10 @@
         </ul>
 
         <p class="mt-3">
-          In the live example below, notice how the form remains valid (green) when the custom constraint warning appears,
-          demonstrating non-blocking validation.
+          In the live example below, the form displays <strong>warnings (yellow)</strong> and <strong>errors (red)</strong> independently.
+          By default, <code>getErrors()</code> only returns errors, while warnings are still shown in the UI.
+          To include warnings in the validation result, pass an array of filters: <code>['error', 'warning']</code>.
+          Final validation behavior is left to the user's implementation.
         </p>
 
         <app-live-example :example="htmlCustomValidator" />
