@@ -87,9 +87,11 @@ export default {
       return this.editorValue
     },
     initEditor() {
+      const safeKeymap = Array.isArray(defaultKeymap) ? defaultKeymap : []
+
       const extensions = [
         html(),
-        keymap.of(defaultKeymap || []), // ✅ Safe fallback for build
+        keymap.of(safeKeymap),
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
             const content = update.state.doc.toString()
@@ -114,8 +116,7 @@ export default {
         parent: this.$refs.editorContainer
       })
 
-      this.editorView.focus() // ✅ Fix for Enter key issue in Chrome
-
+      this.editorView.focus()
       this.editorValue = editorState.doc.toString()
     },
     reinitializeEditor() {
