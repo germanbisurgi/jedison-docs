@@ -8,7 +8,7 @@
         <app-codemirror ref="cmMobile" :value="example" @change="() => refreshCanUpdate('mobile')" />
       </div>
       <div style="height: 400px">
-        <iframe ref="iframeMobile" :srcdoc="srcDocMobile" sandbox="allow-scripts allow-same-origin" frameBorder="0" width="100%" height="100%" />
+        <iframe ref="iframeMobile" :srcdoc="srcDocMobile" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameBorder="0" width="100%" height="100%" />
       </div>
     </div>
 
@@ -22,7 +22,7 @@
           <app-codemirror ref="cmDesktop" :value="example" @change="() => refreshCanUpdate('desktop')" />
         </pane>
         <pane size="70">
-          <iframe ref="iframeDesktop" :srcdoc="srcDocDesktop" sandbox="allow-scripts allow-same-origin" frameBorder="0" width="100%" height="100%" />
+          <iframe ref="iframeDesktop" :srcdoc="srcDocDesktop" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameBorder="0" width="100%" height="100%" />
         </pane>
       </splitpanes>
     </div>

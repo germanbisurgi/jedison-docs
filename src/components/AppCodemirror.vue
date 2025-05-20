@@ -3,8 +3,9 @@
 </template>
 
 <script>
-import {EditorView} from '@codemirror/view'
+import {EditorView, keymap} from '@codemirror/view'
 import {EditorState} from '@codemirror/state'
+import {defaultKeymap} from '@codemirror/commands'
 import {html} from '@codemirror/lang-html'
 import {oneDark} from '@codemirror/theme-one-dark'
 import {githubLight, githubDark} from '@uiw/codemirror-theme-github'
@@ -86,15 +87,8 @@ export default {
       return this.editorValue
     },
     initEditor() {
-      // Create minimal setup without line numbers
-      const minimalSetup = [
-        // EditorView.lineWrapping,
-        // Add other essential extensions you need
-        // but exclude lineNumbers
-      ]
-
       const extensions = [
-        ...minimalSetup,
+        keymap.of(defaultKeymap), // This fixes the Enter key issue
         html(),
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
