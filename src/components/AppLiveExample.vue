@@ -1,6 +1,7 @@
 <template>
   <div class="live-example mb-3">
-    <div class="d-lg-none">
+    <!-- Mobile View -->
+    <div v-if="!isDesktop">
       <button v-if="canUpdateMobile" class="btn btn-primary w-100" @click="updateSrcDoc('mobile')">
         Update
       </button>
@@ -12,8 +13,8 @@
       </div>
     </div>
 
-    <div class="d-none d-lg-block">
-      <!-- Desktop view -->
+    <!-- Desktop View -->
+    <div v-else>
       <button v-if="canUpdateDesktop" class="btn btn-primary w-100" @click="updateSrcDoc('desktop')">
         Update
       </button>
@@ -27,6 +28,7 @@
       </splitpanes>
     </div>
 
+    <!-- Log Output -->
     <div v-if="logs.length" class="log-output p-2 border" style="height: 300px; overflow-y: auto; font-family: monospace;">
       <pre v-for="(log, index) in logs" :key="index" :style="{ color: log.color }">{{ log.text }}</pre>
     </div>
@@ -57,20 +59,25 @@ export default {
       srcDocDesktop: '',
       canUpdateMobile: false,
       canUpdateDesktop: false,
-      logs: []
+      logs: [],
+      isDesktop: false
     }
   },
   mounted() {
-    // Initialize both with example code
+    this.updateViewport()
+    window.addEventListener("resize", this.updateViewport)
     this.srcDocMobile = this.injectConsoleLogger(this.replaceTemplates(this.example))
     this.srcDocDesktop = this.injectConsoleLogger(this.replaceTemplates(this.example))
-
     window.addEventListener("message", this.handleIframeLogs)
   },
   beforeUnmount() {
+    window.removeEventListener("resize", this.updateViewport)
     window.removeEventListener("message", this.handleIframeLogs)
   },
   methods: {
+    updateViewport() {
+      this.isDesktop = window.innerWidth >= 992
+    },
     updateSrcDoc(version) {
       const code = this.getEditorValue(version)
       const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
@@ -86,7 +93,6 @@ export default {
     refreshCanUpdate(version) {
       const code = this.getEditorValue(version)
       const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
-
       if (version === 'mobile') {
         this.canUpdateMobile = this.srcDocMobile !== newSrcDoc
       } else if (version === 'desktop') {

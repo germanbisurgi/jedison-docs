@@ -96,10 +96,23 @@
         <ul>
           <li><code>"type": "array"</code></li>
           <li><code>"x-format": "table"</code></li>
-          <li><code>"items": { "type": "object" }</code></li>
         </ul>
 
         <app-live-example :example="htmlArrayEditorTable" />
+      </article>
+
+      <article>
+        <h2>Table Object Editor</h2>
+        <p>Renders array items in a tabular format</p>
+
+        <h3>Activation Conditions</h3>
+        <ul>
+          <li><code>"type": "array"</code></li>
+          <li><code>"x-format": "table-object"</code></li>
+          <li><code>"items": { "type": "object" }</code></li>
+        </ul>
+
+        <app-live-example :example="htmlArrayEditorTableObject" />
       </article>
     </section>
   </div>
@@ -115,6 +128,7 @@ import htmlArrayEditorChoices from '@/assets/html/array-editors-choices.html?raw
 import htmlArrayEditorNavVertical from '@/assets/html/array-editors-nav-vertical.html?raw'
 import htmlArrayEditorNavHorizontal from '@/assets/html/array-editors-nav-horizontal.html?raw'
 import htmlArrayEditorTable from '@/assets/html/array-editors-table.html?raw'
+import htmlArrayEditorTableObject from '@/assets/html/array-editors-table-object.html?raw'
 
 export default {
   name: 'ArrayEditors',
@@ -140,7 +154,8 @@ export default {
       htmlArrayEditorChoices,
       htmlArrayEditorNavVertical,
       htmlArrayEditorNavHorizontal,
-      htmlArrayEditorTable
+      htmlArrayEditorTable,
+      htmlArrayEditorTableObject
     }
   }
 }

@@ -19,17 +19,37 @@
     iconLib: 'bootstrap-icons',
     btnContents: false,
     schema: {
-      "x-format": "table",
-      "title": "Names",
+      "x-format": "table-object",
+      "title": "users",
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Name"
+        "type": "object",
+        "title": "Person",
+        "description": "User",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "age": {
+            "type": "integer",
+            "title": "Age"
+          }
+        }
       },
       "default": [
-        "Albert",
-        "Betti",
-        "Carl"
+        {
+          "name": "Albert",
+          "age": 23
+        },
+        {
+          "name": "Betti",
+          "age": 56
+        },
+        {
+          "name": "Carl",
+          "age": 18
+        }
       ]
     }
   })
