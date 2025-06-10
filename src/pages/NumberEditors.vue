@@ -7,7 +7,7 @@
 
     <section>
       <article>
-        <h2>Default Number Editor</h2>
+        <h2>Number input</h2>
         <p>A standard numeric input field that appears when no specific format is requested.</p>
 
         <h3>Activation Conditions</h3>
@@ -75,6 +75,19 @@
       </article>
 
       <article>
+        <h2>Input Number Nullable</h2>
+        <p>A standard numeric input field. When empty the instance value is <code>null</code></p>
+
+        <h3>Activation Conditions</h3>
+        <ul>
+          <li><code>"type": ["null", "number"]</code> or <code>"type": ["null", "integer"]</code></li>
+          <li><code>"x-nullable": true</code></li>
+        </ul>
+
+        <app-live-example :example="htmlNumberEditorNullable" />
+      </article>
+
+      <article>
         <h2>Star Rating (Raty)</h2>
         <p>Interactive star rating control that converts numeric selection into visual feedback. Supports half-star increments and custom star elements.</p>
 
@@ -104,6 +117,7 @@ import htmlNumberEditorDefault from '@/assets/html/number-editors-default.html?r
 import htmlNumberEditorSelect from '@/assets/html/number-editors-select.html?raw'
 import htmlNumberEditorRadios from '@/assets/html/number-editors-radios.html?raw'
 import htmlNumberEditorRadiosInline from '@/assets/html/number-editors-radios-inline.html?raw'
+import htmlNumberEditorNullable from '@/assets/html/number-editors-nullable.html?raw'
 import htmlNumberEditorRaty from '@/assets/html/number-editors-raty.html?raw'
 
 export default {
@@ -128,7 +142,8 @@ export default {
       htmlNumberEditorSelect,
       htmlNumberEditorRadios,
       htmlNumberEditorRadiosInline,
-      htmlNumberEditorRaty
+      htmlNumberEditorNullable,
+      htmlNumberEditorRaty,
     }
   }
 }
