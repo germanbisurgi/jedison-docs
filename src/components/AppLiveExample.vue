@@ -29,7 +29,7 @@
     </div>
 
     <!-- Log Output -->
-    <div v-if="logs.length" class="log-output p-2 border" style="height: 300px; overflow-y: auto; font-family: monospace;">
+    <div ref="logs" class="log-output p-2 border" style="height: 300px; overflow-y: auto; font-family: monospace;">
       <pre v-for="(log, index) in logs" :key="index" :style="{ color: log.color }">{{ log.text }}</pre>
     </div>
   </div>
@@ -60,10 +60,12 @@ export default {
       canUpdateMobile: false,
       canUpdateDesktop: false,
       logs: [],
-      isDesktop: false
+      isDesktop: false,
+      randomId: ''
     }
   },
   mounted() {
+    this.randomId = this.generateRandomId()
     this.updateViewport()
     window.addEventListener("resize", this.updateViewport)
     this.srcDocMobile = this.injectConsoleLogger(this.replaceTemplates(this.example))
@@ -75,6 +77,9 @@ export default {
     window.removeEventListener("message", this.handleIframeLogs)
   },
   methods: {
+    generateRandomId(length = 8) {
+      return Math.random().toString(36).substring(2, length + 2)
+    },
     updateViewport() {
       this.isDesktop = window.innerWidth >= 992
     },
@@ -116,7 +121,7 @@ export default {
               console[method] = function (...args) {
                 try {
                   window.parent.postMessage({
-                    source: 'iframe-logger',
+                    source: 'iframe-logger-${this.randomId}',
                     type: method,
                     log: args.map(arg => {
                       try {
@@ -139,7 +144,7 @@ export default {
     },
     handleIframeLogs(event) {
       const data = event.data
-      if (data?.source === 'iframe-logger') {
+      if (data?.source === `iframe-logger-${this.randomId}`) {
         const colorMap = {
           log: 'white',
           info: 'blue',

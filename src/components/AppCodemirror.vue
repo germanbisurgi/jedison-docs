@@ -18,10 +18,6 @@ export default {
       type: String,
       default: ''
     },
-    readOnly: {
-      type: Boolean,
-      default: false
-    },
     theme: {
       type: String,
       default: 'githubDark',
@@ -65,13 +61,6 @@ export default {
         })
       }
     },
-    readOnly(newVal) {
-      if (this.editorView) {
-        this.editorView.dispatch({
-          effects: EditorState.readOnly.of(newVal)
-        })
-      }
-    },
     theme() {
       this.reinitializeEditor()
     }
@@ -98,8 +87,7 @@ export default {
             this.editorValue = content
             this.$emit('change', content)
           }
-        }),
-        EditorState.readOnly.of(this.readOnly)
+        })
       ]
 
       if (this.currentTheme) {
