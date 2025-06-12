@@ -79,9 +79,12 @@
         <h3>Activation Conditions</h3>
         <ul>
           <li><code>"type": "string"</code></li>
-          <li><code>"x-awesomplete": { ... }</code></li>
+          <li><code>"x-format": "awesomplete"</code></li>
           <li>Awesomplete.js must be available (<code>window.Awesomplete</code>)</li>
         </ul>
+
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-awesomplete"</code> keyword</p>
 
         <app-live-example :example="htmlStringEditorAwesomplete" />
       </article>
@@ -97,6 +100,9 @@
           <li>flatpickr.js must be available (<code>window.flatpickr</code>)</li>
         </ul>
 
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-flatpickr"</code> keyword</p>
+
         <app-live-example :example="htmlStringEditorFlatpickr" />
       </article>
 
@@ -107,9 +113,12 @@
         <h3>Activation Conditions</h3>
         <ul>
           <li><code>"type": "string"</code></li>
-          <li><code>"x-imask": { ... }</code></li>
+          <li><code>"x-format": "imask"</code></li>
           <li>IMask.js must be available (<code>window.IMask</code>)</li>
         </ul>
+
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-imask"</code> keyword</p>
 
         <app-live-example :example="htmlStringEditorImask" />
       </article>
@@ -121,9 +130,12 @@
         <h3>Activation Conditions</h3>
         <ul>
           <li><code>"type": "string"</code></li>
-          <li><code>"x-jodit": { ... }</code></li>
+          <li><code>"x-format": "jodit"</code></li>
           <li>Jodit.js must be available (<code>window.Jodit</code>)</li>
         </ul>
+
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-jodit"</code> keyword</p>
 
         <app-live-example :example="htmlStringEditorJodit" />
       </article>
@@ -135,9 +147,12 @@
         <h3>Activation Conditions</h3>
         <ul>
           <li><code>"type": "string"</code></li>
-          <li><code>"x-quill": { ... }</code></li>
+          <li><code>"x-format": "quill"</code></li>
           <li>Quill.js must be available (<code>window.Quill</code>)</li>
         </ul>
+
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-quill"</code> keyword</p>
 
         <app-live-example :example="htmlStringEditorQuill" />
       </article>

@@ -94,11 +94,12 @@
         <h3>Activation Conditions</h3>
         <ul>
           <li><code>"type": "number"</code> or <code>"type": "integer"</code></li>
-          <li><code>"x-raty"</code> property defined</li>
+          <li><code>"x-format": "raty"</code> property defined</li>
           <li>Raty.js library loaded (<code>window.Raty</code>)</li>
         </ul>
 
-        <h3>Configuration Options</h3>
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-raty"</code> keyword</p>
         <ul>
           <li><code>"x-raty.half"</code> - Enables selection of half-star values when true</li>
           <li><code>"x-raty.starType"</code> - Defines HTML tag used for star elements (default: 'i')</li>
