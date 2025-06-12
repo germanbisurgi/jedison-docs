@@ -19,10 +19,10 @@
         Update
       </button>
       <splitpanes style="height: 700px">
-        <pane size="50">
+        <pane size="40">
           <app-codemirror ref="cmDesktop" :value="example" @change="() => refreshCanUpdate('desktop')" />
         </pane>
-        <pane size="50">
+        <pane size="60">
           <iframe ref="iframeDesktop" :srcdoc="srcDocDesktop" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameBorder="0" width="100%" height="100%" />
         </pane>
       </splitpanes>
