@@ -7,9 +7,7 @@ import { EditorView, keymap } from '@codemirror/view'
 import { EditorState } from '@codemirror/state'
 import { defaultKeymap } from '@codemirror/commands'
 import { html } from '@codemirror/lang-html'
-import { oneDark } from '@codemirror/theme-one-dark'
-import { githubLight, githubDark } from '@uiw/codemirror-theme-github'
-import { dracula } from '@uiw/codemirror-theme-dracula'
+import { githubDark } from '@uiw/codemirror-theme-github'
 
 export default {
   name: 'HtmlCodeMirrorEditor',
@@ -17,17 +15,6 @@ export default {
     value: {
       type: String,
       default: ''
-    },
-    theme: {
-      type: String,
-      default: 'githubDark',
-      validator: (value) => [
-        'oneDark',
-        'githubLight',
-        'githubDark',
-        'dracula',
-        'default'
-      ].includes(value)
     }
   },
   emits: ['change'],
@@ -35,18 +22,6 @@ export default {
     return {
       editorView: null,
       editorValue: ''
-    }
-  },
-  computed: {
-    currentTheme() {
-      const themes = {
-        oneDark,
-        githubLight,
-        githubDark,
-        dracula,
-        default: null
-      }
-      return themes[this.theme]
     }
   },
   watch: {
@@ -60,9 +35,6 @@ export default {
           }
         })
       }
-    },
-    theme() {
-      this.reinitializeEditor()
     }
   },
   mounted() {
@@ -76,12 +48,10 @@ export default {
       return this.editorValue
     },
     initEditor() {
-      // Fix: Ensure defaultKeymap is always an array
-      const safeKeymap = Array.isArray(defaultKeymap) ? defaultKeymap : defaultKeymap ? [defaultKeymap] : []
-
       const extensions = [
         html(),
-        keymap.of(safeKeymap),
+        keymap.of(defaultKeymap),
+        githubDark,
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
             const content = update.state.doc.toString()
@@ -90,10 +60,6 @@ export default {
           }
         })
       ]
-
-      if (this.currentTheme) {
-        extensions.push(this.currentTheme)
-      }
 
       const editorState = EditorState.create({
         doc: this.value,
@@ -107,12 +73,6 @@ export default {
 
       this.editorView.focus()
       this.editorValue = editorState.doc.toString()
-    },
-    reinitializeEditor() {
-      if (this.editorView) {
-        this.editorView.destroy()
-        this.initEditor()
-      }
     },
     focus() {
       this.editorView?.focus()
