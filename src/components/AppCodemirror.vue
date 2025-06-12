@@ -5,7 +5,7 @@
 <script>
 import { EditorView, keymap } from '@codemirror/view'
 import { EditorState } from '@codemirror/state'
-import { defaultKeymap } from '@codemirror/commands'
+import { defaultKeymap, indentMore, indentLess } from '@codemirror/commands'
 import { html } from '@codemirror/lang-html'
 import { githubDark } from '@uiw/codemirror-theme-github'
 
@@ -48,9 +48,24 @@ export default {
       return this.editorValue
     },
     initEditor() {
+      // Custom keymap that handles Tab/Shift-Tab for indentation
+      const customKeymap = [
+        ...defaultKeymap,
+        {
+          key: "Tab",
+          preventDefault: true,
+          run: indentMore
+        },
+        {
+          key: "Shift-Tab",
+          preventDefault: true,
+          run: indentLess
+        }
+      ]
+
       const extensions = [
         html(),
-        keymap.of(defaultKeymap),
+        keymap.of(customKeymap),
         githubDark,
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
@@ -58,7 +73,9 @@ export default {
             this.editorValue = content
             this.$emit('change', content)
           }
-        })
+        }),
+        // This ensures the editor captures tab key events
+        EditorView.contentAttributes.of({'data-tab-handled': 'true'})
       ]
 
       const editorState = EditorState.create({
@@ -88,5 +105,10 @@ export default {
 
 .code-mirror-container .cm-editor {
   height: 100%;
+}
+
+/* Optional: Makes the editor capture focus better */
+.code-mirror-container .cm-editor.cm-focused {
+  outline: none;
 }
 </style>
