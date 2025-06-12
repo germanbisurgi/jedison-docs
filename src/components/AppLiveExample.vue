@@ -62,11 +62,9 @@ export default {
     window.addEventListener("resize", this.updateViewport)
     this.srcDocMobile = this.replaceTemplates(this.example)
     this.srcDocDesktop = this.replaceTemplates(this.example)
-    window.addEventListener("message", this.handleIframeLogs)
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.updateViewport)
-    window.removeEventListener("message", this.handleIframeLogs)
   },
   methods: {
     updateViewport() {
@@ -82,7 +80,6 @@ export default {
         this.srcDocDesktop = newSrcDoc
         this.canUpdateDesktop = false
       }
-      this.logs = []
     },
     refreshCanUpdate(version) {
       const code = this.getEditorValue(version)

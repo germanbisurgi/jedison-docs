@@ -76,7 +76,8 @@ export default {
       return this.editorValue
     },
     initEditor() {
-      const safeKeymap = Array.isArray(defaultKeymap) ? defaultKeymap : []
+      // Fix: Ensure defaultKeymap is always an array
+      const safeKeymap = Array.isArray(defaultKeymap) ? defaultKeymap : defaultKeymap ? [defaultKeymap] : []
 
       const extensions = [
         html(),
@@ -112,6 +113,9 @@ export default {
         this.editorView.destroy()
         this.initEditor()
       }
+    },
+    focus() {
+      this.editorView?.focus()
     }
   }
 }
