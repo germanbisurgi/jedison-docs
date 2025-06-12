@@ -19,18 +19,13 @@
         Update
       </button>
       <splitpanes style="height: 700px">
-        <pane size="30">
+        <pane size="50">
           <app-codemirror ref="cmDesktop" :value="example" @change="() => refreshCanUpdate('desktop')" />
         </pane>
-        <pane size="70">
+        <pane size="50">
           <iframe ref="iframeDesktop" :srcdoc="srcDocDesktop" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameBorder="0" width="100%" height="100%" />
         </pane>
       </splitpanes>
-    </div>
-
-    <!-- Log Output -->
-    <div ref="logs" class="log-output p-2 border" style="height: 300px; overflow-y: auto; font-family: monospace;">
-      <pre v-for="(log, index) in logs" :key="index" :style="{ color: log.color }">{{ log.text }}</pre>
     </div>
   </div>
 </template>
@@ -59,17 +54,14 @@ export default {
       srcDocDesktop: '',
       canUpdateMobile: false,
       canUpdateDesktop: false,
-      logs: [],
-      isDesktop: false,
-      randomId: ''
+      isDesktop: false
     }
   },
   mounted() {
-    this.randomId = this.generateRandomId()
     this.updateViewport()
     window.addEventListener("resize", this.updateViewport)
-    this.srcDocMobile = this.injectConsoleLogger(this.replaceTemplates(this.example))
-    this.srcDocDesktop = this.injectConsoleLogger(this.replaceTemplates(this.example))
+    this.srcDocMobile = this.replaceTemplates(this.example)
+    this.srcDocDesktop = this.replaceTemplates(this.example)
     window.addEventListener("message", this.handleIframeLogs)
   },
   beforeUnmount() {
@@ -77,15 +69,12 @@ export default {
     window.removeEventListener("message", this.handleIframeLogs)
   },
   methods: {
-    generateRandomId(length = 8) {
-      return Math.random().toString(36).substring(2, length + 2)
-    },
     updateViewport() {
       this.isDesktop = window.innerWidth >= 992
     },
     updateSrcDoc(version) {
       const code = this.getEditorValue(version)
-      const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
+      const newSrcDoc = this.replaceTemplates(code)
       if (version === 'mobile') {
         this.srcDocMobile = newSrcDoc
         this.canUpdateMobile = false
@@ -97,7 +86,7 @@ export default {
     },
     refreshCanUpdate(version) {
       const code = this.getEditorValue(version)
-      const newSrcDoc = this.injectConsoleLogger(this.replaceTemplates(code))
+      const newSrcDoc = this.replaceTemplates(code)
       if (version === 'mobile') {
         this.canUpdateMobile = this.srcDocMobile !== newSrcDoc
       } else if (version === 'desktop') {
@@ -110,53 +99,6 @@ export default {
     },
     replaceTemplates(string) {
       return string.replace("{{theme}}", "dark")
-    },
-    injectConsoleLogger(html) {
-      const loggerScript = `
-        <script>
-          (function () {
-            const methods = ['log', 'info', 'warn', 'error', 'debug'];
-            methods.forEach((method) => {
-              const original = console[method];
-              console[method] = function (...args) {
-                try {
-                  window.parent.postMessage({
-                    source: 'iframe-logger-${this.randomId}',
-                    type: method,
-                    log: args.map(arg => {
-                      try {
-                        return typeof arg === 'object' ? JSON.stringify(arg) : String(arg);
-                      } catch (e) {
-                        return '[Unserializable]';
-                      }
-                    })
-                  }, '*');
-                } catch (e) {}
-                original.apply(console, args);
-              };
-            });
-          })();
-        <\/script>
-      `
-      return html.includes('</body>')
-          ? html.replace('</body>', loggerScript + '</body>')
-          : html + loggerScript
-    },
-    handleIframeLogs(event) {
-      const data = event.data
-      if (data?.source === `iframe-logger-${this.randomId}`) {
-        const colorMap = {
-          log: 'white',
-          info: 'blue',
-          warn: 'orange',
-          error: 'red',
-          debug: 'gray'
-        }
-        this.logs.push({
-          text: `[iframe ${data.type}] ${data.log.join(' ')}`,
-          color: colorMap[data.type] || 'black'
-        })
-      }
     }
   }
 }
