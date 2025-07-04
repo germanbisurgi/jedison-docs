@@ -19,6 +19,7 @@ import ObjectEditors from "@/pages/ObjectEditors.vue"
 import StringEditors from "@/pages/StringEditors.vue"
 import NullEditors from "@/pages/NullEditors.vue"
 import CustomConstraint from "@/pages/CustomConstraint.vue"
+import Templates from "@/pages/Templates.vue"
 
 export const routes = [
   {
@@ -205,6 +206,15 @@ export const routes = [
     path: '/custom-constraint',
     name: 'Custom constraint',
     component: CustomConstraint,
+    meta: {
+      navbar: true,
+      group: 'Advanced'
+    }
+  },
+  {
+    path: '/templates',
+    name: 'Templates',
+    component: Templates,
     meta: {
       navbar: true,
       group: 'Advanced'
