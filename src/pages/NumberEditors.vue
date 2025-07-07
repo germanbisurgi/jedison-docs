@@ -107,6 +107,23 @@
 
         <app-live-example :example="htmlNumberEditorRaty" />
       </article>
+
+      <article>
+        <h2>Number IMask</h2>
+        <p>Renders a masked text input using IMask.js.</p>
+
+        <h3>Activation Conditions</h3>
+        <ul>
+          <li><code>"type": "number"</code></li>
+          <li><code>"x-format": "imask"</code></li>
+          <li>IMask.js must be available (<code>window.IMask</code>)</li>
+        </ul>
+
+        <h3>Plugin Options</h3>
+        <p>Options can be passed to the plugin via <code>"x-imask"</code> keyword</p>
+
+        <app-live-example :example="htmlNumberEditorImask" />
+      </article>
     </section>
   </div>
 </template>
@@ -120,6 +137,7 @@ import htmlNumberEditorRadios from '@/assets/html/number-editors-radios.html?raw
 import htmlNumberEditorRadiosInline from '@/assets/html/number-editors-radios-inline.html?raw'
 import htmlNumberEditorNullable from '@/assets/html/number-editors-nullable.html?raw'
 import htmlNumberEditorRaty from '@/assets/html/number-editors-raty.html?raw'
+import htmlNumberEditorImask from '@/assets/html/number-editors-imask.html?raw'
 
 export default {
   name: 'NumberEditors',
@@ -145,6 +163,7 @@ export default {
       htmlNumberEditorRadiosInline,
       htmlNumberEditorNullable,
       htmlNumberEditorRaty,
+      htmlNumberEditorImask
     }
   }
 }

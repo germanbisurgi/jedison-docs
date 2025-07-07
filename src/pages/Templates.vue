@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>Template Placeholders</h1>
+      <h1>Templates</h1>
     </header>
 
     <section>
