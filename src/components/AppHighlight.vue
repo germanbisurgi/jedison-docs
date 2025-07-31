@@ -8,6 +8,7 @@ import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
 import bash from 'highlight.js/lib/languages/bash'
 import xml from 'highlight.js/lib/languages/xml'
+import json from 'highlight.js/lib/languages/json'
 import CopyButtonPlugin from 'highlightjs-copy'
 
 export default {
@@ -20,7 +21,7 @@ export default {
     language: {
       type: String,
       default: 'javascript',
-      validator: (value) => ['javascript', 'bash', 'html'].includes(value)
+      validator: (value) => ['javascript', 'bash', 'html', 'json'].includes(value)
     }
   },
   computed: {
@@ -38,6 +39,7 @@ export default {
     hljs.registerLanguage('javascript', javascript)
     hljs.registerLanguage('bash', bash)
     hljs.registerLanguage('html', xml)
+    hljs.registerLanguage('json', json)
 
     // Add copy plugin
     hljs.addPlugin(new CopyButtonPlugin({

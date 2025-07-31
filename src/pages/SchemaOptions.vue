@@ -162,7 +162,19 @@
       <article>
         <h3><code>x-messages</code></h3>
         <p><strong>Type:</strong> <code>object</code> | <code>string[]</code></p>
-        <p>Validation error messages can be customized using this option in the schema.</p>
+        <p>Validation error messages can be customized using this option in the schema. The option can be used in different ways:</p>
+        
+        <h4>Array format</h4>
+        <p>Pass messages as an array of strings:</p>
+        <app-highlight language="json" :code="xMessagesArray" />
+        
+        <h4>Object format with validation keywords</h4>
+        <p>Pass messages as an object with validation keywords as keys:</p>
+        <app-highlight language="json" :code="xMessagesObject" />
+        
+        <h4>Internationalization format</h4>
+        <p>Pass messages with language codes for internationalization support:</p>
+        <app-highlight language="json" :code="xMessagesI18n" />
       </article>
 
       <article>
@@ -223,9 +235,16 @@
 
 <script>
 import {useHead} from '@unhead/vue'
+import AppHighlight from "@/components/AppHighlight.vue"
+import xMessagesArray from '@/assets/markdown/x-messages-array.md?raw'
+import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
+import xMessagesI18n from '@/assets/markdown/x-messages-i18n.md?raw'
 
 export default {
   name: 'SchemaOptions',
+  components: {
+    AppHighlight
+  },
   setup() {
     useHead({
       title: 'Jedison - Schema Options',
@@ -236,6 +255,13 @@ export default {
         }
       ]
     })
+  },
+  data() {
+    return {
+      xMessagesArray,
+      xMessagesObject,
+      xMessagesI18n
+    }
   }
 }
 </script>
