@@ -12,12 +12,41 @@ import RefParser from "@/pages/RefParser.vue"
 import MarkdownAnnotations from "@/pages/MarkdownAnnotations.vue"
 import Options from "@/pages/Options.vue"
 import SchemaOptions from "@/pages/SchemaOptions.vue"
-import ArrayEditors from "@/pages/ArrayEditors.vue"
-import BooleanEditors from "@/pages/BooleanEditors.vue"
-import NumberEditors from "@/pages/NumberEditors.vue"
-import ObjectEditors from "@/pages/ObjectEditors.vue"
-import StringEditors from "@/pages/StringEditors.vue"
-import NullEditors from "@/pages/NullEditors.vue"
+import ArrayEditorDefault from "@/pages/ArrayEditorDefault.vue"
+import ArrayEditorCheckboxes from "@/pages/ArrayEditorCheckboxes.vue"
+import ArrayEditorCheckboxesInline from "@/pages/ArrayEditorCheckboxesInline.vue"
+import ArrayEditorChoices from "@/pages/ArrayEditorChoices.vue"
+import ArrayEditorNavVertical from "@/pages/ArrayEditorNavVertical.vue"
+import ArrayEditorNavHorizontal from "@/pages/ArrayEditorNavHorizontal.vue"
+import ArrayEditorTable from "@/pages/ArrayEditorTable.vue"
+import ArrayEditorTableObject from "@/pages/ArrayEditorTableObject.vue"
+import BooleanEditorDefault from "@/pages/BooleanEditorDefault.vue"
+import BooleanEditorCheckbox from "@/pages/BooleanEditorCheckbox.vue"
+import BooleanEditorRadios from "@/pages/BooleanEditorRadios.vue"
+import BooleanEditorRadiosInline from "@/pages/BooleanEditorRadiosInline.vue"
+import BooleanEditorSelect from "@/pages/BooleanEditorSelect.vue"
+import NumberEditorDefault from "@/pages/NumberEditorDefault.vue"
+import NumberEditorSelect from "@/pages/NumberEditorSelect.vue"
+import NumberEditorRadios from "@/pages/NumberEditorRadios.vue"
+import NumberEditorRadiosInline from "@/pages/NumberEditorRadiosInline.vue"
+import NumberEditorNullable from "@/pages/NumberEditorNullable.vue"
+import NumberEditorRaty from "@/pages/NumberEditorRaty.vue"
+import NumberEditorImask from "@/pages/NumberEditorImask.vue"
+import ObjectEditorDefault from "@/pages/ObjectEditorDefault.vue"
+import ObjectEditorGrid from "@/pages/ObjectEditorGrid.vue"
+import ObjectEditorNavVertical from "@/pages/ObjectEditorNavVertical.vue"
+import ObjectEditorNavHorizontal from "@/pages/ObjectEditorNavHorizontal.vue"
+import StringEditorDefault from "@/pages/StringEditorDefault.vue"
+import StringEditorRadios from "@/pages/StringEditorRadios.vue"
+import StringEditorRadiosInline from "@/pages/StringEditorRadiosInline.vue"
+import StringEditorSelect from "@/pages/StringEditorSelect.vue"
+import StringEditorTextarea from "@/pages/StringEditorTextarea.vue"
+import StringEditorAwesomplete from "@/pages/StringEditorAwesomplete.vue"
+import StringEditorFlatpickr from "@/pages/StringEditorFlatpickr.vue"
+import StringEditorImask from "@/pages/StringEditorImask.vue"
+import StringEditorJodit from "@/pages/StringEditorJodit.vue"
+import StringEditorQuill from "@/pages/StringEditorQuill.vue"
+import NullEditorDefault from "@/pages/NullEditorDefault.vue"
 import CustomConstraint from "@/pages/CustomConstraint.vue"
 import Templates from "@/pages/Templates.vue"
 
@@ -149,54 +178,323 @@ export const routes = [
     }
   },
   {
-    path: '/array-editors',
-    name: 'Array Editors',
-    component: ArrayEditors,
+    path: '/array-editor-default',
+    name: 'Array Default',
+    component: ArrayEditorDefault,
     meta: {
       navbar: true,
       group: 'Editors'
     }
   },
   {
-    path: '/boolean-editors',
-    name: 'Boolean Editors',
-    component: BooleanEditors,
+    path: '/array-editor-checkboxes',
+    name: 'Array Checkboxes',
+    component: ArrayEditorCheckboxes,
     meta: {
       navbar: true,
       group: 'Editors'
     }
   },
   {
-    path: '/numbers-editors',
-    name: 'Numbers Editors',
-    component: NumberEditors,
+    path: '/array-editor-checkboxes-inline',
+    name: 'Array Checkboxes Inline',
+    component: ArrayEditorCheckboxesInline,
     meta: {
       navbar: true,
       group: 'Editors'
     }
   },
   {
-    path: '/object-editors',
-    name: 'Object Editors',
-    component: ObjectEditors,
+    path: '/array-editor-choices',
+    name: 'Array Choices',
+    component: ArrayEditorChoices,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/array-editor-nav-vertical',
+    name: 'Array Navigation Vertical',
+    component: ArrayEditorNavVertical,
     meta: {
       navbar: true,
       group: 'Editors'
     }
   },
   {
-    path: '/string-editors',
-    name: 'String Editors',
-    component: StringEditors,
+    path: '/array-editor-nav-horizontal',
+    name: 'Array Navigation Horizontal',
+    component: ArrayEditorNavHorizontal,
     meta: {
       navbar: true,
       group: 'Editors'
     }
   },
   {
-    path: '/null-editors',
-    name: 'Null Editors',
-    component: NullEditors,
+    path: '/array-editor-table',
+    name: 'Array Table',
+    component: ArrayEditorTable,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/array-editor-table-object',
+    name: 'Array Table Object',
+    component: ArrayEditorTableObject,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editor-default',
+    name: 'Boolean Default',
+    component: BooleanEditorDefault,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editor-checkbox',
+    name: 'Boolean Checkbox',
+    component: BooleanEditorCheckbox,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editor-radios',
+    name: 'Boolean Radio Buttons',
+    component: BooleanEditorRadios,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editor-radios-inline',
+    name: 'Boolean Radio Buttons Inline',
+    component: BooleanEditorRadiosInline,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/boolean-editor-select',
+    name: 'Boolean Select Dropdown',
+    component: BooleanEditorSelect,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-default',
+    name: 'Number Default',
+    component: NumberEditorDefault,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-select',
+    name: 'Number Select',
+    component: NumberEditorSelect,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-radios',
+    name: 'Number Radio Buttons',
+    component: NumberEditorRadios,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-radios-inline',
+    name: 'Number Radio Buttons Inline',
+    component: NumberEditorRadiosInline,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-nullable',
+    name: 'Number Nullable',
+    component: NumberEditorNullable,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/number-editor-raty',
+    name: 'Number Star Rating',
+    component: NumberEditorRaty,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/number-editor-imask',
+    name: 'Number IMask',
+    component: NumberEditorImask,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/object-editor-default',
+    name: 'Object Default',
+    component: ObjectEditorDefault,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-grid',
+    name: 'Object Grid',
+    component: ObjectEditorGrid,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-nav-vertical',
+    name: 'Object Navigation Vertical',
+    component: ObjectEditorNavVertical,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-nav-horizontal',
+    name: 'Object Navigation Horizontal',
+    component: ObjectEditorNavHorizontal,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-default',
+    name: 'String Default',
+    component: StringEditorDefault,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-radios',
+    name: 'String Radio Buttons',
+    component: StringEditorRadios,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-radios-inline',
+    name: 'String Radio Buttons Inline',
+    component: StringEditorRadiosInline,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-select',
+    name: 'String Select',
+    component: StringEditorSelect,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-textarea',
+    name: 'String Textarea',
+    component: StringEditorTextarea,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/string-editor-awesomplete',
+    name: 'String Awesomplete',
+    component: StringEditorAwesomplete,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/string-editor-flatpickr',
+    name: 'String Flatpickr',
+    component: StringEditorFlatpickr,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/string-editor-imask',
+    name: 'String IMask',
+    component: StringEditorImask,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/string-editor-jodit',
+    name: 'String Jodit',
+    component: StringEditorJodit,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/string-editor-quill',
+    name: 'String Quill',
+    component: StringEditorQuill,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/null-editor-default',
+    name: 'Null Default',
+    component: NullEditorDefault,
     meta: {
       navbar: true,
       group: 'Editors'

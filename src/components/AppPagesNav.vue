@@ -17,6 +17,7 @@
         <li v-for="route in groupRoutes" :key="route.name" class="nav-item">
           <router-link :to="route.path" class="nav-link" active-class="text-dark bg-primary">
             {{ route.name }}
+            <span v-if="route.meta?.requiresPlugin" class="badge bg-warning text-dark ms-2">Plugin</span>
           </router-link>
         </li>
       </ul>
