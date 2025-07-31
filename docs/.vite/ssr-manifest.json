@@ -1,9 +1,9 @@
 {
   "\u0000/Users/germanbisurgi/Sites/germanbisurgi/jedison-docs/node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-es-import": [
-    "/jedison-docs/assets/bootstrap.bundle-DRPJJ28r.js"
+    "/jedison-docs/assets/bootstrap.bundle-1_47vTa1.js"
   ],
   "\u0000/Users/germanbisurgi/Sites/germanbisurgi/jedison-docs/node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-module": [
-    "/jedison-docs/assets/bootstrap.bundle-DRPJJ28r.js"
+    "/jedison-docs/assets/bootstrap.bundle-1_47vTa1.js"
   ],
   "\u0000/Users/germanbisurgi/Sites/germanbisurgi/jedison-docs/node_modules/highlight.js/lib/core.js?commonjs-es-import": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
@@ -258,7 +258,7 @@
     "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
   ],
   "node_modules/bootstrap/dist/js/bootstrap.bundle.js": [
-    "/jedison-docs/assets/bootstrap.bundle-DRPJJ28r.js"
+    "/jedison-docs/assets/bootstrap.bundle-1_47vTa1.js"
   ],
   "node_modules/highlight.js/es/languages/bash.js": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
@@ -268,6 +268,13 @@
     "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
   ],
   "node_modules/highlight.js/es/languages/javascript.js": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "node_modules/highlight.js/es/languages/json.js": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
     "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
@@ -940,6 +947,27 @@
     "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
   ],
   "src/assets/markdown/validation-errors.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/assets/markdown/x-messages-array.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/assets/markdown/x-messages-i18n.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/assets/markdown/x-messages-object.md?raw": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-BtvjY1KL.woff2",
     "/jedison-docs/assets/bootstrap-icons-BOrJxbIo.woff",
