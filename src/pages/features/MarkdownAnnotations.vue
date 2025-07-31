@@ -43,7 +43,7 @@ import {useHead} from '@unhead/vue'
 import AppLiveExample from "@/components/AppLiveExample.vue"
 import htmlContent from '@/assets/html/markdown-annotations.html?raw'
 import exposing from '@/assets/markdown/exposing-marked-and-dompurify.md?raw'
-import AppHighlight from "../components/AppHighlight.vue"
+import AppHighlight from "@/components/AppHighlight.vue"
 
 export default {
   name: 'MarkdownAnnotations',
