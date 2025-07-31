@@ -32,6 +32,7 @@ import NumberEditorRadiosInline from "@/pages/NumberEditorRadiosInline.vue"
 import NumberEditorNullable from "@/pages/NumberEditorNullable.vue"
 import NumberEditorRaty from "@/pages/NumberEditorRaty.vue"
 import NumberEditorImask from "@/pages/NumberEditorImask.vue"
+import NumberEditorRange from "@/pages/NumberEditorRange.vue"
 import ObjectEditorDefault from "@/pages/ObjectEditorDefault.vue"
 import ObjectEditorGrid from "@/pages/ObjectEditorGrid.vue"
 import ObjectEditorNavVertical from "@/pages/ObjectEditorNavVertical.vue"
@@ -358,6 +359,15 @@ export const routes = [
       navbar: true,
       group: 'Editors',
       requiresPlugin: true
+    }
+  },
+  {
+    path: '/number-editor-range',
+    name: 'Number Range',
+    component: NumberEditorRange,
+    meta: {
+      navbar: true,
+      group: 'Editors'
     }
   },
   {

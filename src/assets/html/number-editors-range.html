@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  const jedison = new Jedison.Create({
+    container: document.querySelector('#jedison-container'),
+    theme: new Jedison.ThemeBootstrap5(),
+    iconLib: 'bootstrap-icons',
+    btnContents: false,
+    schema: {
+      "title": "Number Range Editor",
+      "type": "object",
+      "properties": {
+        "rangeMinMax": {
+          "type": "number",
+          "title": "Number Range with Min/Max",
+          "description": "Automatically uses range input when min and max are defined",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 50
+        },
+        "rangeInteger": {
+          "type": "integer",
+          "title": "Integer Range",
+          "description": "Integer range with step=1",
+          "minimum": 1,
+          "maximum": 10,
+          "default": 5
+        },
+        "rangeExclusive": {
+          "type": "number",
+          "title": "Exclusive Range",
+          "description": "Range with exclusive minimum and maximum",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 1,
+          "default": 0.5
+        },
+        "rangeMultipleOf": {
+          "type": "number",
+          "title": "Range with MultipleOf",
+          "description": "Range that uses multipleOf as step",
+          "minimum": 0,
+          "maximum": 10,
+          "multipleOf": 0.25,
+          "default": 2.5
+        },
+        "rangeCustomStep": {
+          "type": "number",
+          "title": "Custom Step Range",
+          "description": "Range with custom step override using x-inputAttributes",
+          "minimum": 0,
+          "maximum": 50,
+          "x-inputAttributes": {
+            "step": "2.5"
+          },
+          "default": 25
+        },
+        "rangeExplicitFormat": {
+          "type": "number",
+          "title": "Explicit Range Format",
+          "description": "Explicitly specified as range format with custom attributes",
+          "x-format": "range",
+          "x-inputAttributes": {
+            "min": "10",
+            "max": "90",
+            "step": "5"
+          },
+          "default": 50
+        },
+        "rangeTemperature": {
+          "type": "integer",
+          "title": "Temperature (°C)",
+          "description": "Temperature range with icon",
+          "x-titleIconClass": "fa fa-thermometer-half",
+          "minimum": -10,
+          "maximum": 40,
+          "default": 20
+        },
+        "rangeVolume": {
+          "type": "integer",
+          "title": "Volume Level",
+          "description": "Volume control with hidden title",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 5,
+          "default": 75
+        }
+      },
+      "required": [
+        "rangeMinMax"
+      ]
+    }
+  })
+</script>
+</body>
+</html>
