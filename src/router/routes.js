@@ -50,6 +50,7 @@ import StringEditorQuill from "@/pages/editors/StringEditorQuill.vue"
 import NullEditorDefault from "@/pages/editors/NullEditorDefault.vue"
 import CustomConstraint from "@/pages/advanced/CustomConstraint.vue"
 import Templates from "@/pages/advanced/Templates.vue"
+import FAQ from "@/pages/getting-started/FAQ.vue"
 
 export const routes = [
   {
@@ -110,6 +111,15 @@ export const routes = [
     path: '/playground',
     name: 'Playground',
     component: Playground,
+    meta: {
+      navbar: true,
+      group: 'Getting Started'
+    }
+  },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: FAQ,
     meta: {
       navbar: true,
       group: 'Getting Started'
