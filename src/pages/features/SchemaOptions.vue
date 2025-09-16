@@ -187,8 +187,9 @@
         <h3><code>x-showErrors</code></h3>
         <p><strong>Type:</strong> <code>string</code></p>
         <p><strong>Default:</strong> <code>"change"</code></p>
-        <p><strong>Options:</strong> <code>"never"</code>, <code>"change"</code>, <code>"always"</code></p>
-        <p>Determines when to display validation errors.</p>
+        <p><strong>Options:</strong> <code>"never"</code>, <code>"change"</code>, <code>"input"</code>, <code>"always"</code></p>
+        <p>Determines when to display validation errors for this specific schema. Overrides the instance-level <code>showErrors</code> setting.</p>
+        <p><strong>Note:</strong> The <code>"input"</code> option provides real-time validation as the user types, but only affects text-based inputs (string inputs, textareas, number inputs).</p>
       </article>
 
       <article>

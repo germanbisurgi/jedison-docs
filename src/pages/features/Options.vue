@@ -234,10 +234,12 @@
         <p><strong>Default:</strong> <code>'change'</code></p>
         <p>Determines when to display validation errors. Options include:</p>
         <ul>
-          <li><code>'never'</code></li>
-          <li><code>'change'</code></li>
-          <li><code>'always'</code></li>
+          <li><code>'never'</code> - Never show validation errors automatically</li>
+          <li><code>'change'</code> - Show errors when the input loses focus (default)</li>
+          <li><code>'input'</code> - Show errors immediately as the user types (for text inputs, textareas, and number inputs)</li>
+          <li><code>'always'</code> - Always show validation errors</li>
         </ul>
+        <p><strong>Note:</strong> The <code>'input'</code> option only affects text-based inputs (string inputs, textareas, number inputs). Selection inputs (dropdowns, checkboxes, radios) continue using the <code>'change'</code> event as it's more appropriate for their interaction model.</p>
         <p><strong>x-option:</strong> ✅</p>
       </article>
 
