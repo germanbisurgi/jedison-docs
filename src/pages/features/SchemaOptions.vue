@@ -92,6 +92,14 @@
       </article>
 
       <article>
+        <h3><code>x-editJsonData</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Enables inline JSON editing mode for this specific schema, allowing users to directly edit the JSON data within form fields.</p>
+        <app-highlight :code="xEditJsonDataExample" />
+      </article>
+
+      <article>
         <h3><code>x-enableCollapseToggle</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Display a collapse button used to collapse or expand editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
@@ -240,6 +248,7 @@ import AppHighlight from "@/components/AppHighlight.vue"
 import xMessagesArray from '@/assets/markdown/x-messages-array.md?raw'
 import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
 import xMessagesI18n from '@/assets/markdown/x-messages-i18n.md?raw'
+import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
 
 export default {
   name: 'SchemaOptions',
@@ -261,7 +270,8 @@ export default {
     return {
       xMessagesArray,
       xMessagesObject,
-      xMessagesI18n
+      xMessagesI18n,
+      xEditJsonDataExample
     }
   }
 }

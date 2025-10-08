@@ -268,6 +268,15 @@
       </article>
 
       <article>
+        <h3><code>editJsonData</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Enables inline JSON editing mode, allowing users to directly edit the JSON data within form fields.</p>
+        <app-highlight :code="editJsonDataExample" />
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
         <h3><code>arrayAdd</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
@@ -280,9 +289,14 @@
 
 <script>
 import {useHead} from '@unhead/vue'
+import AppHighlight from "@/components/AppHighlight.vue"
+import editJsonDataExample from '@/assets/markdown/editJsonData-example.md?raw'
 
 export default {
   name: 'InstanceOptions',
+  components: {
+    AppHighlight
+  },
   setup() {
     useHead({
       title: 'Jedison - Instance Options',
@@ -296,6 +310,7 @@ export default {
   },
   data() {
     return {
+      editJsonDataExample
     }
   }
 }
