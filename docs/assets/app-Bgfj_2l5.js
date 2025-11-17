@@ -2630,17 +2630,51 @@ constraints: {
     schema: {
       "title": "Templates",
       "type": "array",
-      "description": "Titles and descriptions can include placeholders such as \`i0\`, \`i1\` that are dynamically replaced when rendering the data.\\n\\nAvailable placeholders:\\n\\n- \`value\` — the current value (from \`getValue\`); **always available**\\n- \`settings\` — configuration options (from \`jedison.options.settings\`); **always available**\\n- \`i0\` — the zero-based index of the array item; available **only if the editor is an array item editor**\\n- \`i1\` — the one-based index of the array item; available **only if the editor is an array item editor**\\n",
+      "x-format": "nav-vertical",
       "minItems": 1,
+      "default": [
+        {
+          "name": "Tech Corp",
+          "departments": [
+            {
+              "name": "Engineering"
+            }
+          ]
+        }
+      ],
+      "x-titleTemplate": "{{ value.name }}",
       "items": {
-        "title": "My object {{ i1 }} has title: {{ value.title }}",
-        "description": "My object {{ i1 }} has title: {{ value.title }}",
+        "title": "Company {{ i1 }} - {{ value.name }}",
+        "description": "Company {{ i1 }} has name: {{ value.name }}",
         "type": "object",
         "properties": {
-          "title": {
-            "title": "title",
+          "name": {
             "type": "string",
-            "default": "default"
+            "title": "Company Name",
+            "default": "New Company"
+          },
+          "departments": {
+            "type": "array",
+            "title": "Departments",
+            "x-format": "nav-vertical",
+            "minItems": 1,
+            "default": [
+              {
+                "name": "General"
+              }
+            ],
+            "x-titleTemplate": "{{ parent.parent.value.name }} - {{ value.name }}",
+            "items": {
+              "title": "{{ parent.parent.value.name }} - {{ value.name }}",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Department Name",
+                  "default": "New Department"
+                }
+              }
+            }
           }
         }
       }
@@ -2648,7 +2682,7 @@ constraints: {
   })
 <\/script>
 </body>
-</html>`,JM={name:"Templates",components:{AppLiveExample:Ee},setup(){Se({title:"Jedison - Template Placeholders",meta:[{name:"description",content:"Documentation for using dynamic placeholders in Jedison template titles and descriptions."}]})},data(){return{htmlTemplateExample:HM,renderedExample:"My object 1"}}};function KM(t,e,n,i,s,r){const o=ae("app-live-example");return ne(),re("div",null,[e[1]||(e[1]=f("header",null,[f("h1",null,"Templates")],-1)),f("section",null,[f("article",null,[e[0]||(e[0]=tt('<h2>Using Placeholders in Templates</h2><p> Jedison allows you to define templates with dynamic titles and descriptions that use placeholders. These placeholders are replaced at runtime with relevant values. </p><h3 class="mt-3"> Available Placeholders </h3><ul><li><code>value</code> — The current value (from <code>getValue()</code>); <strong>always available</strong></li><li><code>settings</code> — Configuration options (from <code>jedison.options.settings</code>); <strong>always available</strong></li><li><code>i0</code> — The zero-based index of the array item; available <strong>only if the editor is an array item editor</strong></li><li><code>i1</code> — The one-based index of the array item; available <strong>only if the editor is an array item editor</strong></li></ul>',4)),B(o,{example:s.htmlTemplateExample},null,8,["example"])])])])}const ej=fe(JM,[["render",KM]]),tj={name:"FAQ"};function nj(t,e,n,i,s,r){return ne(),re("div",null,e[0]||(e[0]=[tt(`<h1 class="mb-4"> FAQ </h1><div class="mb-4"><h3>Does this library generate form elements?</h3><p> No, this library does not generate form elements but only the fields. If you are generating fields inside a form element, it is recommended to use the <code>novalidate</code> attribute on the form to prevent browser validation conflicts. </p><p> It&#39;s also a good practice to use the <code>showValidationErrors</code> method when clicking the submit button to display any validation errors. </p><div class="mt-3"><strong>Example:</strong><pre><code>&lt;form novalidate&gt;
+</html>`,JM={name:"Templates",components:{AppLiveExample:Ee},setup(){Se({title:"Jedison - Template Placeholders",meta:[{name:"description",content:"Documentation for using dynamic placeholders in Jedison template titles and descriptions."}]})},data(){return{htmlTemplateExample:HM,renderedExample:"My object 1"}}};function KM(t,e,n,i,s,r){const o=ae("app-live-example");return ne(),re("div",null,[e[1]||(e[1]=f("header",null,[f("h1",null,"Templates")],-1)),f("section",null,[f("article",null,[e[0]||(e[0]=tt('<h2>Using Placeholders in Templates</h2><p> Jedison allows you to define templates with dynamic titles and descriptions that use placeholders. These placeholders are replaced at runtime with relevant values. </p><h3 class="mt-3"> Available Placeholders </h3><ul><li><code>value</code> — The current value (from <code>getValue()</code>); <strong>always available</strong></li><li><code>settings</code> — Configuration options (from <code>jedison.options.settings</code>); <strong>always available</strong></li><li><code>i0</code> — The zero-based index of the array item; available <strong>only if the editor is an array item editor</strong></li><li><code>i1</code> — The one-based index of the array item; available <strong>only if the editor is an array item editor</strong></li><li><code>parent</code> — Parent instance template data; <strong>available when parent exists</strong></li></ul><h3 class="mt-4"> Parent Template Access </h3><p> When working with nested structures, you can access parent instance data using the <code>parent</code> placeholder. This is particularly useful for creating hierarchical titles and references. </p><h4 class="mt-3">Common Parent Access Patterns</h4><ul><li><code>parent.value</code> — Access the parent&#39;s current value</li><li><code>parent.i1</code> — Access the parent&#39;s array index (1-based)</li><li><code>parent.parent.value</code> — Access grandparent&#39;s value (for deeply nested structures)</li></ul>',8)),B(o,{example:s.htmlTemplateExample},null,8,["example"])])])])}const ej=fe(JM,[["render",KM]]),tj={name:"FAQ"};function nj(t,e,n,i,s,r){return ne(),re("div",null,e[0]||(e[0]=[tt(`<h1 class="mb-4"> FAQ </h1><div class="mb-4"><h3>Does this library generate form elements?</h3><p> No, this library does not generate form elements but only the fields. If you are generating fields inside a form element, it is recommended to use the <code>novalidate</code> attribute on the form to prevent browser validation conflicts. </p><p> It&#39;s also a good practice to use the <code>showValidationErrors</code> method when clicking the submit button to display any validation errors. </p><div class="mt-3"><strong>Example:</strong><pre><code>&lt;form novalidate&gt;
   &lt;!-- Your Jedison fields here --&gt;
   &lt;button type=&quot;submit&quot; onclick=&quot;showValidationErrors()&quot;&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre></div></div>`,2)]))}const ij=fe(tj,[["render",nj]]),sj=[{path:"/",name:"Introduction",component:Rw,meta:{navbar:!0,group:"Getting Started"}},{path:"/install",name:"Install",component:Hw,meta:{navbar:!0,group:"Getting Started"}},{path:"/as-editor",name:"As Editor",component:zE,meta:{navbar:!0,group:"Getting Started"}},{path:"/as-validator",name:"As Validator",component:GE,meta:{navbar:!0,group:"Getting Started"}},{path:"/methods",name:"Methods",component:cC,meta:{navbar:!0,group:"Getting Started"}},{path:"/events",name:"Events",component:gC,meta:{navbar:!0,group:"Getting Started"}},{path:"/playground",name:"Playground",component:KE,meta:{navbar:!0,group:"Getting Started"}},{path:"/faq",name:"FAQ",component:ij,meta:{navbar:!0,group:"Getting Started"}},{path:"/themes",name:"Themes",component:kC,meta:{navbar:!0,group:"Features"}},{path:"/icons",name:"Icons",component:RC,meta:{navbar:!0,group:"Features"}},{path:"/language-and-translations",name:"Language and Translations",component:DC,meta:{navbar:!0,group:"Features"}},{path:"/ref-parser",name:"RefParser",component:zC,meta:{navbar:!0,group:"Features"}},{path:"/markdown-annotations",name:"Markdown Annotations",component:JC,meta:{navbar:!0,group:"Features"}},{path:"/options",name:"Options",component:nA,meta:{navbar:!0,group:"Features"}},{path:"/schema-options",name:"Schema Options",component:cA,meta:{navbar:!0,group:"Features"}},{path:"/array-editor-default",name:"Array Default",component:fA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-checkboxes",name:"Array Checkboxes",component:gA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-checkboxes-inline",name:"Array Checkboxes Inline",component:SA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-choices",name:"Array Choices",component:PA,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/array-editor-nav-vertical",name:"Array Navigation Vertical",component:TA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-nav-horizontal",name:"Array Navigation Horizontal",component:RA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-table",name:"Array Table",component:LA,meta:{navbar:!0,group:"Editors"}},{path:"/array-editor-table-object",name:"Array Table Object",component:XA,meta:{navbar:!0,group:"Editors"}},{path:"/boolean-editor-default",name:"Boolean Default",component:BA,meta:{navbar:!0,group:"Editors"}},{path:"/boolean-editor-checkbox",name:"Boolean Checkbox",component:FA,meta:{navbar:!0,group:"Editors"}},{path:"/boolean-editor-radios",name:"Boolean Radio Buttons",component:KA,meta:{navbar:!0,group:"Editors"}},{path:"/boolean-editor-radios-inline",name:"Boolean Radio Buttons Inline",component:iR,meta:{navbar:!0,group:"Editors"}},{path:"/boolean-editor-select",name:"Boolean Select Dropdown",component:lR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-default",name:"Number Default",component:hR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-select",name:"Number Select",component:mR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-radios",name:"Number Radio Buttons",component:yR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-radios-inline",name:"Number Radio Buttons Inline",component:wR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-nullable",name:"Number Nullable",component:QR,meta:{navbar:!0,group:"Editors"}},{path:"/number-editor-raty",name:"Number Star Rating",component:CR,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/number-editor-imask",name:"Number IMask",component:jR,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/number-editor-range",name:"Number Range",component:DR,meta:{navbar:!0,group:"Editors"}},{path:"/object-editor-default",name:"Object Default",component:VR,meta:{navbar:!0,group:"Editors"}},{path:"/object-editor-grid",name:"Object Grid",component:zR,meta:{navbar:!0,group:"Editors"}},{path:"/object-editor-nav-vertical",name:"Object Navigation Vertical",component:HR,meta:{navbar:!0,group:"Editors"}},{path:"/object-editor-nav-horizontal",name:"Object Navigation Horizontal",component:tM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-default",name:"String Default",component:rM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-radios",name:"String Radio Buttons",component:cM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-radios-inline",name:"String Radio Buttons Inline",component:fM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-select",name:"String Select",component:gM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-textarea",name:"String Textarea",component:SM,meta:{navbar:!0,group:"Editors"}},{path:"/string-editor-awesomplete",name:"String Awesomplete",component:PM,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/string-editor-flatpickr",name:"String Flatpickr",component:TM,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/string-editor-imask",name:"String IMask",component:RM,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/string-editor-jodit",name:"String Jodit",component:LM,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/string-editor-quill",name:"String Quill",component:XM,meta:{navbar:!0,group:"Editors",requiresPlugin:!0}},{path:"/null-editor-default",name:"Null Default",component:BM,meta:{navbar:!0,group:"Editors"}},{path:"/custom-constraint",name:"Custom constraint",component:GM,meta:{navbar:!0,group:"Advanced"}},{path:"/templates",name:"Templates",component:ej,meta:{navbar:!0,group:"Advanced"}}];/*!
@@ -2673,4 +2707,4 @@ constraints: {
  * pinia v2.3.1
  * (c) 2025 Eduardo San Martin Morote
  * @license MIT
- */const fN=Symbol();var vm;(function(t){t.direct="direct",t.patchObject="patch object",t.patchFunction="patch function"})(vm||(vm={}));function pN(){const t=Mm(!0),e=t.run(()=>Gt({}));let n=[],i=[];const s=Hm({install(r){s._a=r,r.provide(fN,s),r.config.globalProperties.$pinia=s,i.forEach(o=>n.push(o)),i=[]},use(r){return this._a?n.push(r):i.push(r),this},_p:n,_a:null,_e:t,_s:new Map,state:e});return s}const mN=pN();zx(Tw,{routes:sj,base:"/jedison-docs/"},async({app:t,router:e,routes:n,isClient:i,initialState:s})=>{t.use(e),t.use(dN),t.use(mN),i&&J0(()=>import("./bootstrap.bundle-DO0NDzCW.js").then(r=>r.b),[]),console.log("routes",n),console.log("initialState",s)});export{KO as g};
+ */const fN=Symbol();var vm;(function(t){t.direct="direct",t.patchObject="patch object",t.patchFunction="patch function"})(vm||(vm={}));function pN(){const t=Mm(!0),e=t.run(()=>Gt({}));let n=[],i=[];const s=Hm({install(r){s._a=r,r.provide(fN,s),r.config.globalProperties.$pinia=s,i.forEach(o=>n.push(o)),i=[]},use(r){return this._a?n.push(r):i.push(r),this},_p:n,_a:null,_e:t,_s:new Map,state:e});return s}const mN=pN();zx(Tw,{routes:sj,base:"/jedison-docs/"},async({app:t,router:e,routes:n,isClient:i,initialState:s})=>{t.use(e),t.use(dN),t.use(mN),i&&J0(()=>import("./bootstrap.bundle-Dl-Eb2Et.js").then(r=>r.b),[]),console.log("routes",n),console.log("initialState",s)});export{KO as g};
