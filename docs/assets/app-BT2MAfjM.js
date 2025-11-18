@@ -2615,6 +2615,8 @@ constraints: {
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"><\/script>
     <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"><\/script>
 </head>
@@ -2627,6 +2629,8 @@ constraints: {
   const jedison = new Jedison.Create({
     container: document.querySelector('#jedison-container'),
     theme: new Jedison.ThemeBootstrap5(),
+    iconLib: 'bootstrap-icons',
+    btnContents: false,
     schema: {
       "title": "Templates",
       "type": "array",
@@ -2707,4 +2711,4 @@ constraints: {
  * pinia v2.3.1
  * (c) 2025 Eduardo San Martin Morote
  * @license MIT
- */const fN=Symbol();var vm;(function(t){t.direct="direct",t.patchObject="patch object",t.patchFunction="patch function"})(vm||(vm={}));function pN(){const t=Mm(!0),e=t.run(()=>Gt({}));let n=[],i=[];const s=Hm({install(r){s._a=r,r.provide(fN,s),r.config.globalProperties.$pinia=s,i.forEach(o=>n.push(o)),i=[]},use(r){return this._a?n.push(r):i.push(r),this},_p:n,_a:null,_e:t,_s:new Map,state:e});return s}const mN=pN();zx(Tw,{routes:sj,base:"/jedison-docs/"},async({app:t,router:e,routes:n,isClient:i,initialState:s})=>{t.use(e),t.use(dN),t.use(mN),i&&J0(()=>import("./bootstrap.bundle-Dl-Eb2Et.js").then(r=>r.b),[]),console.log("routes",n),console.log("initialState",s)});export{KO as g};
+ */const fN=Symbol();var vm;(function(t){t.direct="direct",t.patchObject="patch object",t.patchFunction="patch function"})(vm||(vm={}));function pN(){const t=Mm(!0),e=t.run(()=>Gt({}));let n=[],i=[];const s=Hm({install(r){s._a=r,r.provide(fN,s),r.config.globalProperties.$pinia=s,i.forEach(o=>n.push(o)),i=[]},use(r){return this._a?n.push(r):i.push(r),this},_p:n,_a:null,_e:t,_s:new Map,state:e});return s}const mN=pN();zx(Tw,{routes:sj,base:"/jedison-docs/"},async({app:t,router:e,routes:n,isClient:i,initialState:s})=>{t.use(e),t.use(dN),t.use(mN),i&&J0(()=>import("./bootstrap.bundle-DsDjRZ93.js").then(r=>r.b),[]),console.log("routes",n),console.log("initialState",s)});export{KO as g};
