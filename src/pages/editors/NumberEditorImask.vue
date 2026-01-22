@@ -12,6 +12,7 @@
           <li><code>"type": "number"</code></li>
           <li><code>"x-format": "imask"</code></li>
           <li>IMask.js must be available (<code>window.IMask</code>)</li>
+          <li>Plugin: <a href="https://github.com/uNmAnNeR/imaskjs" target="_blank" rel="noopener noreferrer">IMask.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>

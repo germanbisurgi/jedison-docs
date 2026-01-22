@@ -13,6 +13,7 @@
           <li><code>"x-format": "choices"</code></li>
           <li><code>"items": { "type": "string" | "number" | "integer" }</code></li>
           <li>Choices.js must be available (<code>window.Choices</code>)</li>
+          <li>Plugin: <a href="https://github.com/Choices-js/Choices" target="_blank" rel="noopener noreferrer">Choices.js on GitHub</a></li>
         </ul>
 
         <app-live-example :example="htmlArrayEditorChoices" />

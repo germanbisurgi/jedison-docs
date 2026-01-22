@@ -12,6 +12,7 @@
           <li><code>"type": "string"</code></li>
           <li><code>"x-format": "jodit"</code></li>
           <li>Jodit.js must be available (<code>window.Jodit</code>)</li>
+          <li>Plugin: <a href="https://github.com/xdan/jodit" target="_blank" rel="noopener noreferrer">Jodit.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>

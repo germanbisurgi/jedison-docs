@@ -12,6 +12,7 @@
           <li><code>"type": "string"</code></li>
           <li><code>"x-format": "awesomplete"</code></li>
           <li>Awesomplete.js must be available (<code>window.Awesomplete</code>)</li>
+          <li>Plugin: <a href="https://github.com/LeaVerou/awesomplete" target="_blank" rel="noopener noreferrer">Awesomplete.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>

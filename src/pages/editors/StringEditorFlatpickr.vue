@@ -12,6 +12,7 @@
           <li><code>"type": "string"</code></li>
           <li><code>"x-flatpickr": { ... }</code></li>
           <li>flatpickr.js must be available (<code>window.flatpickr</code>)</li>
+          <li>Plugin: <a href="https://github.com/flatpickr/flatpickr" target="_blank" rel="noopener noreferrer">Flatpickr.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>

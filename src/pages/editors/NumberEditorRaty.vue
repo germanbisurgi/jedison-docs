@@ -12,6 +12,7 @@
           <li><code>"type": "number"</code> or <code>"type": "integer"</code></li>
           <li><code>"x-format": "raty"</code> property defined</li>
           <li>Raty.js library loaded (<code>window.Raty</code>)</li>
+          <li>Plugin: <a href="https://github.com/wbotelhos/raty" target="_blank" rel="noopener noreferrer">Raty.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>

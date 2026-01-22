@@ -12,6 +12,7 @@
           <li><code>"type": "string"</code></li>
           <li><code>"x-format": "quill"</code></li>
           <li>Quill.js must be available (<code>window.Quill</code>)</li>
+          <li>Plugin: <a href="https://github.com/quilljs/quill" target="_blank" rel="noopener noreferrer">Quill.js on GitHub</a></li>
         </ul>
 
         <h2>Plugin Options</h2>
