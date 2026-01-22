@@ -1,4 +1,4 @@
-[![Tests](https://github.com/germanbisurgi/vue-app-template/actions/workflows/main.yml/badge.svg)](https://github.com/germanbisurgi/vue-app-template/actions/workflows/main.yml)
+[![Tests](https://github.com/germanbisurgi/jedison-docs/actions/workflows/main.yml/badge.svg)](https://github.com/germanbisurgi/jedison-docs/actions/workflows/main.yml)
 
 # Jedison Documentation
 
