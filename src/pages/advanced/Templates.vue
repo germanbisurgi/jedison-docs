@@ -31,7 +31,9 @@
           This is particularly useful for creating hierarchical titles and references.
         </p>
         
-        <h4 class="mt-3">Common Parent Access Patterns</h4>
+        <h4 class="mt-3">
+          Common Parent Access Patterns
+        </h4>
         <ul>
           <li><code>parent.value</code> — Access the parent's current value</li>
           <li><code>parent.i1</code> — Access the parent's array index (1-based)</li>
