@@ -82,6 +82,13 @@
       </article>
 
       <article>
+        <h3><code>purifyData</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>Sanitizes string values during data input operations if DOMPurify.js is available as <code>window.DOMPurify</code>. This provides security against XSS attacks in user input data, separate from HTML content purification.</p>
+      </article>
+
+      <article>
         <h3><code>domPurifyOptions</code></h3>
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
