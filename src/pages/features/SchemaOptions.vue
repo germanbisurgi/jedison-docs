@@ -29,6 +29,14 @@
       </article>
 
       <article>
+        <h3><code>x-arrayButtonsPosition</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p><strong>Default:</strong> <code>'left'</code></p>
+        <p><strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
+        <p>Controls the positioning of action buttons (delete, move, drag) in table format arrays. When set to <code>'right'</code>, buttons appear on the right side of the table. When set to <code>'left'</code> (default), buttons appear on the left side.</p>
+      </article>
+
+      <article>
         <h3><code>x-arrayDelete</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
