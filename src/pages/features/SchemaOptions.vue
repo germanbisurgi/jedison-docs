@@ -246,6 +246,12 @@
         <p><strong>Type:</strong> <code>string</code></p>
         <p>A template to form titles dynamically.</p>
       </article>
+
+      <article>
+        <h3><code>x-useConstraintAttributes</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p>Per-schema override for applying native HTML constraint attributes to string and textarea input elements. When set to <code>true</code>, string inputs get <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code> attributes from the corresponding JSON Schema keywords (<code>minLength</code>, <code>maxLength</code>, <code>pattern</code>). Textarea editors get <code>minlength</code> and <code>maxlength</code>. Overrides the global <code>useStringConstraintAttributes</code> option.</p>
+      </article>
     </section>
   </div>
 </template>
