@@ -290,6 +290,14 @@
         <p>If array add buttons should be displayed.</p>
         <p><strong>x-option:</strong> ✅</p>
       </article>
+
+      <article>
+        <h3><code>useStringConstraintAttributes</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>When enabled, string and textarea editors will set native HTML constraint attributes based on JSON Schema keywords. For string inputs: <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code>. For textarea editors: <code>minlength</code> and <code>maxlength</code>. This enables native browser validation hints and constraints for string fields.</p>
+        <p><strong>x-option:</strong> ✅ (as <code>x-useConstraintAttributes</code>)</p>
+      </article>
     </section>
   </div>
 </template>
