@@ -21,6 +21,8 @@
           <li><code>i0</code> — The zero-based index of the array item; available <strong>only if the editor is an array item editor</strong></li>
           <li><code>i1</code> — The one-based index of the array item; available <strong>only if the editor is an array item editor</strong></li>
           <li><code>parent</code> — Parent instance template data; <strong>available when parent exists</strong></li>
+          <li><code>length</code> — The length of the string value; <strong>available only for string types</strong></li>
+          <li><code>remaining</code> — Characters remaining (<code>maxLength - length</code>); <strong>available only for strings with maxLength</strong></li>
         </ul>
 
         <h3 class="mt-4">

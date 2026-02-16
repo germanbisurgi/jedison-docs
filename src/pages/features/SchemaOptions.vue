@@ -250,7 +250,13 @@
       <article>
         <h3><code>x-useConstraintAttributes</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
-        <p>Per-schema override for applying native HTML constraint attributes to string and textarea input elements. When set to <code>true</code>, string inputs get <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code> attributes from the corresponding JSON Schema keywords (<code>minLength</code>, <code>maxLength</code>, <code>pattern</code>). Textarea editors get <code>minlength</code> and <code>maxlength</code>. Overrides the global <code>useStringConstraintAttributes</code> option.</p>
+        <p>Per-schema override for applying native HTML constraint attributes based on JSON Schema keywords. Overrides the global <code>useConstraintAttributes</code> option.</p>
+        <ul>
+          <li><strong>Number inputs:</strong> <code>min</code>, <code>max</code></li>
+          <li><strong>Number range:</strong> <code>min</code>, <code>max</code></li>
+          <li><strong>String inputs:</strong> <code>minlength</code>, <code>maxlength</code>, <code>pattern</code></li>
+          <li><strong>Textarea:</strong> <code>minlength</code>, <code>maxlength</code></li>
+        </ul>
       </article>
     </section>
   </div>

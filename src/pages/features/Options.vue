@@ -292,11 +292,18 @@
       </article>
 
       <article>
-        <h3><code>useStringConstraintAttributes</code></h3>
+        <h3><code>useConstraintAttributes</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
-        <p><strong>Default:</strong> <code>false</code></p>
-        <p>When enabled, string and textarea editors will set native HTML constraint attributes based on JSON Schema keywords. For string inputs: <code>minlength</code>, <code>maxlength</code>, and <code>pattern</code>. For textarea editors: <code>minlength</code> and <code>maxlength</code>. This enables native browser validation hints and constraints for string fields.</p>
-        <p><strong>x-option:</strong> ✅ (as <code>x-useConstraintAttributes</code>)</p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>When enabled, editors will set native HTML constraint attributes based on JSON Schema keywords:</p>
+        <ul>
+          <li><strong>Number inputs:</strong> <code>min</code>, <code>max</code></li>
+          <li><strong>Number range:</strong> <code>min</code>, <code>max</code></li>
+          <li><strong>String inputs:</strong> <code>minlength</code>, <code>maxlength</code>, <code>pattern</code></li>
+          <li><strong>Textarea:</strong> <code>minlength</code>, <code>maxlength</code></li>
+        </ul>
+        <p>This enables native browser validation hints and constraints.</p>
+        <p><strong>x-option:</strong> ✅</p>
       </article>
     </section>
   </div>
