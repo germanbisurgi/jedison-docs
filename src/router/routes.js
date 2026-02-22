@@ -20,6 +20,7 @@ import ArrayEditorNavVertical from "@/pages/editors/ArrayEditorNavVertical.vue"
 import ArrayEditorNavHorizontal from "@/pages/editors/ArrayEditorNavHorizontal.vue"
 import ArrayEditorTable from "@/pages/editors/ArrayEditorTable.vue"
 import ArrayEditorTableObject from "@/pages/editors/ArrayEditorTableObject.vue"
+import ArrayEditorTuple from "@/pages/editors/ArrayEditorTuple.vue"
 import BooleanEditorDefault from "@/pages/editors/BooleanEditorDefault.vue"
 import BooleanEditorCheckbox from "@/pages/editors/BooleanEditorCheckbox.vue"
 import BooleanEditorRadios from "@/pages/editors/BooleanEditorRadios.vue"
@@ -256,6 +257,15 @@ export const routes = [
     path: '/array-editor-table-object',
     name: 'Array Table Object',
     component: ArrayEditorTableObject,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/array-editor-tuple',
+    name: 'Array Tuple',
+    component: ArrayEditorTuple,
     meta: {
       navbar: true,
       group: 'Editors'
