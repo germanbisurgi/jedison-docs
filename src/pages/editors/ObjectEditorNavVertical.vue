@@ -13,6 +13,13 @@
           <li><code>"x-format": "nav-vertical"</code></li>
         </ul>
 
+        <h2>Options</h2>
+        <ul>
+          <li><code>"x-navWarning"</code> — show a warning indicator on tabs that contain validation errors (defaults to <code>true</code>)</li>
+          <li><code>"x-navWarningMessage"</code> — custom message shown in the tab warning indicator</li>
+          <li><code>"x-format": "nav-vertical-N"</code> — use a custom column width for the tab list, where <code>N</code> is a Bootstrap column number (e.g. <code>"nav-vertical-3"</code>)</li>
+        </ul>
+
         <app-live-example :example="htmlObjectEditorNavVertical" />
       </article>
     </section>

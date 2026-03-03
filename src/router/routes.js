@@ -38,6 +38,8 @@ import ObjectEditorDefault from "@/pages/editors/ObjectEditorDefault.vue"
 import ObjectEditorGrid from "@/pages/editors/ObjectEditorGrid.vue"
 import ObjectEditorNavVertical from "@/pages/editors/ObjectEditorNavVertical.vue"
 import ObjectEditorNavHorizontal from "@/pages/editors/ObjectEditorNavHorizontal.vue"
+import ObjectEditorCategoriesVertical from "@/pages/editors/ObjectEditorCategoriesVertical.vue"
+import ObjectEditorCategoriesHorizontal from "@/pages/editors/ObjectEditorCategoriesHorizontal.vue"
 import StringEditorDefault from "@/pages/editors/StringEditorDefault.vue"
 import StringEditorRadios from "@/pages/editors/StringEditorRadios.vue"
 import StringEditorRadiosInline from "@/pages/editors/StringEditorRadiosInline.vue"
@@ -421,6 +423,24 @@ export const routes = [
     path: '/object-editor-nav-horizontal',
     name: 'Object Navigation Horizontal',
     component: ObjectEditorNavHorizontal,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-categories-vertical',
+    name: 'Object Categories Vertical',
+    component: ObjectEditorCategoriesVertical,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-categories-horizontal',
+    name: 'Object Categories Horizontal',
+    component: ObjectEditorCategoriesHorizontal,
     meta: {
       navbar: true,
       group: 'Editors'

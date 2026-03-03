@@ -13,6 +13,12 @@
           <li><code>"x-format": "nav-horizontal"</code></li>
         </ul>
 
+        <h2>Options</h2>
+        <ul>
+          <li><code>"x-navWarning"</code> — show a warning indicator on tabs that contain validation errors (defaults to <code>true</code>)</li>
+          <li><code>"x-navWarningMessage"</code> — custom message shown in the tab warning indicator</li>
+        </ul>
+
         <app-live-example :example="htmlObjectEditorNavHorizontal" />
       </article>
     </section>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  const jedison = new Jedison.Create({
+    container: document.querySelector('#jedison-container'),
+    theme: new Jedison.ThemeBootstrap5(),
+    iconLib: 'bootstrap-icons',
+    btnContents: false,
+    schema: {
+      "type": "object",
+      "title": "Categories Vertical",
+      "x-format": "categories-vertical",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "description": "Your full name",
+          "minLength": 1
+        },
+        "age": {
+          "type": "integer",
+          "title": "Age",
+          "description": "Your age",
+          "minimum": 0
+        },
+        "email": {
+          "type": "string",
+          "title": "Email",
+          "description": "Your email address",
+          "x-category": "Contact"
+        },
+        "address": {
+          "type": "object",
+          "title": "Address",
+          "description": "Your home address",
+          "properties": {
+            "street": {
+              "type": "string",
+              "title": "Street",
+              "description": "Street address"
+            },
+            "city": {
+              "type": "string",
+              "title": "City",
+              "description": "City name"
+            },
+            "zip": {
+              "type": "string",
+              "title": "ZIP Code",
+              "description": "Postal code"
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "title": "Tags",
+          "description": "List of tags",
+          "items": {
+            "type": "string",
+            "title": "Tag"
+          }
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>
