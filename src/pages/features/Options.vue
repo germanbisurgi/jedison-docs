@@ -60,11 +60,7 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>'{}'</code></p>
         <p>Used to add new translations or override the default ones. Uses template placeholders that get dynamically replaced with actual values during runtime</p>
-        <pre>translations: {
-  en: {
-    errorEnum: '🚨 YIKES! That value is about as valid as a pineapple pizza! 🍍🍕.'
-  }
-}</pre>
+        <app-highlight :code="translationsExample" />
       </article>
 
       <article>
@@ -93,6 +89,7 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>DOMPurify options.</p>
+        <app-highlight :code="domPurifyOptionsExample" />
       </article>
 
       <article>
@@ -128,6 +125,7 @@
         <p><strong>Type:</strong> <code>array</code></p>
         <p><strong>Default:</strong> <code>[]</code></p>
         <p>An array of custom editor classes.</p>
+        <app-highlight :code="customEditorsExample" />
       </article>
 
       <article>
@@ -135,6 +133,7 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>Attributes for the hidden input that contains the whole JSON value of the form.</p>
+        <app-highlight :code="hiddenInputAttributesExample" />
       </article>
 
       <article>
@@ -142,6 +141,7 @@
         <p><strong>Type:</strong> <code>object</code></p>
         <p><strong>Default:</strong> <code>{}</code></p>
         <p>An object to store user data and functions. Useful for when there is the need to provide options to configure a plugin but the options can not be used in schemas because of JSON data limitations. Can be used in annotations when using templates.</p>
+        <app-highlight :code="settingsExample" />
       </article>
 
       <article>
@@ -220,6 +220,14 @@
       </article>
 
       <article>
+        <h3><code>embedSwitcher</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>When enabled, embeds the type switcher UI inside the selected editor's header instead of displaying it separately above the content. Applies to <code>oneOf</code> and <code>anyOf</code> schemas.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
         <h3><code>enableCollapseToggle</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
@@ -259,6 +267,14 @@
       </article>
 
       <article>
+        <h3><code>subErrors</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>When enabled, validation errors include detailed sub-error information showing which nested property or item failed validation.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
         <h3><code>arrayDelete</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
@@ -292,6 +308,22 @@
       </article>
 
       <article>
+        <h3><code>objectAdd</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>If the "Add property" button should be displayed on object editors.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
+        <h3><code>arrayDeleteConfirm</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>When enabled, shows a confirmation dialog before deleting an array item.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
         <h3><code>useConstraintAttributes</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
@@ -312,7 +344,12 @@
 <script>
 import {useHead} from '@unhead/vue'
 import AppHighlight from "@/components/AppHighlight.vue"
+import customEditorsExample from '@/assets/markdown/customEditors-example.md?raw'
+import domPurifyOptionsExample from '@/assets/markdown/domPurifyOptions-example.md?raw'
 import editJsonDataExample from '@/assets/markdown/editJsonData-example.md?raw'
+import hiddenInputAttributesExample from '@/assets/markdown/hiddenInputAttributes-example.md?raw'
+import settingsExample from '@/assets/markdown/settings-example.md?raw'
+import translationsExample from '@/assets/markdown/translations-example.md?raw'
 
 export default {
   name: 'InstanceOptions',
@@ -332,7 +369,12 @@ export default {
   },
   data() {
     return {
-      editJsonDataExample
+      customEditorsExample,
+      domPurifyOptionsExample,
+      editJsonDataExample,
+      hiddenInputAttributesExample,
+      settingsExample,
+      translationsExample
     }
   }
 }

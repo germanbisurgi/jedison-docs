@@ -98,14 +98,14 @@ export const searchData = [
     name: 'Options',
     group: 'Features',
     description: 'Global configuration options for Jedison initialization.',
-    keywords: ['options', 'configuration', 'settings', 'init', 'global', 'enforceConst', 'enforceEnum', 'enforceRequired', 'enforceAdditionalProperties', 'switcherInput', 'enablePropertiesToggle', 'enableCollapseToggle', 'deactivateNonRequired', 'showErrors', 'assertFormat', 'arrayDelete', 'arrayMove', 'editJsonData', 'arrayAdd', 'useConstraintAttributes']
+    keywords: ['options', 'configuration', 'settings', 'init', 'global', 'enforceConst', 'enforceEnum', 'enforceRequired', 'enforceAdditionalProperties', 'switcherInput', 'enablePropertiesToggle', 'enableCollapseToggle', 'deactivateNonRequired', 'showErrors', 'assertFormat', 'arrayDelete', 'arrayMove', 'editJsonData', 'arrayAdd', 'arrayDeleteConfirm', 'objectAdd', 'embedSwitcher', 'subErrors', 'useConstraintAttributes']
   },
   {
     path: '/schema-options',
     name: 'Schema Options',
     group: 'Features',
     description: 'Per-schema configuration using x- prefixed properties.',
-    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-editJsonData', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-propertiesToggleContent', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
+    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
   },
 
   // Editors - Array
@@ -391,6 +391,15 @@ export const searchData = [
     group: 'Editors',
     description: 'Default null editor for JSON Schema null type.',
     keywords: ['null', 'default', 'null type']
+  },
+
+  // Editors - Any
+  {
+    path: '/any-editor-json',
+    name: 'Any JSON',
+    group: 'Editors',
+    description: 'Textarea editor for editing any valid JSON value with real-time parse validation.',
+    keywords: ['any', 'json', 'textarea', 'x-format', 'json', 'parse', 'raw']
   },
 
   // Advanced

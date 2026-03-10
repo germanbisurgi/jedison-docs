@@ -44,6 +44,12 @@
       </article>
 
       <article>
+        <h3><code>x-arrayDeleteConfirm</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p>Per-schema override for showing a confirmation dialog before deleting array items. Overrides the global <code>arrayDeleteConfirm</code> option.</p>
+      </article>
+
+      <article>
         <h3><code>x-arrayDeleteContent</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Text content for array "delete" buttons.</p>
@@ -91,6 +97,7 @@
         <h3><code>x-containerAttributes</code></h3>
         <p><strong>Type:</strong> <code>object</code></p>
         <p>Editors container HTML attributes can be set using this option. Attributes such as <code>class</code> or <code>data-*</code> will be applied to the container element.</p>
+        <app-highlight language="json" :code="xContainerAttributesExample" />
       </article>
 
       <article>
@@ -100,11 +107,26 @@
       </article>
 
       <article>
+        <h3><code>x-discriminator</code></h3>
+        <p><strong>Type:</strong> <code>string</code> | <code>object</code></p>
+        <p>When set on a <code>oneOf</code> or <code>anyOf</code> schema, determines the active sub-schema by validating the specified property against each schema option. Accepts either a property name string or an object with a <code>propertyName</code> key.</p>
+        <p>Falls back to the standard error-counting algorithm if no discriminator match is found.</p>
+        <app-highlight language="json" :code="xDiscriminatorExample" />
+      </article>
+
+      <article>
         <h3><code>x-editJsonData</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>false</code></p>
         <p>Enables inline JSON editing mode for this specific schema, allowing users to directly edit the JSON data within form fields.</p>
         <app-highlight :code="xEditJsonDataExample" />
+      </article>
+
+      <article>
+        <h3><code>x-embedSwitcher</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>When enabled on a <code>oneOf</code> or <code>anyOf</code> schema, embeds the type switcher inside the selected editor's header rather than displaying it above.</p>
       </article>
 
       <article>
@@ -131,6 +153,7 @@
         <h3><code>x-enumTitles</code></h3>
         <p><strong>Type:</strong> <code>string[]</code></p>
         <p>Used to display user-friendly labels in the editor instead of those listed in <code>"enum"</code>.</p>
+        <app-highlight language="json" :code="xEnumTitlesExample" />
       </article>
 
       <article>
@@ -149,6 +172,7 @@
           <li><code>offset</code>: How many columns should the editor be offsetted</li>
           <li><code>newRow</code>: Whether the editor should be put in a new row</li>
         </ul>
+        <app-highlight language="json" :code="xGridExample" />
       </article>
 
       <article>
@@ -167,12 +191,14 @@
           <li><code>title</code>: Plain text or <code>markdown</code></li>
           <li><code>content</code>: Plain text or <code>markdown</code></li>
         </ul>
+        <app-highlight language="json" :code="xInfoExample" />
       </article>
 
       <article>
         <h3><code>x-inputAttributes</code></h3>
         <p><strong>Type:</strong> <code>object</code></p>
         <p>Used to set attributes for the editor input if it has one.</p>
+        <app-highlight language="json" :code="xInputAttributesExample" />
       </article>
 
       <article>
@@ -194,9 +220,42 @@
       </article>
 
       <article>
+        <h3><code>x-objectAdd</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>Per-schema override for showing or hiding the "Add property" button on object editors. Overrides the global <code>objectAdd</code> option.</p>
+      </article>
+
+      <article>
+        <h3><code>x-navWarning</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>true</code></p>
+        <p>When enabled, displays a warning icon (⚠) in the legend of array and object editors when they contain nested validation errors. Set to <code>false</code> to disable.</p>
+      </article>
+
+      <article>
+        <h3><code>x-navWarningMessage</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p>Custom tooltip message displayed on the legend warning icon. Requires <code>x-navWarning</code> to be active.</p>
+      </article>
+
+      <article>
         <h3><code>x-propertiesToggleContent</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Text content for "properties" buttons.</p>
+      </article>
+
+      <article>
+        <h3><code>x-propGroup</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p>Assigns a property to a named group in the properties activation dialog. Used together with <code>enablePropertiesToggle</code> and <code>x-propGroupOrder</code>.</p>
+      </article>
+
+      <article>
+        <h3><code>x-propGroupOrder</code></h3>
+        <p><strong>Type:</strong> <code>string[]</code></p>
+        <p>Defines the display order of property groups in the properties activation dialog. Groups are defined using <code>x-propGroup</code> on individual properties. Groups not included in the array are appended at the end; the default group (properties without <code>x-propGroup</code>) always appears first.</p>
+        <app-highlight language="json" :code="xPropGroupOrderExample" />
       </article>
 
       <article>
@@ -219,6 +278,12 @@
         <h3><code>x-startCollapsed</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Whether the editor should start expanded or collapsed. Works on editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
+      </article>
+
+      <article>
+        <h3><code>x-subErrors</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p>Per-schema override for including sub-error details in validation errors. Overrides the global <code>subErrors</code> option.</p>
       </article>
 
       <article>
@@ -265,10 +330,17 @@
 <script>
 import {useHead} from '@unhead/vue'
 import AppHighlight from "@/components/AppHighlight.vue"
+import xContainerAttributesExample from '@/assets/markdown/x-containerAttributes-example.md?raw'
+import xDiscriminatorExample from '@/assets/markdown/x-discriminator-example.md?raw'
+import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
+import xEnumTitlesExample from '@/assets/markdown/x-enumTitles-example.md?raw'
+import xGridExample from '@/assets/markdown/x-grid-example.md?raw'
+import xInfoExample from '@/assets/markdown/x-info-example.md?raw'
+import xInputAttributesExample from '@/assets/markdown/x-inputAttributes-example.md?raw'
 import xMessagesArray from '@/assets/markdown/x-messages-array.md?raw'
 import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
 import xMessagesI18n from '@/assets/markdown/x-messages-i18n.md?raw'
-import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
+import xPropGroupOrderExample from '@/assets/markdown/x-propGroupOrder-example.md?raw'
 
 export default {
   name: 'SchemaOptions',
@@ -288,10 +360,17 @@ export default {
   },
   data() {
     return {
+      xContainerAttributesExample,
+      xDiscriminatorExample,
+      xEditJsonDataExample,
+      xEnumTitlesExample,
+      xGridExample,
+      xInfoExample,
+      xInputAttributesExample,
       xMessagesArray,
       xMessagesObject,
       xMessagesI18n,
-      xEditJsonDataExample
+      xPropGroupOrderExample
     }
   }
 }

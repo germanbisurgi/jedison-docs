@@ -51,6 +51,7 @@ import StringEditorImask from "@/pages/editors/StringEditorImask.vue"
 import StringEditorJodit from "@/pages/editors/StringEditorJodit.vue"
 import StringEditorQuill from "@/pages/editors/StringEditorQuill.vue"
 import NullEditorDefault from "@/pages/editors/NullEditorDefault.vue"
+import AnyEditorJson from "@/pages/editors/AnyEditorJson.vue"
 import CustomConstraint from "@/pages/advanced/CustomConstraint.vue"
 import Templates from "@/pages/advanced/Templates.vue"
 import FAQ from "@/pages/getting-started/FAQ.vue"
@@ -545,6 +546,15 @@ export const routes = [
     path: '/null-editor-default',
     name: 'Null Default',
     component: NullEditorDefault,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/any-editor-json',
+    name: 'Any JSON',
+    component: AnyEditorJson,
     meta: {
       navbar: true,
       group: 'Editors'
