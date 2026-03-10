@@ -394,13 +394,13 @@ export const searchData = [
   },
 
   // Editors - Any
-  {
-    path: '/any-editor-json',
-    name: 'Any JSON',
-    group: 'Editors',
-    description: 'Textarea editor for editing any valid JSON value with real-time parse validation.',
-    keywords: ['any', 'json', 'textarea', 'x-format', 'json', 'parse', 'raw']
-  },
+  // {
+  //   path: '/any-editor-json',
+  //   name: 'Any JSON',
+  //   group: 'Editors',
+  //   description: 'Textarea editor for editing any valid JSON value with real-time parse validation.',
+  //   keywords: ['any', 'json', 'textarea', 'x-format', 'json', 'parse', 'raw']
+  // },
 
   // Advanced
   {
