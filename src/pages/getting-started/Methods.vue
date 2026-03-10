@@ -80,6 +80,15 @@
           <li>Removing all instance references</li>
         </ul>
       </article>
+
+      <article>
+        <h3><code>navigateTo(path)</code></h3>
+        <p>Navigates to a specific field by path, activating all ancestor nav and categories tabs as needed.</p>
+        <ul>
+          <li><code>path</code>: A JSON pointer path string (e.g. <code>'#/organization/departments/1/teams/1'</code>)</li>
+        </ul>
+        <p>Only works when Jedison is used as an editor (i.e. a <code>container</code> is provided).</p>
+      </article>
     </section>
   </div>
 </template>
