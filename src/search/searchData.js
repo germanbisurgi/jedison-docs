@@ -98,14 +98,14 @@ export const searchData = [
     name: 'Options',
     group: 'Features',
     description: 'Global configuration options for Jedison initialization.',
-    keywords: ['options', 'configuration', 'settings', 'init', 'global', 'enforceConst', 'enforceEnum', 'enforceRequired', 'enforceAdditionalProperties', 'switcherInput', 'enablePropertiesToggle', 'enableCollapseToggle', 'deactivateNonRequired', 'showErrors', 'assertFormat', 'arrayDelete', 'arrayMove', 'editJsonData', 'arrayAdd', 'arrayDeleteConfirm', 'objectAdd', 'embedSwitcher', 'subErrors', 'useConstraintAttributes']
+    keywords: ['options', 'configuration', 'settings', 'init', 'global', 'enforceConst', 'enforceEnum', 'enforceRequired', 'enforceAdditionalProperties', 'switcherInput', 'enablePropertiesToggle', 'enableCollapseToggle', 'deactivateNonRequired', 'showErrors', 'assertFormat', 'arrayDelete', 'arrayMove', 'editJsonData', 'arrayAdd', 'arrayDeleteConfirm', 'objectAdd', 'embedSwitcher', 'subErrors', 'useConstraintAttributes', 'arrayDeleteAll', 'arrayFooterAdd', 'arrayFooterDeleteAll', 'arrayFooterButtonsPosition']
   },
   {
     path: '/schema-options',
     name: 'Schema Options',
     group: 'Features',
     description: 'Per-schema configuration using x- prefixed properties.',
-    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
+    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteAll', 'x-arrayDeleteAllContent', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayFooterAdd', 'x-arrayFooterAddContent', 'x-arrayFooterButtonsPosition', 'x-arrayFooterDeleteAll', 'x-arrayFooterDeleteAllContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
   },
 
   // Editors - Array
@@ -114,7 +114,7 @@ export const searchData = [
     name: 'Array Default',
     group: 'Editors',
     description: 'Standard array editor for JSON Schema array types with add/remove support.',
-    keywords: ['array', 'default', 'add', 'remove', 'items', 'list']
+    keywords: ['array', 'default', 'add', 'remove', 'items', 'list', 'footer', 'x-arrayDeleteAll', 'x-arrayFooterAdd', 'x-arrayFooterDeleteAll', 'x-arrayFooterButtonsPosition']
   },
   {
     path: '/array-editor-checkboxes',
@@ -142,28 +142,28 @@ export const searchData = [
     name: 'Array Navigation Vertical',
     group: 'Editors',
     description: 'Array editor with vertical tab navigation between items.',
-    keywords: ['array', 'navigation', 'vertical', 'tabs', 'nav', 'x-format', 'nav-vertical']
+    keywords: ['array', 'navigation', 'vertical', 'tabs', 'nav', 'x-format', 'nav-vertical', 'footer', 'x-arrayDeleteAll', 'x-arrayFooterAdd', 'x-arrayFooterDeleteAll', 'x-arrayFooterButtonsPosition']
   },
   {
     path: '/array-editor-nav-horizontal',
     name: 'Array Navigation Horizontal',
     group: 'Editors',
     description: 'Array editor with horizontal tab navigation between items.',
-    keywords: ['array', 'navigation', 'horizontal', 'tabs', 'nav', 'x-format', 'nav-horizontal']
+    keywords: ['array', 'navigation', 'horizontal', 'tabs', 'nav', 'x-format', 'nav-horizontal', 'footer', 'x-arrayDeleteAll', 'x-arrayFooterAdd', 'x-arrayFooterDeleteAll', 'x-arrayFooterButtonsPosition']
   },
   {
     path: '/array-editor-table',
     name: 'Array Table',
     group: 'Editors',
     description: 'Array editor rendered as a table for simple value types.',
-    keywords: ['array', 'table', 'grid', 'rows', 'columns', 'x-format', 'table']
+    keywords: ['array', 'table', 'grid', 'rows', 'columns', 'x-format', 'table', 'footer', 'x-arrayDeleteAll', 'x-arrayFooterAdd', 'x-arrayFooterDeleteAll', 'x-arrayFooterButtonsPosition']
   },
   {
     path: '/array-editor-table-object',
     name: 'Array Table Object',
     group: 'Editors',
     description: 'Array editor rendered as a table for object items.',
-    keywords: ['array', 'table', 'object', 'grid', 'rows', 'columns', 'x-format', 'table-object']
+    keywords: ['array', 'table', 'object', 'grid', 'rows', 'columns', 'x-format', 'table-object', 'footer', 'x-arrayDeleteAll', 'x-arrayFooterAdd', 'x-arrayFooterDeleteAll', 'x-arrayFooterButtonsPosition']
   },
   {
     path: '/array-editor-tuple',

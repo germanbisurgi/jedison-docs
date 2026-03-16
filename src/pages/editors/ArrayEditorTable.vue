@@ -16,6 +16,21 @@
         <app-live-example :example="htmlArrayEditorTable" />
       </article>
     </section>
+
+    <section>
+      <article>
+        <h2>Footer</h2>
+        <p>Adds a footer row with add and/or delete-all buttons. Use <code>x-arrayDeleteAll</code> to also show a "Delete all" button in the header.</p>
+        <ul>
+          <li><code>x-arrayDeleteAll</code> — Adds a "Delete all" button to the header</li>
+          <li><code>x-arrayFooterAdd</code> — Adds an "Add item" button in the footer</li>
+          <li><code>x-arrayFooterDeleteAll</code> — Adds a "Delete all" button in the footer</li>
+          <li><code>x-arrayFooterButtonsPosition</code> — Aligns footer buttons (<code>'left'</code> or <code>'right'</code>, default: <code>'right'</code>)</li>
+        </ul>
+
+        <app-live-example :example="htmlArrayEditorTableFooter" />
+      </article>
+    </section>
   </div>
 </template>
 
@@ -23,6 +38,7 @@
 import {useHead} from '@unhead/vue'
 import AppLiveExample from "@/components/AppLiveExample.vue"
 import htmlArrayEditorTable from '@/assets/html/array-editors-table.html?raw'
+import htmlArrayEditorTableFooter from '@/assets/html/array-editors-table-footer.html?raw'
 
 export default {
   name: 'ArrayEditorTable',
@@ -42,7 +58,8 @@ export default {
   },
   data() {
     return {
-      htmlArrayEditorTable
+      htmlArrayEditorTable,
+      htmlArrayEditorTableFooter
     }
   }
 }

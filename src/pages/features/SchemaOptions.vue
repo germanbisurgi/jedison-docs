@@ -44,6 +44,19 @@
       </article>
 
       <article>
+        <h3><code>x-arrayDeleteAll</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds a "Delete all items" button to the array editor's header actions area.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayDeleteAllContent</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p>Text content for the "delete all" button.</p>
+      </article>
+
+      <article>
         <h3><code>x-arrayDeleteConfirm</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Per-schema override for showing a confirmation dialog before deleting array items. Overrides the global <code>arrayDeleteConfirm</code> option.</p>
@@ -59,6 +72,40 @@
         <h3><code>x-arrayDragContent</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Text content for array "drag" buttons.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayFooterAdd</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds an "Add item" button in the footer of the array editor.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayFooterAddContent</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p>Text content for the footer "add" button.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayFooterButtonsPosition</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p><strong>Default:</strong> <code>'right'</code></p>
+        <p><strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
+        <p>Controls the alignment of footer buttons. When <code>'right'</code>, buttons are pushed to the right side of the footer. When <code>'left'</code>, buttons align to the left.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayFooterDeleteAll</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds a "Delete all items" button in the footer of the array editor.</p>
+      </article>
+
+      <article>
+        <h3><code>x-arrayFooterDeleteAllContent</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p>Text content for the footer "delete all" button.</p>
       </article>
 
       <article>

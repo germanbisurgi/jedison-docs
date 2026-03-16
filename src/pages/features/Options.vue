@@ -324,6 +324,39 @@
       </article>
 
       <article>
+        <h3><code>arrayDeleteAll</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds a "Delete all items" button to the array editor's header actions area.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
+        <h3><code>arrayFooterAdd</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds an "Add item" button in the footer of the array editor.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
+        <h3><code>arrayFooterButtonsPosition</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p><strong>Default:</strong> <code>'right'</code></p>
+        <p><strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
+        <p>Controls the alignment of footer buttons globally.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
+        <h3><code>arrayFooterDeleteAll</code></h3>
+        <p><strong>Type:</strong> <code>boolean</code></p>
+        <p><strong>Default:</strong> <code>false</code></p>
+        <p>Adds a "Delete all items" button in the footer of the array editor.</p>
+        <p><strong>x-option:</strong> ✅</p>
+      </article>
+
+      <article>
         <h3><code>useConstraintAttributes</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p><strong>Default:</strong> <code>true</code></p>
