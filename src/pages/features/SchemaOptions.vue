@@ -141,6 +141,12 @@
       </article>
 
       <article>
+        <h3><code>x-categoryOrder</code></h3>
+        <p><strong>Type:</strong> <code>string[]</code></p>
+        <p>Controls the display order of tabs in categories-format object editors (<code>categories-vertical</code>, <code>categories-horizontal</code>). Categories listed in the array appear first in the specified order; any categories not listed follow in their natural order.</p>
+      </article>
+
+      <article>
         <h3><code>x-containerAttributes</code></h3>
         <p><strong>Type:</strong> <code>object</code></p>
         <p>Editors container HTML attributes can be set using this option. Attributes such as <code>class</code> or <code>data-*</code> will be applied to the container element.</p>

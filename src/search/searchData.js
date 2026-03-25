@@ -105,7 +105,7 @@ export const searchData = [
     name: 'Schema Options',
     group: 'Features',
     description: 'Per-schema configuration using x- prefixed properties.',
-    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteAll', 'x-arrayDeleteAllContent', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayFooterAdd', 'x-arrayFooterAddContent', 'x-arrayFooterButtonsPosition', 'x-arrayFooterDeleteAll', 'x-arrayFooterDeleteAllContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
+    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteAll', 'x-arrayDeleteAllContent', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayFooterAdd', 'x-arrayFooterAddContent', 'x-arrayFooterButtonsPosition', 'x-arrayFooterDeleteAll', 'x-arrayFooterDeleteAllContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
   },
 
   // Editors - Array
@@ -302,14 +302,14 @@ export const searchData = [
     name: 'Object Categories Vertical',
     group: 'Editors',
     description: 'Object editor with vertical category tabs grouping properties.',
-    keywords: ['object', 'categories', 'vertical', 'tabs', 'groups', 'x-format', 'categories-vertical', 'x-categoriesDefaultLabel', 'x-category', 'x-navWarning', 'x-navWarningMessage']
+    keywords: ['object', 'categories', 'vertical', 'tabs', 'groups', 'x-format', 'categories-vertical', 'x-categoriesDefaultLabel', 'x-category', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder']
   },
   {
     path: '/object-editor-categories-horizontal',
     name: 'Object Categories Horizontal',
     group: 'Editors',
     description: 'Object editor with horizontal category tabs grouping properties.',
-    keywords: ['object', 'categories', 'horizontal', 'tabs', 'groups', 'x-format', 'categories-horizontal', 'x-categoriesDefaultLabel', 'x-category', 'x-navWarning', 'x-navWarningMessage']
+    keywords: ['object', 'categories', 'horizontal', 'tabs', 'groups', 'x-format', 'categories-horizontal', 'x-categoriesDefaultLabel', 'x-category', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder']
   },
 
   // Editors - String

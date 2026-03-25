@@ -19,6 +19,7 @@
           <li><code>"x-category"</code> — set on a child property schema to assign it to a named tab</li>
           <li><code>"x-navWarning"</code> — show a warning indicator on tabs that contain validation errors</li>
           <li><code>"x-navWarningMessage"</code> — custom message shown in the tab warning indicator</li>
+          <li><code>"x-categoryOrder"</code> — array of category names that controls the tab display order; listed categories appear first in the given order, unlisted ones follow</li>
           <li><code>"x-format": "categories-vertical-N"</code> — use a multi-column layout where <code>N</code> is the number of columns (e.g. <code>"categories-vertical-3"</code>)</li>
         </ul>
 

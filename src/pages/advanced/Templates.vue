@@ -25,6 +25,16 @@
           <li><code>remaining</code> — Characters remaining (<code>maxLength - length</code>); <strong>available only for strings with maxLength</strong></li>
         </ul>
 
+        <h3 class="mt-4">Fallback Values</h3>
+        <p>
+          Use the <code>||</code> operator inside a placeholder to provide a fallback value when the placeholder resolves to <code>null</code> or <code>undefined</code>:
+        </p>
+        <pre v-pre><code>{{ value.name || 'Unnamed' }}</code></pre>
+        <p>
+          The fallback can be any quoted string (single or double quotes). When the placeholder has a value, the fallback is ignored.
+        </p>
+        <app-live-example :example="htmlTemplateFallbackExample" />
+
         <h3 class="mt-4">
           Parent Template Access
         </h3>
@@ -52,6 +62,7 @@
 import { useHead } from '@unhead/vue'
 import AppLiveExample from "@/components/AppLiveExample.vue"
 import htmlTemplateExample from '@/assets/html/templates.html?raw'
+import htmlTemplateFallbackExample from '@/assets/html/templates-fallback.html?raw'
 
 export default {
   name: 'Templates',
@@ -72,6 +83,7 @@ export default {
   data() {
     return {
       htmlTemplateExample,
+      htmlTemplateFallbackExample,
       renderedExample: 'My object 1' // example rendered output
     }
   }
