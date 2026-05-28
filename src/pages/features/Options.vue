@@ -199,6 +199,7 @@
           <li><code>select</code></li>
           <li><code>radios</code></li>
           <li><code>radios-inline</code></li>
+          <li><code>modal</code></li>
         </ul>
         <p><strong>x-option:</strong> ✅</p>
       </article>

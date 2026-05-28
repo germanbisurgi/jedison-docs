@@ -4269,10 +4269,10 @@ jackspeak@^4.1.1:
   dependencies:
     "@isaacs/cliui" "^8.0.2"
 
-jedison@^0.2.1:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/jedison/-/jedison-0.2.3.tgz#788511e6ca7865e34cbed4017010c1f7a3252b1d"
-  integrity sha512-0a7ODpUqfPn94Kc56vftm+TRyEppo2uGPhLGNYD63bxS9XjRXfNBzc51JhfyuC+5NTKehMJ9xXN6iStjJWXdqA==
+jedison@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jedison/-/jedison-1.12.1.tgz#3f1bd2dcba44a6298016ed33200e4e8ce50e60c6"
+  integrity sha512-vLjQ6jTdy/opXGhgaiGph5pxkSzyT5rk2yKfcUKMDFZ2DmhnewiWisCrB0aQKaC4K1HJR2A//oWaMDifZfG3hQ==
 
 jest-changed-files@^29.7.0:
   version "29.7.0"

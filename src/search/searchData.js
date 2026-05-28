@@ -105,7 +105,7 @@ export const searchData = [
     name: 'Schema Options',
     group: 'Features',
     description: 'Per-schema configuration using x- prefixed properties.',
-    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteAll', 'x-arrayDeleteAllContent', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayFooterAdd', 'x-arrayFooterAddContent', 'x-arrayFooterButtonsPosition', 'x-arrayFooterDeleteAll', 'x-arrayFooterDeleteAllContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
+    keywords: ['schema options', 'x-', 'ui-format', 'custom', 'per-field', 'x-addPropertyContent', 'x-arrayAdd', 'x-arrayAddContent', 'x-arrayButtonsPosition', 'x-arrayDelete', 'x-arrayDeleteAll', 'x-arrayDeleteAllContent', 'x-arrayDeleteConfirm', 'x-arrayDeleteContent', 'x-arrayDragContent', 'x-arrayFooterAdd', 'x-arrayFooterAddContent', 'x-arrayFooterButtonsPosition', 'x-arrayFooterDeleteAll', 'x-arrayFooterDeleteAllContent', 'x-arrayMove', 'x-arrayMoveDownContent', 'x-arrayMoveUpContent', 'x-assertFormat', 'x-collapseToggleContent', 'x-containerAttributes', 'x-deactivateNonRequired', 'x-discriminator', 'x-editJsonData', 'x-embedSwitcher', 'x-enableCollapseToggle', 'x-enforceConst', 'x-enforceEnum', 'x-enumTitles', 'x-filepond', 'x-format', 'x-grid', 'x-hidden', 'x-info', 'x-inputAttributes', 'x-messages', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder', 'x-objectAdd', 'x-propertiesToggleContent', 'x-propGroup', 'x-propGroupOrder', 'x-showErrors', 'x-sortable', 'x-startCollapsed', 'x-subErrors', 'x-switcherInput', 'x-switcherTitle', 'x-titleHidden', 'x-titleIconClass', 'x-titleTemplate', 'x-useConstraintAttributes']
   },
 
   // Editors - Array
@@ -121,7 +121,7 @@ export const searchData = [
     name: 'Array Checkboxes',
     group: 'Editors',
     description: 'Array editor using checkboxes for enum values selection.',
-    keywords: ['array', 'checkboxes', 'enum', 'multiple', 'select']
+    keywords: ['array', 'checkboxes', 'enum', 'multiple', 'select', 'x-sortable', 'sortable']
   },
   {
     path: '/array-editor-checkboxes-inline',
@@ -311,6 +311,13 @@ export const searchData = [
     description: 'Object editor with horizontal category tabs grouping properties.',
     keywords: ['object', 'categories', 'horizontal', 'tabs', 'groups', 'x-format', 'categories-horizontal', 'x-categoriesDefaultLabel', 'x-category', 'x-navWarning', 'x-navWarningMessage', 'x-categoryOrder']
   },
+  {
+    path: '/object-editor-accordion',
+    name: 'Object Accordion',
+    group: 'Editors',
+    description: 'Object editor rendered as a Bootstrap accordion, each property in its own collapsible panel.',
+    keywords: ['object', 'accordion', 'collapse', 'panel', 'x-format', 'accordion']
+  },
 
   // Editors - String
   {
@@ -382,6 +389,13 @@ export const searchData = [
     group: 'Editors',
     description: 'String editor with rich text WYSIWYG using Quill plugin.',
     keywords: ['string', 'quill', 'wysiwyg', 'rich text', 'html', 'plugin', 'x-format', 'quill', 'x-quill']
+  },
+  {
+    path: '/string-editor-filepond',
+    name: 'String FilePond',
+    group: 'Editors',
+    description: 'String editor for file upload using the FilePond plugin.',
+    keywords: ['string', 'filepond', 'file', 'upload', 'drag', 'drop', 'plugin', 'x-format', 'filepond', 'x-filepond']
   },
 
   // Editors - Null

@@ -40,6 +40,7 @@ import ObjectEditorNavVertical from "@/pages/editors/ObjectEditorNavVertical.vue
 import ObjectEditorNavHorizontal from "@/pages/editors/ObjectEditorNavHorizontal.vue"
 import ObjectEditorCategoriesVertical from "@/pages/editors/ObjectEditorCategoriesVertical.vue"
 import ObjectEditorCategoriesHorizontal from "@/pages/editors/ObjectEditorCategoriesHorizontal.vue"
+import ObjectEditorAccordion from "@/pages/editors/ObjectEditorAccordion.vue"
 import StringEditorDefault from "@/pages/editors/StringEditorDefault.vue"
 import StringEditorRadios from "@/pages/editors/StringEditorRadios.vue"
 import StringEditorRadiosInline from "@/pages/editors/StringEditorRadiosInline.vue"
@@ -50,6 +51,7 @@ import StringEditorFlatpickr from "@/pages/editors/StringEditorFlatpickr.vue"
 import StringEditorImask from "@/pages/editors/StringEditorImask.vue"
 import StringEditorJodit from "@/pages/editors/StringEditorJodit.vue"
 import StringEditorQuill from "@/pages/editors/StringEditorQuill.vue"
+import StringEditorFilePond from "@/pages/editors/StringEditorFilePond.vue"
 import NullEditorDefault from "@/pages/editors/NullEditorDefault.vue"
 // import AnyEditorJson from "@/pages/editors/AnyEditorJson.vue"
 import CustomConstraint from "@/pages/advanced/CustomConstraint.vue"
@@ -448,6 +450,15 @@ export const routes = [
     }
   },
   {
+    path: '/object-editor-accordion',
+    name: 'Object Accordion',
+    component: ObjectEditorAccordion,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
     path: '/string-editor-default',
     name: 'String Default',
     component: StringEditorDefault,
@@ -536,6 +547,16 @@ export const routes = [
     path: '/string-editor-quill',
     name: 'String Quill',
     component: StringEditorQuill,
+    meta: {
+      navbar: true,
+      group: 'Editors',
+      requiresPlugin: true
+    }
+  },
+  {
+    path: '/string-editor-filepond',
+    name: 'String FilePond',
+    component: StringEditorFilePond,
     meta: {
       navbar: true,
       group: 'Editors',

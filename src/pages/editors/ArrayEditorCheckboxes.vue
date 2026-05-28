@@ -15,6 +15,11 @@
         </ul>
 
         <app-live-example :example="htmlArrayEditorCheckboxes" />
+
+        <h2>Sortable Checkboxes</h2>
+        <p>Add <code>"x-sortable": true</code> to enable drag-and-drop reordering of selected items. Requires <a href="https://sortablejs.github.io/Sortable/" target="_blank" rel="noopener noreferrer">SortableJS</a> (<code>window.Sortable</code>).</p>
+
+        <app-live-example :example="htmlArrayEditorCheckboxesSortable" />
       </article>
     </section>
   </div>
@@ -24,6 +29,7 @@
 import {useHead} from '@unhead/vue'
 import AppLiveExample from "@/components/AppLiveExample.vue"
 import htmlArrayEditorCheckboxes from '@/assets/html/array-editors-checkboxes.html?raw'
+import htmlArrayEditorCheckboxesSortable from '@/assets/html/array-editors-checkboxes-sortable.html?raw'
 
 export default {
   name: 'ArrayEditorCheckboxes',
@@ -43,7 +49,8 @@ export default {
   },
   data() {
     return {
-      htmlArrayEditorCheckboxes
+      htmlArrayEditorCheckboxes,
+      htmlArrayEditorCheckboxesSortable
     }
   }
 }

@@ -210,6 +210,12 @@
       </article>
 
       <article>
+        <h3><code>x-filepond</code></h3>
+        <p><strong>Type:</strong> <code>object</code></p>
+        <p>Configuration object passed directly to the FilePond instance. Used with <code>"x-format": "filepond"</code>.</p>
+      </article>
+
+      <article>
         <h3><code>x-format</code></h3>
         <p><strong>Type:</strong> <code>string</code></p>
         <p>Determines which editor UI will be used to edit the json instance.</p>
@@ -337,6 +343,14 @@
         <h3><code>x-subErrors</code></h3>
         <p><strong>Type:</strong> <code>boolean</code></p>
         <p>Per-schema override for including sub-error details in validation errors. Overrides the global <code>subErrors</code> option.</p>
+      </article>
+
+      <article>
+        <h3><code>x-switcherInput</code></h3>
+        <p><strong>Type:</strong> <code>string</code></p>
+        <p><strong>Default:</strong> <code>'select'</code></p>
+        <p><strong>Options:</strong> <code>'select'</code>, <code>'radios'</code>, <code>'radios-inline'</code>, <code>'modal'</code></p>
+        <p>Per-schema override for the input type used to switch between multiple editor schemas (anyOf, oneOf, type arrays). Overrides the global <code>switcherInput</code> option.</p>
       </article>
 
       <article>
