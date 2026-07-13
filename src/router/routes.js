@@ -41,6 +41,8 @@ import ObjectEditorNavHorizontal from "@/pages/editors/ObjectEditorNavHorizontal
 import ObjectEditorCategoriesVertical from "@/pages/editors/ObjectEditorCategoriesVertical.vue"
 import ObjectEditorCategoriesHorizontal from "@/pages/editors/ObjectEditorCategoriesHorizontal.vue"
 import ObjectEditorAccordion from "@/pages/editors/ObjectEditorAccordion.vue"
+import ObjectEditorRadios from "@/pages/editors/ObjectEditorRadios.vue"
+import ObjectEditorRadiosInline from "@/pages/editors/ObjectEditorRadiosInline.vue"
 import StringEditorDefault from "@/pages/editors/StringEditorDefault.vue"
 import StringEditorRadios from "@/pages/editors/StringEditorRadios.vue"
 import StringEditorRadiosInline from "@/pages/editors/StringEditorRadiosInline.vue"
@@ -453,6 +455,24 @@ export const routes = [
     path: '/object-editor-accordion',
     name: 'Object Accordion',
     component: ObjectEditorAccordion,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-radios',
+    name: 'Object Radios',
+    component: ObjectEditorRadios,
+    meta: {
+      navbar: true,
+      group: 'Editors'
+    }
+  },
+  {
+    path: '/object-editor-radios-inline',
+    name: 'Object Radios Inline',
+    component: ObjectEditorRadiosInline,
     meta: {
       navbar: true,
       group: 'Editors'
