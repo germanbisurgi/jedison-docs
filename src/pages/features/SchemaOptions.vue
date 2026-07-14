@@ -349,7 +349,7 @@
         <h3><code>x-switcherInput</code></h3>
         <p><strong>Type:</strong> <code>string</code></p>
         <p><strong>Default:</strong> <code>'select'</code></p>
-        <p><strong>Options:</strong> <code>'select'</code>, <code>'radios'</code>, <code>'radios-inline'</code>, <code>'modal'</code></p>
+        <p><strong>Options:</strong> <code>'select'</code>, <code>'radios'</code>, <code>'radios-inline'</code>, <code>'modal'</code>, <code>'select-inline'</code></p>
         <p>Per-schema override for the input type used to switch between multiple editor schemas (anyOf, oneOf, type arrays). Overrides the global <code>switcherInput</code> option.</p>
       </article>
 
