@@ -87,6 +87,13 @@ export const searchData = [
     keywords: ['ref', 'reference', 'parser', '$ref', 'resolve', 'dereference', 'x-deactivateNonRequired']
   },
   {
+    path: '/overlay',
+    name: 'Overlays',
+    group: 'Features',
+    description: 'Layer presentation directives onto a JSON Schema with applyOverlay and OpenAPI-Overlay-style actions.',
+    keywords: ['overlay', 'applyOverlay', 'openapi overlay', 'jsonpath', 'x-format', 'x-hidden', 'update', 'remove', 'presentation']
+  },
+  {
     path: '/markdown-annotations',
     name: 'Markdown Annotations',
     group: 'Features',

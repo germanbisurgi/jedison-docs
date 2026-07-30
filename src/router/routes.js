@@ -9,6 +9,7 @@ import Themes from "@/pages/features/Themes.vue"
 import Icons from "@/pages/features/Icons.vue"
 import LanguageAndTranslations from "@/pages/features/LanguageAndTranslations.vue"
 import RefParser from "@/pages/features/RefParser.vue"
+import Overlay from "@/pages/features/Overlay.vue"
 import MarkdownAnnotations from "@/pages/features/MarkdownAnnotations.vue"
 import Options from "@/pages/features/Options.vue"
 import SchemaOptions from "@/pages/features/SchemaOptions.vue"
@@ -164,6 +165,15 @@ export const routes = [
     path: '/ref-parser',
     name: 'RefParser',
     component: RefParser,
+    meta: {
+      navbar: true,
+      group: 'Features'
+    }
+  },
+  {
+    path: '/overlay',
+    name: 'Overlays',
+    component: Overlay,
     meta: {
       navbar: true,
       group: 'Features'
