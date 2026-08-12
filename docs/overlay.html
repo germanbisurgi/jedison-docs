@@ -3,7 +3,7 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - Overlays</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQGQ44l2.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
 <meta name="description" content="Layer presentation directives onto a JSON Schema with applyOverlay and OpenAPI-Overlay-style actions."></head>
 <body>
@@ -87,7 +87,33 @@ const jedison = new Jedison.Create({
 <li><strong>Primitive node</strong> — replaced in place.</li>
 </ul>
 <p><code>remove: true</code> deletes matched object properties and splices matched array items (indices are removed highest-first so they stay valid).</p>
-</div><!--]--><!--]--></article><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« RefParser</span></button><button class="btn btn-outline-primary"><span>Markdown Annotations »</span></button></div></div></div></div></div></div>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const schema = {
+  "type": "object",
+  "properties": {
+    "address": { "type": "object", "properties": { "city": { "type": "string" } } },
+    "tags": { "type": "array", "items": { "type": "string" }, "enum": ["a", "b"] },
+    "status": "draft"
+  }
+}
+
+const overlay = {
+  "actions": [
+    // Object node: deep-merged - "city" stays, "country" is added alongside it.
+    { "target": "$.properties.address", "update": { "properties": { "country": { "type": "string" } } } },
+
+    // Array node: concatenated - the update is appended, not replacing ["a", "b"].
+    { "target": "$.properties.tags.enum", "update": ["c"] },
+
+    // Primitive node: replaced in place.
+    { "target": "$.properties.status", "update": "published" }
+  ]
+}
+
+const merged = Jedison.applyOverlay(schema, overlay)
+// merged.properties.address.properties -&gt; { city: {...}, country: {...} }
+// merged.properties.tags.enum          -&gt; ["a", "b", "c"]
+// merged.properties.status             -&gt; "published"
+</code></pre></div><!--]--><!--]--></article><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« RefParser</span></button><button class="btn btn-outline-primary"><span>Markdown Annotations »</span></button></div></div></div></div></div></div>
 
 
 </body></html>

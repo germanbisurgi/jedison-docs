@@ -3,7 +3,7 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - Instance Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQGQ44l2.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
 <meta name="description" content="Global configuration options for Jedison initialization."></head>
 <body>
@@ -23,7 +23,12 @@
 <li><code>'fontawesome5'</code></li>
 <li><code>'fontawesome6'</code></li>
 </ul>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="theme"><a class="header-anchor" href="#theme" aria-label="Permalink to “theme”">​</a>theme</h2><div><p><strong>Type:</strong> <code>Theme</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  container: document.getElementById('form'),
+  schema: mySchema,
+  iconLib: 'bootstrap-icons'
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="theme"><a class="header-anchor" href="#theme" aria-label="Permalink to “theme”">​</a>theme</h2><div><p><strong>Type:</strong> <code>Theme</code>
 <strong>Default:</strong> <code>null</code></p>
 <p>An instance of <code>Theme</code> to apply to the UI. Valid options include:</p>
 <ul>
@@ -32,13 +37,22 @@
 <li><code>new Jedison.ThemeBootstrap4()</code></li>
 <li><code>new Jedison.ThemeBootstrap5()</code></li>
 </ul>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="refparser"><a class="header-anchor" href="#refparser" aria-label="Permalink to “refParser”">​</a>refParser</h2><div><p><strong>Type:</strong> <code>RefParser</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  container: document.getElementById('form'),
+  schema: mySchema,
+  theme: new Jedison.ThemeBootstrap5()
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="refparser"><a class="header-anchor" href="#refparser" aria-label="Permalink to “refParser”">​</a>refParser</h2><div><p><strong>Type:</strong> <code>RefParser</code>
 <strong>Default:</strong> <code>null</code></p>
-<p>An instance of <code>RefParser</code> to handle <code>'$ref'</code> keywords.</p>
+<p>An instance of <code>RefParser</code> to dereference <code>"$ref"</code> keywords in the schema before it's rendered. See the RefParser page for a full walkthrough of internal and recursive references.</p>
 <ul>
-<li><code>new Jedison.RefParser</code></li>
+<li><code>new Jedison.RefParser()</code></li>
 </ul>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="translations"><a class="header-anchor" href="#translations" aria-label="Permalink to “translations”">​</a>translations</h2><div><p><strong>Type:</strong> <code>object</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  schema: mySchema,
+  refParser: new Jedison.RefParser()
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="translations"><a class="header-anchor" href="#translations" aria-label="Permalink to “translations”">​</a>translations</h2><div><p><strong>Type:</strong> <code>object</code>
 <strong>Default:</strong> <code>'{}'</code></p>
 <p>Used to add new translations or override the default ones. Uses template placeholders that get dynamically replaced with actual values during runtime</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
@@ -71,13 +85,38 @@
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="id"><a class="header-anchor" href="#id" aria-label="Permalink to “id”">​</a>id</h2><div><p><strong>Type:</strong> <code>string</code>
 <strong>Default:</strong> <code>''</code></p>
 <p>Used to prefix <code>id</code> and <code>for</code> attributes. Useful if you want to have multiple Jedison forms on the page</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="language"><a class="header-anchor" href="#language" aria-label="Permalink to “language”">​</a>language</h2><div><p><strong>Type:</strong> <code>string</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>// Two Jedison instances on the same page - the id prefix keeps their
+// generated element ids/for attributes from colliding.
+const jedisonA = new Jedison.Create({
+  container: document.getElementById('form-a'),
+  schema: mySchema,
+  id: 'form-a'
+})
+
+const jedisonB = new Jedison.Create({
+  container: document.getElementById('form-b'),
+  schema: mySchema,
+  id: 'form-b'
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="language"><a class="header-anchor" href="#language" aria-label="Permalink to “language”">​</a>language</h2><div><p><strong>Type:</strong> <code>string</code>
 <strong>Default:</strong> <code>'en'</code></p>
 <p>Set default language for error messages and UI texts.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="data"><a class="header-anchor" href="#data" aria-label="Permalink to “data”">​</a>data</h2><div><p><strong>Type:</strong> <code>object</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  language: 'de'
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="data"><a class="header-anchor" href="#data" aria-label="Permalink to “data”">​</a>data</h2><div><p><strong>Type:</strong> <code>object</code>
 <strong>Default:</strong> <code>undefined</code></p>
 <p>Initial JSON data to populate the form.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="customeditors"><a class="header-anchor" href="#customeditors" aria-label="Permalink to “customEditors”">​</a>customEditors</h2><div><p><strong>Type:</strong> <code>array</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  schema: {
+    type: 'object',
+    properties: {
+      name: { type: 'string' }
+    }
+  },
+  data: { name: 'Ada Lovelace' }
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="customeditors"><a class="header-anchor" href="#customeditors" aria-label="Permalink to “customEditors”">​</a>customEditors</h2><div><p><strong>Type:</strong> <code>array</code>
 <strong>Default:</strong> <code>[]</code></p>
 <p>An array of custom editor classes.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>class MyCustomEditor extends Jedison.Editor {
@@ -131,7 +170,7 @@ const jedison = new Jedison.Create({
 <p><strong>x-option:</strong> ✅</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="switcherinput"><a class="header-anchor" href="#switcherinput" aria-label="Permalink to “switcherInput”">​</a>switcherInput</h2><div><p><strong>Type:</strong> <code>string</code>
 <strong>Default:</strong> <code>'select'</code></p>
-<p>Sets the input type that will be used to witch between multiple editors.</p>
+<p>Sets the input type that will be used to switch between multiple editors.</p>
 <ul>
 <li><code>select</code></li>
 <li><code>radios</code></li>
@@ -140,7 +179,11 @@ const jedison = new Jedison.Create({
 <li><code>select-inline</code></li>
 </ul>
 <p><strong>x-option:</strong> ✅</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="enablepropertiestoggle"><a class="header-anchor" href="#enablepropertiestoggle" aria-label="Permalink to “enablePropertiesToggle”">​</a>enablePropertiesToggle</h2><div><p><strong>Type:</strong> <code>boolean</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  schema: mySchema,
+  switcherInput: 'radios'
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="enablepropertiestoggle"><a class="header-anchor" href="#enablepropertiestoggle" aria-label="Permalink to “enablePropertiesToggle”">​</a>enablePropertiesToggle</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>false</code></p>
 <p>Enables a toggle to show/hide the properties dialog in the UI.</p>
 <p><strong>x-option:</strong> ✅</p>
@@ -167,7 +210,11 @@ const jedison = new Jedison.Create({
 </ul>
 <p><strong>Note:</strong> The <code>'input'</code> option only affects text-based inputs (string inputs, textareas, number inputs). Selection inputs (dropdowns, checkboxes, radios) continue using the <code>'change'</code> event as it's more appropriate for their interaction model.</p>
 <p><strong>x-option:</strong> ✅</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="assertformat"><a class="header-anchor" href="#assertformat" aria-label="Permalink to “assertFormat”">​</a>assertFormat</h2><div><p><strong>Type:</strong> <code>boolean</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  schema: mySchema,
+  showErrors: 'always'
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="assertformat"><a class="header-anchor" href="#assertformat" aria-label="Permalink to “assertFormat”">​</a>assertFormat</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>false</code></p>
 <p>Treats <code>'format'</code> as a validator rather than just an annotation.</p>
 <p><strong>x-option:</strong> ✅</p>

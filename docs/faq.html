@@ -3,7 +3,7 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQGQ44l2.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
 <meta name="description" content="Frequently asked questions about Jedison."></head>
 <body>
@@ -20,11 +20,70 @@
 <li><code>container</code> is a valid DOM element</li>
 <li><code>theme</code> is provided</li>
 </ul>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="ref-not-working"><a class="header-anchor" href="#ref-not-working" aria-label="Permalink to “$ref not working?”">​</a>$ref not working?</h2><div><p>Use <code>RefParser</code> and call <code>await refParser.dereference(schema)</code> before creating the Jedison instance.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="plugin-editor-not-showing"><a class="header-anchor" href="#plugin-editor-not-showing" aria-label="Permalink to “Plugin editor not showing?”">​</a>Plugin editor not showing?</h2><div><p>Check that the external library is loaded. For example, verify that <code>window.Quill</code> or <code>window.flatpickr</code> exists before initialization.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="validation-not-working"><a class="header-anchor" href="#validation-not-working" aria-label="Permalink to “Validation not working?”">​</a>Validation not working?</h2><div><p>For <code>format</code> validation, set <code>assertFormat: true</code> in your Jedison options.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="infinite-recursion-with-recursive-schemas"><a class="header-anchor" href="#infinite-recursion-with-recursive-schemas" aria-label="Permalink to “Infinite recursion with recursive schemas?”">​</a>Infinite recursion with recursive schemas?</h2><div><p>Use <code>x-deactivateNonRequired: true</code> in your schema combined with <code>enablePropertiesToggle: true</code> in your Jedison options.</p>
-</div><!--]--><!--]--></article><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« Playground</span></button><button class="btn btn-outline-primary"><span>Themes »</span></button></div></div></div></div></div></div>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>// Both are required for editor mode - missing either one is the most
+// common reason nothing shows up.
+const jedison = new Jedison.Create({
+  container: document.getElementById('jedison-container'),
+  theme: new Jedison.Theme(),
+  schema: mySchema
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="ref-not-working"><a class="header-anchor" href="#ref-not-working" aria-label="Permalink to “$ref not working?”">​</a>$ref not working?</h2><div><p>Use <code>RefParser</code> and call <code>await refParser.dereference(schema)</code> before creating the Jedison instance.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const refParser = new Jedison.RefParser()
+await refParser.dereference(schema)
+
+const jedison = new Jedison.Create({
+  container: document.getElementById('jedison-container'),
+  theme: new Jedison.Theme(),
+  refParser: refParser,
+  schema: schema
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="plugin-editor-not-showing"><a class="header-anchor" href="#plugin-editor-not-showing" aria-label="Permalink to “Plugin editor not showing?”">​</a>Plugin editor not showing?</h2><div><p>Check that the external library is loaded. For example, verify that <code>window.Quill</code> or <code>window.flatpickr</code> exists before initialization.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>&lt;!-- Load the plugin's library BEFORE Jedison creates the editor --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"&gt;&lt;/script&gt;
+
+&lt;script type="module"&gt;
+  console.log(typeof window.Quill) // must be 'function', not 'undefined'
+
+  const jedison = new Jedison.Create({
+    container: document.getElementById('jedison-container'),
+    theme: new Jedison.Theme(),
+    schema: {
+      type: 'string',
+      'x-format': 'quill'
+    }
+  })
+&lt;/script&gt;
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="validation-not-working"><a class="header-anchor" href="#validation-not-working" aria-label="Permalink to “Validation not working?”">​</a>Validation not working?</h2><div><p>For <code>format</code> validation, set <code>assertFormat: true</code> in your Jedison options.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>// Without assertFormat: true, "format" is only an annotation - it doesn't
+// actually reject invalid values.
+const jedison = new Jedison.Create({
+  schema: {
+    type: 'string',
+    format: 'email'
+  },
+  assertFormat: true
+})
+
+jedison.setValue('not-an-email')
+console.log(jedison.getErrors())
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="infinite-recursion-with-recursive-schemas"><a class="header-anchor" href="#infinite-recursion-with-recursive-schemas" aria-label="Permalink to “Infinite recursion with recursive schemas?”">​</a>Infinite recursion with recursive schemas?</h2><div><p>Use <code>x-deactivateNonRequired: true</code> in your schema combined with <code>enablePropertiesToggle: true</code> in your Jedison options.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "properties": {
+    "parent": {
+      "$ref": "#",
+      "x-deactivateNonRequired": true
+    }
+  }
+}
+</code></pre></div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  container: document.getElementById('jedison-container'),
+  theme: new Jedison.Theme(),
+  refParser: refParser,
+  schema: schema,
+  enablePropertiesToggle: true
+})
+</code></pre></div><!--]--><!--]--></article><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« Playground</span></button><button class="btn btn-outline-primary"><span>Themes »</span></button></div></div></div></div></div></div>
 
 
 </body></html>

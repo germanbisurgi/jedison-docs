@@ -3,7 +3,7 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - Language and Translations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQGQ44l2.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
 <meta name="description" content="Localization and translation support for Jedison labels and messages."></head>
 <body>
@@ -22,7 +22,20 @@
 <p>If a translation is missing or you forget to add one, Jedison will automatically use the English version instead.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="adding-translations"><a class="header-anchor" href="#adding-translations" aria-label="Permalink to “Adding Translations”">​</a>Adding Translations</h2><div><p>You can add new languages using the <code>translations</code> option. Just set the <code>language</code> option to your new language code.</p>
 <p>You can also override the default English translations if needed.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="translation-and-templates"><a class="header-anchor" href="#translation-and-templates" aria-label="Permalink to “Translation and Templates”">​</a>Translation and Templates</h2><div><p>The translation system uses template placeholders that get dynamically replaced with actual values during runtime. These placeholders are wrapped in double curly braces <code>{{ property }}</code> and provide context-specific information in error messages.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>// A new language only needs the keys you actually want to override -
+// anything left out falls back to the English default.
+const jedison = new Jedison.Create({
+  language: 'fr',
+  translations: {
+    fr: {
+      errorRequired: 'Doit avoir les propriétés requises : {{ required }}.',
+      errorMinLength: 'Doit comporter au moins {{ minLength }} caractères.',
+      arrayAdd: 'Ajouter un élément',
+      arrayDelete: "Supprimer l'élément"
+    }
+  }
+})
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="translation-and-templates"><a class="header-anchor" href="#translation-and-templates" aria-label="Permalink to “Translation and Templates”">​</a>Translation and Templates</h2><div><p>The translation system uses template placeholders that get dynamically replaced with actual values during runtime. These placeholders are wrapped in double curly braces <code>{{ property }}</code> and provide context-specific information in error messages.</p>
 <p>For example, when validating against a <code>minLength</code> constraint, the template <code>{{ minLength }}</code> will be replaced with the schema's specified minimum length value. This allows for dynamic, accurate error messages that reflect the actual validation rules.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>  const jedison = new Jedison.Create({
   language: 'de',

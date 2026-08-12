@@ -3,7 +3,7 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - Schema Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQGQ44l2.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
 <meta name="description" content="Per-schema configuration using x- prefixed properties."></head>
 <body>
@@ -19,7 +19,15 @@
 <strong>Default:</strong> <code>'left'</code>
 <strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
 <p>Controls the positioning of action buttons (delete, move, drag) in table format arrays. When set to <code>'right'</code>, buttons appear on the right side of the table. When set to <code>'left'</code> (default), buttons appear on the left side.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydelete"><a class="header-anchor" href="#x-arraydelete" aria-label="Permalink to “x-arrayDelete”">​</a>x-arrayDelete</h2><div><p><strong>Type:</strong> <code>boolean</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-format": "table",
+  "x-arrayButtonsPosition": "right",
+  "items": {
+    "type": "string"
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydelete"><a class="header-anchor" href="#x-arraydelete" aria-label="Permalink to “x-arrayDelete”">​</a>x-arrayDelete</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>true</code></p>
 <p>If array "delete" buttons should be displayed.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydeleteall"><a class="header-anchor" href="#x-arraydeleteall" aria-label="Permalink to “x-arrayDeleteAll”">​</a>x-arrayDeleteAll</h2><div><p><strong>Type:</strong> <code>boolean</code>
@@ -113,10 +121,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-embedswitcher"><a class="header-anchor" href="#x-embedswitcher" aria-label="Permalink to “x-embedSwitcher”">​</a>x-embedSwitcher</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
-<p>When enabled on a <code>oneOf</code> or <code>anyOf</code> schema, embeds the type switcher inside the selected editor's header rather than displaying it above.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enablecollapsetoggle"><a class="header-anchor" href="#x-enablecollapsetoggle" aria-label="Permalink to “x-enableCollapseToggle”">​</a>x-enableCollapseToggle</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enablecollapsetoggle"><a class="header-anchor" href="#x-enablecollapsetoggle" aria-label="Permalink to “x-enableCollapseToggle”">​</a>x-enableCollapseToggle</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Display a collapse button used to collapse or expand editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enforceconst"><a class="header-anchor" href="#x-enforceconst" aria-label="Permalink to “x-enforceConst”">​</a>x-enforceConst</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>true</code></p>
@@ -159,7 +164,19 @@
 }
 </code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-hidden"><a class="header-anchor" href="#x-hidden" aria-label="Permalink to “x-hidden”">​</a>x-hidden</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Editors can be hidden using this option. When set to <code>true</code>, the editor is hidden.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-info"><a class="header-anchor" href="#x-info" aria-label="Permalink to “x-info”">​</a>x-info</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "properties": {
+    "internalId": {
+      "type": "string",
+      "x-hidden": true
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-info"><a class="header-anchor" href="#x-info" aria-label="Permalink to “x-info”">​</a>x-info</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>Used to display extra information.</p>
 <p><strong>Options:</strong></p>
 <ul>
@@ -224,11 +241,39 @@
 <p>When enabled, displays a warning icon (⚠) in the legend of array and object editors when they contain nested validation errors. Set to <code>false</code> to disable.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-navwarningmessage"><a class="header-anchor" href="#x-navwarningmessage" aria-label="Permalink to “x-navWarningMessage”">​</a>x-navWarningMessage</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Custom tooltip message displayed on the legend warning icon. Requires <code>x-navWarning</code> to be active.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propertiestogglecontent"><a class="header-anchor" href="#x-propertiestogglecontent" aria-label="Permalink to “x-propertiesToggleContent”">​</a>x-propertiesToggleContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-navWarning": true,
+  "x-navWarningMessage": "This section has validation errors",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email"
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propertiestogglecontent"><a class="header-anchor" href="#x-propertiestogglecontent" aria-label="Permalink to “x-propertiesToggleContent”">​</a>x-propertiesToggleContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Text content for "properties" buttons.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propgroup"><a class="header-anchor" href="#x-propgroup" aria-label="Permalink to “x-propGroup”">​</a>x-propGroup</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Assigns a property to a named group in the properties activation dialog. Used together with <code>enablePropertiesToggle</code> and <code>x-propGroupOrder</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propgrouporder"><a class="header-anchor" href="#x-propgrouporder" aria-label="Permalink to “x-propGroupOrder”">​</a>x-propGroupOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "x-propGroup": "identity"
+    },
+    "lastName": {
+      "type": "string",
+      "x-propGroup": "identity"
+    },
+    "email": {
+      "type": "string",
+      "x-propGroup": "contact"
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propgrouporder"><a class="header-anchor" href="#x-propgrouporder" aria-label="Permalink to “x-propGroupOrder”">​</a>x-propGroupOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
 <p>Defines the display order of property groups in the properties activation dialog. Groups are defined using <code>x-propGroup</code> on individual properties. Groups not included in the array are appended at the end; the default group (properties without <code>x-propGroup</code>) always appears first.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -247,9 +292,29 @@
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-sortable"><a class="header-anchor" href="#x-sortable" aria-label="Permalink to “x-sortable”">​</a>x-sortable</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>false</code></p>
 <p>Items can be sorted via drag and drop if Sortable.js is available.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-startcollapsed"><a class="header-anchor" href="#x-startcollapsed" aria-label="Permalink to “x-startCollapsed”">​</a>x-startCollapsed</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-sortable": true,
+  "items": {
+    "type": "string"
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-startcollapsed"><a class="header-anchor" href="#x-startcollapsed" aria-label="Permalink to “x-startCollapsed”">​</a>x-startCollapsed</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Whether the editor should start expanded or collapsed. Works on editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-suberrors"><a class="header-anchor" href="#x-suberrors" aria-label="Permalink to “x-subErrors”">​</a>x-subErrors</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "advanced": {
+      "type": "object",
+      "x-startCollapsed": true,
+      "properties": {
+        "timeout": { "type": "integer" }
+      }
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-suberrors"><a class="header-anchor" href="#x-suberrors" aria-label="Permalink to “x-subErrors”">​</a>x-subErrors</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Per-schema override for including sub-error details in validation errors. Overrides the global <code>subErrors</code> option.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-switcherinput"><a class="header-anchor" href="#x-switcherinput" aria-label="Permalink to “x-switcherInput”">​</a>x-switcherInput</h2><div><p><strong>Type:</strong> <code>string</code>
 <strong>Default:</strong> <code>'select'</code>
@@ -258,14 +323,53 @@
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-switchertitle"><a class="header-anchor" href="#x-switchertitle" aria-label="Permalink to “x-switcherTitle”">​</a>x-switcherTitle</h2><div><p><strong>Type:</strong> <code>string</code>
 <strong>Default:</strong> property name or <code>"title"</code></p>
 <p>The text displayed in the multiple editor switcher to select this sub-schema editor.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titlehidden"><a class="header-anchor" href="#x-titlehidden" aria-label="Permalink to “x-titleHidden”">​</a>x-titleHidden</h2><div><p><strong>Type:</strong> <code>boolean</code>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "oneOf": [
+    {
+      "type": "string",
+      "x-switcherTitle": "Text"
+    },
+    {
+      "type": "number",
+      "x-switcherTitle": "Number"
+    }
+  ]
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titlehidden"><a class="header-anchor" href="#x-titlehidden" aria-label="Permalink to “x-titleHidden”">​</a>x-titleHidden</h2><div><p><strong>Type:</strong> <code>boolean</code>
 <strong>Default:</strong> <code>false</code></p>
 <p>Hides the editor title.</p>
 </div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titleiconclass"><a class="header-anchor" href="#x-titleiconclass" aria-label="Permalink to “x-titleIconClass”">​</a>x-titleIconClass</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Icon class to use in titles if using any.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titletemplate"><a class="header-anchor" href="#x-titletemplate" aria-label="Permalink to “x-titleTemplate”">​</a>x-titleTemplate</h2><div><p><strong>Type:</strong> <code>string</code></p>
-<p>A template to form titles dynamically.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-useconstraintattributes"><a class="header-anchor" href="#x-useconstraintattributes" aria-label="Permalink to “x-useConstraintAttributes”">​</a>x-useConstraintAttributes</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email address",
+      "x-titleIconClass": "bi bi-envelope"
+    },
+    "internalNote": {
+      "type": "string",
+      "title": "Internal note",
+      "x-titleHidden": true
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titletemplate"><a class="header-anchor" href="#x-titletemplate" aria-label="Permalink to “x-titleTemplate”">​</a>x-titleTemplate</h2><div><p><strong>Type:</strong> <code>string</code></p>
+<p>A template to form titles dynamically, using the same <code>{{ placeholder }}</code> syntax described on the Templates page. Currently only read by nav-format array editors, to title each item from its own value.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-format": "nav-vertical",
+  "items": {
+    "type": "object",
+    "x-titleTemplate": "{{ value.name || 'New contact' }}",
+    "properties": {
+      "name": { "type": "string" }
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-useconstraintattributes"><a class="header-anchor" href="#x-useconstraintattributes" aria-label="Permalink to “x-useConstraintAttributes”">​</a>x-useConstraintAttributes</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Per-schema override for applying native HTML constraint attributes based on JSON Schema keywords. Overrides the global <code>useConstraintAttributes</code> option.</p>
 <ul>
 <li><strong>Number inputs:</strong> <code>min</code>, <code>max</code></li>
