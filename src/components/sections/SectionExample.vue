@@ -1,18 +1,37 @@
 <template>
   <article>
-    <h2 v-if="heading" v-html="heading" />
-    <p v-if="intro" v-html="intro" />
+    <h2 v-if="heading && level === 2" :id="headingId">
+      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+    </h2>
+    <h3 v-else-if="heading && level === 3" :id="headingId">
+      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+    </h3>
+    <p v-if="intro" v-html="renderedIntro" />
 
     <template v-if="activationConditions.length">
-      <h2>Activation Conditions</h2>
+      <component :is="subHeadingTag">
+        Activation Conditions
+      </component>
       <ul>
-        <li v-for="condition in activationConditions" :key="condition" v-html="condition" />
+        <li v-for="condition in renderedActivationConditions" :key="condition" v-html="condition" />
       </ul>
     </template>
 
-    <template v-if="notesHtml">
-      <h2 v-if="notesHeading" v-html="notesHeading" />
-      <div v-html="notesHtml" />
+    <template v-if="notesMarkdown">
+      <h2 v-if="notesHeading && subLevel === 2" :id="notesHeadingId">
+        <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
+      </h2>
+      <h3 v-else-if="notesHeading" :id="notesHeadingId">
+        <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
+      </h3>
+      <div v-html="renderedNotes" />
+    </template>
+
+    <template v-if="schemaJson">
+      <component :is="subHeadingTag">
+        Schema
+      </component>
+      <app-highlight language="json" :code="schemaJson" />
     </template>
 
     <app-live-example :example="resolvedExampleHtml" />
@@ -21,17 +40,30 @@
 
 <script>
 import AppLiveExample from '@/components/AppLiveExample.vue'
+import AppHighlight from '@/components/AppHighlight.vue'
+import AppHeaderAnchor from '@/components/AppHeaderAnchor.vue'
 import { buildLiveExampleHtml } from '@/lib/live-example/buildHtml.js'
+import { slugify } from '@/lib/slugify.js'
+import { renderMarkdown, renderMarkdownInline } from '@/lib/renderMarkdown.js'
 
 export default {
   name: 'SectionExample',
   components: {
-    AppLiveExample
+    AppLiveExample,
+    AppHighlight,
+    AppHeaderAnchor
   },
   props: {
     heading: {
       type: String,
       default: ''
+    },
+    // 2 = section, 3 = article - see main (h1) -> section (h2) -> article (h3).
+    // Activation Conditions/Schema/Notes below always nest one tier under this.
+    level: {
+      type: Number,
+      default: 2,
+      validator: (value) => [2, 3].includes(value)
     },
     intro: {
       type: String,
@@ -45,7 +77,7 @@ export default {
       type: String,
       default: ''
     },
-    notesHtml: {
+    notesMarkdown: {
       type: String,
       default: ''
     },
@@ -65,6 +97,34 @@ export default {
   computed: {
     resolvedExampleHtml () {
       return this.exampleHtml || (this.example ? buildLiveExampleHtml(this.example) : '')
+    },
+    schemaJson () {
+      const schema = this.example?.createOptions?.schema
+      return schema ? JSON.stringify(schema, null, 2) : ''
+    },
+    // Own heading (if any) makes this block a section, pushing its internal
+    // sub-headings down to article tier; with no own heading, this block's
+    // sub-parts are themselves the page's sections.
+    subLevel () {
+      return this.heading ? Math.min(this.level + 1, 3) : this.level
+    },
+    subHeadingTag () {
+      return `h${this.subLevel}`
+    },
+    headingId () {
+      return this.heading ? slugify(this.heading) : undefined
+    },
+    notesHeadingId () {
+      return this.notesHeading ? slugify(this.notesHeading) : undefined
+    },
+    renderedIntro () {
+      return renderMarkdown(this.intro)
+    },
+    renderedNotes () {
+      return renderMarkdown(this.notesMarkdown)
+    },
+    renderedActivationConditions () {
+      return this.activationConditions.map(renderMarkdownInline)
     }
   }
 }

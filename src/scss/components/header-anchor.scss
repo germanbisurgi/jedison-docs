@@ -1,0 +1,11 @@
+.app-content {
+  .header-anchor {
+    margin-right: 0.3em;
+    font-weight: 500;
+    text-decoration: none;
+
+    &::before {
+      content: "#";
+    }
+  }
+}

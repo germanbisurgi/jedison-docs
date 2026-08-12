@@ -9,7 +9,9 @@
         <div class="wrapper border-start border-end">
           <app-navbar />
           <app-breadcrumb />
-          <router-view class="app-content" />
+          <main class="app-content">
+            <router-view />
+          </main>
           <app-next-previous class="app-prev-next" />
         </div>
       </div>
