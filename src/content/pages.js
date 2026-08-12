@@ -93,14 +93,23 @@ import mdEventItemAdd from '@/assets/markdown/event-item-add.md?raw'
 import mdEventItemDelete from '@/assets/markdown/event-item-delete.md?raw'
 import mdEventItemMove from '@/assets/markdown/event-item-move.md?raw'
 
+import faqEditorNotRendering from '@/assets/markdown/faq-editor-not-rendering.md?raw'
+import faqRefNotWorking from '@/assets/markdown/faq-ref-not-working.md?raw'
+import faqPluginEditorNotShowing from '@/assets/markdown/faq-plugin-editor-not-showing.md?raw'
+import faqValidationNotWorking from '@/assets/markdown/faq-validation-not-working.md?raw'
+import faqInfiniteRecursion from '@/assets/markdown/faq-infinite-recursion.md?raw'
+import faqInfiniteRecursionSchema from '@/assets/markdown/faq-infinite-recursion-schema.md?raw'
+
 import mdOptionLanguage from '@/assets/markdown/option-language.md?raw'
 import mdGermanTranslation from '@/assets/markdown/translation-german.md?raw'
+import addingTranslationsExample from '@/assets/markdown/adding-translations-example.md?raw'
 import languageAndTranslationsExample from '@/assets/live-examples/language-and-translations.json'
 
 import markdownAnnotationsExample from '@/assets/live-examples/markdown-annotations.json'
 import exposingMarkedAndDompurify from '@/assets/markdown/exposing-marked-and-dompurify.md?raw'
 
 import mdOverlayUsage from '@/assets/markdown/overlay-usage.md?raw'
+import mdOverlayMergeSemantics from '@/assets/markdown/overlay-merge-semantics.md?raw'
 import htmlOverlayExample from '@/assets/html/overlay-example.html?raw'
 
 import themesThemeExample from '@/assets/live-examples/themes-theme.json'
@@ -108,17 +117,26 @@ import themesBootstrap3Example from '@/assets/live-examples/themes-bootstrap3.js
 import themesBootstrap4Example from '@/assets/live-examples/themes-bootstrap4.json'
 import themesBootstrap5Example from '@/assets/live-examples/themes-bootstrap5.json'
 
+import xArrayButtonsPositionExample from '@/assets/markdown/x-arrayButtonsPosition-example.md?raw'
 import xContainerAttributesExample from '@/assets/markdown/x-containerAttributes-example.md?raw'
 import xDiscriminatorExample from '@/assets/markdown/x-discriminator-example.md?raw'
 import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
 import xEnumTitlesExample from '@/assets/markdown/x-enumTitles-example.md?raw'
 import xGridExample from '@/assets/markdown/x-grid-example.md?raw'
+import xHiddenExample from '@/assets/markdown/x-hidden-example.md?raw'
 import xInfoExample from '@/assets/markdown/x-info-example.md?raw'
 import xInputAttributesExample from '@/assets/markdown/x-inputAttributes-example.md?raw'
 import xMessagesArray from '@/assets/markdown/x-messages-array.md?raw'
 import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
 import xMessagesI18n from '@/assets/markdown/x-messages-i18n.md?raw'
+import xNavWarningExample from '@/assets/markdown/x-navWarning-example.md?raw'
+import xPropGroupExample from '@/assets/markdown/x-propGroup-example.md?raw'
 import xPropGroupOrderExample from '@/assets/markdown/x-propGroupOrder-example.md?raw'
+import xSortableExample from '@/assets/markdown/x-sortable-example.md?raw'
+import xStartCollapsedExample from '@/assets/markdown/x-startCollapsed-example.md?raw'
+import xSwitcherTitleExample from '@/assets/markdown/x-switcherTitle-example.md?raw'
+import xTitleHiddenExample from '@/assets/markdown/x-titleHidden-example.md?raw'
+import xTitleTemplateExample from '@/assets/markdown/x-titleTemplate-example.md?raw'
 
 import htmlCustomValidator from '@/assets/html/custom-constraint.html?raw'
 import mdCustomConstraint from '@/assets/markdown/custom-constraint.md?raw'
@@ -126,10 +144,18 @@ import mdCustomConstraint from '@/assets/markdown/custom-constraint.md?raw'
 import templatesExample from '@/assets/live-examples/templates.json'
 import templatesFallbackExample from '@/assets/live-examples/templates-fallback.json'
 
+import mdMethodGetValue from '@/assets/markdown/method-get-value.md?raw'
+import mdMethodSetValue from '@/assets/markdown/method-set-value.md?raw'
+import mdMethodGetInstance from '@/assets/markdown/method-get-instance.md?raw'
+import mdMethodShowValidationErrors from '@/assets/markdown/method-show-validation-errors.md?raw'
 import mdMethodGetErrorsAndWarnings from '@/assets/markdown/method-get-errors-and-warnings.md?raw'
 import mdMethodGetErrors from '@/assets/markdown/method-get-errors.md?raw'
 import mdValidationErrors from '@/assets/markdown/validation-errors.md?raw'
 import mdValidationErrorsFiltered from '@/assets/markdown/validation-errors-filtered.md?raw'
+import mdMethodDisable from '@/assets/markdown/method-disable.md?raw'
+import mdMethodEnable from '@/assets/markdown/method-enable.md?raw'
+import mdMethodDestroy from '@/assets/markdown/method-destroy.md?raw'
+import mdMethodNavigateTo from '@/assets/markdown/method-navigate-to.md?raw'
 
 import mdRefParserUsage from '@/assets/markdown/ref-parser-usage.md?raw'
 import htmlRefParserBefore from '@/assets/html/ref-parser-before.html?raw'
@@ -138,10 +164,17 @@ import htmlRefParserRecursiveObject from '@/assets/html/ref-parser-recursive-obj
 import htmlRefParserRecursiveArray from '@/assets/html/ref-parser-recursive-array.html?raw'
 
 import customEditorsExample from '@/assets/markdown/customEditors-example.md?raw'
+import dataExample from '@/assets/markdown/data-example.md?raw'
 import domPurifyOptionsExample from '@/assets/markdown/domPurifyOptions-example.md?raw'
 import editJsonDataExample from '@/assets/markdown/editJsonData-example.md?raw'
 import hiddenInputAttributesExample from '@/assets/markdown/hiddenInputAttributes-example.md?raw'
+import iconLibExample from '@/assets/markdown/iconLib-example.md?raw'
+import idExample from '@/assets/markdown/id-example.md?raw'
+import refParserExample from '@/assets/markdown/refParser-example.md?raw'
 import settingsExample from '@/assets/markdown/settings-example.md?raw'
+import showErrorsExample from '@/assets/markdown/showErrors-example.md?raw'
+import switcherInputExample from '@/assets/markdown/switcherInput-example.md?raw'
+import themeExample from '@/assets/markdown/theme-example.md?raw'
 import translationsExample from '@/assets/markdown/translations-example.md?raw'
 
 export const pages = [
@@ -276,6 +309,7 @@ But Jedison is flexible enough to support other patterns too - you might use it 
 Internally, this traverses the entire instance tree to build the complete JSON structure.`
         }
       },
+      {component: SectionCode, props: {code: mdMethodGetValue}},
       {
         component: SectionProse,
         props: {
@@ -286,6 +320,7 @@ Internally, this traverses the entire instance tree to build the complete JSON s
 -   \`data\`: The new JSON data to set`
         }
       },
+      {component: SectionCode, props: {code: mdMethodSetValue}},
       {
         component: SectionProse,
         props: {
@@ -300,6 +335,7 @@ Example paths:
 -   \`'#/array/0'\` - First item in an array`
         }
       },
+      {component: SectionCode, props: {code: mdMethodGetInstance}},
       {
         component: SectionProse,
         props: {
@@ -311,6 +347,7 @@ Example paths:
 -   Otherwise, shows all current validation errors from \`getErrors()\``
         }
       },
+      {component: SectionCode, props: {language: `html`, code: mdMethodShowValidationErrors}},
       {
         component: SectionProse,
         props: {
@@ -333,6 +370,7 @@ Example paths:
           markdown: `Disables UI controls`
         }
       },
+      {component: SectionCode, props: {code: mdMethodDisable}},
       {
         component: SectionProse,
         props: {
@@ -341,6 +379,7 @@ Example paths:
           markdown: `Enables UI controls`
         }
       },
+      {component: SectionCode, props: {code: mdMethodEnable}},
       {
         component: SectionProse,
         props: {
@@ -353,6 +392,7 @@ Example paths:
 -   Removing all instance references`
         }
       },
+      {component: SectionCode, props: {code: mdMethodDestroy}},
       {
         component: SectionProse,
         props: {
@@ -364,7 +404,8 @@ Example paths:
 
 Only works when Jedison is used as an editor (i.e. a \`container\` is provided).`
         }
-      }
+      },
+      {component: SectionCode, props: {code: mdMethodNavigateTo}}
     ]
   },
   {
@@ -519,6 +560,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
 -   \`theme\` is provided`
         }
       },
+      {component: SectionCode, props: {code: faqEditorNotRendering}},
       {
         component: SectionProse,
         props: {
@@ -527,6 +569,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
           markdown: `Use \`RefParser\` and call \`await refParser.dereference(schema)\` before creating the Jedison instance.`
         }
       },
+      {component: SectionCode, props: {code: faqRefNotWorking}},
       {
         component: SectionProse,
         props: {
@@ -535,6 +578,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
           markdown: `Check that the external library is loaded. For example, verify that \`window.Quill\` or \`window.flatpickr\` exists before initialization.`
         }
       },
+      {component: SectionCode, props: {language: `html`, code: faqPluginEditorNotShowing}},
       {
         component: SectionProse,
         props: {
@@ -543,6 +587,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
           markdown: `For \`format\` validation, set \`assertFormat: true\` in your Jedison options.`
         }
       },
+      {component: SectionCode, props: {code: faqValidationNotWorking}},
       {
         component: SectionProse,
         props: {
@@ -550,7 +595,9 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
           level: 2,
           markdown: `Use \`x-deactivateNonRequired: true\` in your schema combined with \`enablePropertiesToggle: true\` in your Jedison options.`
         }
-      }
+      },
+      {component: SectionCode, props: {language: `json`, code: faqInfiniteRecursionSchema}},
+      {component: SectionCode, props: {code: faqInfiniteRecursion}}
     ]
   },
   {
@@ -697,6 +744,7 @@ If a translation is missing or you forget to add one, Jedison will automatically
 You can also override the default English translations if needed.`
         }
       },
+      {component: SectionCode, props: {code: addingTranslationsExample}},
       {
         component: SectionProse,
         props: {
@@ -762,7 +810,10 @@ As a result, Jedison renders a \`object\` editor.`,
       },
       {
         component: SectionProse,
-        props: {heading: "Recursive schema", markdown: ``}
+        props: {
+          heading: "Recursive schema",
+          markdown: `A schema that references itself (directly, or through a chain of \`$ref\`s) would otherwise make \`RefParser\` expand it infinitely. \`RefParser\` detects these cycles and marks the recursive schema so Jedison can render it safely instead of looping forever.`
+        }
       },
       {
         component: SectionExample,
@@ -852,7 +903,8 @@ Filter expressions (\`[?…]\`), array slices (\`[start:end]\`) and function ext
 
 \`remove: true\` deletes matched object properties and splices matched array items (indices are removed highest-first so they stay valid).`
         }
-      }
+      },
+      {component: SectionCode, props: {code: mdOverlayMergeSemantics}}
     ]
   },
   {
@@ -936,6 +988,7 @@ Specifies the icon library to use for UI components. Valid options include:
 -   \`'fontawesome6'\``
         }
       },
+      {component: SectionCode, props: {code: iconLibExample}},
       {
         component: SectionProse,
         props: {
@@ -952,6 +1005,7 @@ An instance of \`Theme\` to apply to the UI. Valid options include:
 -   \`new Jedison.ThemeBootstrap5()\``
         }
       },
+      {component: SectionCode, props: {code: themeExample}},
       {
         component: SectionProse,
         props: {
@@ -960,11 +1014,12 @@ An instance of \`Theme\` to apply to the UI. Valid options include:
           markdown: `**Type:** \`RefParser\`
 **Default:** \`null\`
 
-An instance of \`RefParser\` to handle \`'$ref'\` keywords.
+An instance of \`RefParser\` to dereference \`"$ref"\` keywords in the schema before it's rendered. See the RefParser page for a full walkthrough of internal and recursive references.
 
--   \`new Jedison.RefParser\``
+-   \`new Jedison.RefParser()\``
         }
       },
+      {component: SectionCode, props: {code: refParserExample}},
       {
         component: SectionProse,
         props: {
@@ -1050,6 +1105,7 @@ A JSON schema for the form.`
 Used to prefix \`id\` and \`for\` attributes. Useful if you want to have multiple Jedison forms on the page`
         }
       },
+      {component: SectionCode, props: {code: idExample}},
       {
         component: SectionProse,
         props: {
@@ -1061,6 +1117,7 @@ Used to prefix \`id\` and \`for\` attributes. Useful if you want to have multipl
 Set default language for error messages and UI texts.`
         }
       },
+      {component: SectionCode, props: {code: mdOptionLanguage}},
       {
         component: SectionProse,
         props: {
@@ -1072,6 +1129,7 @@ Set default language for error messages and UI texts.`
 Initial JSON data to populate the form.`
         }
       },
+      {component: SectionCode, props: {code: dataExample}},
       {
         component: SectionProse,
         props: {
@@ -1199,7 +1257,7 @@ When \`true\` the editor removes all properties that are not listed in propertie
           markdown: `**Type:** \`string\`
 **Default:** \`'select'\`
 
-Sets the input type that will be used to witch between multiple editors.
+Sets the input type that will be used to switch between multiple editors.
 
 -   \`select\`
 -   \`radios\`
@@ -1210,6 +1268,7 @@ Sets the input type that will be used to witch between multiple editors.
 **x-option:** ✅`
         }
       },
+      {component: SectionCode, props: {code: switcherInputExample}},
       {
         component: SectionProse,
         props: {
@@ -1282,6 +1341,7 @@ Determines when to display validation errors. Options include:
 **x-option:** ✅`
         }
       },
+      {component: SectionCode, props: {code: showErrorsExample}},
       {
         component: SectionProse,
         props: {
@@ -1472,7 +1532,7 @@ This enables native browser validation hints and constraints.
     navbar: true,
     title: "Jedison - Schema Options",
     description: "Per-schema configuration using x- prefixed properties.",
-    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-discriminator", "x-editJsonData", "x-embedSwitcher", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
+    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
     component: SectionsPage,
     heading: "Schema Options",
     sections: [
@@ -1523,6 +1583,7 @@ Text content for array "add" buttons.`
 Controls the positioning of action buttons (delete, move, drag) in table format arrays. When set to \`'right'\`, buttons appear on the right side of the table. When set to \`'left'\` (default), buttons appear on the left side.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayButtonsPositionExample}},
       {
         component: SectionProse,
         props: {
@@ -1750,17 +1811,6 @@ Enables inline JSON editing mode for this specific schema, allowing users to dir
       {
         component: SectionProse,
         props: {
-          heading: `x-embedSwitcher`,
-          level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
-
-When enabled on a \`oneOf\` or \`anyOf\` schema, embeds the type switcher inside the selected editor's header rather than displaying it above.`
-        }
-      },
-      {
-        component: SectionProse,
-        props: {
           heading: `x-enableCollapseToggle`,
           level: 2,
           markdown: `**Type:** \`boolean\`
@@ -1848,6 +1898,7 @@ A configuration object to determine the position of the property editor in the p
 Editors can be hidden using this option. When set to \`true\`, the editor is hidden.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xHiddenExample}},
       {
         component: SectionProse,
         props: {
@@ -1945,6 +1996,7 @@ When enabled, displays a warning icon (⚠) in the legend of array and object ed
 Custom tooltip message displayed on the legend warning icon. Requires \`x-navWarning\` to be active.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xNavWarningExample}},
       {
         component: SectionProse,
         props: {
@@ -1965,6 +2017,7 @@ Text content for "properties" buttons.`
 Assigns a property to a named group in the properties activation dialog. Used together with \`enablePropertiesToggle\` and \`x-propGroupOrder\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xPropGroupExample}},
       {
         component: SectionProse,
         props: {
@@ -2001,6 +2054,7 @@ Determines when to display validation errors for this specific schema. Overrides
 Items can be sorted via drag and drop if Sortable.js is available.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xSortableExample}},
       {
         component: SectionProse,
         props: {
@@ -2011,6 +2065,7 @@ Items can be sorted via drag and drop if Sortable.js is available.`
 Whether the editor should start expanded or collapsed. Works on editors that support collapse like \`object\` and \`arrays\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xStartCollapsedExample}},
       {
         component: SectionProse,
         props: {
@@ -2044,6 +2099,7 @@ Per-schema override for the input type used to switch between multiple editor sc
 The text displayed in the multiple editor switcher to select this sub-schema editor.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xSwitcherTitleExample}},
       {
         component: SectionProse,
         props: {
@@ -2065,6 +2121,7 @@ Hides the editor title.`
 Icon class to use in titles if using any.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xTitleHiddenExample}},
       {
         component: SectionProse,
         props: {
@@ -2072,9 +2129,10 @@ Icon class to use in titles if using any.`
           level: 2,
           markdown: `**Type:** \`string\`
 
-A template to form titles dynamically.`
+A template to form titles dynamically, using the same \`{{ placeholder }}\` syntax described on the Templates page. Currently only read by nav-format array editors, to title each item from its own value.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xTitleTemplateExample}},
       {
         component: SectionProse,
         props: {
