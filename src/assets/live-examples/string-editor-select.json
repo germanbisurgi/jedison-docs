@@ -1,0 +1,21 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "type": "string",
+      "title": "String select",
+      "enum": [
+        "albert",
+        "betti",
+        "carl"
+      ],
+      "x-enumTitles": [
+        "Albert",
+        "Betti",
+        "Carl"
+      ]
+    }
+  }
+}

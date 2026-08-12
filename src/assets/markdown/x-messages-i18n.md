@@ -1,3 +1,4 @@
+```json
 {
   "type": "string",
   "minLength": 5,
@@ -9,3 +10,4 @@
     }
   }
 }
+```

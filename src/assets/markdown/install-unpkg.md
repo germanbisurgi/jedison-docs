@@ -1,1 +1,0 @@
-<script src="https://app.unpkg.com/jedison@0.1.1/files/dist/umd/jedison.umd.js"></script>

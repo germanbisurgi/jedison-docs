@@ -1,0 +1,24 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "Quill",
+      "type": "string",
+      "description": "Quill is a modern WYSIWYG editor built for compatibility and extensibility.",
+      "default": "Quill default",
+      "minLength": 3,
+      "x-format": "quill",
+      "x-quill": {
+        "theme": "snow"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadJs": [
+    "https://unpkg.com/imask"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "IBAN",
+      "type": "string",
+      "x-format": "imask",
+      "x-imask": {
+        "mask": "DE00 0000 0000 0000 0000 00",
+        "lazy": false
+      }
+    },
+    "settings": {
+      "imaskDate": {
+        "min": "1989-12-31T23:00:00.000Z",
+        "max": "2019-12-31T23:00:00.000Z",
+        "lazy": false
+      }
+    }
+  }
+}

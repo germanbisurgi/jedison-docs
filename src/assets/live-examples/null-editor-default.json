@@ -1,0 +1,11 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "type": "null",
+      "title": "Null"
+    }
+  }
+}

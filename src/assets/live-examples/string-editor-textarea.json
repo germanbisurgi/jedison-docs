@@ -1,0 +1,12 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "x-format": "textarea",
+      "type": "string",
+      "title": "String"
+    }
+  }
+}

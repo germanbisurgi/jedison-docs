@@ -1,3 +1,4 @@
+```json
 {
   "type": "string",
   "minLength": 5,
@@ -7,3 +8,4 @@
     "const": "Only 'locoloco' unlocks the magic here."
   }
 }
+```

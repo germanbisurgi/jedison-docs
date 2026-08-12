@@ -1,0 +1,20 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "x-format": "table",
+      "title": "Names",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Name"
+      },
+      "default": [
+        "Albert",
+        "Betti",
+        "Carl"
+      ]
+    }
+  }
+}

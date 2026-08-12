@@ -1,0 +1,22 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "x-format": "radios-inline",
+      "type": "string",
+      "title": "String radios",
+      "enum": [
+        "albert",
+        "betti",
+        "carl"
+      ],
+      "x-enumTitles": [
+        "Albert",
+        "Betti",
+        "Carl"
+      ]
+    }
+  }
+}

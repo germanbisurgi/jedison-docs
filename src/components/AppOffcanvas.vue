@@ -13,7 +13,6 @@ export default {
   name: 'AppOffCanvas',
   components: {
     AppPagesNav
-  },
-  mounted() {}
+  }
 }
 </script>

@@ -18,11 +18,11 @@ export default defineConfig(({ mode }) => {
       outDir: resolve(__dirname, 'docs'),
     },
     server: {
-      port: 8080,
+      port: 5180,
       strictPort: true
     },
     preview: {
-      port: 8081,
+      port: 5181,
       strictPort: true
     }
   }

@@ -1,0 +1,33 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadJs": [
+    "https://cdnjs.cloudflare.com/ajax/libs/imask/6.1.0/imask.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "IMask Number",
+      "description": "IMask is vanilla javascript input mask.",
+      "type": "number",
+      "default": 0.5,
+      "x-format": "imask",
+      "x-imask": {
+        "thousandsSeparator": ".",
+        "radix": ",",
+        "scale": 2,
+        "padFractionalZeros": true,
+        "normalizeZeros": false,
+        "mapToRadix": [
+          "."
+        ],
+        "autofix": "pad"
+      },
+      "x-info": {
+        "variant": "modal",
+        "title": "### Info Button title",
+        "content": "Info button content"
+      }
+    }
+  }
+}

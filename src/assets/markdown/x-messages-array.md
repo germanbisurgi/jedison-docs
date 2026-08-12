@@ -1,3 +1,4 @@
+```json
 {
   "type": "string",
   "minLength": 5,
@@ -5,3 +6,4 @@
     "5 chars please."
   ]
 }
+```

@@ -1,0 +1,36 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.7/awesomplete.css"
+  ],
+  "extraHeadJs": [
+    "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.7/awesomplete.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "Awesomplete",
+      "type": "string",
+      "minLength": 1,
+      "x-format": "awesomplete",
+      "x-awesomplete": {
+        "list": [
+          "JavaScript",
+          "Java",
+          "Python",
+          "Ruby",
+          "C++",
+          "C#",
+          "PHP",
+          "Swift",
+          "Go",
+          "Kotlin"
+        ],
+        "minChars": 1,
+        "maxItems": 5,
+        "autoFirst": true
+      }
+    }
+  }
+}

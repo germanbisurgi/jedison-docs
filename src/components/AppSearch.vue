@@ -55,14 +55,8 @@
                         {{ result.description }}
                       </div>
                     </div>
-                    <span
-                      class="badge rounded-pill flex-shrink-0"
-                      :class="{
-                        'text-bg-primary': result.type === 'page',
-                        'text-bg-secondary': result.type === 'section',
-                        'text-bg-success': result.type === 'example'
-                      }">
-                      {{ result.type }}
+                    <span class="badge rounded-pill flex-shrink-0 text-bg-primary">
+                      page
                     </span>
                   </div>
                 </li>
@@ -95,12 +89,10 @@ import { searchData } from '@/search/searchData.js'
 
 const flatEntries = searchData.map(page => ({
   path: page.path,
-  name: page.name,
   group: page.group,
   title: page.name,
   description: page.description,
-  keywords: page.keywords,
-  type: 'page'
+  keywords: page.keywords
 }))
 
 const fuse = new Fuse(flatEntries, {

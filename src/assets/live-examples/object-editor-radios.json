@@ -1,0 +1,34 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "schema": {
+      "type": "object",
+      "title": "How did you hear about us?",
+      "x-format": "radios",
+      "x-enumTitles": [
+        "Social media",
+        "A friend or colleague",
+        "Online search",
+        "Advertisement"
+      ],
+      "enum": [
+        {
+          "source": "social_media",
+          "score": 4
+        },
+        {
+          "source": "referral",
+          "score": 5
+        },
+        {
+          "source": "search",
+          "score": 3
+        },
+        {
+          "source": "ad",
+          "score": 2
+        }
+      ]
+    }
+  }
+}

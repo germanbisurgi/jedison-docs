@@ -1,0 +1,31 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "type": "array",
+      "title": "People",
+      "x-titleTemplate": "{{ i1 }}) {{ value.name }}",
+      "x-format": "nav-horizontal",
+      "items": {
+        "type": "object",
+        "title": "Person",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "default": "German"
+          }
+        }
+      },
+      "default": [
+        {
+          "name": "Albert"
+        },
+        {
+          "name": "Betti"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "Team Members",
+      "type": "array",
+      "x-format": "nav-vertical",
+      "x-titleTemplate": "{{ value.name || 'Unnamed' }}",
+      "minItems": 2,
+      "default": [
+        {
+          "name": "Alice"
+        },
+        {}
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        }
+      }
+    }
+  }
+}

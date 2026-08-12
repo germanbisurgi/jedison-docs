@@ -1,0 +1,110 @@
+// Fixed CDN asset bundles for the small number of foundations the live
+// examples actually use (confirmed via diff across all original demo HTML).
+// ICON_LIB_CSS: keyed the same way Icons.vue's x-format demos name them;
+// 'bootstrap-icons' is folded into every 'bootstrap5' preset by default below
+// since that's the common case - the rest are opt-in additions.
+import headPresets from './headPresets.json'
+
+const { HEAD_PRESETS, ICON_LIB_CSS, JEDISON_UMD_SRC, THEME_EXPRESSIONS } = headPresets
+
+const PRESET_THEME = {
+  bootstrap5: 'Bootstrap5',
+  bootstrap4: 'Bootstrap4',
+  bootstrap3: 'Bootstrap3',
+  none: 'Theme'
+}
+
+const CONTAINER_EXPR = "document.querySelector('#jedison-container')"
+const CONTAINER_TOKEN = '__jedison_container_token__'
+const THEME_TOKEN = '__jedison_theme_token__'
+
+function cssLink (href) {
+  return `    <link rel="stylesheet" href="${href}">`
+}
+
+function jsScript (src) {
+  return `    <script src="${src}"></script>`
+}
+
+function indentContinuationLines (text, spaces) {
+  const pad = ' '.repeat(spaces)
+  return text.split('\n').map((line, i) => (i === 0 ? line : pad + line)).join('\n')
+}
+
+// Builds a full standalone HTML document (identical in behavior to the files
+// that used to live in src/assets/html/*.html) from a small, JSON-serializable
+// config object. The result stays a plain string handed to AppLiveExample.vue
+// unchanged - still fully editable in CodeMirror, still runnable standalone.
+//
+// Only covers pages whose demo script is exactly `new Jedison.Create({...})`
+// with JSON-serializable options. Pages with real logic around the Create call
+// (applyOverlay, RefParser, custom constraint functions) are NOT built from
+// this and keep their own hand-written HTML.
+export function buildLiveExampleHtml (config = {}) {
+  const {
+    preset = 'bootstrap5',
+    iconLib = preset === 'bootstrap5' ? 'bootstrap-icons' : null,
+    extraHeadCss = [],
+    extraHeadJs = [],
+    themeExpr = THEME_EXPRESSIONS[PRESET_THEME[preset]],
+    createOptions = {},
+    // Raw JS appended after the Create() call, e.g. a `jedison.on('change', ...)`
+    // listener for a demo. Escape hatch for the rare case that isn't just
+    // JSON-serializable options - keep this the exception, not the norm.
+    afterCreate = ''
+  } = config
+
+  const base = HEAD_PRESETS[preset]
+  if (!base) {
+    throw new Error('buildLiveExampleHtml: unknown preset "' + preset + '"')
+  }
+
+  const iconLibCssHref = iconLib && ICON_LIB_CSS[iconLib]
+
+  const cssLines = [
+    ...base.css.map(cssLink),
+    ...(iconLibCssHref ? [cssLink(iconLibCssHref)] : []),
+    ...extraHeadCss.map(cssLink)
+  ]
+
+  const jsLines = [
+    ...extraHeadJs.map(jsScript),
+    ...base.js.map(jsScript),
+    jsScript(JEDISON_UMD_SRC)
+  ]
+
+  // `iconLib` also gets passed through to Jedison.Create itself (it tells
+  // Jedison which icon-class naming convention to render with) - it always
+  // comes right after `theme` in the original files, so put it first here too.
+  const options = {
+    container: CONTAINER_TOKEN,
+    theme: THEME_TOKEN,
+    ...(iconLib ? { iconLib } : {}),
+    ...createOptions
+  }
+
+  const optionsJson = JSON.stringify(options, null, 2)
+    .replace('"' + CONTAINER_TOKEN + '"', CONTAINER_EXPR)
+    .replace('"' + THEME_TOKEN + '"', themeExpr)
+
+  const createCall = 'const jedison = new Jedison.Create(' + indentContinuationLines(optionsJson, 2) + ')'
+
+  return `<!DOCTYPE html>
+<html data-bs-theme="auto">
+<head>
+    <meta charset="utf-8"/>
+${cssLines.join('\n')}
+${jsLines.join('\n')}
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  ${createCall}
+${afterCreate ? '\n' + afterCreate + '\n' : ''}</script>
+</body>
+</html>
+`
+}

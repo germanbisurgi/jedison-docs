@@ -1,0 +1,11 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "x-format": "checkbox",
+      "type": "boolean",
+      "title": "Boolean"
+    }
+  }
+}

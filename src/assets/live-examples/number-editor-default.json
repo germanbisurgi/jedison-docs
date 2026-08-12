@@ -1,0 +1,10 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "type": "number",
+      "title": "Number"
+    }
+  }
+}

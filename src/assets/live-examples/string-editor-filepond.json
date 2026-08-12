@@ -1,0 +1,21 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/filepond@4.31.1/dist/filepond.min.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/filepond@4.31.1/dist/filepond.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "FilePond",
+      "type": "string",
+      "description": "FilePond is a flexible and fun JavaScript file upload library.",
+      "x-format": "filepond",
+      "x-filepond": {
+        "allowMultiple": false
+      }
+    }
+  }
+}

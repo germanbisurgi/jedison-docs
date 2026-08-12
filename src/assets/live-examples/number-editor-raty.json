@@ -1,0 +1,24 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/raty-js@4.3.0/src/raty.min.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/raty-js@4.3.0/build/raty.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Raty",
+      "type": "number",
+      "description": "Raty - A Star Rating Plugin",
+      "default": 3,
+      "minimum": 0.5,
+      "x-format": "raty",
+      "x-raty": {
+        "half": true,
+        "starType": "i"
+      }
+    }
+  }
+}

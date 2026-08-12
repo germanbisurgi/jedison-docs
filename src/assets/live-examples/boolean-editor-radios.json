@@ -1,0 +1,15 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "x-format": "radios",
+      "type": "boolean",
+      "title": "Boolean",
+      "x-enumTitles": [
+        "Yes",
+        "No"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Array",
+      "type": "array",
+      "uniqueItems": true,
+      "x-format": "checkboxes-inline",
+      "items": {
+        "type": "string",
+        "enum": [
+          "value1",
+          "value2"
+        ]
+      }
+    }
+  }
+}

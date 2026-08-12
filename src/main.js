@@ -12,7 +12,7 @@ export const createApp = ViteSSG(
     routes,
     base: process.env.NODE_ENV === 'production' ? '/jedison-docs/' : '/'
   },
-  async ({ app, router, routes, isClient, initialState }) => {
+  async ({ app, router, isClient }) => {
     app.use(router)
     app.use(i18n)
     app.use(store)
@@ -21,8 +21,5 @@ export const createApp = ViteSSG(
       // Only import Bootstrap JS in the browser
       import('bootstrap/dist/js/bootstrap.bundle.js')
     }
-
-    console.log('routes', routes)
-    console.log('initialState', initialState)
   }
 )

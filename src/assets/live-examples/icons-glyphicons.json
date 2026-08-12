@@ -1,0 +1,24 @@
+{
+  "preset": "bootstrap3",
+  "iconLib": "glyphicons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Hobbies",
+      "x-format": "table",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Board games",
+        "Remote cars",
+        "Woodworking",
+        "Welding",
+        "Robot combat",
+        "Investing"
+      ]
+    }
+  }
+}

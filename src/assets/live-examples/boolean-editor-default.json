@@ -1,0 +1,14 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "type": "boolean",
+      "title": "Boolean",
+      "x-enumTitles": [
+        "Yes",
+        "No"
+      ]
+    }
+  }
+}

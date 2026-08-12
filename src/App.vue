@@ -8,6 +8,7 @@
 
         <div class="wrapper border-start border-end">
           <app-navbar />
+          <app-breadcrumb />
           <router-view class="app-content" />
           <app-next-previous class="app-prev-next" />
         </div>
@@ -21,13 +22,19 @@ import AppNavbar from '@/components/AppNavbar.vue'
 import AppOffCanvas from '@/components/AppOffCanvas.vue'
 import AppAside from '@/components/AppAside.vue'
 import AppNextPrevious from '@/components/AppNextPrevious.vue'
+import AppBreadcrumb from '@/components/AppBreadcrumb.vue'
+import { usePageHead } from '@/composables/usePageHead.js'
 
 export default {
   components: {
     AppNextPrevious,
     AppNavbar,
     AppOffCanvas,
-    AppAside
+    AppAside,
+    AppBreadcrumb
+  },
+  setup () {
+    usePageHead()
   }
 }
 </script>

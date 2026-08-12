@@ -1,0 +1,22 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/jodit@4.2.27/es2015/jodit.min.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/jodit@4.2.27/es2018/jodit.fat.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "Jodit",
+      "type": "string",
+      "description": "Jodit - Best WYSIWYG Editor for You.",
+      "default": "Jodit default",
+      "minLength": 20,
+      "x-format": "jodit",
+      "x-jodit": {}
+    }
+  }
+}

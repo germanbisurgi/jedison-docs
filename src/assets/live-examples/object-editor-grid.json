@@ -1,0 +1,30 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "x-format": "grid",
+      "type": "object",
+      "title": "Login",
+      "properties": {
+        "email": {
+          "title": "E-Mail",
+          "type": "string",
+          "format": "email",
+          "x-grid": {
+            "columns": 6
+          }
+        },
+        "password": {
+          "title": "Password",
+          "type": "string",
+          "minLength": 8,
+          "x-grid": {
+            "columns": 6
+          }
+        }
+      }
+    }
+  }
+}

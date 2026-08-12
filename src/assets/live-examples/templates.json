@@ -1,0 +1,58 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Templates",
+      "type": "array",
+      "x-format": "nav-vertical",
+      "minItems": 1,
+      "default": [
+        {
+          "name": "Tech Corp",
+          "departments": [
+            {
+              "name": "Engineering"
+            }
+          ]
+        }
+      ],
+      "x-titleTemplate": "{{ value.name }}",
+      "items": {
+        "title": "Company {{ i1 }} - {{ value.name }}",
+        "description": "Company {{ i1 }} has name: {{ value.name }}",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Company Name",
+            "default": "New Company"
+          },
+          "departments": {
+            "type": "array",
+            "title": "Departments",
+            "x-format": "nav-vertical",
+            "minItems": 1,
+            "default": [
+              {
+                "name": "General"
+              }
+            ],
+            "x-titleTemplate": "{{ parent.parent.value.name }} - {{ value.name }}",
+            "items": {
+              "title": "{{ parent.parent.value.name }} - {{ value.name }}",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Department Name",
+                  "default": "New Department"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

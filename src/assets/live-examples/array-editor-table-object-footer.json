@@ -1,0 +1,42 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "x-format": "table-object",
+      "title": "Users",
+      "type": "array",
+      "x-arrayDeleteAll": true,
+      "x-arrayFooterAdd": true,
+      "x-arrayFooterDeleteAll": true,
+      "items": {
+        "type": "object",
+        "title": "Person",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "age": {
+            "type": "integer",
+            "title": "Age"
+          }
+        }
+      },
+      "default": [
+        {
+          "name": "Albert",
+          "age": 23
+        },
+        {
+          "name": "Betti",
+          "age": 56
+        },
+        {
+          "name": "Carl",
+          "age": 18
+        }
+      ]
+    }
+  }
+}

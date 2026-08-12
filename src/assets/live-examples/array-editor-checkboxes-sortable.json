@@ -1,0 +1,27 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Array",
+      "description": "Array of unique values with item types string, number or integer",
+      "type": "array",
+      "uniqueItems": true,
+      "x-sortable": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "value1",
+          "value2"
+        ]
+      },
+      "default": [
+        "value1"
+      ],
+      "minItems": 1
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "x-format": "nav-vertical",
+      "type": "object",
+      "title": "All Editors",
+      "properties": {
+        "personA": {
+          "title": "Person A",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "age": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "personB": {
+          "title": "Person B",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "age": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

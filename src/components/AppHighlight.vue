@@ -1,15 +1,15 @@
 <template>
-  <pre><code ref="codeBlock" :class="languageClass">{{ strippedCode }}</code></pre>
+  <div class="app-highlight">
+    <button type="button" class="app-highlight-copy" @click="copy">
+      {{ copyLabel }}
+    </button>
+    <div v-if="highlightedHtml" v-html="highlightedHtml" />
+    <pre v-else><code>{{ strippedCode }}</code></pre>
+  </div>
 </template>
 
 <script>
-// Import highlight.js core and languages at build time
-import hljs from 'highlight.js/lib/core'
-import javascript from 'highlight.js/lib/languages/javascript'
-import bash from 'highlight.js/lib/languages/bash'
-import xml from 'highlight.js/lib/languages/xml'
-import json from 'highlight.js/lib/languages/json'
-import CopyButtonPlugin from 'highlightjs-copy'
+import { codeToHtml } from 'shiki'
 
 export default {
   name: 'AppHighlight',
@@ -24,35 +24,38 @@ export default {
       validator: (value) => ['javascript', 'bash', 'html', 'json'].includes(value)
     }
   },
-  computed: {
-    languageClass() {
-      return `language-${this.language}`
-    },
-    strippedCode() {
-      return this.code
-      .replace(/^```[a-z]*\n/, '')
-      .replace(/```[\s\n]*$/, '')
+  data() {
+    return {
+      highlightedHtml: '',
+      copyLabel: 'Copy'
     }
   },
+  computed: {
+    strippedCode() {
+      return this.code
+        .replace(/^```[a-z]*\n/, '')
+        .replace(/```[\s\n]*$/, '')
+    }
+  },
+  watch: {
+    strippedCode: 'highlight',
+    language: 'highlight'
+  },
   mounted() {
-    // Register languages
-    hljs.registerLanguage('javascript', javascript)
-    hljs.registerLanguage('bash', bash)
-    hljs.registerLanguage('html', xml)
-    hljs.registerLanguage('json', json)
-
-    // Add copy plugin
-    hljs.addPlugin(new CopyButtonPlugin({
-      autohide: false,
-      callback: (text) => console.log('Copied:', text)
-    }))
-
-    // Apply highlighting
-    this.$nextTick(() => {
-      if (this.$refs.codeBlock) {
-        hljs.highlightElement(this.$refs.codeBlock)
-      }
-    })
+    this.highlight()
+  },
+  methods: {
+    async highlight() {
+      this.highlightedHtml = await codeToHtml(this.strippedCode, {
+        lang: this.language,
+        theme: 'github-dark'
+      })
+    },
+    copy() {
+      navigator.clipboard.writeText(this.strippedCode)
+      this.copyLabel = 'Copied!'
+      setTimeout(() => { this.copyLabel = 'Copy' }, 2000)
+    }
   }
 }
 </script>

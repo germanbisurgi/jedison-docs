@@ -1,0 +1,20 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "type": "number",
+      "title": "Quantity",
+      "enum": [
+        0,
+        1,
+        2
+      ],
+      "x-enumTitles": [
+        "None",
+        "One",
+        "A pair"
+      ]
+    }
+  }
+}

@@ -1,4 +1,23 @@
-pre code.hljs {
+.app-highlight {
   @extend .border;
-  background-color: #111 !important;
+  position: relative;
+
+  pre {
+    margin: 0;
+    padding: $grid-gutter-width;
+    overflow-x: auto;
+  }
+
+  .app-highlight-copy {
+    @extend .btn, .btn-sm, .btn-secondary;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  &:hover .app-highlight-copy {
+    opacity: 1;
+  }
 }
