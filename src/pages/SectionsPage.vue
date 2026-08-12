@@ -7,11 +7,13 @@
       <p v-if="page.intro" v-html="renderedIntro" />
     </header>
 
-    <component
-      :is="section.component"
-      v-for="(section, index) in page.sections"
-      :key="page.path + '-' + index"
-      v-bind="section.props" />
+    <article v-for="(group, groupIndex) in groupedSections" :key="page.path + '-group-' + groupIndex">
+      <component
+        :is="section.component"
+        v-for="(section, index) in group"
+        :key="page.path + '-' + groupIndex + '-' + index"
+        v-bind="section.props" />
+    </article>
   </div>
 </template>
 
@@ -39,6 +41,21 @@ export default {
     },
     renderedIntro () {
       return renderMarkdown(this.page.intro)
+    },
+    // Groups each section that introduces its own heading together with any
+    // immediately-following headless sections (its code samples, its live
+    // example) into one <article> - so an example always renders inside the
+    // section/article it demonstrates, rather than as a separate sibling.
+    groupedSections () {
+      const groups = []
+      for (const section of this.page.sections) {
+        if (section.props.heading || groups.length === 0) {
+          groups.push([section])
+        } else {
+          groups[groups.length - 1].push(section)
+        }
+      }
+      return groups
     }
   }
 }

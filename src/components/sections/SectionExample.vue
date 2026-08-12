@@ -1,41 +1,39 @@
 <template>
-  <article>
-    <h2 v-if="heading && level === 2" :id="headingId">
-      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+  <h2 v-if="heading && level === 2" :id="headingId">
+    <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+  </h2>
+  <h3 v-else-if="heading && level === 3" :id="headingId">
+    <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+  </h3>
+  <p v-if="intro" v-html="renderedIntro" />
+
+  <template v-if="activationConditions.length">
+    <component :is="subHeadingTag">
+      Activation Conditions
+    </component>
+    <ul>
+      <li v-for="condition in renderedActivationConditions" :key="condition" v-html="condition" />
+    </ul>
+  </template>
+
+  <template v-if="notesMarkdown">
+    <h2 v-if="notesHeading && subLevel === 2" :id="notesHeadingId">
+      <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
     </h2>
-    <h3 v-else-if="heading && level === 3" :id="headingId">
-      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+    <h3 v-else-if="notesHeading" :id="notesHeadingId">
+      <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
     </h3>
-    <p v-if="intro" v-html="renderedIntro" />
+    <div v-html="renderedNotes" />
+  </template>
 
-    <template v-if="activationConditions.length">
-      <component :is="subHeadingTag">
-        Activation Conditions
-      </component>
-      <ul>
-        <li v-for="condition in renderedActivationConditions" :key="condition" v-html="condition" />
-      </ul>
-    </template>
+  <template v-if="schemaJson">
+    <component :is="subHeadingTag">
+      Schema
+    </component>
+    <app-highlight language="json" :code="schemaJson" />
+  </template>
 
-    <template v-if="notesMarkdown">
-      <h2 v-if="notesHeading && subLevel === 2" :id="notesHeadingId">
-        <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
-      </h2>
-      <h3 v-else-if="notesHeading" :id="notesHeadingId">
-        <app-header-anchor :id="notesHeadingId" :text="notesHeading" />{{ notesHeading }}
-      </h3>
-      <div v-html="renderedNotes" />
-    </template>
-
-    <template v-if="schemaJson">
-      <component :is="subHeadingTag">
-        Schema
-      </component>
-      <app-highlight language="json" :code="schemaJson" />
-    </template>
-
-    <app-live-example :example="resolvedExampleHtml" />
-  </article>
+  <app-live-example :example="resolvedExampleHtml" />
 </template>
 
 <script>

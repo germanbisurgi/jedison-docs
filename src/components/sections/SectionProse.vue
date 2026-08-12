@@ -1,13 +1,11 @@
 <template>
-  <article>
-    <h2 v-if="heading && level === 2" :id="headingId">
-      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
-    </h2>
-    <h3 v-else-if="heading && level === 3" :id="headingId">
-      <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
-    </h3>
-    <div v-if="markdown" v-html="renderedHtml" />
-  </article>
+  <h2 v-if="heading && level === 2" :id="headingId">
+    <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+  </h2>
+  <h3 v-else-if="heading && level === 3" :id="headingId">
+    <app-header-anchor :id="headingId" :text="heading" />{{ heading }}
+  </h3>
+  <div v-if="markdown" v-html="renderedHtml" />
 </template>
 
 <script>
