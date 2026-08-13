@@ -288,7 +288,7 @@ But Jedison is flexible enough to support other patterns too - you might use it 
 -   **\`schema\`** defines the validation rules. The editor will check JSON data against this schema.`
         }
       },
-      {component: SectionExample, props: {example: playgroundExample}}
+      {component: SectionExample, props: {example: playgroundExample, codeMode: 'full'}}
     ]
   },
   {
@@ -548,7 +548,7 @@ The \`Jedison.ThemeBootstrap5()\` instance creates the necessary HTML and ensure
 This approach allows developers to quickly create consistent, validated forms by simply defining their data structure in JSON format, rather than writing manual HTML form markup.`
         }
       },
-      {component: SectionExample, props: {example: playgroundExample}}
+      {component: SectionExample, props: {example: playgroundExample, codeMode: 'full'}}
     ]
   },
   {
@@ -653,6 +653,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
       {
         component: SectionExample,
         props: {
+          codeMode: 'full',
           heading: "Bootstrap 5",
           intro: `Full support for Bootstrap 5 form styling: \`new Jedison.ThemeBootstrap5()\``,
           example: themesBootstrap5Example
@@ -661,6 +662,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
       {
         component: SectionExample,
         props: {
+          codeMode: 'full',
           heading: "Bootstrap 4",
           intro: `Full support for Bootstrap 4 form styling: \`new Jedison.ThemeBootstrap4()\``,
           example: themesBootstrap4Example
@@ -669,6 +671,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
       {
         component: SectionExample,
         props: {
+          codeMode: 'full',
           heading: "Bootstrap 3",
           intro: `Full support for Bootstrap 3 form styling: \`new Jedison.ThemeBootstrap3()\``,
           example: themesBootstrap3Example
@@ -677,6 +680,7 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
       {
         component: SectionExample,
         props: {
+          codeMode: 'full',
           heading: "Default Theme",
           intro: `Basic unstyled theme that provides minimal structure: \`new Jedison.Theme()\``,
           example: themesThemeExample
@@ -705,29 +709,30 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
       },
       {
         component: SectionExample,
-        props: {heading: "'bootstrap-icons'", example: iconsBootstrapIconsExample}
+        props: {heading: "'bootstrap-icons'", example: iconsBootstrapIconsExample, codeMode: 'full'}
       },
       {
         component: SectionExample,
-        props: {heading: "'fontawesome6'", example: iconsFontawesome6Example}
+        props: {heading: "'fontawesome6'", example: iconsFontawesome6Example, codeMode: 'full'}
       },
       {
         component: SectionExample,
-        props: {heading: "'fontawesome5'", example: iconsFontawesome5Example}
+        props: {heading: "'fontawesome5'", example: iconsFontawesome5Example, codeMode: 'full'}
       },
       {
         component: SectionExample,
-        props: {heading: "'fontawesome4'", example: iconsFontawesome4Example}
+        props: {heading: "'fontawesome4'", example: iconsFontawesome4Example, codeMode: 'full'}
       },
       {
         component: SectionExample,
-        props: {heading: "'fontawesome3'", example: iconsFontawesome3Example}
+        props: {heading: "'fontawesome3'", example: iconsFontawesome3Example, codeMode: 'full'}
       },
       {
         component: SectionExample,
         props: {
           heading: "'glyphicons' - Bootstrap 3's Glyphicons",
-          example: iconsGlyphiconsExample
+          example: iconsGlyphiconsExample,
+          codeMode: 'full'
         }
       }
     ]
@@ -795,7 +800,8 @@ For example, when validating against a \`minLength\` constraint, the template \`
           intro: `See how the placeholders work in this example. The error message will show "Muss mindestens \`3\` Zeichen lang sein" because of \`minLength: 3\`.  
 Notice that all UI elements including buttons were also translated to German in this example.  
 We used the option \`showErrors: 'always'\` to make validation messages appear immediately rather than waiting for user interaction.`,
-          example: languageAndTranslationsExample
+          example: languageAndTranslationsExample,
+          codeMode: 'full'
         }
       }
     ]
@@ -960,7 +966,7 @@ Filter expressions (\`[?…]\`), array slices (\`[start:end]\`) and function ext
 For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XSS attacks while preserving safe HTML content. Sanitization is enabled with \`purifyHtml: true\` in the Jedison configuration.`
         }
       },
-      {component: SectionExample, props: {example: markdownAnnotationsExample}},
+      {component: SectionExample, props: {example: markdownAnnotationsExample, codeMode: 'full'}},
       {
         component: SectionProse,
         props: {

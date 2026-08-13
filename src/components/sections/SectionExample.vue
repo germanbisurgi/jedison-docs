@@ -28,9 +28,9 @@
 
   <template v-if="optionsCode">
     <component :is="subHeadingTag">
-      Options
+      Example
     </component>
-    <app-highlight language="javascript" :code="optionsCode" />
+    <app-highlight :language="optionsLanguage" :code="optionsCode" />
   </template>
 
   <app-live-example :example="resolvedExampleHtml" />
@@ -57,7 +57,7 @@ export default {
       default: ''
     },
     // 2 = section, 3 = article - see main (h1) -> section (h2) -> article (h3).
-    // Activation Conditions/Options/Notes below always nest one tier under this.
+    // Activation Conditions/Example/Notes below always nest one tier under this.
     level: {
       type: Number,
       default: 2,
@@ -90,18 +90,31 @@ export default {
     exampleHtml: {
       type: String,
       default: ''
+    },
+    // 'schema' (default) prints just the schema - right for pages about a
+    // schema/x- option, where the instance-level options (iconLib,
+    // btnContents, ...) are incidental demo housekeeping, not the topic.
+    // 'full' prints the whole `new Jedison.Create({...})` call - for pages
+    // actually about an instance option (iconLib, translations, ...) that a
+    // schema-only snippet would omit entirely.
+    codeMode: {
+      type: String,
+      default: 'schema',
+      validator: (value) => ['schema', 'full'].includes(value)
     }
   },
   computed: {
     resolvedExampleHtml () {
       return this.exampleHtml || (this.example ? buildLiveExampleHtml(this.example) : '')
     },
-    // A copy-pasteable `new Jedison.Create({...})` call for the options this
-    // example passes - not just the schema, since plenty of examples
-    // demonstrate an instance-level option (iconLib, translations,
-    // showErrors, ...) that a schema-only snippet would omit entirely.
     optionsCode () {
-      return this.example ? buildDisplayCode(this.example) : ''
+      if (!this.example) return ''
+      if (this.codeMode === 'full') return buildDisplayCode(this.example)
+      const schema = this.example?.createOptions?.schema
+      return schema ? JSON.stringify(schema, null, 2) : ''
+    },
+    optionsLanguage () {
+      return this.codeMode === 'full' ? 'javascript' : 'json'
     },
     // Own heading (if any) makes this block a section, pushing its internal
     // sub-headings down to article tier; with no own heading, this block's

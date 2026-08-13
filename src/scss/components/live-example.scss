@@ -25,11 +25,13 @@
     color: $primary;
   }
 
+  // Matches --bs-tertiary-bg under [data-bs-theme=dark] (see bootstrap.css) -
+  // a panel resting on the site's own dark-gray body instead of a black hole.
   .ͼ1l {
-    background-color: #111;
+    background-color: #24292E;
   }
 
   .log-output {
-    background-color: #111;
+    background-color: #24292E;
   }
 }

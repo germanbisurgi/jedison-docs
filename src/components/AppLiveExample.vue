@@ -60,8 +60,8 @@ export default {
   mounted() {
     this.updateViewport()
     window.addEventListener("resize", this.updateViewport)
-    this.srcDocMobile = this.replaceTemplates(this.example)
-    this.srcDocDesktop = this.replaceTemplates(this.example)
+    this.srcDocMobile = this.example
+    this.srcDocDesktop = this.example
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.updateViewport)
@@ -71,8 +71,7 @@ export default {
       this.isDesktop = window.innerWidth >= 992
     },
     updateSrcDoc(version) {
-      const code = this.getEditorValue(version)
-      const newSrcDoc = this.replaceTemplates(code)
+      const newSrcDoc = this.getEditorValue(version)
       if (version === 'mobile') {
         this.srcDocMobile = newSrcDoc
         this.canUpdateMobile = false
@@ -82,8 +81,7 @@ export default {
       }
     },
     refreshCanUpdate(version) {
-      const code = this.getEditorValue(version)
-      const newSrcDoc = this.replaceTemplates(code)
+      const newSrcDoc = this.getEditorValue(version)
       if (version === 'mobile') {
         this.canUpdateMobile = this.srcDocMobile !== newSrcDoc
       } else if (version === 'desktop') {
@@ -93,9 +91,6 @@ export default {
     getEditorValue(version) {
       const editor = version === 'mobile' ? this.$refs.cmMobile : this.$refs.cmDesktop
       return editor && editor.getValue ? editor.getValue() : ''
-    },
-    replaceTemplates(string) {
-      return string.replace("{{theme}}", "dark")
     }
   }
 }

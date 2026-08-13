@@ -42,11 +42,17 @@ function buildDisplayOptions (config = {}) {
     createOptions = {}
   } = config
 
+  // `schema` prints last regardless of where it sits in the source file -
+  // it's usually the largest part of the options object, so the smaller,
+  // more specific settings read first.
+  const { schema, ...rest } = createOptions
+
   // `iconLib` always comes right after `theme` in the original files, so put
   // it first here too (see buildLiveExampleHtml).
   return {
     ...(iconLib ? { iconLib } : {}),
-    ...createOptions
+    ...rest,
+    ...(schema !== undefined ? { schema } : {})
   }
 }
 
@@ -115,7 +121,7 @@ export function buildLiveExampleHtml (config = {}) {
   const createCall = 'const jedison = new Jedison.Create(' + indentContinuationLines(optionsJson, 2) + ')'
 
   return `<!DOCTYPE html>
-<html data-bs-theme="auto">
+<html data-bs-theme="dark">
 <head>
     <meta charset="utf-8"/>
 ${cssLines.join('\n')}
