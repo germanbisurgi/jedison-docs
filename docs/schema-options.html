@@ -3,21 +3,40 @@
     <link rel="icon" type="image/x-icon" href="/jedison-docs/assets/vue-logo-B5-umZ-1.png">
     <title>Jedison - Schema Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-rrGDoTsh.js"></script>
-  <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-CVO8LXdy.css">
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-Ce89cN1E.js"></script>
+  <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-Cl1dZ9FO.css">
 <meta name="description" content="Per-schema configuration using x- prefixed properties."></head>
 <body>
-<div id="app" data-server-rendered="true"><div class="app-container safe-area-top safe-area-bottom"><div id="offcanvasNavbar" class="offcanvas offcanvas-start d-xl-none" tabindex="-1" aria-labelledby="navigation"><div class="offcanvas-body"><nav class="pages-nav"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0"> Jedison </h5><a href="https://github.com/germanbisurgi/jedison" target="_blank" class="text-decoration-none" title="GitHub Repository"><i class="bi bi-github fs-5"></i></a></div><!--[--><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">Introduction <!----></a></li><li class="nav-item"><a href="/jedison-docs/install" class="nav-link">Install <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-validator" class="nav-link">As Validator <!----></a></li><li class="nav-item"><a href="/jedison-docs/methods" class="nav-link">Methods <!----></a></li><li class="nav-item"><a href="/jedison-docs/events" class="nav-link">Events <!----></a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground <!----></a></li><li class="nav-item"><a href="/jedison-docs/faq" class="nav-link">FAQ <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/themes" class="nav-link">Themes <!----></a></li><li class="nav-item"><a href="/jedison-docs/icons" class="nav-link">Icons <!----></a></li><li class="nav-item"><a href="/jedison-docs/language-and-translations" class="nav-link">Language and Translations <!----></a></li><li class="nav-item"><a href="/jedison-docs/ref-parser" class="nav-link">RefParser <!----></a></li><li class="nav-item"><a href="/jedison-docs/overlay" class="nav-link">Overlays <!----></a></li><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations <!----></a></li><li class="nav-item"><a href="/jedison-docs/options" class="nav-link">Options <!----></a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/schema-options" class="text-dark bg-primary router-link-exact-active nav-link">Schema Options <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Editors</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/array-editor-default" class="nav-link">Array Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes" class="nav-link">Array Checkboxes <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes-inline" class="nav-link">Array Checkboxes Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-choices" class="nav-link">Array Choices <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-vertical" class="nav-link">Array Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-horizontal" class="nav-link">Array Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table" class="nav-link">Array Table <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table-object" class="nav-link">Array Table Object <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-tuple" class="nav-link">Array Tuple <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-default" class="nav-link">Boolean Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-checkbox" class="nav-link">Boolean Checkbox <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios" class="nav-link">Boolean Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios-inline" class="nav-link">Boolean Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-select" class="nav-link">Boolean Select Dropdown <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-default" class="nav-link">Number Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-select" class="nav-link">Number Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios" class="nav-link">Number Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios-inline" class="nav-link">Number Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-nullable" class="nav-link">Number Nullable <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-raty" class="nav-link">Number Star Rating <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-imask" class="nav-link">Number IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-range" class="nav-link">Number Range <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-default" class="nav-link">Object Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-grid" class="nav-link">Object Grid <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-vertical" class="nav-link">Object Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-horizontal" class="nav-link">Object Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-vertical" class="nav-link">Object Categories Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-horizontal" class="nav-link">Object Categories Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-accordion" class="nav-link">Object Accordion <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios" class="nav-link">Object Radios <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios-inline" class="nav-link">Object Radios Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-default" class="nav-link">String Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios" class="nav-link">String Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios-inline" class="nav-link">String Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-select" class="nav-link">String Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-textarea" class="nav-link">String Textarea <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-awesomplete" class="nav-link">String Awesomplete <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-flatpickr" class="nav-link">String Flatpickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-imask" class="nav-link">String IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-jodit" class="nav-link">String Jodit <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-quill" class="nav-link">String Quill <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-filepond" class="nav-link">String FilePond <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/null-editor-default" class="nav-link">Null Default <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Advanced</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/custom-constraint" class="nav-link">Custom constraint <!----></a></li><li class="nav-item"><a href="/jedison-docs/templates" class="nav-link">Templates <!----></a></li><!--]--></ul><hr></div><!--]--></nav></div></div><div class="vh-100 overflow-y-auto"><div class="d-flex"><aside class="aside vh-100 overflow-y-auto d-none d-xl-block"><nav class="pages-nav"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0"> Jedison </h5><a href="https://github.com/germanbisurgi/jedison" target="_blank" class="text-decoration-none" title="GitHub Repository"><i class="bi bi-github fs-5"></i></a></div><!--[--><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">Introduction <!----></a></li><li class="nav-item"><a href="/jedison-docs/install" class="nav-link">Install <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-validator" class="nav-link">As Validator <!----></a></li><li class="nav-item"><a href="/jedison-docs/methods" class="nav-link">Methods <!----></a></li><li class="nav-item"><a href="/jedison-docs/events" class="nav-link">Events <!----></a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground <!----></a></li><li class="nav-item"><a href="/jedison-docs/faq" class="nav-link">FAQ <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/themes" class="nav-link">Themes <!----></a></li><li class="nav-item"><a href="/jedison-docs/icons" class="nav-link">Icons <!----></a></li><li class="nav-item"><a href="/jedison-docs/language-and-translations" class="nav-link">Language and Translations <!----></a></li><li class="nav-item"><a href="/jedison-docs/ref-parser" class="nav-link">RefParser <!----></a></li><li class="nav-item"><a href="/jedison-docs/overlay" class="nav-link">Overlays <!----></a></li><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations <!----></a></li><li class="nav-item"><a href="/jedison-docs/options" class="nav-link">Options <!----></a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/schema-options" class="text-dark bg-primary router-link-exact-active nav-link">Schema Options <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Editors</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/array-editor-default" class="nav-link">Array Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes" class="nav-link">Array Checkboxes <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes-inline" class="nav-link">Array Checkboxes Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-choices" class="nav-link">Array Choices <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-vertical" class="nav-link">Array Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-horizontal" class="nav-link">Array Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table" class="nav-link">Array Table <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table-object" class="nav-link">Array Table Object <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-tuple" class="nav-link">Array Tuple <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-default" class="nav-link">Boolean Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-checkbox" class="nav-link">Boolean Checkbox <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios" class="nav-link">Boolean Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios-inline" class="nav-link">Boolean Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-select" class="nav-link">Boolean Select Dropdown <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-default" class="nav-link">Number Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-select" class="nav-link">Number Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios" class="nav-link">Number Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios-inline" class="nav-link">Number Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-nullable" class="nav-link">Number Nullable <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-raty" class="nav-link">Number Star Rating <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-imask" class="nav-link">Number IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-range" class="nav-link">Number Range <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-default" class="nav-link">Object Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-grid" class="nav-link">Object Grid <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-vertical" class="nav-link">Object Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-horizontal" class="nav-link">Object Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-vertical" class="nav-link">Object Categories Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-horizontal" class="nav-link">Object Categories Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-accordion" class="nav-link">Object Accordion <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios" class="nav-link">Object Radios <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios-inline" class="nav-link">Object Radios Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-default" class="nav-link">String Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios" class="nav-link">String Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios-inline" class="nav-link">String Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-select" class="nav-link">String Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-textarea" class="nav-link">String Textarea <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-awesomplete" class="nav-link">String Awesomplete <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-flatpickr" class="nav-link">String Flatpickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-imask" class="nav-link">String IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-jodit" class="nav-link">String Jodit <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-quill" class="nav-link">String Quill <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-filepond" class="nav-link">String FilePond <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/null-editor-default" class="nav-link">Null Default <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Advanced</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/custom-constraint" class="nav-link">Custom constraint <!----></a></li><li class="nav-item"><a href="/jedison-docs/templates" class="nav-link">Templates <!----></a></li><!--]--></ul><hr></div><!--]--></nav></aside><div class="wrapper border-start border-end"><div class="navbar app-navbar"><div class="container-fluid"><div></div><div class="d-flex align-items-center gap-2"><!--[--><button class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2"><i class="bi bi-search"></i><span class="d-none d-sm-inline">Search</span></button><!--teleport start--><!--teleport end--><!--]--><button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div></div></div><nav aria-label="breadcrumb" class="app-breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item">Features</li><li class="breadcrumb-item active" aria-current="page">Schema Options</li></ol></nav><main class="app-content"><div><header><h1 id="schema-options"><a class="header-anchor" href="#schema-options" aria-label="Permalink to “Schema Options”">​</a>Schema Options</h1><!----></header><!--[--><article><!--[--><!--[--><!----><div><p>Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>) to not collide with future JSON schema spec keywords.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-addpropertycontent"><a class="header-anchor" href="#x-addpropertycontent" aria-label="Permalink to “x-addPropertyContent”">​</a>x-addPropertyContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+<div id="app" data-server-rendered="true"><div class="app-container safe-area-top safe-area-bottom"><div id="offcanvasNavbar" class="offcanvas offcanvas-start d-xl-none" tabindex="-1" aria-labelledby="navigation"><div class="offcanvas-body"><nav class="pages-nav"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0"> Jedison </h5><a href="https://github.com/germanbisurgi/jedison" target="_blank" class="text-decoration-none" title="GitHub Repository"><i class="bi bi-github fs-5"></i></a></div><!--[--><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">Introduction <!----></a></li><li class="nav-item"><a href="/jedison-docs/install" class="nav-link">Install <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-validator" class="nav-link">As Validator <!----></a></li><li class="nav-item"><a href="/jedison-docs/methods" class="nav-link">Methods <!----></a></li><li class="nav-item"><a href="/jedison-docs/events" class="nav-link">Events <!----></a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground <!----></a></li><li class="nav-item"><a href="/jedison-docs/faq" class="nav-link">FAQ <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/themes" class="nav-link">Themes <!----></a></li><li class="nav-item"><a href="/jedison-docs/icons" class="nav-link">Icons <!----></a></li><li class="nav-item"><a href="/jedison-docs/language-and-translations" class="nav-link">Language and Translations <!----></a></li><li class="nav-item"><a href="/jedison-docs/ref-parser" class="nav-link">RefParser <!----></a></li><li class="nav-item"><a href="/jedison-docs/overlay" class="nav-link">Overlays <!----></a></li><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations <!----></a></li><li class="nav-item"><a href="/jedison-docs/options" class="nav-link">Options <!----></a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/schema-options" class="text-dark bg-primary router-link-exact-active nav-link">Schema Options <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Editors</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/array-editor-default" class="nav-link">Array Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes" class="nav-link">Array Checkboxes <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes-inline" class="nav-link">Array Checkboxes Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-choices" class="nav-link">Array Choices <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-vertical" class="nav-link">Array Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-horizontal" class="nav-link">Array Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table" class="nav-link">Array Table <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table-object" class="nav-link">Array Table Object <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-tuple" class="nav-link">Array Tuple <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-default" class="nav-link">Boolean Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-checkbox" class="nav-link">Boolean Checkbox <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios" class="nav-link">Boolean Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios-inline" class="nav-link">Boolean Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-select" class="nav-link">Boolean Select Dropdown <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-default" class="nav-link">Number Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-select" class="nav-link">Number Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios" class="nav-link">Number Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios-inline" class="nav-link">Number Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-nullable" class="nav-link">Number Nullable <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-raty" class="nav-link">Number Star Rating <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-imask" class="nav-link">Number IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-range" class="nav-link">Number Range <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-default" class="nav-link">Object Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-grid" class="nav-link">Object Grid <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-vertical" class="nav-link">Object Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-horizontal" class="nav-link">Object Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-vertical" class="nav-link">Object Categories Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-horizontal" class="nav-link">Object Categories Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-accordion" class="nav-link">Object Accordion <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios" class="nav-link">Object Radios <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios-inline" class="nav-link">Object Radios Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-default" class="nav-link">String Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios" class="nav-link">String Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios-inline" class="nav-link">String Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-select" class="nav-link">String Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-textarea" class="nav-link">String Textarea <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-awesomplete" class="nav-link">String Awesomplete <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-flatpickr" class="nav-link">String Flatpickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-imask" class="nav-link">String IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-jodit" class="nav-link">String Jodit <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-quill" class="nav-link">String Quill <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-filepond" class="nav-link">String FilePond <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-ace" class="nav-link">String Ace <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-emoji-button" class="nav-link">String Emoji Button <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-simplemde" class="nav-link">String SimpleMDE <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-pickr" class="nav-link">String Pickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-milkdown" class="nav-link">String Milkdown <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/null-editor-default" class="nav-link">Null Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/conditional-fields" class="nav-link">Conditional Fields <!----></a></li><li class="nav-item"><a href="/jedison-docs/schema-composition" class="nav-link">Schema Composition <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Advanced</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/custom-constraint" class="nav-link">Custom constraint <!----></a></li><li class="nav-item"><a href="/jedison-docs/templates" class="nav-link">Templates <!----></a></li><!--]--></ul><hr></div><!--]--></nav></div></div><div class="vh-100 overflow-y-auto"><div class="d-flex"><aside class="aside vh-100 overflow-y-auto d-none d-xl-block"><nav class="pages-nav"><div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0"> Jedison </h5><a href="https://github.com/germanbisurgi/jedison" target="_blank" class="text-decoration-none" title="GitHub Repository"><i class="bi bi-github fs-5"></i></a></div><!--[--><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Getting Started</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/" class="nav-link">Introduction <!----></a></li><li class="nav-item"><a href="/jedison-docs/install" class="nav-link">Install <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-editor" class="nav-link">As Editor <!----></a></li><li class="nav-item"><a href="/jedison-docs/as-validator" class="nav-link">As Validator <!----></a></li><li class="nav-item"><a href="/jedison-docs/methods" class="nav-link">Methods <!----></a></li><li class="nav-item"><a href="/jedison-docs/events" class="nav-link">Events <!----></a></li><li class="nav-item"><a href="/jedison-docs/playground" class="nav-link">Playground <!----></a></li><li class="nav-item"><a href="/jedison-docs/faq" class="nav-link">FAQ <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Features</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/themes" class="nav-link">Themes <!----></a></li><li class="nav-item"><a href="/jedison-docs/icons" class="nav-link">Icons <!----></a></li><li class="nav-item"><a href="/jedison-docs/language-and-translations" class="nav-link">Language and Translations <!----></a></li><li class="nav-item"><a href="/jedison-docs/ref-parser" class="nav-link">RefParser <!----></a></li><li class="nav-item"><a href="/jedison-docs/overlay" class="nav-link">Overlays <!----></a></li><li class="nav-item"><a href="/jedison-docs/markdown-annotations" class="nav-link">Markdown Annotations <!----></a></li><li class="nav-item"><a href="/jedison-docs/options" class="nav-link">Options <!----></a></li><li class="nav-item"><a aria-current="page" href="/jedison-docs/schema-options" class="text-dark bg-primary router-link-exact-active nav-link">Schema Options <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Editors</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/array-editor-default" class="nav-link">Array Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes" class="nav-link">Array Checkboxes <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-checkboxes-inline" class="nav-link">Array Checkboxes Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-choices" class="nav-link">Array Choices <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-vertical" class="nav-link">Array Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-nav-horizontal" class="nav-link">Array Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table" class="nav-link">Array Table <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-table-object" class="nav-link">Array Table Object <!----></a></li><li class="nav-item"><a href="/jedison-docs/array-editor-tuple" class="nav-link">Array Tuple <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-default" class="nav-link">Boolean Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-checkbox" class="nav-link">Boolean Checkbox <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios" class="nav-link">Boolean Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-radios-inline" class="nav-link">Boolean Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/boolean-editor-select" class="nav-link">Boolean Select Dropdown <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-default" class="nav-link">Number Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-select" class="nav-link">Number Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios" class="nav-link">Number Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-radios-inline" class="nav-link">Number Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-nullable" class="nav-link">Number Nullable <!----></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-raty" class="nav-link">Number Star Rating <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-imask" class="nav-link">Number IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/number-editor-range" class="nav-link">Number Range <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-default" class="nav-link">Object Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-grid" class="nav-link">Object Grid <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-vertical" class="nav-link">Object Navigation Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-nav-horizontal" class="nav-link">Object Navigation Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-vertical" class="nav-link">Object Categories Vertical <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-categories-horizontal" class="nav-link">Object Categories Horizontal <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-accordion" class="nav-link">Object Accordion <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios" class="nav-link">Object Radios <!----></a></li><li class="nav-item"><a href="/jedison-docs/object-editor-radios-inline" class="nav-link">Object Radios Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-default" class="nav-link">String Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios" class="nav-link">String Radio Buttons <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-radios-inline" class="nav-link">String Radio Buttons Inline <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-select" class="nav-link">String Select <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-textarea" class="nav-link">String Textarea <!----></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-awesomplete" class="nav-link">String Awesomplete <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-flatpickr" class="nav-link">String Flatpickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-imask" class="nav-link">String IMask <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-jodit" class="nav-link">String Jodit <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-quill" class="nav-link">String Quill <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-filepond" class="nav-link">String FilePond <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-ace" class="nav-link">String Ace <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-emoji-button" class="nav-link">String Emoji Button <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-simplemde" class="nav-link">String SimpleMDE <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-pickr" class="nav-link">String Pickr <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/string-editor-milkdown" class="nav-link">String Milkdown <span class="badge bg-warning text-dark ms-2">Plugin</span></a></li><li class="nav-item"><a href="/jedison-docs/null-editor-default" class="nav-link">Null Default <!----></a></li><li class="nav-item"><a href="/jedison-docs/conditional-fields" class="nav-link">Conditional Fields <!----></a></li><li class="nav-item"><a href="/jedison-docs/schema-composition" class="nav-link">Schema Composition <!----></a></li><!--]--></ul><hr></div><div class="nav-group"><h6 class="nav-group-title text-muted text-uppercase small">Advanced</h6><ul class="nav flex-column"><!--[--><li class="nav-item"><a href="/jedison-docs/custom-constraint" class="nav-link">Custom constraint <!----></a></li><li class="nav-item"><a href="/jedison-docs/templates" class="nav-link">Templates <!----></a></li><!--]--></ul><hr></div><!--]--></nav></aside><div class="wrapper border-start border-end"><div class="navbar app-navbar"><div class="container-fluid"><div></div><div class="d-flex align-items-center gap-2"><!--[--><button class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2"><i class="bi bi-search"></i><span class="d-none d-sm-inline">Search</span></button><!--teleport start--><!--teleport end--><!--]--><button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button></div></div></div><nav aria-label="breadcrumb" class="app-breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item">Features</li><li class="breadcrumb-item active" aria-current="page">Schema Options</li></ol></nav><main class="app-content"><div><header><h1 id="schema-options"><a class="header-anchor" href="#schema-options" aria-label="Permalink to “Schema Options”">​</a>Schema Options</h1><!----><!--[--><!--[--><!----><div><p>Options in schemas are always prefixed with <code>x-</code> (e.g. <code>x-assertFormat</code>) to not collide with future JSON schema spec keywords.</p>
+</div><!--]--><!--]--></header><!--[--><section><!--[--><!--[--><h2 id="x-addpropertycontent"><a class="header-anchor" href="#x-addpropertycontent" aria-label="Permalink to “x-addPropertyContent”">​</a>x-addPropertyContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for "add property" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayadd"><a class="header-anchor" href="#x-arrayadd" aria-label="Permalink to “x-arrayAdd”">​</a>x-arrayAdd</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-addPropertyContent": "Add field",
+  "additionalProperties": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayadd"><a class="header-anchor" href="#x-arrayadd" aria-label="Permalink to “x-arrayAdd”">​</a>x-arrayAdd</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>If array "add" buttons should be displayed.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayaddcontent"><a class="header-anchor" href="#x-arrayaddcontent" aria-label="Permalink to “x-arrayAddContent”">​</a>x-arrayAddContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayAdd": false,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayaddcontent"><a class="header-anchor" href="#x-arrayaddcontent" aria-label="Permalink to “x-arrayAddContent”">​</a>x-arrayAddContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for array "add" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraybuttonsposition"><a class="header-anchor" href="#x-arraybuttonsposition" aria-label="Permalink to “x-arrayButtonsPosition”">​</a>x-arrayButtonsPosition</h2><div><p><strong>Type:</strong> <code>string</code>
-<strong>Default:</strong> <code>'left'</code>
-<strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayAddContent": "Add item",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraybuttonsposition"><a class="header-anchor" href="#x-arraybuttonsposition" aria-label="Permalink to “x-arrayButtonsPosition”">​</a>x-arrayButtonsPosition</h2><div><ul>
+<li><strong>Type:</strong> <code>string</code></li>
+<li><strong>Default:</strong> <code>'left'</code></li>
+<li><strong>Options:</strong> <code>'left'</code>, <code>'right'</code></li>
+</ul>
 <p>Controls the positioning of action buttons (delete, move, drag) in table format arrays. When set to <code>'right'</code>, buttons appear on the right side of the table. When set to <code>'left'</code> (default), buttons appear on the left side.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "array",
@@ -27,49 +46,181 @@
     "type": "string"
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydelete"><a class="header-anchor" href="#x-arraydelete" aria-label="Permalink to “x-arrayDelete”">​</a>x-arrayDelete</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydelete"><a class="header-anchor" href="#x-arraydelete" aria-label="Permalink to “x-arrayDelete”">​</a>x-arrayDelete</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>If array "delete" buttons should be displayed.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydeleteall"><a class="header-anchor" href="#x-arraydeleteall" aria-label="Permalink to “x-arrayDeleteAll”">​</a>x-arrayDeleteAll</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayDelete": false,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydeleteall"><a class="header-anchor" href="#x-arraydeleteall" aria-label="Permalink to “x-arrayDeleteAll”">​</a>x-arrayDeleteAll</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Adds a "Delete all items" button to the array editor's header actions area.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydeleteallcontent"><a class="header-anchor" href="#x-arraydeleteallcontent" aria-label="Permalink to “x-arrayDeleteAllContent”">​</a>x-arrayDeleteAllContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayDeleteAll": true,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydeleteallcontent"><a class="header-anchor" href="#x-arraydeleteallcontent" aria-label="Permalink to “x-arrayDeleteAllContent”">​</a>x-arrayDeleteAllContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for the "delete all" button.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydeleteconfirm"><a class="header-anchor" href="#x-arraydeleteconfirm" aria-label="Permalink to “x-arrayDeleteConfirm”">​</a>x-arrayDeleteConfirm</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayDeleteAll": true,
+  "x-arrayDeleteAllContent": "Remove all",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydeleteconfirm"><a class="header-anchor" href="#x-arraydeleteconfirm" aria-label="Permalink to “x-arrayDeleteConfirm”">​</a>x-arrayDeleteConfirm</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Per-schema override for showing a confirmation dialog before deleting array items. Overrides the global <code>arrayDeleteConfirm</code> option.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydeletecontent"><a class="header-anchor" href="#x-arraydeletecontent" aria-label="Permalink to “x-arrayDeleteContent”">​</a>x-arrayDeleteContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayDeleteConfirm": true,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydeletecontent"><a class="header-anchor" href="#x-arraydeletecontent" aria-label="Permalink to “x-arrayDeleteContent”">​</a>x-arrayDeleteContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for array "delete" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraydragcontent"><a class="header-anchor" href="#x-arraydragcontent" aria-label="Permalink to “x-arrayDragContent”">​</a>x-arrayDragContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayDeleteContent": "Remove",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraydragcontent"><a class="header-anchor" href="#x-arraydragcontent" aria-label="Permalink to “x-arrayDragContent”">​</a>x-arrayDragContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for array "drag" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayfooteradd"><a class="header-anchor" href="#x-arrayfooteradd" aria-label="Permalink to “x-arrayFooterAdd”">​</a>x-arrayFooterAdd</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-sortable": true,
+  "x-arrayDragContent": "Drag to reorder",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayfooteradd"><a class="header-anchor" href="#x-arrayfooteradd" aria-label="Permalink to “x-arrayFooterAdd”">​</a>x-arrayFooterAdd</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Adds an "Add item" button in the footer of the array editor.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayfooteraddcontent"><a class="header-anchor" href="#x-arrayfooteraddcontent" aria-label="Permalink to “x-arrayFooterAddContent”">​</a>x-arrayFooterAddContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayFooterAdd": true,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayfooteraddcontent"><a class="header-anchor" href="#x-arrayfooteraddcontent" aria-label="Permalink to “x-arrayFooterAddContent”">​</a>x-arrayFooterAddContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for the footer "add" button.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayfooterbuttonsposition"><a class="header-anchor" href="#x-arrayfooterbuttonsposition" aria-label="Permalink to “x-arrayFooterButtonsPosition”">​</a>x-arrayFooterButtonsPosition</h2><div><p><strong>Type:</strong> <code>string</code>
-<strong>Default:</strong> <code>'right'</code>
-<strong>Options:</strong> <code>'left'</code>, <code>'right'</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayFooterAdd": true,
+  "x-arrayFooterAddContent": "Add item",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayfooterbuttonsposition"><a class="header-anchor" href="#x-arrayfooterbuttonsposition" aria-label="Permalink to “x-arrayFooterButtonsPosition”">​</a>x-arrayFooterButtonsPosition</h2><div><ul>
+<li><strong>Type:</strong> <code>string</code></li>
+<li><strong>Default:</strong> <code>'right'</code></li>
+<li><strong>Options:</strong> <code>'left'</code>, <code>'right'</code></li>
+</ul>
 <p>Controls the alignment of footer buttons. When <code>'right'</code>, buttons are pushed to the right side of the footer. When <code>'left'</code>, buttons align to the left.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayfooterdeleteall"><a class="header-anchor" href="#x-arrayfooterdeleteall" aria-label="Permalink to “x-arrayFooterDeleteAll”">​</a>x-arrayFooterDeleteAll</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayFooterAdd": true,
+  "x-arrayFooterButtonsPosition": "left",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayfooterdeleteall"><a class="header-anchor" href="#x-arrayfooterdeleteall" aria-label="Permalink to “x-arrayFooterDeleteAll”">​</a>x-arrayFooterDeleteAll</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Adds a "Delete all items" button in the footer of the array editor.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arrayfooterdeleteallcontent"><a class="header-anchor" href="#x-arrayfooterdeleteallcontent" aria-label="Permalink to “x-arrayFooterDeleteAllContent”">​</a>x-arrayFooterDeleteAllContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayFooterDeleteAll": true,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arrayfooterdeleteallcontent"><a class="header-anchor" href="#x-arrayfooterdeleteallcontent" aria-label="Permalink to “x-arrayFooterDeleteAllContent”">​</a>x-arrayFooterDeleteAllContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for the footer "delete all" button.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraymove"><a class="header-anchor" href="#x-arraymove" aria-label="Permalink to “x-arrayMove”">​</a>x-arrayMove</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayFooterDeleteAll": true,
+  "x-arrayFooterDeleteAllContent": "Remove all",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraymove"><a class="header-anchor" href="#x-arraymove" aria-label="Permalink to “x-arrayMove”">​</a>x-arrayMove</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>If array "move up" and "move down" buttons should be displayed.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraymovedowncontent"><a class="header-anchor" href="#x-arraymovedowncontent" aria-label="Permalink to “x-arrayMoveDownContent”">​</a>x-arrayMoveDownContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayMove": false,
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraymovedowncontent"><a class="header-anchor" href="#x-arraymovedowncontent" aria-label="Permalink to “x-arrayMoveDownContent”">​</a>x-arrayMoveDownContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for array "move down" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-arraymoveupcontent"><a class="header-anchor" href="#x-arraymoveupcontent" aria-label="Permalink to “x-arrayMoveUpContent”">​</a>x-arrayMoveUpContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayMoveDownContent": "Move down",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-arraymoveupcontent"><a class="header-anchor" href="#x-arraymoveupcontent" aria-label="Permalink to “x-arrayMoveUpContent”">​</a>x-arrayMoveUpContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for array "move up" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-assertformat"><a class="header-anchor" href="#x-assertformat" aria-label="Permalink to “x-assertFormat”">​</a>x-assertFormat</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "array",
+  "x-arrayMoveUpContent": "Move up",
+  "items": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-assertformat"><a class="header-anchor" href="#x-assertformat" aria-label="Permalink to “x-assertFormat”">​</a>x-assertFormat</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Treats <code>"format"</code> as a validator rather than just an annotation.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-collapsetogglecontent"><a class="header-anchor" href="#x-collapsetogglecontent" aria-label="Permalink to “x-collapseToggleContent”">​</a>x-collapseToggleContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "format": "email",
+  "x-assertFormat": true
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-buttons"><a class="header-anchor" href="#x-buttons" aria-label="Permalink to “x-buttons”">​</a>x-buttons</h2><div><p><strong>Type:</strong> <code>array</code></p>
+<p>Adds schema-defined action buttons to any editor, without them becoming part of the data model. Works on every editor type, including container editors (object/array). Each button config accepts:</p>
+<ul>
+<li><code>label</code> - The button's HTML content (sanitized before rendering, so it can carry an icon)</li>
+<li><code>event.name</code> - Clicking the button emits <code>jedison:&lt;name&gt;</code> on the root Jedison instance, with a payload of <code>{ jedison, editor, path }</code></li>
+<li><code>attributes</code> - An object of HTML attributes for the button element, filtered against an allowlist (<code>id</code>, <code>class</code>, <code>title</code>, <code>name</code>, <code>value</code>, <code>disabled</code>, <code>aria-*</code>, <code>data-*</code>, plus <code>always-enabled</code>/<code>always-disabled</code> to override the field's own disabled state)</li>
+</ul>
+<p>Subscribe to the event the same way as any other event:</p>
+<pre><code class="language-javascript">jedison.on('jedison:detectCity', ({ jedison, editor, path }) =&gt; {})
+</code></pre>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "title": "City",
+  "x-buttons": [
+    {
+      "label": "Detect city",
+      "event": { "name": "detectCity" },
+      "attributes": { "class": "my-custom-button" }
+    }
+  ]
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-collapsetogglecontent"><a class="header-anchor" href="#x-collapsetogglecontent" aria-label="Permalink to “x-collapseToggleContent”">​</a>x-collapseToggleContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for "collapse" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-categoryorder"><a class="header-anchor" href="#x-categoryorder" aria-label="Permalink to “x-categoryOrder”">​</a>x-categoryOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-enableCollapseToggle": true,
+  "x-collapseToggleContent": "Toggle",
+  "properties": {
+    "name": { "type": "string" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-categoryorder"><a class="header-anchor" href="#x-categoryorder" aria-label="Permalink to “x-categoryOrder”">​</a>x-categoryOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
 <p>Controls the display order of tabs in categories-format object editors (<code>categories-vertical</code>, <code>categories-horizontal</code>). Categories listed in the array appear first in the specified order; any categories not listed follow in their natural order.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-containerattributes"><a class="header-anchor" href="#x-containerattributes" aria-label="Permalink to “x-containerAttributes”">​</a>x-containerAttributes</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-format": "categories-vertical",
+  "x-categoryOrder": ["contact", "profile"],
+  "properties": {
+    "profile": { "type": "object", "properties": { "name": { "type": "string" } } },
+    "contact": { "type": "object", "properties": { "email": { "type": "string" } } }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-containerattributes"><a class="header-anchor" href="#x-containerattributes" aria-label="Permalink to “x-containerAttributes”">​</a>x-containerAttributes</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>Editors container HTML attributes can be set using this option. Attributes such as <code>class</code> or <code>data-*</code> will be applied to the container element.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -78,9 +229,18 @@
     "data-id": "user-form"
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-deactivatenonrequired"><a class="header-anchor" href="#x-deactivatenonrequired" aria-label="Permalink to “x-deactivateNonRequired”">​</a>x-deactivateNonRequired</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-deactivatenonrequired"><a class="header-anchor" href="#x-deactivatenonrequired" aria-label="Permalink to “x-deactivateNonRequired”">​</a>x-deactivateNonRequired</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Whether the editor should deactivate (hide) or activate (show) non required properties. Works only with <code>object</code> type editors.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-discriminator"><a class="header-anchor" href="#x-discriminator" aria-label="Permalink to “x-discriminator”">​</a>x-discriminator</h2><div><p><strong>Type:</strong> <code>string</code> | <code>object</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-deactivateNonRequired": true,
+  "required": ["name"],
+  "properties": {
+    "name": { "type": "string" },
+    "nickname": { "type": "string" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-discriminator"><a class="header-anchor" href="#x-discriminator" aria-label="Permalink to “x-discriminator”">​</a>x-discriminator</h2><div><p><strong>Type:</strong> <code>string</code> | <code>object</code></p>
 <p>When set on a <code>oneOf</code> or <code>anyOf</code> schema, determines the active sub-schema by validating the specified property against each schema option. Accepts either a property name string or an object with a <code>propertyName</code> key.</p>
 <p>Falls back to the standard error-counting algorithm if no discriminator match is found.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
@@ -102,8 +262,10 @@
   ],
   "x-discriminator": "type"
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-editjsondata"><a class="header-anchor" href="#x-editjsondata" aria-label="Permalink to “x-editJsonData”">​</a>x-editJsonData</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-editjsondata"><a class="header-anchor" href="#x-editjsondata" aria-label="Permalink to “x-editJsonData”">​</a>x-editJsonData</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Enables inline JSON editing mode for this specific schema, allowing users to directly edit the JSON data within form fields.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "x-editJsonData": true,
@@ -121,26 +283,58 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enablecollapsetoggle"><a class="header-anchor" href="#x-enablecollapsetoggle" aria-label="Permalink to “x-enableCollapseToggle”">​</a>x-enableCollapseToggle</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-enablecollapsetoggle"><a class="header-anchor" href="#x-enablecollapsetoggle" aria-label="Permalink to “x-enableCollapseToggle”">​</a>x-enableCollapseToggle</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Display a collapse button used to collapse or expand editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enforceconst"><a class="header-anchor" href="#x-enforceconst" aria-label="Permalink to “x-enforceConst”">​</a>x-enforceConst</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-enableCollapseToggle": true,
+  "properties": {
+    "name": { "type": "string" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-enforceconst"><a class="header-anchor" href="#x-enforceconst" aria-label="Permalink to “x-enforceConst”">​</a>x-enforceConst</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>Value will remain whatever is defined in schema <code>"const"</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enforceenum"><a class="header-anchor" href="#x-enforceenum" aria-label="Permalink to “x-enforceEnum”">​</a>x-enforceEnum</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "const": "active",
+  "x-enforceConst": false
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-enforceenum"><a class="header-anchor" href="#x-enforceenum" aria-label="Permalink to “x-enforceEnum”">​</a>x-enforceEnum</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>Whether the editor initial value will be the first item in the <code>"enum"</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-enumtitles"><a class="header-anchor" href="#x-enumtitles" aria-label="Permalink to “x-enumTitles”">​</a>x-enumTitles</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "enum": ["draft", "published"],
+  "x-enforceEnum": false
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-enumtitles"><a class="header-anchor" href="#x-enumtitles" aria-label="Permalink to “x-enumTitles”">​</a>x-enumTitles</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
 <p>Used to display user-friendly labels in the editor instead of those listed in <code>"enum"</code>.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "string",
   "enum": ["us", "gb", "de"],
   "x-enumTitles": ["United States", "United Kingdom", "Germany"]
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-filepond"><a class="header-anchor" href="#x-filepond" aria-label="Permalink to “x-filepond”">​</a>x-filepond</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-filepond"><a class="header-anchor" href="#x-filepond" aria-label="Permalink to “x-filepond”">​</a>x-filepond</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>Configuration object passed directly to the FilePond instance. Used with <code>"x-format": "filepond"</code>.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-format"><a class="header-anchor" href="#x-format" aria-label="Permalink to “x-format”">​</a>x-format</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "x-format": "filepond",
+  "x-filepond": {
+    "acceptedFileTypes": ["image/*"]
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-format"><a class="header-anchor" href="#x-format" aria-label="Permalink to “x-format”">​</a>x-format</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Determines which editor UI will be used to edit the json instance.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-grid"><a class="header-anchor" href="#x-grid" aria-label="Permalink to “x-grid”">​</a>x-grid</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "x-format": "textarea"
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-grid"><a class="header-anchor" href="#x-grid" aria-label="Permalink to “x-grid”">​</a>x-grid</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>A configuration object to determine the position of the property editor in the parent's grid.</p>
 <p><strong>Options:</strong></p>
 <ul>
@@ -162,7 +356,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-hidden"><a class="header-anchor" href="#x-hidden" aria-label="Permalink to “x-hidden”">​</a>x-hidden</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-hidden"><a class="header-anchor" href="#x-hidden" aria-label="Permalink to “x-hidden”">​</a>x-hidden</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Editors can be hidden using this option. When set to <code>true</code>, the editor is hidden.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -176,7 +370,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-info"><a class="header-anchor" href="#x-info" aria-label="Permalink to “x-info”">​</a>x-info</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-info"><a class="header-anchor" href="#x-info" aria-label="Permalink to “x-info”">​</a>x-info</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>Used to display extra information.</p>
 <p><strong>Options:</strong></p>
 <ul>
@@ -192,7 +386,7 @@
     "content": "Enter your full legal name."
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-inputattributes"><a class="header-anchor" href="#x-inputattributes" aria-label="Permalink to “x-inputAttributes”">​</a>x-inputAttributes</h2><div><p><strong>Type:</strong> <code>object</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-inputattributes"><a class="header-anchor" href="#x-inputattributes" aria-label="Permalink to “x-inputAttributes”">​</a>x-inputAttributes</h2><div><p><strong>Type:</strong> <code>object</code></p>
 <p>Used to set attributes for the editor input if it has one.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "string",
@@ -201,9 +395,9 @@
     "autocomplete": "name"
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-messages"><a class="header-anchor" href="#x-messages" aria-label="Permalink to “x-messages”">​</a>x-messages</h2><div><p><strong>Type:</strong> <code>object</code> | <code>string[]</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-messages"><a class="header-anchor" href="#x-messages" aria-label="Permalink to “x-messages”">​</a>x-messages</h2><div><p><strong>Type:</strong> <code>object</code> | <code>string[]</code></p>
 <p>Validation error messages can be customized using this option in the schema. The option can be used in different ways:</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h3 id="array-format"><a class="header-anchor" href="#array-format" aria-label="Permalink to “Array format”">​</a>Array format</h3><div><p>Pass messages as an array of strings:</p>
+</div><!--]--><!--]--></section><article><!--[--><!--[--><h3 id="array-format"><a class="header-anchor" href="#array-format" aria-label="Permalink to “Array format”">​</a>Array format</h3><div><p>Pass messages as an array of strings:</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "string",
   "minLength": 5,
@@ -233,13 +427,22 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-objectadd"><a class="header-anchor" href="#x-objectadd" aria-label="Permalink to “x-objectAdd”">​</a>x-objectAdd</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</code></pre></div><!--]--><!--]--></article><section><!--[--><!--[--><h2 id="x-objectadd"><a class="header-anchor" href="#x-objectadd" aria-label="Permalink to “x-objectAdd”">​</a>x-objectAdd</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>Per-schema override for showing or hiding the "Add property" button on object editors. Overrides the global <code>objectAdd</code> option.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-navwarning"><a class="header-anchor" href="#x-navwarning" aria-label="Permalink to “x-navWarning”">​</a>x-navWarning</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>true</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-objectAdd": false,
+  "additionalProperties": { "type": "string" }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-navwarning"><a class="header-anchor" href="#x-navwarning" aria-label="Permalink to “x-navWarning”">​</a>x-navWarning</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>true</code></li>
+</ul>
 <p>When enabled, displays a warning icon (⚠) in the legend of array and object editors when they contain nested validation errors. Set to <code>false</code> to disable.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-navwarningmessage"><a class="header-anchor" href="#x-navwarningmessage" aria-label="Permalink to “x-navWarningMessage”">​</a>x-navWarningMessage</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-navwarningmessage"><a class="header-anchor" href="#x-navwarningmessage" aria-label="Permalink to “x-navWarningMessage”">​</a>x-navWarningMessage</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Custom tooltip message displayed on the legend warning icon. Requires <code>x-navWarning</code> to be active.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -252,9 +455,17 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propertiestogglecontent"><a class="header-anchor" href="#x-propertiestogglecontent" aria-label="Permalink to “x-propertiesToggleContent”">​</a>x-propertiesToggleContent</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-propertiestogglecontent"><a class="header-anchor" href="#x-propertiestogglecontent" aria-label="Permalink to “x-propertiesToggleContent”">​</a>x-propertiesToggleContent</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Text content for "properties" buttons.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propgroup"><a class="header-anchor" href="#x-propgroup" aria-label="Permalink to “x-propGroup”">​</a>x-propGroup</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-propertiesToggleContent": "Fields",
+  "properties": {
+    "name": { "type": "string" },
+    "nickname": { "type": "string" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-propgroup"><a class="header-anchor" href="#x-propgroup" aria-label="Permalink to “x-propGroup”">​</a>x-propGroup</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Assigns a property to a named group in the properties activation dialog. Used together with <code>enablePropertiesToggle</code> and <code>x-propGroupOrder</code>.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -273,7 +484,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-propgrouporder"><a class="header-anchor" href="#x-propgrouporder" aria-label="Permalink to “x-propGroupOrder”">​</a>x-propGroupOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-propgrouporder"><a class="header-anchor" href="#x-propgrouporder" aria-label="Permalink to “x-propGroupOrder”">​</a>x-propGroupOrder</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
 <p>Defines the display order of property groups in the properties activation dialog. Groups are defined using <code>x-propGroup</code> on individual properties. Groups not included in the array are appended at the end; the default group (properties without <code>x-propGroup</code>) always appears first.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -284,13 +495,21 @@
     "email": { "type": "string", "x-propGroup": "contact" }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-showerrors"><a class="header-anchor" href="#x-showerrors" aria-label="Permalink to “x-showErrors”">​</a>x-showErrors</h2><div><p><strong>Type:</strong> <code>string</code>
-<strong>Default:</strong> <code>"change"</code>
-<strong>Options:</strong> <code>"never"</code>, <code>"change"</code>, <code>"input"</code>, <code>"always"</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-showerrors"><a class="header-anchor" href="#x-showerrors" aria-label="Permalink to “x-showErrors”">​</a>x-showErrors</h2><div><ul>
+<li><strong>Type:</strong> <code>string</code></li>
+<li><strong>Default:</strong> <code>"change"</code></li>
+<li><strong>Options:</strong> <code>"never"</code>, <code>"change"</code>, <code>"input"</code>, <code>"always"</code></li>
+</ul>
 <p>Determines when to display validation errors for this specific schema. Overrides the instance-level <code>showErrors</code> setting.</p>
 <p><strong>Note:</strong> The <code>"input"</code> option provides real-time validation as the user types, but only affects text-based inputs (string inputs, textareas, number inputs).</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-sortable"><a class="header-anchor" href="#x-sortable" aria-label="Permalink to “x-sortable”">​</a>x-sortable</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "x-showErrors": "always"
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-sortable"><a class="header-anchor" href="#x-sortable" aria-label="Permalink to “x-sortable”">​</a>x-sortable</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Items can be sorted via drag and drop if Sortable.js is available.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "array",
@@ -299,7 +518,7 @@
     "type": "string"
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-startcollapsed"><a class="header-anchor" href="#x-startcollapsed" aria-label="Permalink to “x-startCollapsed”">​</a>x-startCollapsed</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-startcollapsed"><a class="header-anchor" href="#x-startcollapsed" aria-label="Permalink to “x-startCollapsed”">​</a>x-startCollapsed</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Whether the editor should start expanded or collapsed. Works on editors that support collapse like <code>object</code> and <code>arrays</code>.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -314,14 +533,32 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-suberrors"><a class="header-anchor" href="#x-suberrors" aria-label="Permalink to “x-subErrors”">​</a>x-subErrors</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-suberrors"><a class="header-anchor" href="#x-suberrors" aria-label="Permalink to “x-subErrors”">​</a>x-subErrors</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Per-schema override for including sub-error details in validation errors. Overrides the global <code>subErrors</code> option.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-switcherinput"><a class="header-anchor" href="#x-switcherinput" aria-label="Permalink to “x-switcherInput”">​</a>x-switcherInput</h2><div><p><strong>Type:</strong> <code>string</code>
-<strong>Default:</strong> <code>'select'</code>
-<strong>Options:</strong> <code>'select'</code>, <code>'radios'</code>, <code>'radios-inline'</code>, <code>'modal'</code>, <code>'select-inline'</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-subErrors": false,
+  "properties": {
+    "email": { "type": "string", "format": "email" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-switcherinput"><a class="header-anchor" href="#x-switcherinput" aria-label="Permalink to “x-switcherInput”">​</a>x-switcherInput</h2><div><ul>
+<li><strong>Type:</strong> <code>string</code></li>
+<li><strong>Default:</strong> <code>'select'</code></li>
+<li><strong>Options:</strong> <code>'select'</code>, <code>'radios'</code>, <code>'radios-inline'</code>, <code>'modal'</code>, <code>'select-inline'</code></li>
+</ul>
 <p>Per-schema override for the input type used to switch between multiple editor schemas (anyOf, oneOf, type arrays). Overrides the global <code>switcherInput</code> option.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-switchertitle"><a class="header-anchor" href="#x-switchertitle" aria-label="Permalink to “x-switcherTitle”">​</a>x-switcherTitle</h2><div><p><strong>Type:</strong> <code>string</code>
-<strong>Default:</strong> property name or <code>"title"</code></p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "x-switcherInput": "radios-inline",
+  "oneOf": [
+    { "type": "string", "title": "Text" },
+    { "type": "number", "title": "Number" }
+  ]
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-switchertitle"><a class="header-anchor" href="#x-switchertitle" aria-label="Permalink to “x-switcherTitle”">​</a>x-switcherTitle</h2><div><ul>
+<li><strong>Type:</strong> <code>string</code></li>
+<li><strong>Default:</strong> property name or <code>"title"</code></li>
+</ul>
 <p>The text displayed in the multiple editor switcher to select this sub-schema editor.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "oneOf": [
@@ -335,10 +572,12 @@
     }
   ]
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titlehidden"><a class="header-anchor" href="#x-titlehidden" aria-label="Permalink to “x-titleHidden”">​</a>x-titleHidden</h2><div><p><strong>Type:</strong> <code>boolean</code>
-<strong>Default:</strong> <code>false</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-titlehidden"><a class="header-anchor" href="#x-titlehidden" aria-label="Permalink to “x-titleHidden”">​</a>x-titleHidden</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
 <p>Hides the editor title.</p>
-</div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titleiconclass"><a class="header-anchor" href="#x-titleiconclass" aria-label="Permalink to “x-titleIconClass”">​</a>x-titleIconClass</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-titleiconclass"><a class="header-anchor" href="#x-titleiconclass" aria-label="Permalink to “x-titleIconClass”">​</a>x-titleIconClass</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>Icon class to use in titles if using any.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "object",
@@ -356,7 +595,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-titletemplate"><a class="header-anchor" href="#x-titletemplate" aria-label="Permalink to “x-titleTemplate”">​</a>x-titleTemplate</h2><div><p><strong>Type:</strong> <code>string</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-titletemplate"><a class="header-anchor" href="#x-titletemplate" aria-label="Permalink to “x-titleTemplate”">​</a>x-titleTemplate</h2><div><p><strong>Type:</strong> <code>string</code></p>
 <p>A template to form titles dynamically, using the same <code>{{ placeholder }}</code> syntax described on the Templates page. Currently only read by nav-format array editors, to title each item from its own value.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "array",
@@ -369,7 +608,7 @@
     }
   }
 }
-</code></pre></div><!--]--><!--]--></article><article><!--[--><!--[--><h2 id="x-useconstraintattributes"><a class="header-anchor" href="#x-useconstraintattributes" aria-label="Permalink to “x-useConstraintAttributes”">​</a>x-useConstraintAttributes</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-useconstraintattributes"><a class="header-anchor" href="#x-useconstraintattributes" aria-label="Permalink to “x-useConstraintAttributes”">​</a>x-useConstraintAttributes</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
 <p>Per-schema override for applying native HTML constraint attributes based on JSON Schema keywords. Overrides the global <code>useConstraintAttributes</code> option.</p>
 <ul>
 <li><strong>Number inputs:</strong> <code>min</code>, <code>max</code></li>
@@ -377,7 +616,13 @@
 <li><strong>String inputs:</strong> <code>minlength</code>, <code>maxlength</code>, <code>pattern</code></li>
 <li><strong>Textarea:</strong> <code>minlength</code>, <code>maxlength</code></li>
 </ul>
-</div><!--]--><!--]--></article><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« Options</span></button><button class="btn btn-outline-primary"><span>Array Default »</span></button></div></div></div></div></div></div>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "minLength": 3,
+  "maxLength": 10,
+  "x-useConstraintAttributes": false
+}
+</code></pre></div><!--]--><!--]--></section><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« Options</span></button><button class="btn btn-outline-primary"><span>Array Default »</span></button></div></div></div></div></div></div>
 
 
 </body></html>
