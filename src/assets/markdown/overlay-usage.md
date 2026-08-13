@@ -9,8 +9,6 @@ const schema = {
   }
 }
 
-// An OpenAPI-Overlay-style document: ordered actions, each targeting nodes
-// with a JSONPath and either merging an "update" or "remove"-ing them.
 const overlay = {
   "overlay": "1.0.0",
   "info": { "title": "Presentation overlay", "version": "1.0.0" },
@@ -21,7 +19,6 @@ const overlay = {
   ]
 }
 
-// Returns a NEW schema. The inputs are never mutated.
 const merged = Jedison.applyOverlay(schema, overlay)
 
 const jedison = new Jedison.Create({

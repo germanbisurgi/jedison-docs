@@ -17,6 +17,5 @@ const jedison = new Jedison.Create({
   }
 })
 
-// Activates the "organization" tab and scrolls its "name" field into view.
 jedison.navigateTo('#/organization/name')
 ```

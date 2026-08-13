@@ -5,6 +5,5 @@ const jedison = new Jedison.Create({
   schema: { type: 'object', properties: { name: { type: 'string' } } }
 })
 
-// Later, e.g. when navigating away or swapping to a different schema:
 jedison.destroy()
 ```

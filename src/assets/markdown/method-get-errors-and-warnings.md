@@ -1,3 +1,3 @@
 ```javascript
-jedison.getErrors(filters = ['error, 'warning'])
+jedison.getErrors(['error', 'warning'])
 ```

@@ -10,13 +10,8 @@ const schema = {
 
 const overlay = {
   "actions": [
-    // Object node: deep-merged - "city" stays, "country" is added alongside it.
     { "target": "$.properties.address", "update": { "properties": { "country": { "type": "string" } } } },
-
-    // Array node: concatenated - the update is appended, not replacing ["a", "b"].
     { "target": "$.properties.tags.enum", "update": ["c"] },
-
-    // Primitive node: replaced in place.
     { "target": "$.properties.status", "update": "published" }
   ]
 }

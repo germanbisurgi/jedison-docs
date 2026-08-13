@@ -1,6 +1,4 @@
 ```javascript
-// A new language only needs the keys you actually want to override -
-// anything left out falls back to the English default.
 const jedison = new Jedison.Create({
   language: 'fr',
   translations: {
