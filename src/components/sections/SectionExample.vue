@@ -8,8 +8,8 @@
   <p v-if="intro" v-html="renderedIntro" />
 
   <template v-if="activationConditions.length">
-    <component :is="subHeadingTag">
-      Activation Conditions
+    <component :is="subHeadingTag" :id="activationConditionsId">
+      <app-header-anchor :id="activationConditionsId" text="Activation Conditions" />Activation Conditions
     </component>
     <ul>
       <li v-for="condition in renderedActivationConditions" :key="condition" v-html="condition" />
@@ -27,8 +27,8 @@
   </template>
 
   <template v-if="optionsCode">
-    <component :is="subHeadingTag">
-      Example
+    <component :is="subHeadingTag" :id="exampleId">
+      <app-header-anchor :id="exampleId" text="Example" />Example
     </component>
     <app-highlight :language="optionsLanguage" :code="optionsCode" />
   </template>
@@ -130,6 +130,16 @@ export default {
     },
     notesHeadingId () {
       return this.notesHeading ? slugify(this.notesHeading) : undefined
+    },
+    // Scoped under the section's own heading when it has one, since a page
+    // can have several headed SectionExamples (e.g. one per allOf/anyOf/
+    // oneOf/not on /schema-composition) each with their own "Activation
+    // Conditions"/"Example" sub-heading - an unscoped id would collide.
+    activationConditionsId () {
+      return this.heading ? this.headingId + '-activation-conditions' : 'activation-conditions'
+    },
+    exampleId () {
+      return this.heading ? this.headingId + '-example' : 'example'
     },
     renderedIntro () {
       return renderMarkdown(this.intro)
