@@ -324,9 +324,9 @@ Internally, this traverses the entire instance tree to build the complete JSON s
       {
         component: SectionProse,
         props: {
-          heading: "getInstance(jsonPath)",
+          heading: "getInstance(path)",
           level: 2,
-          markdown: `Retrieves a specific instance by its JSON path.
+          markdown: `Retrieves a specific instance by its JSON Pointer.
 
 Example paths:
 
@@ -400,7 +400,7 @@ Example paths:
           level: 2,
           markdown: `Navigates to a specific field by path, activating all ancestor nav and categories tabs as needed.
 
--   \`path\`: A JSON pointer path string (e.g. \`'#/organization/departments/1/teams/1'\`)
+-   \`path\`: A JSON Pointer path string (e.g. \`'#/organization/departments/1/teams/1'\`)
 
 Only works when Jedison is used as an editor (i.e. a \`container\` is provided).`
         }
@@ -964,8 +964,8 @@ Some of these options can be set at JSON schema level. Options in schemas are al
         props: {
           heading: `container`,
           level: 2,
-          markdown: `**Type:** \`HTMLElement\`
-**Default:** \`null\`
+          markdown: `-   **Type:** \`HTMLElement\`
+-   **Default:** \`null\`
 
 The HTML element that will contain the generated form.`
         }
@@ -975,8 +975,8 @@ The HTML element that will contain the generated form.`
         props: {
           heading: `iconLib`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`null\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`null\`
 
 Specifies the icon library to use for UI components. Valid options include:
 
@@ -994,8 +994,8 @@ Specifies the icon library to use for UI components. Valid options include:
         props: {
           heading: `theme`,
           level: 2,
-          markdown: `**Type:** \`Theme\`
-**Default:** \`null\`
+          markdown: `-   **Type:** \`Theme\`
+-   **Default:** \`null\`
 
 An instance of \`Theme\` to apply to the UI. Valid options include:
 
@@ -1011,8 +1011,8 @@ An instance of \`Theme\` to apply to the UI. Valid options include:
         props: {
           heading: `refParser`,
           level: 2,
-          markdown: `**Type:** \`RefParser\`
-**Default:** \`null\`
+          markdown: `-   **Type:** \`RefParser\`
+-   **Default:** \`null\`
 
 An instance of \`RefParser\` to dereference \`"$ref"\` keywords in the schema before it's rendered. See the RefParser page for a full walkthrough of internal and recursive references.
 
@@ -1025,8 +1025,8 @@ An instance of \`RefParser\` to dereference \`"$ref"\` keywords in the schema be
         props: {
           heading: `translations`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`'{}'\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`'{}'\`
 
 Used to add new translations or override the default ones. Uses template placeholders that get dynamically replaced with actual values during runtime`
         }
@@ -1040,8 +1040,8 @@ Used to add new translations or override the default ones. Uses template placeho
         props: {
           heading: `parseMarkdown`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Transform \`markdown\` to \`html\` in annotations like \`title\` and \`description\` if marked.js is available as \`window.marked\`.`
         }
@@ -1051,8 +1051,8 @@ Transform \`markdown\` to \`html\` in annotations like \`title\` and \`descripti
         props: {
           heading: `purifyHtml`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 Sanitizes \`html\` tags from annotations like if DOMPurify.js is available as \`window.DOMPurify\`.`
         }
@@ -1062,8 +1062,8 @@ Sanitizes \`html\` tags from annotations like if DOMPurify.js is available as \`
         props: {
           heading: `purifyData`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 Sanitizes string values during data input operations if DOMPurify.js is available as \`window.DOMPurify\`. This provides security against XSS attacks in user input data, separate from HTML content purification.`
         }
@@ -1073,8 +1073,8 @@ Sanitizes string values during data input operations if DOMPurify.js is availabl
         props: {
           heading: `domPurifyOptions`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`{}\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`{}\`
 
 DOMPurify options.`
         }
@@ -1088,8 +1088,8 @@ DOMPurify options.`
         props: {
           heading: `schema`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`{}\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`{}\`
 
 A JSON schema for the form.`
         }
@@ -1099,8 +1099,8 @@ A JSON schema for the form.`
         props: {
           heading: `id`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`''\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`''\`
 
 Used to prefix \`id\` and \`for\` attributes. Useful if you want to have multiple Jedison forms on the page`
         }
@@ -1111,8 +1111,8 @@ Used to prefix \`id\` and \`for\` attributes. Useful if you want to have multipl
         props: {
           heading: `language`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'en'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'en'\`
 
 Set default language for error messages and UI texts.`
         }
@@ -1123,8 +1123,8 @@ Set default language for error messages and UI texts.`
         props: {
           heading: `data`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`undefined\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`undefined\`
 
 Initial JSON data to populate the form.`
         }
@@ -1135,8 +1135,8 @@ Initial JSON data to populate the form.`
         props: {
           heading: `customEditors`,
           level: 2,
-          markdown: `**Type:** \`array\`
-**Default:** \`[]\`
+          markdown: `-   **Type:** \`array\`
+-   **Default:** \`[]\`
 
 An array of custom editor classes.`
         }
@@ -1150,8 +1150,8 @@ An array of custom editor classes.`
         props: {
           heading: `hiddenInputAttributes`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`{}\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`{}\`
 
 Attributes for the hidden input that contains the whole JSON value of the form.`
         }
@@ -1165,8 +1165,8 @@ Attributes for the hidden input that contains the whole JSON value of the form.`
         props: {
           heading: `settings`,
           level: 2,
-          markdown: `**Type:** \`object\`
-**Default:** \`{}\`
+          markdown: `-   **Type:** \`object\`
+-   **Default:** \`{}\`
 
 An object to store user data and functions. Useful for when there is the need to provide options to configure a plugin but the options can not be used in schemas because of JSON data limitations. Can be used in annotations when using templates.`
         }
@@ -1180,8 +1180,8 @@ An object to store user data and functions. Useful for when there is the need to
         props: {
           heading: `btnContents`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If buttons texts should be displayed.`
         }
@@ -1191,8 +1191,8 @@ If buttons texts should be displayed.`
         props: {
           heading: `btnIcons`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If buttons icons should be displayed.`
         }
@@ -1202,8 +1202,8 @@ If buttons icons should be displayed.`
         props: {
           heading: `enforceConst`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Enforces the \`const\` keyword value in editors. Works only in editor mode
 
@@ -1215,8 +1215,8 @@ Enforces the \`const\` keyword value in editors. Works only in editor mode
         props: {
           heading: `enforceEnum`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When \`true\` uses the first item in the enum as the default value. Works only in editor mode
 
@@ -1228,8 +1228,8 @@ When \`true\` uses the first item in the enum as the default value. Works only i
         props: {
           heading: `enforceRequired`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When \`true\` required properties are always displayed and added when missing. Works only in editor mode
 
@@ -1241,8 +1241,8 @@ When \`true\` required properties are always displayed and added when missing. W
         props: {
           heading: `enforceAdditionalProperties`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When \`true\` the editor removes all properties that are not listed in properties. Works only in editor mode
 
@@ -1254,8 +1254,8 @@ When \`true\` the editor removes all properties that are not listed in propertie
         props: {
           heading: `switcherInput`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'select'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'select'\`
 
 Sets the input type that will be used to switch between multiple editors.
 
@@ -1274,8 +1274,8 @@ Sets the input type that will be used to switch between multiple editors.
         props: {
           heading: `enablePropertiesToggle`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Enables a toggle to show/hide the properties dialog in the UI.
 
@@ -1287,8 +1287,8 @@ Enables a toggle to show/hide the properties dialog in the UI.
         props: {
           heading: `embedSwitcher`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 When enabled, embeds the type switcher UI inside the selected editor's header instead of displaying it separately above the content. Applies to \`oneOf\` and \`anyOf\` schemas.
 
@@ -1300,8 +1300,8 @@ When enabled, embeds the type switcher UI inside the selected editor's header in
         props: {
           heading: `enableCollapseToggle`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Allows sections to be collapsible in the UI.
 
@@ -1313,8 +1313,8 @@ Allows sections to be collapsible in the UI.
         props: {
           heading: `deactivateNonRequired`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Deactivates non-required properties. Useful when working with circular schemas to avoid infinite recursion.
 
@@ -1326,8 +1326,8 @@ Deactivates non-required properties. Useful when working with circular schemas t
         props: {
           heading: `showErrors`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'change'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'change'\`
 
 Determines when to display validation errors. Options include:
 
@@ -1347,8 +1347,8 @@ Determines when to display validation errors. Options include:
         props: {
           heading: `assertFormat`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Treats \`'format'\` as a validator rather than just an annotation.
 
@@ -1360,8 +1360,8 @@ Treats \`'format'\` as a validator rather than just an annotation.
         props: {
           heading: `subErrors`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 When enabled, validation errors include detailed sub-error information showing which nested property or item failed validation.
 
@@ -1373,8 +1373,8 @@ When enabled, validation errors include detailed sub-error information showing w
         props: {
           heading: `arrayDelete`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array delete buttons should be displayed.
 
@@ -1386,8 +1386,8 @@ If array delete buttons should be displayed.
         props: {
           heading: `arrayMove`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array move up and move down buttons should be displayed.
 
@@ -1399,8 +1399,8 @@ If array move up and move down buttons should be displayed.
         props: {
           heading: `editJsonData`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Enables inline JSON editing mode, allowing users to directly edit the JSON data within form fields.
 
@@ -1416,8 +1416,8 @@ Enables inline JSON editing mode, allowing users to directly edit the JSON data 
         props: {
           heading: `arrayAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array add buttons should be displayed.
 
@@ -1429,8 +1429,8 @@ If array add buttons should be displayed.
         props: {
           heading: `objectAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If the "Add property" button should be displayed on object editors.
 
@@ -1442,8 +1442,8 @@ If the "Add property" button should be displayed on object editors.
         props: {
           heading: `arrayDeleteConfirm`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When enabled, shows a confirmation dialog before deleting an array item.
 
@@ -1455,8 +1455,8 @@ When enabled, shows a confirmation dialog before deleting an array item.
         props: {
           heading: `arrayDeleteAll`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds a "Delete all items" button to the array editor's header actions area.
 
@@ -1468,8 +1468,8 @@ Adds a "Delete all items" button to the array editor's header actions area.
         props: {
           heading: `arrayFooterAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds an "Add item" button in the footer of the array editor.
 
@@ -1481,9 +1481,9 @@ Adds an "Add item" button in the footer of the array editor.
         props: {
           heading: `arrayFooterButtonsPosition`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'right'\`
-**Options:** \`'left'\`, \`'right'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'right'\`
+-   **Options:** \`'left'\`, \`'right'\`
 
 Controls the alignment of footer buttons globally.
 
@@ -1495,8 +1495,8 @@ Controls the alignment of footer buttons globally.
         props: {
           heading: `arrayFooterDeleteAll`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds a "Delete all items" button in the footer of the array editor.
 
@@ -1508,8 +1508,8 @@ Adds a "Delete all items" button in the footer of the array editor.
         props: {
           heading: `useConstraintAttributes`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When enabled, editors will set native HTML constraint attributes based on JSON Schema keywords:
 
@@ -1555,8 +1555,8 @@ Text content for "add property" buttons.`
         props: {
           heading: `x-arrayAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array "add" buttons should be displayed.`
         }
@@ -1576,9 +1576,9 @@ Text content for array "add" buttons.`
         props: {
           heading: `x-arrayButtonsPosition`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'left'\`
-**Options:** \`'left'\`, \`'right'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'left'\`
+-   **Options:** \`'left'\`, \`'right'\`
 
 Controls the positioning of action buttons (delete, move, drag) in table format arrays. When set to \`'right'\`, buttons appear on the right side of the table. When set to \`'left'\` (default), buttons appear on the left side.`
         }
@@ -1589,8 +1589,8 @@ Controls the positioning of action buttons (delete, move, drag) in table format 
         props: {
           heading: `x-arrayDelete`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array "delete" buttons should be displayed.`
         }
@@ -1600,8 +1600,8 @@ If array "delete" buttons should be displayed.`
         props: {
           heading: `x-arrayDeleteAll`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds a "Delete all items" button to the array editor's header actions area.`
         }
@@ -1651,8 +1651,8 @@ Text content for array "drag" buttons.`
         props: {
           heading: `x-arrayFooterAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds an "Add item" button in the footer of the array editor.`
         }
@@ -1672,9 +1672,9 @@ Text content for the footer "add" button.`
         props: {
           heading: `x-arrayFooterButtonsPosition`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'right'\`
-**Options:** \`'left'\`, \`'right'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'right'\`
+-   **Options:** \`'left'\`, \`'right'\`
 
 Controls the alignment of footer buttons. When \`'right'\`, buttons are pushed to the right side of the footer. When \`'left'\`, buttons align to the left.`
         }
@@ -1684,8 +1684,8 @@ Controls the alignment of footer buttons. When \`'right'\`, buttons are pushed t
         props: {
           heading: `x-arrayFooterDeleteAll`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Adds a "Delete all items" button in the footer of the array editor.`
         }
@@ -1705,8 +1705,8 @@ Text content for the footer "delete all" button.`
         props: {
           heading: `x-arrayMove`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 If array "move up" and "move down" buttons should be displayed.`
         }
@@ -1736,8 +1736,8 @@ Text content for array "move up" buttons.`
         props: {
           heading: `x-assertFormat`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Treats \`"format"\` as a validator rather than just an annotation.`
         }
@@ -1801,8 +1801,8 @@ Falls back to the standard error-counting algorithm if no discriminator match is
         props: {
           heading: `x-editJsonData`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Enables inline JSON editing mode for this specific schema, allowing users to directly edit the JSON data within form fields.`
         }
@@ -1823,8 +1823,8 @@ Display a collapse button used to collapse or expand editors that support collap
         props: {
           heading: `x-enforceConst`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 Value will remain whatever is defined in schema \`"const"\`.`
         }
@@ -1834,8 +1834,8 @@ Value will remain whatever is defined in schema \`"const"\`.`
         props: {
           heading: `x-enforceEnum`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 Whether the editor initial value will be the first item in the \`"enum"\`.`
         }
@@ -1969,8 +1969,8 @@ Validation error messages can be customized using this option in the schema. The
         props: {
           heading: `x-objectAdd`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 Per-schema override for showing or hiding the "Add property" button on object editors. Overrides the global \`objectAdd\` option.`
         }
@@ -1980,8 +1980,8 @@ Per-schema override for showing or hiding the "Add property" button on object ed
         props: {
           heading: `x-navWarning`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`true\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`true\`
 
 When enabled, displays a warning icon (⚠) in the legend of array and object editors when they contain nested validation errors. Set to \`false\` to disable.`
         }
@@ -2034,9 +2034,9 @@ Defines the display order of property groups in the properties activation dialog
         props: {
           heading: `x-showErrors`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`"change"\`
-**Options:** \`"never"\`, \`"change"\`, \`"input"\`, \`"always"\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`"change"\`
+-   **Options:** \`"never"\`, \`"change"\`, \`"input"\`, \`"always"\`
 
 Determines when to display validation errors for this specific schema. Overrides the instance-level \`showErrors\` setting.
 
@@ -2048,8 +2048,8 @@ Determines when to display validation errors for this specific schema. Overrides
         props: {
           heading: `x-sortable`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Items can be sorted via drag and drop if Sortable.js is available.`
         }
@@ -2081,9 +2081,9 @@ Per-schema override for including sub-error details in validation errors. Overri
         props: {
           heading: `x-switcherInput`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** \`'select'\`
-**Options:** \`'select'\`, \`'radios'\`, \`'radios-inline'\`, \`'modal'\`, \`'select-inline'\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** \`'select'\`
+-   **Options:** \`'select'\`, \`'radios'\`, \`'radios-inline'\`, \`'modal'\`, \`'select-inline'\`
 
 Per-schema override for the input type used to switch between multiple editor schemas (anyOf, oneOf, type arrays). Overrides the global \`switcherInput\` option.`
         }
@@ -2093,8 +2093,8 @@ Per-schema override for the input type used to switch between multiple editor sc
         props: {
           heading: `x-switcherTitle`,
           level: 2,
-          markdown: `**Type:** \`string\`
-**Default:** property name or \`"title"\`
+          markdown: `-   **Type:** \`string\`
+-   **Default:** property name or \`"title"\`
 
 The text displayed in the multiple editor switcher to select this sub-schema editor.`
         }
@@ -2105,8 +2105,8 @@ The text displayed in the multiple editor switcher to select this sub-schema edi
         props: {
           heading: `x-titleHidden`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
-**Default:** \`false\`
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
 
 Hides the editor title.`
         }
@@ -3254,7 +3254,7 @@ Per-schema override for applying native HTML constraint attributes based on JSON
           level: 3,
           markdown: `-   **\`context\`** object containing:
     -   \`value\` - The current field value
-    -   \`path\` - JSON path to the field
+    -   \`path\` - JSON Pointer to the field
     -   \`schema\` - The schema for this field
     -   \`translator\` - The Translator instance
 -   **Error objects** with:
