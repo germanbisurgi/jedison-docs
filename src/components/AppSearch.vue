@@ -46,17 +46,19 @@
                   <div class="d-flex justify-content-between align-items-start gap-2">
                     <div class="overflow-hidden">
                       <div class="small text-muted text-truncate">
-                        {{ result.group }}
+                        {{ result.group }}<template v-if="result.anchor">
+                          &middot; {{ result.pageTitle }}
+                        </template>
                       </div>
                       <div class="fw-semibold text-truncate">
                         {{ result.title }}
                       </div>
                       <div class="small text-muted text-truncate">
-                        {{ result.description }}
+                        {{ snippet(result) }}
                       </div>
                     </div>
                     <span class="badge rounded-pill flex-shrink-0 text-bg-primary">
-                      page
+                      {{ result.anchor ? 'section' : 'page' }}
                     </span>
                   </div>
                 </li>
@@ -87,20 +89,16 @@
 import Fuse from 'fuse.js'
 import { searchData } from '@/search/searchData.js'
 
-const flatEntries = searchData.map(page => ({
-  path: page.path,
-  group: page.group,
-  title: page.name,
-  description: page.description,
-  keywords: page.keywords
-}))
-
-const fuse = new Fuse(flatEntries, {
+// One entry per page AND one per heading inside it (see searchData.js) - so
+// a match can deep-link straight to the specific section, not just the page.
+const fuse = new Fuse(searchData, {
   keys: [
-    { name: 'title', weight: 0.5 },
-    { name: 'description', weight: 0.3 },
-    { name: 'keywords', weight: 0.15 },
-    { name: 'group', weight: 0.05 }
+    { name: 'title', weight: 0.45 },
+    { name: 'keywords', weight: 0.2 },
+    { name: 'description', weight: 0.15 },
+    { name: 'content', weight: 0.15 },
+    { name: 'pageTitle', weight: 0.1 },
+    { name: 'code', weight: 0.05 }
   ],
   threshold: 0.4,
   minMatchCharLength: 2
@@ -152,8 +150,12 @@ export default {
       if (this.results[this.focusedIndex]) this.navigateTo(this.results[this.focusedIndex])
     },
     navigateTo (result) {
-      this.$router.push(result.path)
+      this.$router.push(result.anchor ? result.path + '#' + result.anchor : result.path)
       this.closeModal()
+    },
+    snippet (result) {
+      if (result.description) return result.description
+      return result.content.length > 140 ? result.content.slice(0, 140) + '…' : result.content
     }
   }
 }
