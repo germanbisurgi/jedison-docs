@@ -1,5 +1,6 @@
 .app-highlight {
   @extend .border;
+  @extend .mb-3;
   position: relative;
 
   pre {
