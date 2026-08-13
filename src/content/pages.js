@@ -117,26 +117,58 @@ import themesBootstrap3Example from '@/assets/live-examples/themes-bootstrap3.js
 import themesBootstrap4Example from '@/assets/live-examples/themes-bootstrap4.json'
 import themesBootstrap5Example from '@/assets/live-examples/themes-bootstrap5.json'
 
+import xAddPropertyContentExample from '@/assets/markdown/x-addPropertyContent-example.md?raw'
+import xArrayAddContentExample from '@/assets/markdown/x-arrayAddContent-example.md?raw'
+import xArrayAddExample from '@/assets/markdown/x-arrayAdd-example.md?raw'
 import xArrayButtonsPositionExample from '@/assets/markdown/x-arrayButtonsPosition-example.md?raw'
+import xArrayDeleteAllContentExample from '@/assets/markdown/x-arrayDeleteAllContent-example.md?raw'
+import xArrayDeleteAllExample from '@/assets/markdown/x-arrayDeleteAll-example.md?raw'
+import xArrayDeleteConfirmExample from '@/assets/markdown/x-arrayDeleteConfirm-example.md?raw'
+import xArrayDeleteContentExample from '@/assets/markdown/x-arrayDeleteContent-example.md?raw'
+import xArrayDeleteExample from '@/assets/markdown/x-arrayDelete-example.md?raw'
+import xArrayDragContentExample from '@/assets/markdown/x-arrayDragContent-example.md?raw'
+import xArrayFooterAddContentExample from '@/assets/markdown/x-arrayFooterAddContent-example.md?raw'
+import xArrayFooterAddExample from '@/assets/markdown/x-arrayFooterAdd-example.md?raw'
+import xArrayFooterButtonsPositionExample from '@/assets/markdown/x-arrayFooterButtonsPosition-example.md?raw'
+import xArrayFooterDeleteAllContentExample from '@/assets/markdown/x-arrayFooterDeleteAllContent-example.md?raw'
+import xArrayFooterDeleteAllExample from '@/assets/markdown/x-arrayFooterDeleteAll-example.md?raw'
+import xArrayMoveDownContentExample from '@/assets/markdown/x-arrayMoveDownContent-example.md?raw'
+import xArrayMoveExample from '@/assets/markdown/x-arrayMove-example.md?raw'
+import xArrayMoveUpContentExample from '@/assets/markdown/x-arrayMoveUpContent-example.md?raw'
+import xAssertFormatExample from '@/assets/markdown/x-assertFormat-example.md?raw'
+import xCategoryOrderExample from '@/assets/markdown/x-categoryOrder-example.md?raw'
+import xCollapseToggleContentExample from '@/assets/markdown/x-collapseToggleContent-example.md?raw'
 import xContainerAttributesExample from '@/assets/markdown/x-containerAttributes-example.md?raw'
+import xDeactivateNonRequiredExample from '@/assets/markdown/x-deactivateNonRequired-example.md?raw'
 import xDiscriminatorExample from '@/assets/markdown/x-discriminator-example.md?raw'
 import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
+import xEnableCollapseToggleExample from '@/assets/markdown/x-enableCollapseToggle-example.md?raw'
+import xEnforceConstExample from '@/assets/markdown/x-enforceConst-example.md?raw'
+import xEnforceEnumExample from '@/assets/markdown/x-enforceEnum-example.md?raw'
 import xEnumTitlesExample from '@/assets/markdown/x-enumTitles-example.md?raw'
+import xFilepondExample from '@/assets/markdown/x-filepond-example.md?raw'
+import xFormatExample from '@/assets/markdown/x-format-example.md?raw'
 import xGridExample from '@/assets/markdown/x-grid-example.md?raw'
 import xHiddenExample from '@/assets/markdown/x-hidden-example.md?raw'
 import xInfoExample from '@/assets/markdown/x-info-example.md?raw'
 import xInputAttributesExample from '@/assets/markdown/x-inputAttributes-example.md?raw'
 import xMessagesArray from '@/assets/markdown/x-messages-array.md?raw'
-import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
 import xMessagesI18n from '@/assets/markdown/x-messages-i18n.md?raw'
+import xMessagesObject from '@/assets/markdown/x-messages-object.md?raw'
 import xNavWarningExample from '@/assets/markdown/x-navWarning-example.md?raw'
+import xObjectAddExample from '@/assets/markdown/x-objectAdd-example.md?raw'
 import xPropGroupExample from '@/assets/markdown/x-propGroup-example.md?raw'
 import xPropGroupOrderExample from '@/assets/markdown/x-propGroupOrder-example.md?raw'
+import xPropertiesToggleContentExample from '@/assets/markdown/x-propertiesToggleContent-example.md?raw'
+import xShowErrorsExample from '@/assets/markdown/x-showErrors-example.md?raw'
 import xSortableExample from '@/assets/markdown/x-sortable-example.md?raw'
 import xStartCollapsedExample from '@/assets/markdown/x-startCollapsed-example.md?raw'
+import xSubErrorsExample from '@/assets/markdown/x-subErrors-example.md?raw'
+import xSwitcherInputExample from '@/assets/markdown/x-switcherInput-example.md?raw'
 import xSwitcherTitleExample from '@/assets/markdown/x-switcherTitle-example.md?raw'
 import xTitleHiddenExample from '@/assets/markdown/x-titleHidden-example.md?raw'
 import xTitleTemplateExample from '@/assets/markdown/x-titleTemplate-example.md?raw'
+import xUseConstraintAttributesExample from '@/assets/markdown/x-useConstraintAttributes-example.md?raw'
 
 import htmlCustomValidator from '@/assets/html/custom-constraint.html?raw'
 import mdCustomConstraint from '@/assets/markdown/custom-constraint.md?raw'
@@ -1545,11 +1577,12 @@ This enables native browser validation hints and constraints.
         props: {
           heading: `x-addPropertyContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for "add property" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xAddPropertyContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1561,16 +1594,18 @@ Text content for "add property" buttons.`
 If array "add" buttons should be displayed.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayAddExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-arrayAddContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for array "add" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayAddContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1595,6 +1630,7 @@ Controls the positioning of action buttons (delete, move, drag) in table format 
 If array "delete" buttons should be displayed.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDeleteExample}},
       {
         component: SectionProse,
         props: {
@@ -1606,6 +1642,7 @@ If array "delete" buttons should be displayed.`
 Adds a "Delete all items" button to the array editor's header actions area.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDeleteAllExample}},
       {
         component: SectionProse,
         props: {
@@ -1616,6 +1653,7 @@ Adds a "Delete all items" button to the array editor's header actions area.`
 Text content for the "delete all" button.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDeleteAllContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1626,26 +1664,29 @@ Text content for the "delete all" button.`
 Per-schema override for showing a confirmation dialog before deleting array items. Overrides the global \`arrayDeleteConfirm\` option.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDeleteConfirmExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-arrayDeleteContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for array "delete" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDeleteContentExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-arrayDragContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for array "drag" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayDragContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1657,6 +1698,7 @@ Text content for array "drag" buttons.`
 Adds an "Add item" button in the footer of the array editor.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayFooterAddExample}},
       {
         component: SectionProse,
         props: {
@@ -1667,6 +1709,7 @@ Adds an "Add item" button in the footer of the array editor.`
 Text content for the footer "add" button.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayFooterAddContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1679,6 +1722,7 @@ Text content for the footer "add" button.`
 Controls the alignment of footer buttons. When \`'right'\`, buttons are pushed to the right side of the footer. When \`'left'\`, buttons align to the left.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayFooterButtonsPositionExample}},
       {
         component: SectionProse,
         props: {
@@ -1690,6 +1734,7 @@ Controls the alignment of footer buttons. When \`'right'\`, buttons are pushed t
 Adds a "Delete all items" button in the footer of the array editor.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayFooterDeleteAllExample}},
       {
         component: SectionProse,
         props: {
@@ -1700,6 +1745,7 @@ Adds a "Delete all items" button in the footer of the array editor.`
 Text content for the footer "delete all" button.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayFooterDeleteAllContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1711,26 +1757,29 @@ Text content for the footer "delete all" button.`
 If array "move up" and "move down" buttons should be displayed.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayMoveExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-arrayMoveDownContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for array "move down" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayMoveDownContentExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-arrayMoveUpContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for array "move up" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xArrayMoveUpContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1742,16 +1791,18 @@ Text content for array "move up" buttons.`
 Treats \`"format"\` as a validator rather than just an annotation.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xAssertFormatExample}},
       {
         component: SectionProse,
         props: {
           heading: `x-collapseToggleContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for "collapse" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xCollapseToggleContentExample}},
       {
         component: SectionProse,
         props: {
@@ -1762,6 +1813,7 @@ Text content for "collapse" buttons.`
 Controls the display order of tabs in categories-format object editors (\`categories-vertical\`, \`categories-horizontal\`). Categories listed in the array appear first in the specified order; any categories not listed follow in their natural order.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xCategoryOrderExample}},
       {
         component: SectionProse,
         props: {
@@ -1783,6 +1835,7 @@ Editors container HTML attributes can be set using this option. Attributes such 
 Whether the editor should deactivate (hide) or activate (show) non required properties. Works only with \`object\` type editors.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xDeactivateNonRequiredExample}},
       {
         component: SectionProse,
         props: {
@@ -1818,6 +1871,7 @@ Enables inline JSON editing mode for this specific schema, allowing users to dir
 Display a collapse button used to collapse or expand editors that support collapse like \`object\` and \`arrays\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xEnableCollapseToggleExample}},
       {
         component: SectionProse,
         props: {
@@ -1829,6 +1883,7 @@ Display a collapse button used to collapse or expand editors that support collap
 Value will remain whatever is defined in schema \`"const"\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xEnforceConstExample}},
       {
         component: SectionProse,
         props: {
@@ -1840,6 +1895,7 @@ Value will remain whatever is defined in schema \`"const"\`.`
 Whether the editor initial value will be the first item in the \`"enum"\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xEnforceEnumExample}},
       {
         component: SectionProse,
         props: {
@@ -1861,6 +1917,7 @@ Used to display user-friendly labels in the editor instead of those listed in \`
 Configuration object passed directly to the FilePond instance. Used with \`"x-format": "filepond"\`.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xFilepondExample}},
       {
         component: SectionProse,
         props: {
@@ -1871,6 +1928,7 @@ Configuration object passed directly to the FilePond instance. Used with \`"x-fo
 Determines which editor UI will be used to edit the json instance.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xFormatExample}},
       {
         component: SectionProse,
         props: {
@@ -1975,6 +2033,7 @@ Validation error messages can be customized using this option in the schema. The
 Per-schema override for showing or hiding the "Add property" button on object editors. Overrides the global \`objectAdd\` option.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xObjectAddExample}},
       {
         component: SectionProse,
         props: {
@@ -2002,11 +2061,12 @@ Custom tooltip message displayed on the legend warning icon. Requires \`x-navWar
         props: {
           heading: `x-propertiesToggleContent`,
           level: 2,
-          markdown: `**Type:** \`boolean\`
+          markdown: `**Type:** \`string\`
 
 Text content for "properties" buttons.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xPropertiesToggleContentExample}},
       {
         component: SectionProse,
         props: {
@@ -2043,6 +2103,7 @@ Determines when to display validation errors for this specific schema. Overrides
 **Note:** The \`"input"\` option provides real-time validation as the user types, but only affects text-based inputs (string inputs, textareas, number inputs).`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xShowErrorsExample}},
       {
         component: SectionProse,
         props: {
@@ -2076,6 +2137,7 @@ Whether the editor should start expanded or collapsed. Works on editors that sup
 Per-schema override for including sub-error details in validation errors. Overrides the global \`subErrors\` option.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xSubErrorsExample}},
       {
         component: SectionProse,
         props: {
@@ -2088,6 +2150,7 @@ Per-schema override for including sub-error details in validation errors. Overri
 Per-schema override for the input type used to switch between multiple editor schemas (anyOf, oneOf, type arrays). Overrides the global \`switcherInput\` option.`
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xSwitcherInputExample}},
       {
         component: SectionProse,
         props: {
@@ -2148,6 +2211,7 @@ Per-schema override for applying native HTML constraint attributes based on JSON
 -   **Textarea:** \`minlength\`, \`maxlength\``
         }
       },
+      {component: SectionCode, props: {language: `json`, code: xUseConstraintAttributesExample}},
     ]
   },
   {

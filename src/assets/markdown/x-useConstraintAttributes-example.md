@@ -1,0 +1,8 @@
+```json
+{
+  "type": "string",
+  "minLength": 3,
+  "maxLength": 10,
+  "x-useConstraintAttributes": false
+}
+```
