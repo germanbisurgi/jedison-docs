@@ -102,6 +102,7 @@ import mdEventInstanceChange from '@/assets/markdown/event-instance-change.md?ra
 import mdEventItemAdd from '@/assets/markdown/event-item-add.md?raw'
 import mdEventItemDelete from '@/assets/markdown/event-item-delete.md?raw'
 import mdEventItemMove from '@/assets/markdown/event-item-move.md?raw'
+import mdEventOff from '@/assets/markdown/event-off.md?raw'
 
 import faqEditorNotRendering from '@/assets/markdown/faq-editor-not-rendering.md?raw'
 import faqRefNotWorking from '@/assets/markdown/faq-ref-not-working.md?raw'
@@ -481,7 +482,7 @@ Only works when Jedison is used as an editor (i.e. a \`container\` is provided).
     navbar: true,
     title: "Jedison - Events",
     description: "Events emitted by Jedison for change detection and lifecycle hooks.",
-    keywords: ["events", "change", "ready", "on", "emit", "lifecycle"],
+    keywords: ["events", "change", "ready", "on", "off", "emit", "lifecycle"],
     component: SectionsPage,
     heading: "Events",
     sections: [
@@ -556,7 +557,19 @@ Callback receives \`(initiator)\`.`
 Callback receives \`(initiator)\`.`
         }
       },
-      {component: SectionCode, props: {language: "javascript", code: mdEventItemMove}}
+      {component: SectionCode, props: {language: "javascript", code: mdEventItemMove}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "Removing listeners: off()",
+          level: 2,
+          markdown: `Stops a callback from being called for a given event.
+
+-   \`jedison.off(name, callback)\` - Removes that specific callback
+-   \`jedison.off(name)\` - Removes every listener registered for that event`
+        }
+      },
+      {component: SectionCode, props: {language: "javascript", code: mdEventOff}}
     ]
   },
   {
@@ -2366,7 +2379,7 @@ Per-schema override for applying native HTML constraint attributes based on JSON
     requiresPlugin: true,
     title: "Jedison - Choices Array Editor",
     description: "Array editor using Choices.js plugin for tag-style multi-select.",
-    keywords: ["array", "choices", "choices.js", "tags", "multi-select", "plugin", "x-format", "choices"],
+    keywords: ["array", "choices", "choices.js", "tags", "multi-select", "plugin", "x-format", "choices", "x-choicesOptions"],
     heading: "Choices Array Editor",
     intro: `Enhanced multi-select interface using the Choices.js library.`,
     component: SectionsPage,
@@ -2375,6 +2388,8 @@ Per-schema override for applying native HTML constraint attributes based on JSON
         component: SectionExample,
         props: {
           activationConditions: [`\`"type": "array"\``, `\`"x-format": "choices"\``, `\`"items": { "type": "string" | "number" | "integer" }\``, `Choices.js must be available (\`window.Choices\`)`, `Plugin: [Choices.js on GitHub](https://github.com/Choices-js/Choices)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-choicesOptions"\` keyword`,
           example: arrayEditorChoicesExample
         }
       }
