@@ -1,0 +1,12 @@
+{
+  "createOptions": {
+    "schema": {
+      "type": "number",
+      "title": "Number (anyOf)",
+      "anyOf": [
+        { "type": "number", "multipleOf": 3 },
+        { "type": "number", "multipleOf": 5 }
+      ]
+    }
+  }
+}

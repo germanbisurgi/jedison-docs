@@ -106,6 +106,12 @@ import addingTranslationsExample from '@/assets/markdown/adding-translations-exa
 import languageAndTranslationsExample from '@/assets/live-examples/language-and-translations.json'
 
 import markdownAnnotationsExample from '@/assets/live-examples/markdown-annotations.json'
+import ifThenElseExample from '@/assets/live-examples/if-then-else.json'
+import ifThenElseNestedExample from '@/assets/live-examples/if-then-else-nested.json'
+import schemaCompositionAllOfExample from '@/assets/live-examples/schema-composition-allof.json'
+import schemaCompositionAnyOfExample from '@/assets/live-examples/schema-composition-anyof.json'
+import schemaCompositionOneOfExample from '@/assets/live-examples/schema-composition-oneof.json'
+import schemaCompositionNotExample from '@/assets/live-examples/schema-composition-not.json'
 import exposingMarkedAndDompurify from '@/assets/markdown/exposing-marked-and-dompurify.md?raw'
 
 import mdOverlayUsage from '@/assets/markdown/overlay-usage.md?raw'
@@ -3290,6 +3296,89 @@ Per-schema override for applying native HTML constraint attributes based on JSON
 }
 \`\`\``,
           example: nullEditorDefaultExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/conditional-fields",
+    routeName: "Conditional Fields",
+    group: "Editors",
+    navbar: true,
+    title: "Jedison - Conditional Fields",
+    description: "Show or require different fields based on another field's value using if/then/else.",
+    keywords: ["conditional", "if", "then", "else", "if-then-else", "validation"],
+    component: SectionsPage,
+    heading: "Conditional Fields",
+    intro: `A schema can use \`if\` to test a condition against the current value. When the condition matches, \`then\` applies; when it doesn't, \`else\` applies instead. Either \`then\` or \`else\` alone is enough — only \`if\` itself is required.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: ["Schema has an `if` keyword — `then` and `else` are both optional and evaluated independently."],
+          notesHeading: "How branch switching works",
+          notesMarkdown: `Jedison builds one editor per matching branch and swaps which one is shown as the watched fields change. Switching branches keeps each branch's own field values remembered rather than wiping them, so flipping back and forth doesn't lose data.`,
+          example: ifThenElseExample
+        }
+      },
+      {
+        component: SectionExample,
+        props: {
+          heading: "Chaining Conditions (else-if)",
+          intro: `Nesting another \`if\`/\`then\`/\`else\` inside an \`else\` block chains conditions together, like an else-if ladder.`,
+          example: ifThenElseNestedExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/schema-composition",
+    routeName: "Schema Composition",
+    group: "Editors",
+    navbar: true,
+    title: "Jedison - Schema Composition",
+    description: "Combining subschemas with allOf, anyOf, oneOf, and not.",
+    keywords: ["allOf", "anyOf", "oneOf", "not", "composition", "and", "or", "xor", "validation"],
+    component: SectionsPage,
+    heading: "Schema Composition",
+    intro: `JSON Schema lets you combine multiple subschemas on a single field using \`allOf\`, \`anyOf\`, \`oneOf\`, and \`not\`.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          heading: "allOf (AND)",
+          intro: `The value must be valid against **all** of the given subschemas.`,
+          activationConditions: [`\`allOf\` keyword present — the field still renders with its own type's normal editor; every subschema is validated together.`],
+          example: schemaCompositionAllOfExample
+        }
+      },
+      {
+        component: SectionExample,
+        props: {
+          heading: "anyOf (OR)",
+          intro: `The value must be valid against **any** (one or more) of the given subschemas.`,
+          activationConditions: [`\`anyOf\` keyword present — jedison shows a switcher to pick which candidate schema to fill in as.`],
+          example: schemaCompositionAnyOfExample
+        }
+      },
+      {
+        component: SectionExample,
+        props: {
+          heading: "oneOf (XOR)",
+          intro: `The value must be valid against **exactly one** of the given subschemas — matching more than one is invalid too.`,
+          activationConditions: [`\`oneOf\` keyword present — uses the same switcher UI as \`anyOf\`.`],
+          notesHeading: "anyOf vs. oneOf",
+          notesMarkdown: `Try \`15\` in both this example and the \`anyOf\` example above: 15 is a multiple of both 3 and 5, so it's valid for \`anyOf\` but invalid for \`oneOf\`.`,
+          example: schemaCompositionOneOfExample
+        }
+      },
+      {
+        component: SectionExample,
+        props: {
+          heading: "not (NOT)",
+          intro: `The value must **not** be valid against the given subschema.`,
+          activationConditions: [`\`not\` keyword present — adds a validation rule on top of the field's normal editor; it doesn't change which editor is used.`],
+          example: schemaCompositionNotExample
         }
       }
     ]

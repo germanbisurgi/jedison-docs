@@ -1,0 +1,9 @@
+{
+  "createOptions": {
+    "schema": {
+      "type": "string",
+      "title": "Username (not)",
+      "not": { "const": "admin" }
+    }
+  }
+}

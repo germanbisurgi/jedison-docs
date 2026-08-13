@@ -1,0 +1,12 @@
+{
+  "createOptions": {
+    "schema": {
+      "type": "string",
+      "title": "Username (allOf)",
+      "allOf": [
+        { "minLength": 3 },
+        { "pattern": "^[a-z0-9_]+$" }
+      ]
+    }
+  }
+}
