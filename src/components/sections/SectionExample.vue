@@ -26,11 +26,11 @@
     <div v-html="renderedNotes" />
   </template>
 
-  <template v-if="schemaJson">
+  <template v-if="optionsCode">
     <component :is="subHeadingTag">
-      Schema
+      Options
     </component>
-    <app-highlight language="json" :code="schemaJson" />
+    <app-highlight language="javascript" :code="optionsCode" />
   </template>
 
   <app-live-example :example="resolvedExampleHtml" />
@@ -40,7 +40,7 @@
 import AppLiveExample from '@/components/AppLiveExample.vue'
 import AppHighlight from '@/components/AppHighlight.vue'
 import AppHeaderAnchor from '@/components/AppHeaderAnchor.vue'
-import { buildLiveExampleHtml } from '@/lib/live-example/buildHtml.js'
+import { buildLiveExampleHtml, buildDisplayCode } from '@/lib/live-example/buildHtml.js'
 import { slugify } from '@/lib/slugify.js'
 import { renderMarkdown, renderMarkdownInline } from '@/lib/renderMarkdown.js'
 
@@ -57,7 +57,7 @@ export default {
       default: ''
     },
     // 2 = section, 3 = article - see main (h1) -> section (h2) -> article (h3).
-    // Activation Conditions/Schema/Notes below always nest one tier under this.
+    // Activation Conditions/Options/Notes below always nest one tier under this.
     level: {
       type: Number,
       default: 2,
@@ -96,9 +96,12 @@ export default {
     resolvedExampleHtml () {
       return this.exampleHtml || (this.example ? buildLiveExampleHtml(this.example) : '')
     },
-    schemaJson () {
-      const schema = this.example?.createOptions?.schema
-      return schema ? JSON.stringify(schema, null, 2) : ''
+    // A copy-pasteable `new Jedison.Create({...})` call for the options this
+    // example passes - not just the schema, since plenty of examples
+    // demonstrate an instance-level option (iconLib, translations,
+    // showErrors, ...) that a schema-only snippet would omit entirely.
+    optionsCode () {
+      return this.example ? buildDisplayCode(this.example) : ''
     },
     // Own heading (if any) makes this block a section, pushing its internal
     // sub-headings down to article tier; with no own heading, this block's

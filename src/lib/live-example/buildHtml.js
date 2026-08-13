@@ -31,6 +31,36 @@ function indentContinuationLines (text, spaces) {
   return text.split('\n').map((line, i) => (i === 0 ? line : pad + line)).join('\n')
 }
 
+// The actual `Jedison.Create` options a live example passes, minus the
+// `container`/`theme` demo plumbing. This is the single source of truth for
+// "what does this example configure" - both the runnable HTML below and
+// buildDisplayCode() below derive from it, so they can never drift apart.
+function buildDisplayOptions (config = {}) {
+  const {
+    preset = 'bootstrap5',
+    iconLib = preset === 'bootstrap5' ? 'bootstrap-icons' : null,
+    createOptions = {}
+  } = config
+
+  // `iconLib` always comes right after `theme` in the original files, so put
+  // it first here too (see buildLiveExampleHtml).
+  return {
+    ...(iconLib ? { iconLib } : {}),
+    ...createOptions
+  }
+}
+
+// A copy-pasteable `new Jedison.Create({...})` call for the options this
+// example passes - the crawlable code block shown next to the live demo
+// (SectionExample.vue). Leaves out `container`/`theme` since a reader isn't
+// meant to copy those literally. Returns '' when there's nothing to show.
+export function buildDisplayCode (config = {}) {
+  const options = buildDisplayOptions(config)
+  if (!Object.keys(options).length) return ''
+  const optionsJson = JSON.stringify(options, null, 2)
+  return 'const jedison = new Jedison.Create(' + indentContinuationLines(optionsJson, 2) + ')'
+}
+
 // Builds a full standalone HTML document (identical in behavior to the files
 // that used to live in src/assets/html/*.html) from a small, JSON-serializable
 // config object. The result stays a plain string handed to AppLiveExample.vue
@@ -47,7 +77,6 @@ export function buildLiveExampleHtml (config = {}) {
     extraHeadCss = [],
     extraHeadJs = [],
     themeExpr = THEME_EXPRESSIONS[PRESET_THEME[preset]],
-    createOptions = {},
     // Raw JS appended after the Create() call, e.g. a `jedison.on('change', ...)`
     // listener for a demo. Escape hatch for the rare case that isn't just
     // JSON-serializable options - keep this the exception, not the norm.
@@ -73,14 +102,10 @@ export function buildLiveExampleHtml (config = {}) {
     jsScript(JEDISON_UMD_SRC)
   ]
 
-  // `iconLib` also gets passed through to Jedison.Create itself (it tells
-  // Jedison which icon-class naming convention to render with) - it always
-  // comes right after `theme` in the original files, so put it first here too.
   const options = {
     container: CONTAINER_TOKEN,
     theme: THEME_TOKEN,
-    ...(iconLib ? { iconLib } : {}),
-    ...createOptions
+    ...buildDisplayOptions(config)
   }
 
   const optionsJson = JSON.stringify(options, null, 2)
