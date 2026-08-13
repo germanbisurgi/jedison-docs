@@ -179,6 +179,7 @@ import templatesFallbackExample from '@/assets/live-examples/templates-fallback.
 import mdMethodGetValue from '@/assets/markdown/method-get-value.md?raw'
 import mdMethodSetValue from '@/assets/markdown/method-set-value.md?raw'
 import mdMethodGetInstance from '@/assets/markdown/method-get-instance.md?raw'
+import mdMethodArrayInstanceControl from '@/assets/markdown/method-array-instance-control.md?raw'
 import mdMethodShowValidationErrors from '@/assets/markdown/method-show-validation-errors.md?raw'
 import mdMethodGetErrorsAndWarnings from '@/assets/markdown/method-get-errors-and-warnings.md?raw'
 import mdMethodGetErrors from '@/assets/markdown/method-get-errors.md?raw'
@@ -368,6 +369,22 @@ Example paths:
         }
       },
       {component: SectionCode, props: {code: mdMethodGetInstance}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "Programmatic Array Control",
+          level: 2,
+          markdown: `Every array instance retrieved via \`getInstance(path)\` exposes methods to add, remove, and reorder items directly, without going through the UI:
+
+-   \`move(fromIndex, toIndex, initiator)\` - Moves an item from one index to another
+-   \`addItem(initiator)\` - Appends a new item using the schema's default value
+-   \`addItemAfter(afterIndex, initiator)\` - Inserts a new item right after the given index
+-   \`deleteItem(itemIndex, initiator)\` - Removes the item at the given index
+
+\`initiator\` is optional and defaults to \`'api'\`. These are the same methods the UI's own add/delete/move buttons call internally, so they fire the same \`item-add\`/\`item-delete\`/\`item-move\` events documented on the Events page.`
+        }
+      },
+      {component: SectionCode, props: {code: mdMethodArrayInstanceControl}},
       {
         component: SectionProse,
         props: {
