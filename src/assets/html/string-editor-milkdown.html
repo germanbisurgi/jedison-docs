@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"></script>
+    <!--
+      @milkdown/crepe ships ESM-only, and its theme CSS relies on bundler-only
+      @import specifiers - neither works loaded raw from a CDN via <script>/<link>.
+      Loading Crepe and its peer prosemirror-virtual-cursor from independent CDN
+      module URLs also resolves two different copies of prosemirror-state,
+      which crashes on mount ("Adding different instances of a keyed plugin").
+      jedison's own demo app avoids all of this because it's a real npm install
+      with one deduplicated dependency tree. /public/milkdown/milkdown.bundle.js
+      and .css are a pre-built esbuild bundle of the exact same
+      @milkdown/crepe@7.22.0 + @milkdown/kit@7.22.0 install, so this demo has
+      the full default feature set (including `cursor`), matching jedison's own
+      usage exactly - see /Users/germanbisurgi/Sites/germanbisurgi/jedison/src-docs/main.js.
+    -->
+    <link rel="stylesheet" href="__BASE__milkdown/milkdown.bundle.css">
+    <script src="__BASE__milkdown/milkdown.bundle.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  const jedison = new Jedison.Create({
+    container: document.querySelector('#jedison-container'),
+    theme: new Jedison.ThemeBootstrap5(),
+    iconLib: 'bootstrap-icons',
+    schema: {
+      title: 'Milkdown',
+      type: 'string',
+      description: 'WYSIWYG markdown editor powered by Milkdown.',
+      default: 'Milkdown default',
+      'x-format': 'milkdown'
+    }
+  })
+</script>
+</body>
+</html>

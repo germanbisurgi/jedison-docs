@@ -1,0 +1,20 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/simplemde@1.11.2/dist/simplemde.min.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/simplemde@1.11.2/dist/simplemde.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "enablePropertiesToggle": true,
+    "schema": {
+      "title": "SimpleMDE",
+      "type": "string",
+      "description": "Markdown editor powered by SimpleMDE.",
+      "default": "SimpleMDE default",
+      "x-format": "simplemde"
+    }
+  }
+}

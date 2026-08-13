@@ -1,0 +1,15 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Emoji Button",
+      "type": "string",
+      "description": "Pick a single emoji using Emoji Button.",
+      "x-format": "emojiButton"
+    }
+  }
+}

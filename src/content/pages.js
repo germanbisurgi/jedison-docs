@@ -56,6 +56,16 @@ import stringEditorImaskExample from '@/assets/live-examples/string-editor-imask
 import stringEditorJoditExample from '@/assets/live-examples/string-editor-jodit.json'
 import stringEditorQuillExample from '@/assets/live-examples/string-editor-quill.json'
 import stringEditorFilepondExample from '@/assets/live-examples/string-editor-filepond.json'
+import stringEditorAceExample from '@/assets/live-examples/string-editor-ace.json'
+import stringEditorEmojiButtonExample from '@/assets/live-examples/string-editor-emoji-button.json'
+import stringEditorSimplemdeExample from '@/assets/live-examples/string-editor-simplemde.json'
+import stringEditorPickrExample from '@/assets/live-examples/string-editor-pickr.json'
+import htmlStringEditorMilkdownRaw from '@/assets/html/string-editor-milkdown.html?raw'
+
+// The Milkdown demo loads a pre-built bundle from /public/milkdown/ (see that
+// file's own head comment for why) - it needs the deployed base path (e.g.
+// "/jedison-docs/" in production) prepended, which a plain ?raw import can't do.
+const htmlStringEditorMilkdown = htmlStringEditorMilkdownRaw.replaceAll('__BASE__', import.meta.env.BASE_URL)
 import nullEditorDefaultExample from '@/assets/live-examples/null-editor-default.json'
 import arrayEditorDefaultExample from '@/assets/live-examples/array-editor-default.json'
 import arrayEditorFooterExample from '@/assets/live-examples/array-editor-footer.json'
@@ -3268,6 +3278,132 @@ Per-schema override for applying native HTML constraint attributes based on JSON
           notesHeading: `Plugin Options`,
           notesMarkdown: `Options can be passed to the plugin via \`"x-filepond"\` keyword`,
           example: stringEditorFilepondExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/string-editor-ace",
+    routeName: "String Ace",
+    group: "Editors",
+    navbar: true,
+    requiresPlugin: true,
+    title: "Jedison - String Ace Editor",
+    description: "String editor with code syntax highlighting using the Ace plugin.",
+    keywords: ["string", "ace", "code", "editor", "syntax", "highlighting", "plugin", "x-format", "ace", "x-ace"],
+    component: SectionsPage,
+    heading: `String Ace`,
+    intro: `Renders a code editor with syntax highlighting using Ace.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: [`\`"type": "string"\``, `\`"x-format": "ace"\``, `Ace must be available (\`window.ace\`)`, `Plugin: [Ace on GitHub](https://github.com/ajaxorg/ace)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-ace"\` keyword (e.g. \`mode\`, \`theme\`, \`height\`). Ace also needs its own mode script loaded per language (e.g. \`mode-json.min.js\`) in addition to the core Ace script.`,
+          example: stringEditorAceExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/string-editor-emoji-button",
+    routeName: "String Emoji Button",
+    group: "Editors",
+    navbar: true,
+    requiresPlugin: true,
+    title: "Jedison - String Emoji Button Editor",
+    description: "String editor for picking a single emoji using the Emoji Button plugin.",
+    keywords: ["string", "emoji", "emojiButton", "picker", "plugin", "x-format", "emojiButton", "x-emojiButton"],
+    component: SectionsPage,
+    heading: `String Emoji Button`,
+    intro: `Renders a button that opens an emoji picker using Emoji Button.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: [`\`"type": "string"\``, `\`"x-format": "emojiButton"\``, `Emoji Button must be available (\`window.EmojiButton\`)`, `Plugin: [Emoji Button on GitHub](https://github.com/joeattardi/emoji-button)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-emojiButton"\` keyword`,
+          example: stringEditorEmojiButtonExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/string-editor-simplemde",
+    routeName: "String SimpleMDE",
+    group: "Editors",
+    navbar: true,
+    requiresPlugin: true,
+    title: "Jedison - String SimpleMDE Editor",
+    description: "String editor with a markdown editing toolbar using the SimpleMDE plugin.",
+    keywords: ["string", "simplemde", "markdown", "editor", "plugin", "x-format", "simplemde", "x-simplemde"],
+    component: SectionsPage,
+    heading: `String SimpleMDE`,
+    intro: `Renders a markdown editor with a formatting toolbar using SimpleMDE.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: [`\`"type": "string"\``, `\`"x-format": "simplemde"\``, `SimpleMDE must be available (\`window.SimpleMDE\`)`, `Plugin: [SimpleMDE on GitHub](https://github.com/sparksuite/simplemde-markdown-editor)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-simplemde"\` keyword`,
+          example: stringEditorSimplemdeExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/string-editor-pickr",
+    routeName: "String Pickr",
+    group: "Editors",
+    navbar: true,
+    requiresPlugin: true,
+    title: "Jedison - String Pickr Editor",
+    description: "String editor for picking a color using the Pickr plugin.",
+    keywords: ["string", "pickr", "color", "picker", "plugin", "x-format", "pickr", "x-pickr"],
+    component: SectionsPage,
+    heading: `String Pickr`,
+    intro: `Renders a color picker using Pickr.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: [`\`"type": "string"\``, `\`"x-format": "pickr"\``, `Pickr must be available (\`window.Pickr\`)`, `Plugin: [Pickr on GitHub](https://github.com/simonwep/pickr)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-pickr"\` keyword. Pickr also needs one of its own theme stylesheets loaded (\`classic\`, \`monolith\`, or \`nano\`) matching the \`theme\` option.`,
+          example: stringEditorPickrExample
+        }
+      }
+    ]
+  },
+  {
+    path: "/string-editor-milkdown",
+    routeName: "String Milkdown",
+    group: "Editors",
+    navbar: true,
+    requiresPlugin: true,
+    title: "Jedison - String Milkdown Editor",
+    description: "String editor with a WYSIWYG markdown editing experience using the Milkdown plugin.",
+    keywords: ["string", "milkdown", "wysiwyg", "markdown", "rich text", "plugin", "x-format", "milkdown", "x-milkdown"],
+    component: SectionsPage,
+    heading: `String Milkdown`,
+    intro: `Renders a WYSIWYG markdown editor using Milkdown's Crepe preset.`,
+    sections: [
+      {
+        component: SectionExample,
+        props: {
+          activationConditions: [`\`"type": "string"\``, `\`"x-format": "milkdown"\``, `Milkdown must be available (\`window.Milkdown.Crepe\`)`, `Plugin: [Milkdown](https://milkdown.dev/)`],
+          notesHeading: `Plugin Options`,
+          notesMarkdown: `Options can be passed to the plugin via \`"x-milkdown"\` keyword.
+
+Unlike jedison's other plugin editors, Milkdown ships as an ES module with no plain \`<script>\`-loadable build, so it can't be dropped in with a single CDN tag — it needs to be imported and exposed as \`window.Milkdown\` (see the example source below). Its theme CSS also isn't plain-\`<link>\`-loadable as shipped (it uses bundler-only \`@import\` specifiers), so the example inlines a pre-flattened copy instead.
+
+The \`cursor\` feature is disabled in this example: loading Milkdown from separate CDN module URLs like this pulls in two different copies of \`prosemirror-state\`, and that feature crashes on mount ("Adding different instances of a keyed plugin") when that happens. This is a quirk of loading Milkdown via CDN, not something that happens in jedison's own bundled build. All other Crepe features work normally.
+
+Milkdown's markdown serializer also always adds a trailing newline, so a value like \`"a"\` round-trips as \`"a\\n"\`.`,
+          exampleHtml: htmlStringEditorMilkdown
         }
       }
     ]

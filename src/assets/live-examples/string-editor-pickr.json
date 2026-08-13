@@ -1,0 +1,22 @@
+{
+  "iconLib": "bootstrap-icons",
+  "extraHeadCss": [
+    "https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.10.1/dist/themes/classic.min.css"
+  ],
+  "extraHeadJs": [
+    "https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.10.1/dist/pickr.min.js"
+  ],
+  "createOptions": {
+    "btnContents": false,
+    "schema": {
+      "title": "Pickr",
+      "type": "string",
+      "description": "Color picker powered by Pickr.",
+      "default": "#347aeb",
+      "x-format": "pickr",
+      "x-pickr": {
+        "theme": "classic"
+      }
+    }
+  }
+}
