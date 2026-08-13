@@ -152,6 +152,7 @@ import xArrayMoveDownContentExample from '@/assets/markdown/x-arrayMoveDownConte
 import xArrayMoveExample from '@/assets/markdown/x-arrayMove-example.md?raw'
 import xArrayMoveUpContentExample from '@/assets/markdown/x-arrayMoveUpContent-example.md?raw'
 import xAssertFormatExample from '@/assets/markdown/x-assertFormat-example.md?raw'
+import xButtonsExample from '@/assets/markdown/x-buttons-example.md?raw'
 import xCategoryOrderExample from '@/assets/markdown/x-categoryOrder-example.md?raw'
 import xCollapseToggleContentExample from '@/assets/markdown/x-collapseToggleContent-example.md?raw'
 import xContainerAttributesExample from '@/assets/markdown/x-containerAttributes-example.md?raw'
@@ -1603,7 +1604,7 @@ This enables native browser validation hints and constraints.
     navbar: true,
     title: "Jedison - Schema Options",
     description: "Per-schema configuration using x- prefixed properties.",
-    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
+    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-buttons", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
     component: SectionsPage,
     heading: "Schema Options",
     sections: [
@@ -1831,6 +1832,27 @@ Treats \`"format"\` as a validator rather than just an annotation.`
         }
       },
       {component: SectionCode, props: {language: `json`, code: xAssertFormatExample}},
+      {
+        component: SectionProse,
+        props: {
+          heading: `x-buttons`,
+          level: 2,
+          markdown: `**Type:** \`array\`
+
+Adds schema-defined action buttons to any editor, without them becoming part of the data model. Works on every editor type, including container editors (object/array). Each button config accepts:
+
+-   \`label\` - The button's HTML content (sanitized before rendering, so it can carry an icon)
+-   \`event.name\` - Clicking the button emits \`jedison:<name>\` on the root Jedison instance, with a payload of \`{ jedison, editor, path }\`
+-   \`attributes\` - An object of HTML attributes for the button element, filtered against an allowlist (\`id\`, \`class\`, \`title\`, \`name\`, \`value\`, \`disabled\`, \`aria-*\`, \`data-*\`, plus \`always-enabled\`/\`always-disabled\` to override the field's own disabled state)
+
+Subscribe to the event the same way as any other event:
+
+\`\`\`javascript
+jedison.on('jedison:detectCity', ({ jedison, editor, path }) => {})
+\`\`\``
+        }
+      },
+      {component: SectionCode, props: {language: `json`, code: xButtonsExample}},
       {
         component: SectionProse,
         props: {
