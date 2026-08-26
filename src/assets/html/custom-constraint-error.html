@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jedison@latest/dist/umd/jedison.umd.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="mt-5" id="jedison-container"></div>
+</div>
+
+<script>
+  const jedison = new Jedison.Create({
+    container: document.querySelector('#jedison-container'),
+    theme: new Jedison.ThemeBootstrap5(),
+    schema: {
+      "title": "Error messages",
+      "type": "number",
+      "x-must-be-even": true
+    },
+    constraints: {
+      'x-must-be-even': (context) => {
+        const errors = []
+        const schemaMustBeEven = context.schema['x-must-be-even']
+
+        if (schemaMustBeEven) {
+          const invalid = context.value % 2 !== 0
+
+          if (invalid) {
+            errors.push({
+              type: 'error',
+              path: context.path,
+              constraint: 'x-must-be-even',
+              messages: [
+                'Value must be an even number.'
+              ]
+            })
+          }
+        }
+
+        return errors
+      }
+    }
+  })
+
+  jedison.on('change', () => {
+    console.log('only errors', JSON.stringify(jedison.getErrors(), null, 2))
+  })
+</script>
+</body>
+</html>

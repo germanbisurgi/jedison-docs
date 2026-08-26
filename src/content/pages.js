@@ -190,6 +190,12 @@ import xUseConstraintAttributesExample from '@/assets/markdown/x-useConstraintAt
 
 import htmlCustomValidator from '@/assets/html/custom-constraint.html?raw'
 import mdCustomConstraint from '@/assets/markdown/custom-constraint.md?raw'
+import htmlCustomConstraintError from '@/assets/html/custom-constraint-error.html?raw'
+import mdCustomConstraintError from '@/assets/markdown/custom-constraint-error.md?raw'
+
+import mdVersionUsage from '@/assets/markdown/version-usage.md?raw'
+import mdCustomEditorFullExample from '@/assets/markdown/custom-editor-full-example.md?raw'
+import mdCustomEditorRefParserResolves from '@/assets/markdown/custom-editor-refparser-resolves.md?raw'
 
 import templatesExample from '@/assets/live-examples/templates.json'
 import templatesFallbackExample from '@/assets/live-examples/templates-fallback.json'
@@ -209,6 +215,7 @@ import mdMethodDestroy from '@/assets/markdown/method-destroy.md?raw'
 import mdMethodNavigateTo from '@/assets/markdown/method-navigate-to.md?raw'
 
 import mdRefParserUsage from '@/assets/markdown/ref-parser-usage.md?raw'
+import mdRefParserFetchOptions from '@/assets/markdown/ref-parser-fetch-options.md?raw'
 import htmlRefParserBefore from '@/assets/html/ref-parser-before.html?raw'
 import htmlRefParserAfter from '@/assets/html/ref-parser-after.html?raw'
 import htmlRefParserRecursiveObject from '@/assets/html/ref-parser-recursive-object.html?raw'
@@ -473,6 +480,36 @@ Only works when Jedison is used as an editor (i.e. a \`container\` is provided).
         }
       },
       {component: SectionCode, props: {code: mdMethodNavigateTo}}
+    ]
+  },
+  {
+    path: "/version",
+    routeName: "Version",
+    group: "Getting Started",
+    navbar: true,
+    title: "Jedison - Version",
+    description: "Reading the installed Jedison version at runtime for compatibility checks.",
+    keywords: ["version", "compatibility", "runtime", "plugin", "Create.version"],
+    component: SectionsPage,
+    heading: "Version",
+    sections: [
+      {
+        component: SectionProse,
+        props: {
+          markdown: `Jedison exposes its package version at runtime as \`Jedison.version\`, and the same value is also available as a static property on the \`Create\` class: \`Jedison.Create.version\`. Both are sourced from \`package.json\` at build time, so they always match the published release.`
+        }
+      },
+      {component: SectionCode, props: {code: mdVersionUsage}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "Checking compatibility",
+          level: 2,
+          markdown: `This is most useful when Jedison is not bundled directly, but loaded at runtime by a host application — for example when the host runs [third-party custom editors](/custom-editors) and wants to verify compatibility before executing that code, rather than let a mismatch surface as a broken form.
+
+Compare it against a required version using a semver-aware check (e.g. the \`semver\` package's \`satisfies()\`), rather than a plain string or numeric comparison — version strings don't sort correctly as plain strings (\`'1.9.0' > '1.10.0'\` alphabetically, even though \`1.10.0\` is the newer release).`
+        }
+      }
     ]
   },
   {
@@ -860,7 +897,7 @@ We used the option \`showErrors: 'always'\` to make validation messages appear i
     navbar: true,
     title: "Jedison - RefParser",
     description: "$ref resolution and JSON Schema reference parsing.",
-    keywords: ["ref", "reference", "parser", "$ref", "resolve", "dereference", "x-deactivateNonRequired"],
+    keywords: ["ref", "reference", "parser", "$ref", "resolve", "dereference", "x-deactivateNonRequired", "fetch", "fetchOptions", "external ref", "authentication", "auth", "authorization", "cookie", "session", "credentials", "server-side"],
     component: SectionsPage,
     heading: "RefParser",
     sections: [
@@ -917,7 +954,21 @@ This setup is necessary to prevent infinite recursion during schema processing.`
 This is because the schema is only instantiated at runtime when a new item is added to the array.`,
           exampleHtml: htmlRefParserRecursiveArray
         }
-      }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: "External refs & custom fetch",
+          markdown: `A \`$ref\` value starting with \`http\` or \`https\` is treated as an external reference: \`RefParser\` loads it over the network instead of resolving it against the schema's own \`$defs\`.
+By default this uses the global \`fetch\`, but the \`RefParser\` constructor accepts two options to override that:
+
+-   \`fetchOptions\` — passed as the second argument to \`fetch\`, e.g. to forward an \`Authorization\` header or \`credentials\` so an authenticated endpoint can be reached
+-   \`fetch\` — a full replacement for the fetch function itself, useful server-side to resolve refs entirely in-process (no network round-trip, and no need to carry the caller's session/cookie through an HTTP request to your own API)
+
+Whichever \`fetch\` is used, it must resolve to an object with an \`ok\` boolean and a \`json()\` method, matching the Fetch API's \`Response\` shape.`
+        }
+      },
+      {component: SectionCode, props: {code: mdRefParserFetchOptions}}
     ]
   },
   {
@@ -1223,7 +1274,7 @@ Initial JSON data to populate the form.`
           markdown: `-   **Type:** \`array\`
 -   **Default:** \`[]\`
 
-An array of custom editor classes.`
+An array of custom editor classes. See [Custom Editors](/custom-editors) for a complete example.`
         }
       },
       {
@@ -3590,12 +3641,23 @@ Milkdown's markdown serializer also always adds a trailing newline, so a value l
       {
         component: SectionProse,
         props: {
-          heading: "Implementation Example",
+          heading: "Warning Example",
           level: 3,
-          markdown: `The example shows a custom constraint checking \`x-my-constraint\`:`
+          markdown: `A custom constraint checking \`x-my-constraint\`, reported as a \`warning\`:`
         }
       },
       {component: SectionCode, props: {code: mdCustomConstraint}},
+      {component: SectionExample, props: {exampleHtml: htmlCustomValidator}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "Error Example",
+          level: 3,
+          markdown: `The same shape, checking \`x-must-be-even\`, but reported as an \`error\`. Errors are what \`jedison.getErrors()\` returns by default, and are typically treated as blocking:`
+        }
+      },
+      {component: SectionCode, props: {code: mdCustomConstraintError}},
+      {component: SectionExample, props: {exampleHtml: htmlCustomConstraintError}},
       {
         component: SectionProse,
         props: {
@@ -3635,10 +3697,54 @@ Milkdown's markdown serializer also always adds a trailing newline, so a value l
 -   **Better UX** - Different visual treatment for errors (blocking) vs warnings (advisory)
 -   **Flexible workflows** - Allow submission with warnings while maintaining data quality standards
 
-In the live example below, the form displays **warnings (yellow)** and **errors (red)** independently. By default, \`getErrors()\` only returns errors, while warnings are still shown in the UI. To include warnings in the validation result, pass an array of filters: \`['error', 'warning']\`. Final validation behavior is left to the user's implementation.`
+In the examples above, warnings and errors display independently — **warnings (yellow)** and **errors (red)**. By default, \`getErrors()\` only returns errors, while warnings are still shown in the UI. To include warnings in the validation result, pass an array of filters: \`['error', 'warning']\`. Final validation behavior is left to the user's implementation.`
+        }
+      }
+    ]
+  },
+  {
+    path: "/custom-editors",
+    routeName: "Custom Editors",
+    group: "Advanced",
+    navbar: true,
+    title: "Jedison - Custom Editors",
+    description: "Writing a custom editor from scratch: resolving a schema, rendering it, and syncing value changes.",
+    keywords: ["customEditors", "resolves", "build", "refreshUI", "addEventListeners", "plugin", "advanced", "Editor"],
+    component: SectionsPage,
+    heading: "Custom Editors",
+    sections: [
+      {
+        component: SectionProse,
+        props: {
+          markdown: `A custom editor is a class extending \`Jedison.Editor\`, registered via the [\`customEditors\`](/options#customeditors) option. For every field in the schema, Jedison calls \`resolves(schema)\` on each registered custom editor, in order, and uses the first one that returns \`true\` — checked before any built-in editor. If none match, Jedison falls back to its built-in editors for that field.`
         }
       },
-      {component: SectionExample, props: {exampleHtml: htmlCustomValidator}}
+      {
+        component: SectionProse,
+        props: {
+          heading: "The editor lifecycle",
+          level: 2,
+          markdown: `A subclass typically implements:
+
+-   **\`static resolves(schema)\`** — returns \`true\` if this editor should handle the given schema node.
+-   **\`build()\`** — creates \`this.control\`, an object whose \`container\` property is the \`HTMLElement\` this editor renders into. Parent editors (object, array) append \`this.control.container\` into their own DOM — it's the only property the base class strictly requires; anything else on \`this.control\` (\`input\`, \`label\`, ...) is for the editor's own use.
+-   **\`addEventListeners()\`** — wires DOM events to \`this.instance.setValue(value, true, 'user')\`, writing the user's input back onto the instance.
+-   **\`refreshUI()\`** — reads \`this.instance.getValue()\` and updates the DOM. Called once after construction and again automatically every time the instance's value changes — a custom editor doesn't need to subscribe to its own change event manually.
+-   **\`sanitize(value)\`** — coerces a raw value (e.g. a string from an \`<input>\`) to the type the schema expects, before it's stored on the instance.
+
+\`destroy()\` is handled by the base class: it removes \`this.control.container\` from the DOM and cleans up. A custom editor only needs its own \`destroy()\` if it registers listeners outside \`addEventListeners()\`.`
+        }
+      },
+      {component: SectionCode, props: {code: mdCustomEditorFullExample}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "Expanding $ref schemas in resolves()",
+          level: 2,
+          markdown: `\`resolves()\` receives a second argument: the \`RefParser\` instance configured on \`Jedison.Create\` (or \`undefined\` if none was configured). This matters when the schema you need to inspect might be a \`$ref\` — for example, checking the \`items\` schema of an array — since a plain \`{ $ref: '...' }\` node won't have the keywords you're checking for until it's expanded.`
+        }
+      },
+      {component: SectionCode, props: {code: mdCustomEditorRefParserResolves}}
     ]
   },
   {
