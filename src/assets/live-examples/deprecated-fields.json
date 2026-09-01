@@ -1,0 +1,21 @@
+{
+  "iconLib": "bootstrap-icons",
+  "createOptions": {
+    "schema": {
+      "type": "object",
+      "title": "Person",
+      "properties": {
+        "legacyId": {
+          "type": "string",
+          "title": "Legacy ID",
+          "deprecated": true
+        },
+        "id": {
+          "type": "string",
+          "title": "ID"
+        }
+      }
+    }
+  },
+  "afterCreate": "const style = document.createElement('style')\nstyle.textContent = '.jedi-deprecated .jedi-label::after { content: \"Deprecated\"; margin-left: 4px; font-size: 0.75em; opacity: 0.75; } .jedi-deprecated { opacity: 0.7; }'\ndocument.head.appendChild(style)"
+}

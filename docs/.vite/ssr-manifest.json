@@ -1958,6 +1958,13 @@
     "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
     "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
   ],
+  "src/assets/live-examples/deprecated-fields.json": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
   "src/assets/live-examples/icons-bootstrap-icons.json": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
@@ -2365,6 +2372,13 @@
     "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
   ],
   "src/assets/markdown/custom-editor-full-example.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf",
+    "/jedison-docs/assets/vue-logo-B5-umZ-1.png"
+  ],
+  "src/assets/markdown/custom-editor-priority-example.md?raw": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
     "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",

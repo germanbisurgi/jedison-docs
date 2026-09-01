@@ -196,9 +196,11 @@ import mdCustomConstraintError from '@/assets/markdown/custom-constraint-error.m
 import mdVersionUsage from '@/assets/markdown/version-usage.md?raw'
 import mdCustomEditorFullExample from '@/assets/markdown/custom-editor-full-example.md?raw'
 import mdCustomEditorRefParserResolves from '@/assets/markdown/custom-editor-refparser-resolves.md?raw'
+import mdCustomEditorPriorityExample from '@/assets/markdown/custom-editor-priority-example.md?raw'
 
 import templatesExample from '@/assets/live-examples/templates.json'
 import templatesFallbackExample from '@/assets/live-examples/templates-fallback.json'
+import deprecatedFieldsExample from '@/assets/live-examples/deprecated-fields.json'
 
 import mdMethodGetValue from '@/assets/markdown/method-get-value.md?raw'
 import mdMethodSetValue from '@/assets/markdown/method-set-value.md?raw'
@@ -1074,6 +1076,34 @@ For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XS
         }
       },
       {component: SectionCode, props: {code: exposingMarkedAndDompurify}}
+    ]
+  },
+  {
+    path: "/deprecated-fields",
+    routeName: "Deprecated Fields",
+    group: "Features",
+    navbar: true,
+    title: "Jedison - Deprecated Fields",
+    description: "Marking a schema field as deprecated with the standard JSON Schema keyword.",
+    keywords: ["deprecated", "jedi-deprecated", "css hook", "annotation", "container"],
+    component: SectionsPage,
+    heading: "Deprecated Fields",
+    sections: [
+      {
+        component: SectionProse,
+        props: {
+          markdown: `The standard JSON Schema \`deprecated\` keyword is supported. When a field's schema has \`deprecated: true\`, Jedison adds a \`jedi-deprecated\` class to that field's container element.`
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: "Styling deprecated fields",
+          level: 2,
+          markdown: `Jedison applies no default styling or behavior beyond the class itself — no badge, no automatic hiding — so you decide what fits your UI. The demo below targets \`.jedi-deprecated\` directly with CSS to gray the field out and badge its label; edit the code to try your own treatment.`
+        }
+      },
+      {component: SectionExample, props: {example: deprecatedFieldsExample}}
     ]
   },
   {
@@ -3709,16 +3739,25 @@ In the examples above, warnings and errors display independently — **warnings 
     navbar: true,
     title: "Jedison - Custom Editors",
     description: "Writing a custom editor from scratch: resolving a schema, rendering it, and syncing value changes.",
-    keywords: ["customEditors", "resolves", "build", "refreshUI", "addEventListeners", "plugin", "advanced", "Editor"],
+    keywords: ["customEditors", "resolves", "priority", "build", "refreshUI", "addEventListeners", "plugin", "advanced", "Editor"],
     component: SectionsPage,
     heading: "Custom Editors",
     sections: [
       {
         component: SectionProse,
         props: {
-          markdown: `A custom editor is a class extending \`Jedison.Editor\`, registered via the [\`customEditors\`](/options#customeditors) option. For every field in the schema, Jedison calls \`resolves(schema)\` on each registered custom editor, in order, and uses the first one that returns \`true\` — checked before any built-in editor. If none match, Jedison falls back to its built-in editors for that field.`
+          markdown: `A custom editor is a class extending \`Jedison.Editor\`, registered via the [\`customEditors\`](/options#customeditors) option. For every field in the schema, Jedison calls \`resolves(schema)\` on each registered custom editor, highest \`priority()\` first, and uses the first one that returns \`true\` — checked before any built-in editor. If none match, Jedison falls back to its built-in editors for that field.`
         }
       },
+      {
+        component: SectionProse,
+        props: {
+          heading: "Resolution priority",
+          level: 2,
+          markdown: `When \`customEditors\` combines editors from more than one source, two of them may both match the same field. Override the static \`priority()\` method (default \`0\`) to make one win regardless of array order. Editors are sorted by priority, highest first, before being scanned — ties keep their original array order, so editors that don't set a priority behave exactly as before.`
+        }
+      },
+      {component: SectionCode, props: {code: mdCustomEditorPriorityExample}},
       {
         component: SectionProse,
         props: {
