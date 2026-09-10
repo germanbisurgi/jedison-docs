@@ -1,7 +1,8 @@
 <template>
   <nav class="pages-nav">
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h5 class="mb-0">
+      <h5 class="mb-0 d-flex align-items-center gap-2">
+        <img src="/images/jedison-mark.svg" alt="" width="24" height="24">
         Jedison
       </h5>
       <a href="https://github.com/germanbisurgi/jedison" target="_blank" class="text-decoration-none" title="GitHub Repository">
