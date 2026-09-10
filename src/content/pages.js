@@ -248,6 +248,7 @@ export const pages = [
     keywords: ["introduction", "overview", "jedison", "json schema", "editor", "validator"],
     component: SectionsPage,
     heading: "Introduction",
+    intro: `<p class="text-center"><img src="/images/jedison-mark.svg" width="96" height="96" alt="Jedison"></p>`,
     sections: [
       {
         component: SectionProse,
