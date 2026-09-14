@@ -2648,6 +2648,18 @@
     "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
     "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
   ],
+  "src/assets/markdown/x-defaultProperties-example.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
+  ],
+  "src/assets/markdown/x-defaultProperty-example.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
+  ],
   "src/assets/markdown/x-discriminator-example.md?raw": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",

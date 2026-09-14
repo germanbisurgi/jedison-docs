@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - Schema Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-Dn-UdqmX.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQoRcJuX.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Per-schema configuration using x- prefixed properties."></head>
 <body>
@@ -238,6 +238,38 @@
   "properties": {
     "name": { "type": "string" },
     "nickname": { "type": "string" }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-defaultproperty"><a class="header-anchor" href="#x-defaultproperty" aria-label="Permalink to “x-defaultProperty”">​</a>x-defaultProperty</h2><div><p><strong>Type:</strong> <code>boolean</code></p>
+<p>Set on a property's own schema, this overrides the parent's <code>x-defaultProperties</code> whitelist for that one property, in either direction: <code>true</code> shows it by default even if the parent's list omits it, <code>false</code> hides it even if the parent's list includes it. Works only with <code>object</code> type editors, and only affects non-required properties.</p>
+<p>This is the override point for a property reused (e.g. via <code>$ref</code>) across parents that disagree on whether it should show by default. Since it is a single boolean rather than a list entry, it can be flipped per consumer through an <code>allOf</code> merge without touching the shared list.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-enablePropertiesToggle": true,
+  "x-defaultProperties": ["phone"],
+  "properties": {
+    "phone": {
+      "type": "string",
+      "x-defaultProperty": false
+    },
+    "fax": {
+      "type": "string",
+      "x-defaultProperty": true
+    }
+  }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-defaultproperties"><a class="header-anchor" href="#x-defaultproperties" aria-label="Permalink to “x-defaultProperties”">​</a>x-defaultProperties</h2><div><p><strong>Type:</strong> <code>string[]</code></p>
+<p>Whitelists which non-required properties are shown by default, instead of every non-required property being hidden behind the properties toggle. A non-required property whose key is not listed stays hidden until the user opts it in. Works only with <code>object</code> type editors.</p>
+<p>A property's own <code>x-defaultProperty</code>, if set, overrides this list for that property - see above.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "object",
+  "x-enablePropertiesToggle": true,
+  "required": ["name"],
+  "x-defaultProperties": ["email"],
+  "properties": {
+    "name": { "type": "string" },
+    "email": { "type": "string" },
+    "phone": { "type": "string" }
   }
 }
 </code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-discriminator"><a class="header-anchor" href="#x-discriminator" aria-label="Permalink to “x-discriminator”">​</a>x-discriminator</h2><div><p><strong>Type:</strong> <code>string</code> | <code>object</code></p>

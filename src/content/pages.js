@@ -158,6 +158,8 @@ import xCategoryOrderExample from '@/assets/markdown/x-categoryOrder-example.md?
 import xCollapseToggleContentExample from '@/assets/markdown/x-collapseToggleContent-example.md?raw'
 import xContainerAttributesExample from '@/assets/markdown/x-containerAttributes-example.md?raw'
 import xDeactivateNonRequiredExample from '@/assets/markdown/x-deactivateNonRequired-example.md?raw'
+import xDefaultPropertyExample from '@/assets/markdown/x-defaultProperty-example.md?raw'
+import xDefaultPropertiesExample from '@/assets/markdown/x-defaultProperties-example.md?raw'
 import xDiscriminatorExample from '@/assets/markdown/x-discriminator-example.md?raw'
 import xEditJsonDataExample from '@/assets/markdown/x-editJsonData-example.md?raw'
 import xEnableCollapseToggleExample from '@/assets/markdown/x-enableCollapseToggle-example.md?raw'
@@ -1699,7 +1701,7 @@ This enables native browser validation hints and constraints.
     navbar: true,
     title: "Jedison - Schema Options",
     description: "Per-schema configuration using x- prefixed properties.",
-    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-buttons", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
+    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-buttons", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-defaultProperty", "x-defaultProperties", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
     component: SectionsPage,
     heading: "Schema Options",
     sections: [
@@ -1992,6 +1994,32 @@ Whether the editor should deactivate (hide) or activate (show) non required prop
         }
       },
       {component: SectionCode, props: {language: `json`, code: xDeactivateNonRequiredExample}},
+      {
+        component: SectionProse,
+        props: {
+          heading: `x-defaultProperty`,
+          level: 2,
+          markdown: `**Type:** \`boolean\`
+
+Set on a property's own schema, this overrides the parent's \`x-defaultProperties\` whitelist for that one property, in either direction: \`true\` shows it by default even if the parent's list omits it, \`false\` hides it even if the parent's list includes it. Works only with \`object\` type editors, and only affects non-required properties.
+
+This is the override point for a property reused (e.g. via \`$ref\`) across parents that disagree on whether it should show by default. Since it is a single boolean rather than a list entry, it can be flipped per consumer through an \`allOf\` merge without touching the shared list.`
+        }
+      },
+      {component: SectionCode, props: {language: `json`, code: xDefaultPropertyExample}},
+      {
+        component: SectionProse,
+        props: {
+          heading: `x-defaultProperties`,
+          level: 2,
+          markdown: `**Type:** \`string[]\`
+
+Whitelists which non-required properties are shown by default, instead of every non-required property being hidden behind the properties toggle. A non-required property whose key is not listed stays hidden until the user opts it in. Works only with \`object\` type editors.
+
+A property's own \`x-defaultProperty\`, if set, overrides this list for that property - see above.`
+        }
+      },
+      {component: SectionCode, props: {language: `json`, code: xDefaultPropertiesExample}},
       {
         component: SectionProse,
         props: {
