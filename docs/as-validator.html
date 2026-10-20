@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - As Validator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BIVaRSDL.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-D7ER-TWu.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Using Jedison as a JSON Schema validator without UI."></head>
 <body>
@@ -59,6 +59,49 @@ console.log(jedison.getErrors())
 //     messages: ['Must have the required properties: name, age.']
 //   }
 // ]
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="json-schema-versions"><a class="header-anchor" href="#json-schema-versions" aria-label="Permalink to “JSON Schema versions”">​</a>JSON Schema versions</h2><div><p>Jedison follows draft 2020-12. Schemas that declare an older <code>$schema</code> (draft-04, draft-06, draft-07 or 2019-09) are normalized to 2020-12 before use, so validation and forms behave the same for all of them:</p>
+<ul>
+<li><code>items</code> as array and <code>additionalItems</code> become <code>prefixItems</code> and <code>items</code>.</li>
+<li><code>dependencies</code> becomes <code>dependentRequired</code> and <code>dependentSchemas</code>.</li>
+<li>Draft-04 <code>id</code> and boolean <code>exclusiveMinimum</code> / <code>exclusiveMaximum</code> are converted.</li>
+<li>Keywords next to <code>$ref</code> are ignored up to draft 7. See the <code>keepRefSiblings</code> option.</li>
+</ul>
+<p><code>$dynamicRef</code> and <code>$recursiveRef</code> are not supported.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
+  schema: {
+    // Declare the draft the schema was written for
+    $schema: 'http://json-schema.org/draft-07/schema#',
+    type: 'object',
+    properties: {
+      // Draft 7 tuple: "items" as array + "additionalItems"
+      point: {
+        type: 'array',
+        items: [{ type: 'number' }, { type: 'number' }],
+        additionalItems: false,
+      },
+      card: { type: 'string' },
+      billing: { type: 'string' },
+    },
+    // Draft 7 "dependencies"
+    dependencies: {
+      card: ['billing'],
+    },
+  },
+})
+
+jedison.setValue({ point: [1, 2, 3], card: '4111' })
+
+console.log(jedison.getErrors())
+
+// Errors:
+// - "#"         dependentRequired: Must have the required properties: billing.
+// - "#/point/2" the third item is not allowed (additionalItems: false)
+
+// Keep keywords next to "$ref" in draft 7 and older
+const other = new Jedison.Create({
+  schema: { $schema: 'http://json-schema.org/draft-07/schema#', /* ... */ },
+  keepRefSiblings: true,
+})
 </code></pre></div><!--]--><!--]--></section><!--]--></div></main><div class="d-flex justify-content-between mt-4 mb-4 app-prev-next"><button class="btn btn-outline-primary"><span>« As Editor</span></button><button class="btn btn-outline-primary"><span>Methods »</span></button></div></div></div></div></div></div>
 
 

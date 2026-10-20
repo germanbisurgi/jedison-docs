@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - Instance Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BIVaRSDL.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-D7ER-TWu.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Global configuration options for Jedison initialization."></head>
 <body>
@@ -274,7 +274,14 @@ const jedison = new Jedison.Create({
 <li><strong>Default:</strong> <code>false</code></li>
 </ul>
 <p>Treats <code>'format'</code> as a validator rather than just an annotation.</p>
+<p>Checked formats: <code>email</code>, <code>url</code>, <code>date</code>, <code>time</code>, <code>date-time</code>, <code>duration</code>, <code>ipv4</code>, <code>ipv6</code>, <code>hostname</code>, <code>uri</code>, <code>uri-reference</code>, <code>uri-template</code>, <code>json-pointer</code>, <code>relative-json-pointer</code> and <code>regex</code>. Unknown formats are ignored.</p>
 <p><strong>x-option:</strong> ✅</p>
+</div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="keeprefsiblings"><a class="header-anchor" href="#keeprefsiblings" aria-label="Permalink to “keepRefSiblings”">​</a>keepRefSiblings</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
+<p>By the JSON Schema spec, keywords next to a <code>$ref</code> are ignored up to draft 7 (the schema's <code>$schema</code>). Set this to <code>true</code> to keep merging them into the referenced schema, like in 2019-09 and later.</p>
+<p><strong>x-option:</strong> ❌</p>
 </div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="suberrors"><a class="header-anchor" href="#suberrors" aria-label="Permalink to “subErrors”">​</a>subErrors</h2><div><ul>
 <li><strong>Type:</strong> <code>boolean</code></li>
 <li><strong>Default:</strong> <code>false</code></li>

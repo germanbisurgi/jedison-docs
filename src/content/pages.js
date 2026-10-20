@@ -96,6 +96,7 @@ import mdInstallNpm from '@/assets/markdown/install-npm.md?raw'
 import mdInstallYarn from '@/assets/markdown/install-yarn.md?raw'
 import mdUsingEsm from '@/assets/markdown/using-esm.md?raw'
 import mdUsingCdn from '@/assets/markdown/using-cdn.md?raw'
+import draftsExample from '@/assets/markdown/drafts-example.md?raw'
 import mdUsingNode from '@/assets/markdown/using-node.md?raw'
 import mdEventChange from '@/assets/markdown/event-change.md?raw'
 import mdEventInstanceChange from '@/assets/markdown/event-instance-change.md?raw'
@@ -345,7 +346,23 @@ But Jedison is flexible enough to support other patterns too - you might use it 
 -   **\`schema\`** defines the validation rules. This is the only mandatory option when using Jedison for validation. The validator will check JSON data against this schema without needing a UI container or theme.`
         }
       },
-      {component: SectionCode, props: {language: "javascript", code: mdUsingNode}}
+      {component: SectionCode, props: {language: "javascript", code: mdUsingNode}},
+      {
+        component: SectionProse,
+        props: {
+          heading: "JSON Schema versions",
+          level: 2,
+          markdown: `Jedison follows draft 2020-12. Schemas that declare an older \`$schema\` (draft-04, draft-06, draft-07 or 2019-09) are normalized to 2020-12 before use, so validation and forms behave the same for all of them:
+
+-   \`items\` as array and \`additionalItems\` become \`prefixItems\` and \`items\`.
+-   \`dependencies\` becomes \`dependentRequired\` and \`dependentSchemas\`.
+-   Draft-04 \`id\` and boolean \`exclusiveMinimum\` / \`exclusiveMaximum\` are converted.
+-   Keywords next to \`$ref\` are ignored up to draft 7. See the \`keepRefSiblings\` option.
+
+\`$dynamicRef\` and \`$recursiveRef\` are not supported.`
+        }
+      },
+      {component: SectionCode, props: {language: "javascript", code: draftsExample}}
     ]
   },
   {
@@ -1136,7 +1153,7 @@ For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XS
     navbar: true,
     title: "Jedison - Instance Options",
     description: "Global configuration options for Jedison initialization.",
-    keywords: ["options", "configuration", "settings", "init", "global", "enforceConst", "enforceEnum", "enforceRequired", "enforceAdditionalProperties", "switcherInput", "enablePropertiesToggle", "enableCollapseToggle", "deactivateNonRequired", "showErrors", "assertFormat", "arrayDelete", "arrayMove", "editJsonData", "readOnly", "arrayAdd", "arrayDeleteConfirm", "objectAdd", "embedSwitcher", "subErrors", "useConstraintAttributes", "arrayDeleteAll", "arrayFooterAdd", "arrayFooterDeleteAll", "arrayFooterButtonsPosition"],
+    keywords: ["options", "configuration", "settings", "init", "global", "enforceConst", "enforceEnum", "enforceRequired", "enforceAdditionalProperties", "switcherInput", "enablePropertiesToggle", "enableCollapseToggle", "deactivateNonRequired", "showErrors", "assertFormat", "keepRefSiblings", "arrayDelete", "arrayMove", "editJsonData", "readOnly", "arrayAdd", "arrayDeleteConfirm", "objectAdd", "embedSwitcher", "subErrors", "useConstraintAttributes", "arrayDeleteAll", "arrayFooterAdd", "arrayFooterDeleteAll", "arrayFooterButtonsPosition"],
     component: SectionsPage,
     heading: "Instance Options",
     sections: [
@@ -1542,7 +1559,22 @@ Determines when to display validation errors. Options include:
 
 Treats \`'format'\` as a validator rather than just an annotation.
 
+Checked formats: \`email\`, \`url\`, \`date\`, \`time\`, \`date-time\`, \`duration\`, \`ipv4\`, \`ipv6\`, \`hostname\`, \`uri\`, \`uri-reference\`, \`uri-template\`, \`json-pointer\`, \`relative-json-pointer\` and \`regex\`. Unknown formats are ignored.
+
 **x-option:** ✅`
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: `keepRefSiblings`,
+          level: 2,
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
+
+By the JSON Schema spec, keywords next to a \`$ref\` are ignored up to draft 7 (the schema's \`$schema\`). Set this to \`true\` to keep merging them into the referenced schema, like in 2019-09 and later.
+
+**x-option:** ❌`
         }
       },
       {
