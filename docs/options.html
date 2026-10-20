@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - Instance Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BQoRcJuX.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BIVaRSDL.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Global configuration options for Jedison initialization."></head>
 <body>
@@ -42,6 +42,7 @@
 <li><code>new Jedison.ThemeBootstrap3()</code></li>
 <li><code>new Jedison.ThemeBootstrap4()</code></li>
 <li><code>new Jedison.ThemeBootstrap5()</code></li>
+<li><code>new Jedison.ThemeTailwind4()</code></li>
 </ul>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison.Create({
   container: document.getElementById('form'),
@@ -307,6 +308,35 @@ const jedison = new Jedison.Create({
     }
   },
   editJsonData: true
+})
+jedison.render(document.getElementById('container'))
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="readonly"><a class="header-anchor" href="#readonly" aria-label="Permalink to “readOnly”">​</a>readOnly</h2><div><ul>
+<li><strong>Type:</strong> <code>boolean</code></li>
+<li><strong>Default:</strong> <code>false</code></li>
+</ul>
+<p>Makes the whole form view-only. Unlike <code>disable()</code>, which switches everything off, <code>readOnly</code> keeps the data inspectable:</p>
+<ul>
+<li>Collapse toggles and accordions keep working.</li>
+<li>The JSON button (<code>editJsonData</code>) becomes an eye icon labelled "View JSON". The dialog allows viewing and copying but has no save button.</li>
+<li>Text fields and textareas use the native <code>readonly</code> attribute, so they stay focusable and their text can be selected and copied.</li>
+<li>Selects, checkboxes, radios, ranges and third-party widgets (Ace, Quill, Pickr, ...) cannot be changed.</li>
+<li>Structure tools are hidden instead of greyed out: the properties toggle, add property, and the array add, delete, move and drag buttons. Table formats also drop their buttons column.</li>
+<li>Custom <code>x-buttons</code> stay disabled.</li>
+</ul>
+<p>The value can still be changed from code with <code>setValue()</code>. A schema with <code>"readOnly": true</code> behaves the same way for that schema and its children.</p>
+<p><strong>x-option:</strong> ❌ (use the standard JSON schema <code>readOnly</code> keyword)</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>const jedison = new Jedison({
+  schema: {
+    type: 'object',
+    properties: {
+      name: { type: 'string' },
+      tags: { type: 'array', items: { type: 'string' } }
+    }
+  },
+  data: { name: 'Jane', tags: ['json', 'forms'] },
+  editJsonData: true,
+  enableCollapseToggle: true,
+  readOnly: true
 })
 jedison.render(document.getElementById('container'))
 </code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="arrayadd"><a class="header-anchor" href="#arrayadd" aria-label="Permalink to “arrayAdd”">​</a>arrayAdd</h2><div><ul>

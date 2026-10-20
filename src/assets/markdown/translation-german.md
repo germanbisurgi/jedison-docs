@@ -44,7 +44,9 @@
       objectPropertyAdded: 'Feld wurde dem Formular hinzugefügt',
       objectPropertyRemoved: 'Feld wurde aus dem Formular entfernt',
       propertiesToggle: 'Eigenschaften',
-      collapseToggle: 'Einklappen'
+      collapseToggle: 'Einklappen',
+      editJson: 'JSON bearbeiten',
+      viewJson: 'JSON ansehen'
     }
   }
 })

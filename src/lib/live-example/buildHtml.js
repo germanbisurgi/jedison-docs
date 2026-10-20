@@ -11,6 +11,7 @@ const PRESET_THEME = {
   bootstrap5: 'Bootstrap5',
   bootstrap4: 'Bootstrap4',
   bootstrap3: 'Bootstrap3',
+  tailwind4: 'Tailwind4',
   none: 'Theme'
 }
 

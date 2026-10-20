@@ -133,6 +133,7 @@ import themesThemeExample from '@/assets/live-examples/themes-theme.json'
 import themesBootstrap3Example from '@/assets/live-examples/themes-bootstrap3.json'
 import themesBootstrap4Example from '@/assets/live-examples/themes-bootstrap4.json'
 import themesBootstrap5Example from '@/assets/live-examples/themes-bootstrap5.json'
+import themesTailwind4Example from '@/assets/live-examples/themes-tailwind4.json'
 
 import xAddPropertyContentExample from '@/assets/markdown/x-addPropertyContent-example.md?raw'
 import xArrayAddContentExample from '@/assets/markdown/x-arrayAddContent-example.md?raw'
@@ -232,11 +233,13 @@ import editJsonDataExample from '@/assets/markdown/editJsonData-example.md?raw'
 import hiddenInputAttributesExample from '@/assets/markdown/hiddenInputAttributes-example.md?raw'
 import iconLibExample from '@/assets/markdown/iconLib-example.md?raw'
 import idExample from '@/assets/markdown/id-example.md?raw'
+import readOnlyExample from '@/assets/markdown/readOnly-example.md?raw'
 import refParserExample from '@/assets/markdown/refParser-example.md?raw'
 import settingsExample from '@/assets/markdown/settings-example.md?raw'
 import showErrorsExample from '@/assets/markdown/showErrors-example.md?raw'
 import switcherInputExample from '@/assets/markdown/switcherInput-example.md?raw'
 import themeExample from '@/assets/markdown/theme-example.md?raw'
+import themeTailwind4Source from '@/assets/markdown/theme-tailwind4-source.md?raw'
 import translationsExample from '@/assets/markdown/translations-example.md?raw'
 
 export const pages = [
@@ -727,8 +730,8 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
     group: "Features",
     navbar: true,
     title: "Jedison - Themes",
-    description: "Theming support for Jedison including Bootstrap and custom themes.",
-    keywords: ["themes", "bootstrap", "styling", "css", "custom"],
+    description: "Theming support for Jedison including Bootstrap, Tailwind CSS and custom themes.",
+    keywords: ["themes", "bootstrap", "tailwind", "styling", "css", "custom"],
     component: SectionsPage,
     heading: "Themes",
     sections: [
@@ -764,6 +767,23 @@ It's also a good practice to use the \`showValidationErrors\` method when clicki
           heading: "Bootstrap 3",
           intro: `Full support for Bootstrap 3 form styling: \`new Jedison.ThemeBootstrap3()\``,
           example: themesBootstrap3Example
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: "Tailwind CSS 4",
+          markdown: `Form styling with Tailwind CSS v4 utility classes: \`new Jedison.ThemeTailwind4()\` (since Jedison 1.28.0). The theme ships no CSS and no JavaScript of its own, it only adds Tailwind classes to the form elements.
+
+Tailwind generates CSS only for the class names it finds in the files it scans, and it does not scan \`node_modules\` by default. Add Jedison to the scanned files with \`@source\` in your Tailwind CSS entry file (adjust the path to your project), or the form renders unstyled:`
+        }
+      },
+      {component: SectionCode, props: {code: themeTailwind4Source}},
+      {
+        component: SectionExample,
+        props: {
+          codeMode: 'full',
+          example: themesTailwind4Example
         }
       },
       {
@@ -1116,7 +1136,7 @@ For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XS
     navbar: true,
     title: "Jedison - Instance Options",
     description: "Global configuration options for Jedison initialization.",
-    keywords: ["options", "configuration", "settings", "init", "global", "enforceConst", "enforceEnum", "enforceRequired", "enforceAdditionalProperties", "switcherInput", "enablePropertiesToggle", "enableCollapseToggle", "deactivateNonRequired", "showErrors", "assertFormat", "arrayDelete", "arrayMove", "editJsonData", "arrayAdd", "arrayDeleteConfirm", "objectAdd", "embedSwitcher", "subErrors", "useConstraintAttributes", "arrayDeleteAll", "arrayFooterAdd", "arrayFooterDeleteAll", "arrayFooterButtonsPosition"],
+    keywords: ["options", "configuration", "settings", "init", "global", "enforceConst", "enforceEnum", "enforceRequired", "enforceAdditionalProperties", "switcherInput", "enablePropertiesToggle", "enableCollapseToggle", "deactivateNonRequired", "showErrors", "assertFormat", "arrayDelete", "arrayMove", "editJsonData", "readOnly", "arrayAdd", "arrayDeleteConfirm", "objectAdd", "embedSwitcher", "subErrors", "useConstraintAttributes", "arrayDeleteAll", "arrayFooterAdd", "arrayFooterDeleteAll", "arrayFooterButtonsPosition"],
     component: SectionsPage,
     heading: "Instance Options",
     sections: [
@@ -1171,7 +1191,8 @@ An instance of \`Theme\` to apply to the UI. Valid options include:
 -   \`new Jedison.Theme()\`
 -   \`new Jedison.ThemeBootstrap3()\`
 -   \`new Jedison.ThemeBootstrap4()\`
--   \`new Jedison.ThemeBootstrap5()\``
+-   \`new Jedison.ThemeBootstrap5()\`
+-   \`new Jedison.ThemeTailwind4()\``
         }
       },
       {component: SectionCode, props: {code: themeExample}},
@@ -1579,6 +1600,32 @@ Enables inline JSON editing mode, allowing users to directly edit the JSON data 
       {
         component: SectionCode,
         props: {code: editJsonDataExample}
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: `readOnly`,
+          level: 2,
+          markdown: `-   **Type:** \`boolean\`
+-   **Default:** \`false\`
+
+Makes the whole form view-only. Unlike \`disable()\`, which switches everything off, \`readOnly\` keeps the data inspectable:
+
+-   Collapse toggles and accordions keep working.
+-   The JSON button (\`editJsonData\`) becomes an eye icon labelled "View JSON". The dialog allows viewing and copying but has no save button.
+-   Text fields and textareas use the native \`readonly\` attribute, so they stay focusable and their text can be selected and copied.
+-   Selects, checkboxes, radios, ranges and third-party widgets (Ace, Quill, Pickr, ...) cannot be changed.
+-   Structure tools are hidden instead of greyed out: the properties toggle, add property, and the array add, delete, move and drag buttons. Table formats also drop their buttons column.
+-   Custom \`x-buttons\` stay disabled.
+
+The value can still be changed from code with \`setValue()\`. A schema with \`"readOnly": true\` behaves the same way for that schema and its children.
+
+**x-option:** ❌ (use the standard JSON schema \`readOnly\` keyword)`
+        }
+      },
+      {
+        component: SectionCode,
+        props: {code: readOnlyExample}
       },
       {
         component: SectionProse,

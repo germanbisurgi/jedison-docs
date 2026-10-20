@@ -2156,6 +2156,12 @@
     "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
     "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
   ],
+  "src/assets/live-examples/themes-tailwind4.json": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
+  ],
   "src/assets/live-examples/themes-theme.json": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
@@ -2414,6 +2420,12 @@
     "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
     "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
   ],
+  "src/assets/markdown/readOnly-example.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
+  ],
   "src/assets/markdown/ref-parser-fetch-options.md?raw": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
@@ -2451,6 +2463,12 @@
     "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
   ],
   "src/assets/markdown/theme-example.md?raw": [
+    "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
+    "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
+    "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",
+    "/jedison-docs/assets/Roboto-Regular-CGSfnFoJ.ttf"
+  ],
+  "src/assets/markdown/theme-tailwind4-source.md?raw": [
     "/jedison-docs/assets/mermaid-flow-transparent-DieOVjEZ.svg",
     "/jedison-docs/assets/bootstrap-icons-mSm7cUeB.woff2",
     "/jedison-docs/assets/bootstrap-icons-BeopsB42.woff",

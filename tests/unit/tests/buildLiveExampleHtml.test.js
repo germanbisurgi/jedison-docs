@@ -40,6 +40,18 @@ describe('buildLiveExampleHtml', function () {
     expect(html).not.toContain('font-awesome')
   })
 
+  it('loads the Tailwind browser build instead of a stylesheet for the tailwind4 preset', function () {
+    const html = buildLiveExampleHtml({
+      preset: 'tailwind4',
+      createOptions: { schema: { type: 'object' } }
+    })
+
+    expect(html).toContain('@tailwindcss/browser@4')
+    expect(html).toContain('"theme": new Jedison.ThemeTailwind4()')
+    expect(html).not.toContain('bootstrap')
+    expect(html).not.toContain('"iconLib"')
+  })
+
   it('supports the afterCreate escape hatch for demos with a listener', function () {
     const html = buildLiveExampleHtml({
       createOptions: { schema: { type: 'number' } },

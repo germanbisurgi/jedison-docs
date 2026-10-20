@@ -27,6 +27,12 @@
         "https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
       ]
     },
+    "tailwind4": {
+      "css": [],
+      "js": [
+        "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+      ]
+    },
     "none": {
       "css": [],
       "js": []
@@ -44,6 +50,7 @@
     "Bootstrap5": "new Jedison.ThemeBootstrap5()",
     "Bootstrap4": "new Jedison.ThemeBootstrap4()",
     "Bootstrap3": "new Jedison.ThemeBootstrap3()",
+    "Tailwind4": "new Jedison.ThemeTailwind4()",
     "Theme": "new Jedison.Theme()"
   }
 }
