@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - Schema Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-CLwS3TQY.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BhsT4Tcg.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Per-schema configuration using x- prefixed properties."></head>
 <body>
@@ -575,7 +575,8 @@
   }
 }
 </code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-summary"><a class="header-anchor" href="#x-summary" aria-label="Permalink to “x-summary”">​</a>x-summary</h2><div><p><strong>Type:</strong> <code>string</code></p>
-<p>Replaces <code>description</code> in the form when set. Use it when the <code>description</code> is long, for example because it also feeds your API documentation, and the form needs a shorter text. It supports markdown and templates like <code>description</code>. Without <code>x-summary</code> the <code>description</code> is shown.</p>
+<p>A short text shown in the form instead of <code>description</code>. Use it when the <code>description</code> is long, for example because it also feeds your API documentation. The full <code>description</code> stays available: click the short text to expand it, and it starts collapsed. Both support markdown and templates. Without <code>x-summary</code> the <code>description</code> is shown as usual.</p>
+<p>The toggle is a native <code>&lt;details class="jedi-summary"&gt;</code> element.</p>
 </div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
   "type": "string",
   "title": "Name",

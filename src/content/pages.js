@@ -2490,7 +2490,9 @@ Per-schema override for including sub-error details in validation errors. Overri
           level: 2,
           markdown: `**Type:** \`string\`
 
-Replaces \`description\` in the form when set. Use it when the \`description\` is long, for example because it also feeds your API documentation, and the form needs a shorter text. It supports markdown and templates like \`description\`. Without \`x-summary\` the \`description\` is shown.`
+A short text shown in the form instead of \`description\`. Use it when the \`description\` is long, for example because it also feeds your API documentation. The full \`description\` stays available: click the short text to expand it, and it starts collapsed. Both support markdown and templates. Without \`x-summary\` the \`description\` is shown as usual.
+
+The toggle is a native \`<details class="jedi-summary">\` element.`
         }
       },
       {component: SectionCode, props: {language: `json`, code: xSummaryExample}},
