@@ -187,6 +187,7 @@ import xShowErrorsExample from '@/assets/markdown/x-showErrors-example.md?raw'
 import xSortableExample from '@/assets/markdown/x-sortable-example.md?raw'
 import xStartCollapsedExample from '@/assets/markdown/x-startCollapsed-example.md?raw'
 import xSubErrorsExample from '@/assets/markdown/x-subErrors-example.md?raw'
+import xSummaryExample from '@/assets/markdown/x-summary-example.md?raw'
 import xSwitcherInputExample from '@/assets/markdown/x-switcherInput-example.md?raw'
 import xSwitcherTitleExample from '@/assets/markdown/x-switcherTitle-example.md?raw'
 import xTitleHiddenExample from '@/assets/markdown/x-titleHidden-example.md?raw'
@@ -1058,6 +1059,27 @@ This is because the schema is only instantiated at runtime when a new item is ad
       {
         component: SectionProse,
         props: {
+          heading: "Keywords next to $ref",
+          markdown: `Up to draft 7 (see \`$schema\`) keywords next to \`$ref\` are ignored, unless you set the \`keepRefSiblings\` option. From 2019-09 on they apply together with the referenced schema:
+
+-   Siblings that add \`title\`, \`description\`, \`default\`, \`x-\` options or \`properties\` are merged into the referenced schema, so the form keeps its \`type\` and fields.
+-   When both define the same keyword (for example \`minimum\` or \`prefixItems\`), or the referenced schema uses \`unevaluatedProperties\` or \`unevaluatedItems\`, they are validated separately and both must pass.
+
+\`\`\`json
+{
+  "$defs": { "age": { "type": "integer", "minimum": 21 } },
+  "properties": {
+    "age": { "$ref": "#/$defs/age", "title": "Age", "minimum": 18 }
+  }
+}
+\`\`\`
+
+Here 19 is rejected: the title is merged, and both \`minimum\` values apply, so the stricter one wins.`
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
           heading: "External refs & custom fetch",
           markdown: `A \`$ref\` value starting with \`http\` or \`https\` is treated as an external reference: \`RefParser\` loads it over the network instead of resolving it against the schema's own \`$defs\`.
 By default this uses the global \`fetch\`, but the \`RefParser\` constructor accepts two options to override that:
@@ -1161,7 +1183,9 @@ Filter expressions (\`[?…]\`), array slices (\`[start:end]\`) and function ext
           level: 2,
           markdown: `Jedison supports Markdown formatting in various text fields including titles, descriptions, and info content. This is enabled by the \`marked.js\` library and activated by setting \`parseMarkdown: true\` in the Jedison configuration.
 
-For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XSS attacks while preserving safe HTML content. Sanitization is enabled with \`purifyHtml: true\` in the Jedison configuration.`
+For security, all HTML output is sanitized using \`DOMPurify\`. This prevents XSS attacks while preserving safe HTML content. Sanitization is enabled with \`purifyHtml: true\` in the Jedison configuration.
+
+Jedison does not bundle \`DOMPurify\`: it uses \`window.DOMPurify\` when it is loaded. Security fixes ship with \`DOMPurify\` itself, so keep your copy up to date.`
         }
       },
       {component: SectionExample, props: {example: markdownAnnotationsExample, codeMode: 'full'}},
@@ -1838,7 +1862,7 @@ This enables native browser validation hints and constraints.
     navbar: true,
     title: "Jedison - Schema Options",
     description: "Per-schema configuration using x- prefixed properties.",
-    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-buttons", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-defaultProperty", "x-defaultProperties", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
+    keywords: ["schema options", "x-", "ui-format", "custom", "per-field", "x-addPropertyContent", "x-arrayAdd", "x-arrayAddContent", "x-arrayButtonsPosition", "x-arrayDelete", "x-arrayDeleteAll", "x-arrayDeleteAllContent", "x-arrayDeleteConfirm", "x-arrayDeleteContent", "x-arrayDragContent", "x-arrayFooterAdd", "x-arrayFooterAddContent", "x-arrayFooterButtonsPosition", "x-arrayFooterDeleteAll", "x-arrayFooterDeleteAllContent", "x-arrayMove", "x-arrayMoveDownContent", "x-arrayMoveUpContent", "x-assertFormat", "x-buttons", "x-collapseToggleContent", "x-containerAttributes", "x-deactivateNonRequired", "x-defaultProperty", "x-defaultProperties", "x-discriminator", "x-editJsonData", "x-enableCollapseToggle", "x-enforceConst", "x-enforceEnum", "x-enumTitles", "x-filepond", "x-format", "x-grid", "x-hidden", "x-info", "x-inputAttributes", "x-messages", "x-navWarning", "x-navWarningMessage", "x-categoryOrder", "x-objectAdd", "x-propertiesToggleContent", "x-propGroup", "x-propGroupOrder", "x-showErrors", "x-sortable", "x-startCollapsed", "x-subErrors", "x-summary", "x-switcherInput", "x-switcherTitle", "x-titleHidden", "x-titleIconClass", "x-titleTemplate", "x-useConstraintAttributes"],
     component: SectionsPage,
     heading: "Schema Options",
     sections: [
@@ -2459,6 +2483,17 @@ Per-schema override for including sub-error details in validation errors. Overri
         }
       },
       {component: SectionCode, props: {language: `json`, code: xSubErrorsExample}},
+      {
+        component: SectionProse,
+        props: {
+          heading: `x-summary`,
+          level: 2,
+          markdown: `**Type:** \`string\`
+
+Replaces \`description\` in the form when set. Use it when the \`description\` is long, for example because it also feeds your API documentation, and the form needs a shorter text. It supports markdown and templates like \`description\`. Without \`x-summary\` the \`description\` is shown.`
+        }
+      },
+      {component: SectionCode, props: {language: `json`, code: xSummaryExample}},
       {
         component: SectionProse,
         props: {

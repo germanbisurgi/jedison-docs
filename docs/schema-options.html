@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - Schema Options</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BSjUDojY.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-CLwS3TQY.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="Per-schema configuration using x- prefixed properties."></head>
 <body>
@@ -573,6 +573,14 @@
   "properties": {
     "email": { "type": "string", "format": "email" }
   }
+}
+</code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-summary"><a class="header-anchor" href="#x-summary" aria-label="Permalink to “x-summary”">​</a>x-summary</h2><div><p><strong>Type:</strong> <code>string</code></p>
+<p>Replaces <code>description</code> in the form when set. Use it when the <code>description</code> is long, for example because it also feeds your API documentation, and the form needs a shorter text. It supports markdown and templates like <code>description</code>. Without <code>x-summary</code> the <code>description</code> is shown.</p>
+</div><!--]--><!--[--><!----><div class="app-highlight"><button type="button" class="app-highlight-copy">Copy</button><pre><code>{
+  "type": "string",
+  "title": "Name",
+  "description": "The full name of the person as it appears on the legal documents. Used by the API for matching.",
+  "x-summary": "Your full legal name."
 }
 </code></pre></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="x-switcherinput"><a class="header-anchor" href="#x-switcherinput" aria-label="Permalink to “x-switcherInput”">​</a>x-switcherInput</h2><div><ul>
 <li><strong>Type:</strong> <code>string</code></li>

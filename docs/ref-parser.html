@@ -3,7 +3,7 @@
     <link rel="icon" type="image/svg+xml" href="/jedison-docs/images/jedison-mark.svg">
     <title>Jedison - RefParser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" crossorigin="" src="/jedison-docs/assets/app-BSjUDojY.js"></script>
+  <script type="module" crossorigin="" src="/jedison-docs/assets/app-CLwS3TQY.js"></script>
   <link rel="stylesheet" crossorigin="" href="/jedison-docs/assets/app-DtVo2UkS.css">
 <meta name="description" content="$ref resolution and JSON Schema reference parsing."></head>
 <body>
@@ -46,7 +46,20 @@ init()
 <p></p><!----><!----><!----><div class="live-example mb-3"><div><!----><div><div class="code-mirror-container mb-3"></div></div><div style="height:400px;"><iframe srcdoc="" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameborder="0" width="100%" height="100%"></iframe></div></div></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="recursive-schema"><a class="header-anchor" href="#recursive-schema" aria-label="Permalink to “Recursive schema”">​</a>Recursive schema</h2><div><p>A schema that references itself (directly, or through a chain of <code>$ref</code>s) would otherwise make <code>RefParser</code> expand it infinitely. <code>RefParser</code> detects these cycles and marks the recursive schema so Jedison can render it safely instead of looping forever.</p>
 </div><!--]--><!--[--><!----><p></p><p>Jedison can handle recursive JSON Schemas, provided certain conditions are met.<br>In this example, we use the <code>x-deactivateNonRequired</code> keyword, which requires properties to be added manually.<br>To support this, the Jedison option <code>enablePropertiesToggle: true</code> allows manual activation of properties.<br>This setup is necessary to prevent infinite recursion during schema processing.</p>
 <p></p><!----><!----><!----><div class="live-example mb-3"><div><!----><div><div class="code-mirror-container mb-3"></div></div><div style="height:400px;"><iframe srcdoc="" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameborder="0" width="100%" height="100%"></iframe></div></div></div><!--]--><!--[--><!----><p></p><p>In some cases, handling recursion is easier—for example, when the recursive <code>$ref</code> is inside an <code>"items"</code> schema.<br>This is because the schema is only instantiated at runtime when a new item is added to the array.</p>
-<p></p><!----><!----><!----><div class="live-example mb-3"><div><!----><div><div class="code-mirror-container mb-3"></div></div><div style="height:400px;"><iframe srcdoc="" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameborder="0" width="100%" height="100%"></iframe></div></div></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="external-refs-custom-fetch"><a class="header-anchor" href="#external-refs-custom-fetch" aria-label="Permalink to “External refs &amp; custom fetch”">​</a>External refs &amp; custom fetch</h2><div><p>A <code>$ref</code> value starting with <code>http</code> or <code>https</code> is treated as an external reference: <code>RefParser</code> loads it over the network instead of resolving it against the schema's own <code>$defs</code>.
+<p></p><!----><!----><!----><div class="live-example mb-3"><div><!----><div><div class="code-mirror-container mb-3"></div></div><div style="height:400px;"><iframe srcdoc="" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups" frameborder="0" width="100%" height="100%"></iframe></div></div></div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="keywords-next-to-ref"><a class="header-anchor" href="#keywords-next-to-ref" aria-label="Permalink to “Keywords next to $ref”">​</a>Keywords next to $ref</h2><div><p>Up to draft 7 (see <code>$schema</code>) keywords next to <code>$ref</code> are ignored, unless you set the <code>keepRefSiblings</code> option. From 2019-09 on they apply together with the referenced schema:</p>
+<ul>
+<li>Siblings that add <code>title</code>, <code>description</code>, <code>default</code>, <code>x-</code> options or <code>properties</code> are merged into the referenced schema, so the form keeps its <code>type</code> and fields.</li>
+<li>When both define the same keyword (for example <code>minimum</code> or <code>prefixItems</code>), or the referenced schema uses <code>unevaluatedProperties</code> or <code>unevaluatedItems</code>, they are validated separately and both must pass.</li>
+</ul>
+<pre><code class="language-json">{
+  "$defs": { "age": { "type": "integer", "minimum": 21 } },
+  "properties": {
+    "age": { "$ref": "#/$defs/age", "title": "Age", "minimum": 18 }
+  }
+}
+</code></pre>
+<p>Here 19 is rejected: the title is merged, and both <code>minimum</code> values apply, so the stricter one wins.</p>
+</div><!--]--><!--]--></section><section><!--[--><!--[--><h2 id="external-refs-custom-fetch"><a class="header-anchor" href="#external-refs-custom-fetch" aria-label="Permalink to “External refs &amp; custom fetch”">​</a>External refs &amp; custom fetch</h2><div><p>A <code>$ref</code> value starting with <code>http</code> or <code>https</code> is treated as an external reference: <code>RefParser</code> loads it over the network instead of resolving it against the schema's own <code>$defs</code>.
 By default this uses the global <code>fetch</code>, but the <code>RefParser</code> constructor accepts two options to override that:</p>
 <ul>
 <li><code>fetchOptions</code> — passed as the second argument to <code>fetch</code>, e.g. to forward an <code>Authorization</code> header or <code>credentials</code> so an authenticated endpoint can be reached</li>
