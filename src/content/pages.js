@@ -97,6 +97,7 @@ import mdInstallYarn from '@/assets/markdown/install-yarn.md?raw'
 import mdUsingEsm from '@/assets/markdown/using-esm.md?raw'
 import mdUsingCdn from '@/assets/markdown/using-cdn.md?raw'
 import draftsExample from '@/assets/markdown/drafts-example.md?raw'
+import migrateFromJsonEditor from '@/assets/markdown/migrate-from-json-editor.md?raw'
 import mdUsingNode from '@/assets/markdown/using-node.md?raw'
 import mdEventChange from '@/assets/markdown/event-change.md?raw'
 import mdEventInstanceChange from '@/assets/markdown/event-instance-change.md?raw'
@@ -658,6 +659,63 @@ This approach allows developers to quickly create consistent, validated forms by
         }
       },
       {component: SectionExample, props: {example: playgroundExample, codeMode: 'full'}}
+    ]
+  },
+  {
+    path: "/compare-json-editor",
+    routeName: "Jedison vs JSON Editor",
+    group: "Getting Started",
+    navbar: true,
+    title: "Jedison - Jedison vs JSON Editor",
+    description: "How Jedison compares to JSON Editor and how to migrate from it.",
+    keywords: ["json editor", "json-editor", "compare", "comparison", "migrate", "migration", "alternative", "jdorn", "draft-04", "draft-07", "2020-12"],
+    component: SectionsPage,
+    heading: "Jedison vs JSON Editor",
+    sections: [
+      {
+        component: SectionProse,
+        props: {
+          markdown: `[JSON Editor](https://github.com/json-editor/json-editor) is a well-known library that also builds forms from JSON Schemas. Its README now says it is in maintenance mode and points to Jedison for active development. This page shows where the two differ and how to move a project over.`
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: "At a glance",
+          level: 2,
+          markdown: `| | Jedison | JSON Editor |
+|---|---|---|
+| JSON Schema drafts | 4, 6, 7, 2019-09 and 2020-12 | 3 and 4 (per its README) |
+| Newer keywords | \`prefixItems\`, \`unevaluatedItems\`, \`unevaluatedProperties\`, \`$anchor\`, \`$id\` base URIs | Not mentioned in its README |
+| Validation tests | Run against the official JSON-Schema-Test-Suite for every supported draft | Own test suite |
+| Dependencies | None | None at runtime, per its README (npm lists \`core-js\`) |
+| Themes | Barebones, Bootstrap 3, 4 and 5, Tailwind 4 | Barebones, HTML, Bootstrap 3, 4 and 5, Spectre, Tailwind |
+| Per-field options in the schema | \`x-\` prefixed keywords, so they never collide with the spec | An \`options\` keyword |
+| Project status | Actively developed | Maintenance mode |
+
+JSON Editor still has the larger user base and more third-party editor integrations. If a project depends on a specific editor widget, check that Jedison has an equivalent on the Editors pages first.`
+        }
+      },
+      {
+        component: SectionProse,
+        props: {
+          heading: "Migrating",
+          level: 2,
+          markdown: `The basic API is close. These are the main renames:
+
+| JSON Editor | Jedison |
+|---|---|
+| \`new JSONEditor(element, options)\` | \`new Jedison.Create({container: element, ...})\` |
+| \`startval\` | \`data\` |
+| \`theme: 'bootstrap4'\` | \`theme: new Jedison.ThemeBootstrap4()\` |
+| \`validate()\` | \`getErrors()\` |
+| \`getEditor('root.name')\` | \`getInstance('#/name')\` |
+| \`getValue()\`, \`setValue()\`, \`on('change')\`, \`enable()\`, \`disable()\`, \`destroy()\` | Same names |
+
+Paths use JSON pointers (\`#/name\`) instead of dot paths (\`root.name\`). Options set inside the schema move from \`options\` to \`x-\` keywords, see Schema Options.`
+        }
+      },
+      {component: SectionCode, props: {language: "javascript", code: migrateFromJsonEditor}}
     ]
   },
   {
